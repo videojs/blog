@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name). | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="First and foremost, THANK YOU to the 25 contributors who completed and merged 146 pull requests and updated just about every line of code in the project. And thank you to the hundreds of issue comment">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn't (including the name).">
+<meta property="og:url" content="http://yoursite.com/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="First and foremost, THANK YOU to the 25 contributors who completed and merged 146 pull requests and updated just about every line of code in the project. And thank you to the hundreds of issue comment">
+<meta property="og:image" content="http://66.media.tumblr.com/7936bfddeddf68058784eb6d815cd631/tumblr_inline_nveuwhsdFu1qzc111_540.png">
+<meta property="og:image" content="http://67.media.tumblr.com/cb1841277ee68c248443e42c0391e286/tumblr_inline_nvf06qcRca1qzc111_540.png">
+<meta property="og:image" content="http://66.media.tumblr.com/1e6ec3eacf62a57d0543b01cb4454527/tumblr_inline_nvesinCDHy1qzc111_500.gif">
+<meta property="og:image" content="http://66.media.tumblr.com/2872e2376c584d2abe4293d442e367e2/tumblr_inline_nvesehMSl91qzc111_540.png">
+<meta property="og:image" content="http://feeds.feedburner.com/~r/video-js/~4/ASsV6seqM8A">
+<meta property="og:updated_time" content="2016-05-23T18:13:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn't (including the name).">
+<meta name="twitter:description" content="First and foremost, THANK YOU to the 25 contributors who completed and merged 146 pull requests and updated just about every line of code in the project. And thank you to the hundreds of issue comment">
+<meta name="twitter:image" content="http://66.media.tumblr.com/7936bfddeddf68058784eb6d815cd631/tumblr_inline_nveuwhsdFu1qzc111_540.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/" class="article-date">
+  <time datetime="2015-09-29T18:00:16.000Z" itemprop="datePublished">2015-09-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name).
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>First and foremost, <strong>THANK YOU</strong> to the 25 contributors who completed and merged <strong>146 pull requests</strong> and updated just about every line of code in the project. And thank you to the hundreds of issue commenters and plugin authors who helped shape this latest version. For a widget, we&rsquo;ve got a pretty awesome community.</p>
+<p>For 5.0 we have some interesting new features, and we made A LOT of new technology choices. This will include an exhaustive dive into those choices, because&hellip;why not?</p>
+<ul>
+<li><p>Redesigned and rebuilt the UI</p>
+<ul>
+<li>Using a flex-box-based controls layout for easier add-ons</li>
+<li>Improved accessibility of the controls</li>
+<li>Switched from LESS to SASS</li>
+<li>Switched to Material Icons</li>
+</ul>
+</li>
+<li>Rebuilt the library in ES6/Babel/Browserify including Modules and Classes</li>
+<li>Added support for responsive layouts including auto-sizing to the video content</li>
+<li>Added support for HLS in desktop browsers <strong>without Flash</strong></li>
+<li>Improved audio-only support</li>
+<li>Added 6 more language translations bringing the total to 25</li>
+<li>Switched from Closure Compiler to UglifyJS (we STOPPED mangling object properties)</li>
+<li>Switched to JSDoc for documentation</li>
+<li>Switched to BrowserStack for automated browser testing</li>
+<li>Switched to Fastly for our CDN</li>
+<li>New definition around plugins</li>
+<li>New <a href="http://codepen.io/heff/pen/EarCt/left/?editors=010" target="_blank" rel="external">player skin designer</a> on Codepen</li>
+<li>New definition around playback technologies (&ldquo;techs&rdquo;)</li>
+<li>New project governance model</li>
+<li>New Website and Logo!</li>
+</ul>
+<p>If you&rsquo;re a Video.js user or lover of <a href="http://semver.org/" target="_blank" rel="external">semver</a>, you&rsquo;re probably looking at the <a href="https://github.com/videojs/video.js/blob/872459837b21c1e3d05fa86df4022f5a2b17ea1c/CHANGELOG.md#500-2015-09-29" target="_blank" rel="external">changelog</a> and dying inside (or out). You&rsquo;re probably already thinking about how little you want to do the mega-upgrade dance every time the major version is bumped. To be clear, there will be at least <em>some</em> upgrade cost between major versions because that&rsquo;s just how things go. <strong>However</strong>, from 5.0 on, we plan on being a lot more liberal with major versions to avoid stop-the-world mega releases like this.</p>
+<p>The fact is, this release <a href="https://github.com/videojs/video.js/wiki/5.0-Change-Details" target="_blank" rel="external">cleaned up a lot of technical debt</a> and cruft over years of maintaining a popular open source library. Working with the codebase is fun again (not like it wasn&rsquo;t before, Judgy McJudgerson) and we think we&rsquo;ve bought ourselves at least 6 months before we have to upgrade to ES9000. In all seriousness, we plan on being quicker with releases, both breaking and non, in order to make incremental upgrades less painful and, well, quicker. Besides, Chrome and Firefox are going to be in the thousands soon for their releases, and we want some of that fun.</p>
+<h2 id="Redesigned-and-rebuilt-UI"><a href="#Redesigned-and-rebuilt-UI" class="headerlink" title="Redesigned and rebuilt UI"></a>Redesigned and rebuilt UI</h2><p><a href="http://www.videojs.com" target="_blank" rel="external"><img src="http://66.media.tumblr.com/7936bfddeddf68058784eb6d815cd631/tumblr_inline_nveuwhsdFu1qzc111_540.png" alt=""></a></p>
+<p>Video.js has had an all-CSS skin (including for Flash) since it was created in 2010 (the <a href="http://videojs.github.io/video.js/" target="_blank" rel="external">first version</a> was <em>literally</em> all CSS, no images, fonts, or svgs. And still works today!) Over those years we&rsquo;ve seen some very creative customizations and learned a lot about what users are hoping to do with player design when they&rsquo;re able to use native web techologies. For 5.0 we&rsquo;ve both simplified the default layout and added more flexibility than ever before.</p>
+<h3 id="Flex-Box-Layout"><a href="#Flex-Box-Layout" class="headerlink" title="Flex Box Layout"></a>Flex Box Layout</h3><p>One of our biggest challenges with the layout of the controls is keeping the control bar flexible and able to accomodate any new buttons that a plugin author might want to add. In 4.0 we used CSS floats to allow a new button to be appended to the control bar and flow into space. This however led to a very awkward tab order for anyone navigating the controls with the tab key. In 5.0 we were finally able to take advantage of <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="external">flex box</a>, which improves on the flexibility of the previous version while also maintaining the right tab order. In IE8 (because yeah, we still support that) we fall back to <code>display:table</code>, which works surprisingly well.</p>
+<h3 id="Improved-accessibility"><a href="#Improved-accessibility" class="headerlink" title="Improved accessibility"></a>Improved accessibility</h3><p>Accessibility has been a <a href="http://www.3playmedia.com/2015/04/30/video-jss-approach-to-video-player-accessibility/" target="_blank" rel="external">hot topic as of late</a>, with <a href="http://www.w3.org/WAI/intro/wcag" target="_blank" rel="external">new regulations</a> helping push the industry forward and defining what accessbility means for a player. The tab-order mentioned previously was an eye sore in our accessiblity support, and we&rsquo;re all happy to have that fixed in 5.0. Addtionally, after <a href="https://github.com/videojs/video.js/issues/841" target="_blank" rel="external">a long debate</a>, we switched our Button elements to use the actual HTML button tag instead of divs. Using divs previously gave us a large degree of safety from external styles clobbering our own styles. This can be a big problem for html-based widgets that are dropped into other frameworks that add styles directly to native elements (<em>ahem</em> Foundation). In the end however the accessibility experts in our community made a strong enough case, pointing out that there&rsquo;s still a number of devices that do not handle ARIA roles and javascript enhanced divs well enough to fully rely on them.</p>
+<h3 id="Switched-from-LESS-to-SASS"><a href="#Switched-from-LESS-to-SASS" class="headerlink" title="Switched from LESS to SASS"></a>Switched from LESS to SASS</h3><p>The original decision to use <a href="http://lesscss.org/" target="_blank" rel="external">Less</a> over <a href="http://sass-lang.com" target="_blank" rel="external">Sass</a> in version 4 was largely driven by the fact that it could be run in the browser. We knew we wanted to start using a preprocessor, but we still wanted to provide things like the skin designer which meant we needed to be able to do all pre-processing on the client. Less was totally appropriate for the job and allowed us to start modernizing the skin in appearance and tooling.</p>
+<p>Since then, thanks to <a href="https://github.com/kripken/emscripten" target="_blank" rel="external">Emscripten</a>, Sass has joined Less in the browser. This meant that we were free to use whichever of the two we liked, so all the contributors put on Less or Sass branded boxing gloves and fought until two gloves were still standing, which turned out to be Sass. Aside from the battle royale, there were a few reasons we decided to go with Sass for the new base skin in version 5.</p>
+<ul>
+<li><strong>Familiarity</strong>. Core contributors that started working on the new base skin were a little more experienced with Sass and simply preferred it.</li>
+<li><strong>Speed</strong>. On top of allowing us to use Sass without requiring Ruby, <a href="https://github.com/sass/libsass" target="_blank" rel="external">LibSass</a> is <em>fast</em>.</li>
+<li><strong>Popularity</strong>. Your parents are right, not everything&rsquo;s a popularity contest&hellip;but it is when you want to pick between two basically equivalent* tools. We wanted to pick something that more devs would be familiar with, and that seems to be Sass. On that note, it was also requested fairly often on the issue tracker.</li>
+<li><strong>Community</strong>. This goes hand in hand with popularity, but the Sass community is large and growing, with currently popular projects using it (and <a href="http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/" target="_blank" rel="external">switching to it</a>) and new tooling popping up every day along side industry standards such as <a href="http://compass-style.org/" target="_blank" rel="external">Compass</a> and <a href="http://bourbon.io" target="_blank" rel="external">Bourbon</a>.</li>
+</ul>
+<p>Big changes that we made during the switch that are unrelated to the tooling:</p>
+<ul>
+<li>We broke apart the source files.</li>
+<li>As mentioned above, we switched to a Flexbox-based layout. &ldquo;What about IE8,&rdquo; you say again? Tables. <a href="https://github.com/videojs/video.js/blob/a5dad5ade29a0ae33e0b80c600f1a06c953aff52/src/css/components/_control-bar.scss#L55-L58" target="_blank" rel="external">Srsly</a>.</li>
+<li>Improved support for responsive layouts.</li>
+<li>We simplified the amount of customization we explicitly allow in the source to encourage people to build <em>on top</em> of the base skin, not edit it directly.</li>
+<li>On the simplification note, we tried to simplify the base skin as much as possible. Our goal was to allow designers to build <em>anything</em> on top of the base without having to entirely start from scratch.</li>
+<li><p>And more!</p>
+</li>
+<li><p>We try to avoid Super Power User Features™ for reasons that can be explained in a different post, but in practice for us, the functional differences are pretty limited.</p>
+</li>
+</ul>
+<h3 id="Switched-to-Material-Icons"><a href="#Switched-to-Material-Icons" class="headerlink" title="Switched to Material Icons"></a>Switched to Material Icons</h3><p>The switch to an icon font in version 4 was a huge win for Video.js. It allowed designers to do things as basic as style component icon colors with <em>just CSS</em>. It simplified the code base by allowing us not not worry about things like image sprites or other image optimizations. The only recurring issue we ran into was the process around adding new icons to the set, which ultimately involved just uploading the font back to <a href="https://icomoon.io/" target="_blank" rel="external">IcoMoon</a> and re-exporting.</p>
+<p>In version 5, we&rsquo;ve switched everything about our icon set. First we went with a new set of icons: Google&rsquo;s <a href="https://www.google.com/design/icons/" target="_blank" rel="external">Material Icons</a>. This was a big step forward in terms of appearance, but we had the same issue as far as adding new icons. To fix that process we created new <a href="https://github.com/videojs/font" target="_blank" rel="external">Font tooling</a> for the project.</p>
+<p>The tooling is really simple, but it allows anyone to write out a JSON configuration file pointing to any SVGs they have access to. The output of that tool is the font files themselves along with a new SCSS partial that gets imported into our Sass workflow in the core project at build.</p>
+<p>We primarily use the Material icons, but occasionally we have to pull in a social media icon from another set, which this process greatly simplifies. See icons missing in the set that you&rsquo;d like to use? Give the tool a try and let us know what you think!</p>
+<h2 id="Rebuilt-the-library-in-ES6-Babel-Browserify-including-Modules-and-Classes"><a href="#Rebuilt-the-library-in-ES6-Babel-Browserify-including-Modules-and-Classes" class="headerlink" title="Rebuilt the library in ES6/Babel/Browserify including Modules and Classes"></a>Rebuilt the library in ES6/Babel/Browserify including Modules and Classes</h2><p>5.0 comes with bit of enlightenment as we ditch our not-built-here syndrome and make a leap to post-modern development practices.</p>
+<p>When we started work on the new version we originally planned to just use browserify and CommonJS modules, but when we took a closer look at the great work being done on <a href="https://babeljs.io" target="_blank" rel="external">Babel</a>, it only made sense to jump again to ES6 modules and save ourselves another code transition down the road, while at the same time gaining a lot of great new JavaScript features.</p>
+<p>Side-stepping any argument of the validity of JavaScript Classes, Video.js has always used classes for the internal UI framework. We used a custom class implementation that was of course incompatible with other custom implementations, so the move to ES6 opens the door for some potential interoperability with other frameworks as more people use ES6 classes specifically.</p>
+<p>With the move to modules we&rsquo;ve also opened the door to using more of the glorious ecosystem that is <a href="https://www.npmjs.com" target="_blank" rel="external">npm</a>. We&rsquo;ve started to toss out some of the non-core internal libraries that required us to be experts in just about everything, and replace them with other community-built modules. So far this includes libraries like <a href="https://lodash.com" target="_blank" rel="external">lodash</a> and <a href="https://github.com/raynos/xhr" target="_blank" rel="external">raynos/xhr</a>, and we&rsquo;re actively looking for opportunies where we can share more code.</p>
+<h3 id="What-does-this-mean-for-the-end-user"><a href="#What-does-this-mean-for-the-end-user" class="headerlink" title="What does this mean for the end user?"></a>What does this mean for the end user?</h3><p>This should make it easier for end-users of videojs, especially if they use browserify themselves. With this change, users can just<br><code>require(&#39;video.js&#39;)</code> in their <code>app.js</code> or whenever they need it to instantiate players. In addition, plugins that were written<br>using browserify themselves can be added very easily using browserify and <code>require</code> as well. Of course, you can use Babel and<br>ES6 modules as well. For example, your <code>app.js</code> could look like the following, assuming browserify and babel for ES6 syntax:</p>
+<pre class="prettyprint">
+// import videojs
+import videojs from 'video.js';
+// import several plugins. 
+// Each requires videojs itself and registers itself accordingly.
+import 'videojs-playlist';
+import 'videojs-thumbnail';
+// this isn't ready yet, unfortunately
+import 'videojs-contrib-hls'; 
+
+// make a player
+let player = videojs('my-video');
+// initialize some plugins
+player.playlist(myplaylist);
+player.thumbnail(myThumbnailConfig);
+</pre>
+
+<h2 id="Added-support-for-responsive-layouts-including-auto-sizing-to-the-video-content"><a href="#Added-support-for-responsive-layouts-including-auto-sizing-to-the-video-content" class="headerlink" title="Added support for responsive layouts including auto-sizing to the video content"></a>Added support for responsive layouts including auto-sizing to the video content</h2><p><a href="https://www.youtube.com/watch?v=0AEFvF2bHtw&amp;feature=youtu.be&amp;t=50m37s" target="_blank" rel="external">Check out this video from the SF Vid Tech meetup for quick overview.</a></p>
+<p><em>Proper</em> support for responsive layouts has been a long time request. We&rsquo;ve had tips and guides for how to make it work in the old version, but now it&rsquo;s seamlessly built into the player. First we have two easy CSS classes you can just add to the embed code, <code>vjs-16-9</code> and <code>vjs-4-3</code>.</p>
+<p><code>&amp;lt;video class=&quot;video-js vjs-16-9 vjs-default-skin&quot; ...&amp;gt;&amp;lt;/video&amp;gt;</code></p>
+<p>Or you can set the player to a fluid layout in the options and it will <strong>automatically update to match the aspect ratio of the content.</strong>, whether you set a width, height, or neither.</p>
+<pre class="prettyprint">
+var myPlayer = videojs(id, { fluid: true, preload: 'metadata' });
+</pre>
+
+<p>This was very tricky to implement, but well worth the effort. We have a <a href="http://jsbin.com/qucinu/edit?html,output" target="_blank" rel="external">jsbin example page</a> where you can try out different options.</p>
+<h2 id="Added-support-for-HTTP-Live-Streaming-in-desktop-browsers-WITHOUT-Flash"><a href="#Added-support-for-HTTP-Live-Streaming-in-desktop-browsers-WITHOUT-Flash" class="headerlink" title="Added support for HTTP Live Streaming in desktop browsers WITHOUT Flash"></a>Added support for HTTP Live Streaming in desktop browsers WITHOUT Flash</h2><p>We&rsquo;ve been chasing down the last excuses for using Flash for video for awhile now and have reached some major milestones. <a href="http://videojs.github.io/videojs-contrib-hls/" target="_blank" rel="external">videojs-contrib-hls</a> 1.0 (it&rsquo;s about time!) will use <a href="https://w3c.github.io/media-source/" target="_blank" rel="external">Media Source Extensions</a>, an advanced video element API, to provide HLS playback in Chrome and Microsoft Edge. Besides the enhanced debuggability of doing everything in Javascript, most of the computation has been moved to a web worker and is hardware accelerated on platforms that support it. That means even 60fps or 4k streams should play back without a stutter and your battery will get less of a workout, too. As part of that work, we&rsquo;ve split off the code we use to repackage HLS video into a separate project in the video.js org: <a href="https://github.com/videojs/mux.js" target="_blank" rel="external">mux.js</a>. If you&rsquo;re interested in how video works down at the bit level, check it out! We&rsquo;re always looking for new contributors.</p>
+<h2 id="Switched-from-Closure-Compiler-to-Uglify-We-STOPPED-mangling-object-properties"><a href="#Switched-from-Closure-Compiler-to-Uglify-We-STOPPED-mangling-object-properties" class="headerlink" title="Switched from Closure Compiler to Uglify (We STOPPED mangling object properties)"></a>Switched from Closure Compiler to Uglify (We STOPPED mangling object properties)</h2><p>In version 4.0 we introduced Google&rsquo;s Closure Compiler into our build chain. It&rsquo;s <strong>advanced optimizations mode</strong> saved us 25% in filesize over UglifyJS at the time. The downsides were that it required us to write the code in very specific ways and mangled internal object properties, which made contributing, debugging, and writing plugins much more difficult. The reality today is that with gzip and improved bandwidth, video.js users are pushing us less and less to squeeze the last bit of filesize out of the library. So for 5.0 we&rsquo;ve switched back to UglifyJS. Plugin authors rejoice!</p>
+<h2 id="Improved-audio-only-support"><a href="#Improved-audio-only-support" class="headerlink" title="Improved audio-only support"></a>Improved audio-only support</h2><p>Hey did you know? Video.js also supports the HTML5 audio tag. Try it out and let us know what you think.</p>
+<p><code>&amp;lt;audio id=&quot;my_audio_1&quot; class=&quot;video-js vjs-default-skin&quot; controls data-setup=&quot;{}&quot;&amp;gt;&amp;lt;source src=&quot;MY_AUDIO_FILE.mp3&quot; type=&quot;audio/mp3&quot;&amp;gt;&amp;lt;/source&amp;gt;&amp;lt;/audio&amp;gt;</code></p>
+<h2 id="Added-6-more-language-translations"><a href="#Added-6-more-language-translations" class="headerlink" title="Added 6 more language translations"></a>Added 6 more language translations</h2><p>Ever since we implemented localization in Video.js there&rsquo;s been a wave of contributions from all over the world. With 5.0 comes Danish, Bosnian, Serbian, Croatian, Finnish, and Turkish. This brings the number of lanugages supported to 25!</p>
+<h2 id="New-definition-around-plugins"><a href="#New-definition-around-plugins" class="headerlink" title="New definition around plugins"></a>New definition around plugins</h2><p>Plugins mostly have not changed from how they worked in Videojs 4.x. You still register and use them the same way.<br>The only major change is that if you are instantiating a plugin inside the config of a player, this plugin will get run<br>before the player is ready. This is so that if plugins are doing some UI work or adding themselves as children of the player<br>they can do so early on. This means that plugins that require the player to be ready would need to handle that themselves or<br>else not support instantiation via the player config. Ex:</p>
+<pre class="prettyprint">
+videojs('my-video', {
+  plugins: {
+    playlists: {}
+  }
+});
+</pre>
+
+<p>As part of the update to videojs 5 and our switch from Google&rsquo;s Closure Compiler to Uglify,<br>we&rsquo;ve been focusing on making the plugin experience better.<br>We&rsquo;ve made sure to export some of the utility functions that we use inside our own codebase to make writing plugins easier.<br>This way plugins don&rsquo;t need to include extra code themselves if a function, merge, for example, is available from videojs.</p>
+<p>Also, we&rsquo;re encouraging plugin authors to publish their plugins on npm. If the plugins are tagged with <code>videojs-plugin</code>,<br>they&rsquo;ll show up on our <a href="http://videojs.com/plugins/" target="_blank" rel="external">spiffy new plugins listing page</a>.</p>
+<h2 id="New-player-skin-designer-on-Codepen"><a href="#New-player-skin-designer-on-Codepen" class="headerlink" title="New player skin designer on Codepen"></a>New player skin designer on Codepen</h2><p>We&rsquo;re taking a slightly different approach with <a href="http://codepen.io/heff/pen/EarCt/left/?editors=010" target="_blank" rel="external">the designer</a> now. Instead of exposing all CSS properties from the default skin, we&rsquo;ve set up a template starter that has fewer options and allows you to get at the more common customizations more easily.</p>
+<p>It&rsquo;s also using <a href="http://codepen.io" target="_blank" rel="external">Codepen</a>, which is a great service and much better than hosting the designer ourselves. If you use it to make a cool skin, be sure to let us know. Tweet at @videojs or comment on the designer.</p>
+<p><a href="http://codepen.io/heff/pen/EarCt/left/?editors=010" target="_blank" rel="external">http://codepen.io/heff/pen/EarCt/left/?editors=010</a></p>
+<h2 id="New-project-governance-model"><a href="#New-project-governance-model" class="headerlink" title="New project governance model"></a>New project governance model</h2><p>Jumping right on that band wagon, we&rsquo;re implementing a governance model for the project that&rsquo;s similar to <a href="https://github.com/nodejs/node/blob/20dae2a90610d7b6243dffc3c88a0cd2dfbcb7ce/GOVERNANCE.md" target="_blank" rel="external">Node.js/io.js</a> and <a href="http://rfc.zeromq.org/spec:22" target="_blank" rel="external">0MQ&rsquo;s C4.1</a>. Along with some better structure around the project it comes with a lower bar for becoming an official maintainer of the project. We&rsquo;re aiming to have a more diverse set of people and companies representing the leadership of Video.js.</p>
+<h2 id="Improved-the-definition-of-a-playback-technology-or-ldquo-tech-rdquo"><a href="#Improved-the-definition-of-a-playback-technology-or-ldquo-tech-rdquo" class="headerlink" title="Improved the definition of a playback technology or &ldquo;tech&rdquo;"></a>Improved the definition of a playback technology or &ldquo;tech&rdquo;</h2><p>The creator of our most popular plugin (<a href="https://github.com/eXon/videojs-youtube" target="_blank" rel="external">the YouTube plugin</a>) took on the task of improving the relationship between the player and techs. &ldquo;Tech&rdquo; is the term we use to describe the translation layer between the player API and the underlying video objects, which can be the HTML5 video element, plugins like <a href="https://github.com/videojs/video-js-swf" target="_blank" rel="external">Flash</a> and <a href="https://github.com/Afterster/videojs-silverlight" target="_blank" rel="external">Silverlight</a>, or other players like <a href="https://github.com/eXon/videojs-youtube" target="_blank" rel="external">Youtube</a> and <a href="https://github.com/eXon/videojs-vimeo" target="_blank" rel="external">Vimeo</a>. If you&rsquo;ve built a tech or are intersted in building one, check out the changes in 5.0.</p>
+<h2 id="Switched-to-JSDoc-from-a-home-grown-docs-parser"><a href="#Switched-to-JSDoc-from-a-home-grown-docs-parser" class="headerlink" title="Switched to JSDoc from a home-grown docs parser"></a>Switched to JSDoc from a home-grown docs parser</h2><p>In the last version we had a <a href="https://github.com/videojs/doc-generator" target="_blank" rel="external">custom built docs generator</a> that used <a href="http://esprima.org" target="_blank" rel="external">esprima</a> to parse the AST and create a lot of the API docs just from the code, with JSDoc tags filling in the rest. That could still be a good project, but it&rsquo;s become too much to maintain and too limited for plugin authors.</p>
+<p>For 5.0 we&rsquo;ve switched to <a href="https://github.com/jsdoc3/jsdoc" target="_blank" rel="external">jsdoc</a>. Check out the <a href="http://docs.videojs.com" target="_blank" rel="external">new docs site</a>. Anyone want to help us design it? :)</p>
+<h2 id="Switched-to-BrowserStack-for-automated-browser-testing"><a href="#Switched-to-BrowserStack-for-automated-browser-testing" class="headerlink" title="Switched to BrowserStack for automated browser testing"></a>Switched to BrowserStack for automated browser testing</h2><p>For 5.0 we have moved from <a href="https://saucelabs.com" target="_blank" rel="external">Sauce Labs</a> to <a href="https://www.browserstack.com" target="_blank" rel="external">BrowserStack</a> as our browser provider for automated testing. BrowserStack is a cross-browser testing tool that provides desktop and mobile browsers and are currently rolling out support for real mobile devices. We moved to BrowserStack to reduce the amount of timeout errors, build time and false positives we were seeing in our builds previously. This stability has allowed us to expand our testing coverage to include iOS, Android and all supported versions of Internet Explorer.</p>
+<h2 id="Switched-to-Fastly-for-our-CDN"><a href="#Switched-to-Fastly-for-our-CDN" class="headerlink" title="Switched to Fastly for our CDN"></a>Switched to Fastly for our CDN</h2><p>The CDN-hosted version of Video.js at vjs.zencdn.net is downloaded over 2 BILLION times every month, even with agressive browser-side caching. Video.js is relatively small in file size but that&rsquo;s still 34 TB per month. We were previously piggy-backing on Brightcove&rsquo;s Akamai account, but Fastly offered to host the library for free. We gave it a shot and fell in love. In full disclosure, our testing found that Fastly didn&rsquo;t perform quite as well as Akamai internationally, but Fastly&rsquo;s user interface, API, and real-time purge are things of beauty and make our <a href="http://github.com/videojs/cdn" target="_blank" rel="external">CDN deploy process</a> much simpler.</p>
+<h2 id="New-Website-and-Logo"><a href="#New-Website-and-Logo" class="headerlink" title="New Website and Logo!"></a>New Website and Logo!</h2><p><img src="http://67.media.tumblr.com/cb1841277ee68c248443e42c0391e286/tumblr_inline_nvf06qcRca1qzc111_540.png" alt="Video.js Logo"></p>
+<p>We simplified it a bit. What do you think?</p>
+<p>If you don&rsquo;t feel comfortable contributing to Video.js we can always use help on <a href="http://videojs.com" target="_blank" rel="external">the website</a>. It gets <strong>over 200,000 unique views</strong> every month. Contribute at <a href="https://github.com/videojs/videojs.com" target="_blank" rel="external">the website repo</a>.</p>
+<h1 id="HALP"><a href="#HALP" class="headerlink" title="HALP!"></a>HALP!</h1><p>It&rsquo;s our community that keeps Video.js actually decent and <strong>truly free</strong> (Apache 2), so don&rsquo;t be shy. Jump in and submit a bug, build a plugin, or design a skin.</p>
+<p>In conclusion, it&rsquo;s been a good year of a lot of good work. Thanks!</p>
+<p><a href="https://news.ycombinator.com/item?id=10298267" target="_blank" rel="external"><img src="http://66.media.tumblr.com/1e6ec3eacf62a57d0543b01cb4454527/tumblr_inline_nvesinCDHy1qzc111_500.gif" alt=""></a><a href="https://twitter.com/videojs/status/648921250882977792" target="_blank" rel="external"><img src="http://66.media.tumblr.com/2872e2376c584d2abe4293d442e367e2/tumblr_inline_nvesehMSl91qzc111_540.png" alt=""></a><br><img src="http://feeds.feedburner.com/~r/video-js/~4/ASsV6seqM8A" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/" data-id="ciokbzt09000qpacdjx2myzmz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/It-s-here-5-0-release-candidates/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">It&#39;s here: 5.0 release candidates!</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/html5-video/" style="font-size: 13.33px;">html5 video</a> <a href="/tags/news/" style="font-size: 16.67px;">news</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/">Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name).</a>
+          </li>
+        
+          <li>
+            <a href="/It-s-here-5-0-release-candidates/">It&#39;s here: 5.0 release candidates!</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-4-12-The-last-of-the-4-minors/">Video.js 4.12 - The last of the 4 minors</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-4-9-Now-can-join-the-party/">Video.js 4.9 - Now  can join the party!</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

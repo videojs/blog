@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Video.js 4.9 - Now  can join the party! | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="HTML5 Audio supportA common request we&amp;rsquo;ve seen is to be able to use Video.js with an &amp;amp;lt;audio&amp;amp;gt; tag, and now you can! Usage is almost identical, you can just include a data-setup={} a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Video.js 4.9 - Now  can join the party!">
+<meta property="og:url" content="http://yoursite.com/Video-js-4-9-Now-can-join-the-party/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="HTML5 Audio supportA common request we&amp;rsquo;ve seen is to be able to use Video.js with an &amp;amp;lt;audio&amp;amp;gt; tag, and now you can! Usage is almost identical, you can just include a data-setup={} a">
+<meta property="og:image" content="https://cloudup.com/cp544DZlhuV+">
+<meta property="og:image" content="https://cloudup.com/cotq6_EJ69v+">
+<meta property="og:image" content="http://feeds.feedburner.com/~r/video-js/~4/gKkF36A9CFY">
+<meta property="og:updated_time" content="2016-05-23T18:13:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Video.js 4.9 - Now  can join the party!">
+<meta name="twitter:description" content="HTML5 Audio supportA common request we&amp;rsquo;ve seen is to be able to use Video.js with an &amp;amp;lt;audio&amp;amp;gt; tag, and now you can! Usage is almost identical, you can just include a data-setup={} a">
+<meta name="twitter:image" content="https://cloudup.com/cp544DZlhuV+">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Video-js-4-9-Now-can-join-the-party" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Video-js-4-9-Now-can-join-the-party/" class="article-date">
+  <time datetime="2014-10-03T00:49:00.000Z" itemprop="datePublished">2014-10-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Video.js 4.9 - Now  can join the party!
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="HTML5-Audio-support"><a href="#HTML5-Audio-support" class="headerlink" title="HTML5 Audio support"></a>HTML5 Audio support</h3><p>A common request we&rsquo;ve seen is to be able to use Video.js with an <code>&amp;lt;audio&amp;gt;</code> tag, and now you can! Usage is almost identical, you can just include a <code>data-setup={}</code> attribute on an <code>&amp;lt;audio&amp;gt;</code> tag or initialize via Javascript.</p>
+<pre><code>&amp;lt;audio id=&quot;audio_example&quot; class=&quot;video-js vjs-default-skin&quot; controls 
+  preload=&quot;auto&quot; width=&quot;600&quot; height=&quot;600&quot; 
+  poster=&quot;/img/awesome-album-art.png&quot; data-setup=&apos;{}&apos;&amp;gt;
+  &amp;lt;source src=&quot;/audio/awesome-music.mp3&quot; type=&apos;audio/mp3&apos;/&amp;gt;
+&amp;lt;/audio&amp;gt;
+</code></pre><p>The only differences in behavior are that the poster image and controls are never hidden. This allows you to keep up something like album art during playback rather than a black video element. Since there&rsquo;s no interesting content to hide (other than the poster image), we leave the controls showing to mimic a familiar audio player experience.</p>
+<p><img src="https://cloudup.com/cp544DZlhuV+" alt="Audio Screenshot"></p>
+<p><strong>Note</strong>: The Flash fallback still doesn&rsquo;t support audio-only sources, but we&rsquo;d like to add that in the future. In the meantime, audio playback with MP3 and Ogg sources should work fine in any (modern) browser that&rsquo;s not IE8, so enjoy!</p>
+<h3 id="More-translations"><a href="#More-translations" class="headerlink" title="More translations!"></a>More translations!</h3><p>We&rsquo;ve been really excited by the continued support in terms of new translations. This release contains Brazilian Portuguese, Japanese, Italian, French, and Korean, as well as some improvements to the previous Spanish translation. We&rsquo;d love to see the trend continue, so if you&rsquo;re fluent in a language please consider <a href="https://github.com/videojs/video.js/blob/master/CONTRIBUTING.md" target="_blank" rel="external">submitting</a> improvements or whole new localizations!</p>
+<h3 id="Video-js-in-the-wild"><a href="#Video-js-in-the-wild" class="headerlink" title="Video.js in the wild"></a>Video.js in the wild</h3><p><a href="http://coursera.org" target="_blank" rel="external">Coursera</a> is an education platform that offers free courses online from some of the world&rsquo;s top institutions. They&rsquo;ve built great tools for video interaction on top of Video.js, and are even going to talk about some of the work they&rsquo;re doing at October&rsquo;s <a href="http://sfvideo.org" target="_blank" rel="external">SF Video Meetup</a>.</p>
+<p><img src="https://cloudup.com/cotq6_EJ69v+" alt="Coursera Screenshot"></p>
+<h3 id="New-Plugins"><a href="#New-Plugins" class="headerlink" title="New Plugins"></a>New Plugins</h3><p><a href="https://github.com/collab-project/videojs-wavesurfer" target="_blank" rel="external">videojs-wavesurfer</a> - Adds a navigable waveform for audio files, using the excellent wavesurfer.js library.</p>
+<h3 id="Full-list-of-changes"><a href="#Full-list-of-changes" class="headerlink" title="Full list of changes"></a>Full list of changes</h3><ul>
+<li>@deedos added a Brazilian Portuguese translation (<a href="https://github.com/videojs/video.js/pull/1520" target="_blank" rel="external">view</a>)</li>
+<li>@baloneysandwiches added a hasClass method (<a href="https://github.com/videojs/video.js/pull/1464" target="_blank" rel="external">view</a>)</li>
+<li>@mynameisstephen fixed an issue where slider event listeners were not being cleaned up (<a href="https://github.com/videojs/video.js/pull/1475" target="_blank" rel="external">view</a>)</li>
+<li>@alexrqs cleaned up the Spanish translation (<a href="https://github.com/videojs/video.js/pull/1494" target="_blank" rel="external">view</a>)</li>
+<li>@t2y added a Japanese translation (<a href="https://github.com/videojs/video.js/pull/1497" target="_blank" rel="external">view</a>)</li>
+<li>@chikathreesix fixed an issue where data-setup options could be missed (<a href="https://github.com/videojs/video.js/pull/1514" target="_blank" rel="external">view</a>)</li>
+<li>@seniorflexdeveloper added new translations and translation updates (<a href="https://github.com/videojs/video.js/pull/1530" target="_blank" rel="external">view</a>)</li>
+<li>@chikathreesix exported the videojs.Flash.embed method (<a href="https://github.com/videojs/video.js/pull/1533" target="_blank" rel="external">view</a>)</li>
+<li>@doublex fixed an issue with IE7 backwards compatibility (<a href="https://github.com/videojs/video.js/pull/1542" target="_blank" rel="external">view</a>)</li>
+<li>@mmcc made it possible to override the font-size of captions and subtitles (<a href="https://github.com/videojs/video.js/pull/1547" target="_blank" rel="external">view</a>)</li>
+<li>@philipgiuliani added an Italian translation (<a href="https://github.com/videojs/video.js/pull/1550" target="_blank" rel="external">view</a>)</li>
+<li>@twentyrogersc fixed the return value when setting the poster source (<a href="https://github.com/videojs/video.js/pull/1552" target="_blank" rel="external">view</a>)</li>
+<li>@heff updated to swf v4.5.0 to fix event issues (<a href="https://github.com/videojs/video.js/pull/1554" target="_blank" rel="external">view</a>)</li>
+<li>@rpless made the VolumeMenuButton volume more accesible via tab navigation (<a href="https://github.com/videojs/video.js/pull/1519" target="_blank" rel="external">view</a>)</li>
+<li>@mmcc added support for audio tags (html5 audio only) (<a href="https://github.com/videojs/video.js/pull/1540" target="_blank" rel="external">view</a>)<img src="http://feeds.feedburner.com/~r/video-js/~4/gKkF36A9CFY" alt=""></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/Video-js-4-9-Now-can-join-the-party/" data-id="ciokbzt05000opacdiemgkr18" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/news/">news</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/Video-js-4-12-The-last-of-the-4-minors/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Video.js 4.12 - The last of the 4 minors
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Video-js-4-8-0-released-Prost/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Video.js 4.8.0 released...Prost!</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/html5-video/" style="font-size: 13.33px;">html5 video</a> <a href="/tags/news/" style="font-size: 16.67px;">news</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/">Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name).</a>
+          </li>
+        
+          <li>
+            <a href="/It-s-here-5-0-release-candidates/">It&#39;s here: 5.0 release candidates!</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-4-12-The-last-of-the-4-minors/">Video.js 4.12 - The last of the 4 minors</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-4-9-Now-can-join-the-party/">Video.js 4.9 - Now  can join the party!</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

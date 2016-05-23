@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Video.js version 4.3.0 released w/ shiny new API docs | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="The biggest change in this update is actually an overhaul of the API docs. The best example of the new docs is the Player doc, which is the API most video.js users will work with.
+The new docs are now">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Video.js version 4.3.0 released w/ shiny new API docs">
+<meta property="og:url" content="http://yoursite.com/Video-js-version-4-3-0-released-w-shiny-new-API-docs/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="The biggest change in this update is actually an overhaul of the API docs. The best example of the new docs is the Player doc, which is the API most video.js users will work with.
+The new docs are now">
+<meta property="og:image" content="http://feeds.feedburner.com/~r/video-js/~4/HFDZaCSgXYI">
+<meta property="og:updated_time" content="2016-05-23T18:13:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Video.js version 4.3.0 released w/ shiny new API docs">
+<meta name="twitter:description" content="The biggest change in this update is actually an overhaul of the API docs. The best example of the new docs is the Player doc, which is the API most video.js users will work with.
+The new docs are now">
+<meta name="twitter:image" content="http://feeds.feedburner.com/~r/video-js/~4/HFDZaCSgXYI">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Video-js-version-4-3-0-released-w-shiny-new-API-docs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Video-js-version-4-3-0-released-w-shiny-new-API-docs/" class="article-date">
+  <time datetime="2013-11-06T00:29:00.000Z" itemprop="datePublished">2013-11-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Video.js version 4.3.0 released w/ shiny new API docs
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The biggest change in this update is actually an overhaul of the <a href="https://github.com/videojs/video.js/tree/v4.3.0/docs/api" target="_blank" rel="external">API docs</a>. The best example of the new docs is the <a href="https://github.com/videojs/video.js/blob/v4.3.0/docs/api/vjs.Player.md" target="_blank" rel="external">Player doc</a>, which is the API most video.js users will work with.</p>
+<p>The new docs are now automatically generated from the code and code comments, making it easier to keep them up to date with what&rsquo;s currently in the codebase.</p>
+<p>One interesting note about the doc-generator is that it uses <a href="http://esprima.org" target="_blank" rel="external">esprima</a>, a tool that reads javascript files and gives back the &ldquo;abstract syntax tree&rdquo; of the code.</p>
+<p>For the following javascript:</p>
+<pre class="prettify">
+var hi;
+</pre>
+
+<p>Esprima would generate:</p>
+<pre class="prettify">
+{
+    "type": "Program",
+    "body": [
+        {
+            "type": "VariableDeclaration",
+            "declarations": [
+                {
+                    "type": "VariableDeclarator",
+                    "id": {
+                        "type": "Identifier",
+                        "name": "hi"
+                    },
+                    "init": null
+                }
+            ],
+            "kind": "var"
+        }
+    ]
+}
+</pre>
+
+<p>We&rsquo;re using the AST of the video.js codebase to generate the majority of the information in the docs, which means it requires fewer comments and less work to keep the docs really great as we continue to build. If you&rsquo;re interested in seeing how we&rsquo;re handling that, check out the <a href="https://github.com/videojs/doc-generator" target="_blank" rel="external">doc-generator</a> repo (it&rsquo;s currently only useful with the video.js codebase, but it could be extended to support more).</p>
+<h2 id="New-CSS-Options"><a href="#New-CSS-Options" class="headerlink" title="New CSS Options"></a>New CSS Options</h2><p>Additional updates include new loading spinner icon options, and a new class for centering the big play button.</p>
+<p>Many users have been clear that they&rsquo;d prefer the big play button in the center of the video. While we feel the trend is still moving towards getting the play button out of the way of the content, we wanted to make this feature easier to customize. You can now use the <code>vjs-big-play-centered</code> class on your video tag to center the play button.</p>
+<p>To try the new spinner icon options, check out the <a href="http://designer.videojs.com" target="_blank" rel="external">designer</a> and change the icon name used by the spinner class.</p>
+<h2 id="Even-more-plugins"><a href="#Even-more-plugins" class="headerlink" title="Even more plugins!"></a>Even more plugins!</h2><p>Finally, the most exciting developments are actually happening in the video.js community, with more and more plugins being built. We&rsquo;re up to 26 in the <a href="https://github.com/videojs/video.js/wiki/Plugins" target="_blank" rel="external">plugins list</a>, with more on the way.</p>
+<p>If you have some code you&rsquo;ve built on top of video.js that you think might be valuable to others, please share it on the plugins list, or post an issue on the video.js repo if you have questions about the plugin process.</p>
+<h2 id="Full-list-from-the-changelog"><a href="#Full-list-from-the-changelog" class="headerlink" title="Full list from the changelog"></a>Full list from the changelog</h2><ul>
+<li>Added Karma for cross-browser unit testing (<a href="https://github.com/videojs/video.js/pull/714" target="_blank" rel="external">view</a>)</li>
+<li>Unmuting when the volume is changed (<a href="https://github.com/videojs/video.js/pull/720" target="_blank" rel="external">view</a>)</li>
+<li>Fixed an accessibility issue with the big play button (<a href="https://github.com/videojs/video.js/pull/777" target="_blank" rel="external">view</a>)</li>
+<li>Exported user activity methods (<a href="https://github.com/videojs/video.js/pull/783" target="_blank" rel="external">view</a>)</li>
+<li>Added a classname to center the play button and new spinner options (<a href="https://github.com/videojs/video.js/pull/784" target="_blank" rel="external">view</a>)</li>
+<li>Added API doc generation (<a href="https://github.com/videojs/video.js/pull/801" target="_blank" rel="external">view</a>)</li>
+<li>Added support for codecs in Flash mime types (<a href="https://github.com/videojs/video.js/pull/805" target="_blank" rel="external">view</a>)</li>
+</ul>
+<p>The new version is available on <a href="http://www.videojs.com" target="_blank" rel="external">videojs.com</a> and  has been added to the CDN.</p>
+<p>Cheers,</p>
+<p>-heff<br><img src="http://feeds.feedburner.com/~r/video-js/~4/HFDZaCSgXYI" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/Video-js-version-4-3-0-released-w-shiny-new-API-docs/" data-id="ciokbzt0r000vpacdecw0vxj4" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Video.js version 4.4.0 released - Now supporting RequireJS and Browserify
+        
+      </div>
+    </a>
+  
+  
+    <a href="/The-Guardian-uses-Video-js-in-feature-article/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">The Guardian uses Video.js in feature article</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/html5-video/" style="font-size: 13.33px;">html5 video</a> <a href="/tags/news/" style="font-size: 16.67px;">news</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/">Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name).</a>
+          </li>
+        
+          <li>
+            <a href="/It-s-here-5-0-release-candidates/">It&#39;s here: 5.0 release candidates!</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-4-12-The-last-of-the-4-minors/">Video.js 4.12 - The last of the 4 minors</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-4-9-Now-can-join-the-party/">Video.js 4.9 - Now  can join the party!</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

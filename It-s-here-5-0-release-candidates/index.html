@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>It&#39;s here: 5.0 release candidates! | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Today we&amp;rsquo;re releasing our first official 5.0 release candidate. We&amp;rsquo;re really excited to get this into the wild, but a lot has changed under hood. It should be stable for normal usage, but">
+<meta property="og:type" content="article">
+<meta property="og:title" content="It's here: 5.0 release candidates!">
+<meta property="og:url" content="http://yoursite.com/It-s-here-5-0-release-candidates/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Today we&amp;rsquo;re releasing our first official 5.0 release candidate. We&amp;rsquo;re really excited to get this into the wild, but a lot has changed under hood. It should be stable for normal usage, but">
+<meta property="og:image" content="https://cloudup.com/c0dLiQlBE8F+">
+<meta property="og:image" content="http://feeds.feedburner.com/~r/video-js/~4/lLH3vkDw9AY">
+<meta property="og:updated_time" content="2016-05-23T18:13:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="It's here: 5.0 release candidates!">
+<meta name="twitter:description" content="Today we&amp;rsquo;re releasing our first official 5.0 release candidate. We&amp;rsquo;re really excited to get this into the wild, but a lot has changed under hood. It should be stable for normal usage, but">
+<meta name="twitter:image" content="https://cloudup.com/c0dLiQlBE8F+">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-It-s-here-5-0-release-candidates" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/It-s-here-5-0-release-candidates/" class="article-date">
+  <time datetime="2015-06-08T23:59:42.000Z" itemprop="datePublished">2015-06-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      It&#39;s here: 5.0 release candidates!
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Today we&rsquo;re releasing our first official 5.0 release candidate. We&rsquo;re really excited to get this into the wild, but a lot has changed under hood. It should be stable for normal usage, but we&rsquo;ve got a limited number of test devices (and testers for that matter), so what we need now is for people to bang on 5.0 and let us know what breaks!</p>
+<p>You can either grab the master branch from Github and run <code>grunt</code> to create your own build, or we&rsquo;ll push each new release candidate to the CDN. We&rsquo;re going to be moving quickly and pushing new candidates when we uncover / fix bugs, so be sure to check for new versions! As of this post, the newest release is <a href="http://vjs.zencdn.net/5.0.0-rc.2/video.js" target="_blank" rel="external">5.0-rc.2</a>. If you&rsquo;d like to see a demo, we&rsquo;ve got one up on <a href="http://jsbin.com/halokodoxo/1/edit?html,output" target="_blank" rel="external">JSBin</a>.</p>
+<h2 id="What-rsquo-s-different"><a href="#What-rsquo-s-different" class="headerlink" title="What&rsquo;s different?"></a>What&rsquo;s different?</h2><h3 id="New-Base-Theme"><a href="#New-Base-Theme" class="headerlink" title="New Base Theme"></a>New Base Theme</h3><p>The most obvious difference you&rsquo;ll see when you load up the release candidate is most likely going to be the new base theme. We&rsquo;ve worked hard to simplify the theme and make it possible to do as much as possible with purely CSS.</p>
+<p><img src="https://cloudup.com/c0dLiQlBE8F+" alt="screenshot"></p>
+<p>There are elements in the control bar that aren&rsquo;t shown by default, but can be by simply overriding a little CSS. For example, if you&rsquo;d rather use an inline volume control instead of the popup menu, you could make these changes:</p>
+<p><code>css
+.video-js .vjs-volume-menu-button { display: none; }
+.video-js .vjs-mute-control, .video-js .vjs-volume-control { display: flex; }</code></p>
+<p>This just hides the <code>.vjs-volume-menu-button</code> control, and unhides the mute control / inline volume control. Other things that are available but hidden by default are a time divider (<code>.vjs-time-devider</code>), total duration (<code>.vjs-duration</code>), and a spacer (<code>.vjs-custom-control-spacer</code>).</p>
+<h3 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h3><p>Thanks to the incredible <a href="http://babeljs.io" target="_blank" rel="external">Babel project</a>, we&rsquo;re able to write ES2015 and have it transpiled to ES5. It&rsquo;s fantastic, and means we get glorious things such as string interpolation, so reading our codebase <code>just got a whole lot ${_.sample([&#39;better&#39;, &#39;awesomer&#39;, &#39;more fantastic&#39;, &#39;less plus-y&#39;])}</code>.</p>
+<p>On our Wiki we have a page devoted to <a href="https://github.com/videojs/video.js/wiki/ES6-Features-used-in-the-source" target="_blank" rel="external">ES6 features we use extensively</a>. There are probably a few little things missing, but if you familiarize yourself with those features you should feel comfortable reading the Video.js source.</p>
+<p>We&rsquo;re also using <a href="http://browserify.org" target="_blank" rel="external">Browserify</a> (with a Babelify transform), so now we&rsquo;re able to take advantage of all the browser packages NPM has to offer. One big area this has allowed us to improve is utility functions, which are now provided by <a href="http://lodash.com" target="_blank" rel="external">Lodash</a>.</p>
+<h3 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h3><p>Plugins are initialized earlier than before, giving plugin developers even more control over the player experience. They&rsquo;re now initialized before other components are added (like the control bar), but after the player div is created. Keep in mind you&rsquo;ll now need to wait for the <code>ready</code> event to do things such as append items to the control bar.</p>
+<p>The plugin-development world should have also gotten more predictable since we&rsquo;ve gotten a little less aggressive with our minification. Keep in mind that when you want to subclass a component externally (not using ES2015), you&rsquo;ll want to use <a href="https://github.com/videojs/video.js/wiki/5.0-Change-Details#switched-to-es6-classes-updated-how-you-subclass-components" target="_blank" rel="external"><code>videojs.extends</code></a>.</p>
+<p>You can find more information on our <a href="https://github.com/videojs/video.js/wiki/5.0-Change-Details" target="_blank" rel="external">5.0 change details</a> wiki page.</p>
+<h1 id="Want-to-be-helpful"><a href="#Want-to-be-helpful" class="headerlink" title="Want to be helpful?"></a>Want to be helpful?</h1><p>Use it! We&rsquo;ve spent months using this player in very specific ways while development, but there&rsquo;s always the issue of &ldquo;not being able to <a href="http://en.wiktionary.org/wiki/see_the_forest_for_the_trees" target="_blank" rel="external">see the forest for the trees</a>&rdquo;. If you find issues while testing the player, please let us know on the <a href="https://github.com/videojs/video.js/issues" target="_blank" rel="external">issue tracker</a>.<br><img src="http://feeds.feedburner.com/~r/video-js/~4/lLH3vkDw9AY" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/It-s-here-5-0-release-candidates/" data-id="ciokbzsxx0008pacdmjeuhh5m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/release/">release</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videojs/">videojs</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name).
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Video-js-4-12-The-last-of-the-4-minors/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Video.js 4.12 - The last of the 4 minors</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/html5-video/" style="font-size: 13.33px;">html5 video</a> <a href="/tags/news/" style="font-size: 16.67px;">news</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/">Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name).</a>
+          </li>
+        
+          <li>
+            <a href="/It-s-here-5-0-release-candidates/">It&#39;s here: 5.0 release candidates!</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-4-12-The-last-of-the-4-minors/">Video.js 4.12 - The last of the 4 minors</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-4-9-Now-can-join-the-party/">Video.js 4.9 - Now  can join the party!</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
