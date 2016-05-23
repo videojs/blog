@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://videojs.github.io/blog/
 root: /blog/
 permalink: :title/
 permalink_defaults:
@@ -71,6 +71,9 @@ marked:
   breaks: true,
   smartLists: true,
   smartypants: true
+
+feed:
+  limit: 0
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
