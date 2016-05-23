@@ -65,6 +65,13 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: landscape
 
+marked:
+  gfm: true
+  tables: true,
+  breaks: true,
+  smartLists: true,
+  smartypants: true
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
