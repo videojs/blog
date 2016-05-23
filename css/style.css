@@ -511,6 +511,7 @@ body {
 }
 .article-inner {
   overflow: hidden;
+  padding: 15px;
 }
 .article-meta:before,
 .article-meta:after {
@@ -587,6 +588,28 @@ a.article-title:hover {
   line-height: 1.1em;
   margin: 1.1em 0;
 }
+.article-entry h1:hover .headerlink,
+.article-entry h2:hover .headerlink,
+.article-entry h3:hover .headerlink,
+.article-entry h4:hover .headerlink,
+.article-entry h5:hover .headerlink,
+.article-entry h6:hover .headerlink {
+  text-align: center;
+  line-height: 1;
+  font-size: 14px;
+  padding-right: 2px;
+  margin-left: -15px;
+  font-family: FontAwesome;
+  color: inherit;
+}
+.article-entry h1:hover .headerlink:before,
+.article-entry h2:hover .headerlink:before,
+.article-entry h3:hover .headerlink:before,
+.article-entry h4:hover .headerlink:before,
+.article-entry h5:hover .headerlink:before,
+.article-entry h6:hover .headerlink:before {
+  content: '\f0c1';
+}
 .article-entry a {
   color: #258fb8;
   text-decoration: none;
@@ -606,6 +629,10 @@ a.article-title:hover {
   height: auto;
   display: block;
   margin: auto;
+}
+.article-entry .no-fancybox img,
+.article-entry .no-fancybox video {
+  display: initial;
 }
 .article-entry iframe {
   border: none;

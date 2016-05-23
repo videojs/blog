@@ -114,7 +114,7 @@
 <p>If you’re a Video.js user or lover of <a href="http://semver.org/" target="_blank" rel="external">semver</a>, you’re probably looking at the <a href="https://github.com/videojs/video.js/blob/872459837b21c1e3d05fa86df4022f5a2b17ea1c/CHANGELOG.md#500-2015-09-29" target="_blank" rel="external">changelog</a> and dying inside (or out). You’re probably already thinking about how little you want to do the mega-upgrade dance every time the major version is bumped. To be clear, there will be at least <em>some</em> upgrade cost between major versions because that’s just how things go. <strong>However</strong>, from 5.0 on, we plan on being a lot more liberal with major versions to avoid stop-the-world mega releases like this.</p>
 <p>The fact is, this release <a href="https://github.com/videojs/video.js/wiki/5.0-Change-Details" target="_blank" rel="external">cleaned up a lot of technical debt</a> and cruft over years of maintaining a popular open source library. Working with the codebase is fun again (not like it wasn’t before, Judgy McJudgerson) and we think we’ve bought ourselves at least 6 months before we have to upgrade to ES9000. In all seriousness, we plan on being quicker with releases, both breaking and non, in order to make incremental upgrades less painful and, well, quicker. Besides, Chrome and Firefox are going to be in the thousands soon for their releases, and we want some of that fun.</p>
 <h2 id="Redesigned-and-rebuilt-UI"><a href="#Redesigned-and-rebuilt-UI" class="headerlink" title="Redesigned and rebuilt UI"></a>Redesigned and rebuilt UI</h2><p><a href="http://www.videojs.com" target="_blank" rel="external"><img src="http://66.media.tumblr.com/7936bfddeddf68058784eb6d815cd631/tumblr_inline_nveuwhsdFu1qzc111_540.png" alt=""></a></p>
-<p>Video.js has had an all-CSS skin (including for Flash) since it was created in 2010 (the <a href="http://videojs.github.io/video.js/" target="_blank" rel="external">first version</a> was <em>literally</em> all CSS, no images, fonts, or svgs. And still works today!) Over those years we’ve seen some very creative customizations and learned a lot about what users are hoping to do with player design when they’re able to use native web techologies. For 5.0 we’ve both simplified the default layout and added more flexibility than ever before.</p>
+<p>Video.js has had an all-CSS skin (including for Flash) since it was created in 2010 (the <a href="http://videojs.github.io/video.js/">first version</a> was <em>literally</em> all CSS, no images, fonts, or svgs. And still works today!) Over those years we’ve seen some very creative customizations and learned a lot about what users are hoping to do with player design when they’re able to use native web techologies. For 5.0 we’ve both simplified the default layout and added more flexibility than ever before.</p>
 <h3 id="Flex-Box-Layout"><a href="#Flex-Box-Layout" class="headerlink" title="Flex Box Layout"></a>Flex Box Layout</h3><p>One of our biggest challenges with the layout of the controls is keeping the control bar flexible and able to accomodate any new buttons that a plugin author might want to add. In 4.0 we used CSS floats to allow a new button to be appended to the control bar and flow into space. This however led to a very awkward tab order for anyone navigating the controls with the tab key. In 5.0 we were finally able to take advantage of <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank" rel="external">flex box</a>, which improves on the flexibility of the previous version while also maintaining the right tab order. In IE8 (because yeah, we still support that) we fall back to <code>display:table</code>, which works surprisingly well.</p>
 <h3 id="Improved-accessibility"><a href="#Improved-accessibility" class="headerlink" title="Improved accessibility"></a>Improved accessibility</h3><p>Accessibility has been a <a href="http://www.3playmedia.com/2015/04/30/video-jss-approach-to-video-player-accessibility/" target="_blank" rel="external">hot topic as of late</a>, with <a href="http://www.w3.org/WAI/intro/wcag" target="_blank" rel="external">new regulations</a> helping push the industry forward and defining what accessbility means for a player. The tab-order mentioned previously was an eye sore in our accessiblity support, and we’re all happy to have that fixed in 5.0. Addtionally, after <a href="https://github.com/videojs/video.js/issues/841" target="_blank" rel="external">a long debate</a>, we switched our Button elements to use the actual HTML button tag instead of divs. Using divs previously gave us a large degree of safety from external styles clobbering our own styles. This can be a big problem for html-based widgets that are dropped into other frameworks that add styles directly to native elements (<em>ahem</em> Foundation). In the end however the accessibility experts in our community made a strong enough case, pointing out that there’s still a number of devices that do not handle ARIA roles and javascript enhanced divs well enough to fully rely on them.</p>
 <h3 id="Switched-from-LESS-to-SASS"><a href="#Switched-from-LESS-to-SASS" class="headerlink" title="Switched from LESS to SASS"></a>Switched from LESS to SASS</h3><p>The original decision to use <a href="http://lesscss.org/" target="_blank" rel="external">Less</a> over <a href="http://sass-lang.com" target="_blank" rel="external">Sass</a> in version 4 was largely driven by the fact that it could be run in the browser. We knew we wanted to start using a preprocessor, but we still wanted to provide things like the skin designer which meant we needed to be able to do all pre-processing on the client. Less was totally appropriate for the job and allowed us to start modernizing the skin in appearance and tooling.</p>
@@ -150,7 +150,7 @@
 <p>Or you can set the player to a fluid layout in the options and it will <strong>automatically update to match the aspect ratio of the content.</strong>, whether you set a width, height, or neither.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myPlayer = videojs(id, &#123; fluid: <span class="literal">true</span>, preload: <span class="string">'metadata'</span> &#125;);</span><br></pre></td></tr></table></figure>
 <p>This was very tricky to implement, but well worth the effort. We have a <a href="http://jsbin.com/qucinu/edit?html,output" target="_blank" rel="external">jsbin example page</a> where you can try out different options.</p>
-<h2 id="Added-support-for-HTTP-Live-Streaming-in-desktop-browsers-WITHOUT-Flash"><a href="#Added-support-for-HTTP-Live-Streaming-in-desktop-browsers-WITHOUT-Flash" class="headerlink" title="Added support for HTTP Live Streaming in desktop browsers WITHOUT Flash"></a>Added support for HTTP Live Streaming in desktop browsers WITHOUT Flash</h2><p>We’ve been chasing down the last excuses for using Flash for video for awhile now and have reached some major milestones. <a href="http://videojs.github.io/videojs-contrib-hls/" target="_blank" rel="external">videojs-contrib-hls</a> 1.0 (it’s about time!) will use <a href="https://w3c.github.io/media-source/" target="_blank" rel="external">Media Source Extensions</a>, an advanced video element API, to provide HLS playback in Chrome and Microsoft Edge. Besides the enhanced debuggability of doing everything in Javascript, most of the computation has been moved to a web worker and is hardware accelerated on platforms that support it. That means even 60fps or 4k streams should play back without a stutter and your battery will get less of a workout, too. As part of that work, we’ve split off the code we use to repackage HLS video into a separate project in the video.js org: <a href="https://github.com/videojs/mux.js" target="_blank" rel="external">mux.js</a>. If you’re interested in how video works down at the bit level, check it out! We’re always looking for new contributors.</p>
+<h2 id="Added-support-for-HTTP-Live-Streaming-in-desktop-browsers-WITHOUT-Flash"><a href="#Added-support-for-HTTP-Live-Streaming-in-desktop-browsers-WITHOUT-Flash" class="headerlink" title="Added support for HTTP Live Streaming in desktop browsers WITHOUT Flash"></a>Added support for HTTP Live Streaming in desktop browsers WITHOUT Flash</h2><p>We’ve been chasing down the last excuses for using Flash for video for awhile now and have reached some major milestones. <a href="http://videojs.github.io/videojs-contrib-hls/">videojs-contrib-hls</a> 1.0 (it’s about time!) will use <a href="https://w3c.github.io/media-source/" target="_blank" rel="external">Media Source Extensions</a>, an advanced video element API, to provide HLS playback in Chrome and Microsoft Edge. Besides the enhanced debuggability of doing everything in Javascript, most of the computation has been moved to a web worker and is hardware accelerated on platforms that support it. That means even 60fps or 4k streams should play back without a stutter and your battery will get less of a workout, too. As part of that work, we’ve split off the code we use to repackage HLS video into a separate project in the video.js org: <a href="https://github.com/videojs/mux.js" target="_blank" rel="external">mux.js</a>. If you’re interested in how video works down at the bit level, check it out! We’re always looking for new contributors.</p>
 <h2 id="Switched-from-Closure-Compiler-to-Uglify-We-STOPPED-mangling-object-properties"><a href="#Switched-from-Closure-Compiler-to-Uglify-We-STOPPED-mangling-object-properties" class="headerlink" title="Switched from Closure Compiler to Uglify (We STOPPED mangling object properties)"></a>Switched from Closure Compiler to Uglify (We STOPPED mangling object properties)</h2><p>In version 4.0 we introduced Google’s Closure Compiler into our build chain. It’s <strong>advanced optimizations mode</strong> saved us 25% in filesize over UglifyJS at the time. The downsides were that it required us to write the code in very specific ways and mangled internal object properties, which made contributing, debugging, and writing plugins much more difficult. The reality today is that with gzip and improved bandwidth, video.js users are pushing us less and less to squeeze the last bit of filesize out of the library. So for 5.0 we’ve switched back to UglifyJS. Plugin authors rejoice!</p>
 <h2 id="Improved-audio-only-support"><a href="#Improved-audio-only-support" class="headerlink" title="Improved audio-only support"></a>Improved audio-only support</h2><p>Hey did you know? Video.js also supports the HTML5 audio tag. Try it out and let us know what you think.</p>
 <p><code>&lt;audio id=&quot;my_audio_1&quot; class=&quot;video-js vjs-default-skin&quot; controls data-setup=&quot;{}&quot;&gt;&lt;source src=&quot;MY_AUDIO_FILE.mp3&quot; type=&quot;audio/mp3&quot;&gt;&lt;/source&gt;&lt;/audio&gt;</code></p>
@@ -178,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://videojs.github.io/blog/blog/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/" data-id="ciokf1c4e000q0ncdhow4l9d8" class="article-share-link">Share</a>
+      <a data-url="https://videojs.github.io/blog/blog/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/" data-id="ciokkyfk4000q0fcdz5hqjmc7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -230,7 +230,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://videojs.github.io/blog/blog/It-s-here-5-0-release-candidates/" data-id="ciokf1c3h00060ncd6fzun5je" class="article-share-link">Share</a>
+      <a data-url="https://videojs.github.io/blog/blog/It-s-here-5-0-release-candidates/" data-id="ciokkyfiz00040fcd74krkq2d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/release/">release</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/videojs/">videojs</a></li></ul>
@@ -350,7 +350,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://videojs.github.io/blog/blog/Video-js-4-12-The-last-of-the-4-minors/" data-id="ciokf1c44000g0ncd5pid6iqm" class="article-share-link">Share</a>
+      <a data-url="https://videojs.github.io/blog/blog/Video-js-4-12-The-last-of-the-4-minors/" data-id="ciokkyfjv000j0fcd83hayjb8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/news/">news</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li></ul>
@@ -418,7 +418,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://videojs.github.io/blog/blog/Video-js-4-9-Now-can-join-the-party/" data-id="ciokf1c4b000o0ncdhq3i9lbj" class="article-share-link">Share</a>
+      <a data-url="https://videojs.github.io/blog/blog/Video-js-4-9-Now-can-join-the-party/" data-id="ciokkyfk0000o0fcdbw10m8rb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/news/">news</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li></ul>
@@ -474,7 +474,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://videojs.github.io/blog/blog/Video-js-4-8-0-released-Prost/" data-id="ciokf1c48000l0ncdsm243uw0" class="article-share-link">Share</a>
+      <a data-url="https://videojs.github.io/blog/blog/Video-js-4-8-0-released-Prost/" data-id="ciokkyfjx000l0fcdvasevbdf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/news/">news</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li></ul>
@@ -570,7 +570,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://videojs.github.io/blog/blog/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/" data-id="ciokf1c4i000t0ncdloqchsf0" class="article-share-link">Share</a>
+      <a data-url="https://videojs.github.io/blog/blog/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/" data-id="ciokkyfk8000t0fcdtgatysiq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/news/">news</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li></ul>
@@ -658,7 +658,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://videojs.github.io/blog/blog/DASH-Everywhere-ish-hack-project/" data-id="ciokf1c3600010ncdczrhd8br" class="article-share-link">Share</a>
+      <a data-url="https://videojs.github.io/blog/blog/DASH-Everywhere-ish-hack-project/" data-id="ciokkyfiq00010fcd4cnxlctj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/html5-video/">html5 video</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/news/">news</a></li></ul>
@@ -745,7 +745,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://videojs.github.io/blog/blog/Video-js-version-4-6-0-released-It-s-been-a-productive-month/" data-id="ciokf1c4w00110ncd1wm2l5wd" class="article-share-link">Share</a>
+      <a data-url="https://videojs.github.io/blog/blog/Video-js-version-4-6-0-released-It-s-been-a-productive-month/" data-id="ciokkyfkh000x0fcduyeupx6r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li></ul>
@@ -802,7 +802,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://videojs.github.io/blog/blog/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/" data-id="ciokf1c4u000z0ncduta095iz" class="article-share-link">Share</a>
+      <a data-url="https://videojs.github.io/blog/blog/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/" data-id="ciokkyfkn00110fcdsfdyfr8d" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li></ul>
@@ -876,7 +876,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://videojs.github.io/blog/blog/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/" data-id="ciokf1c4q000x0ncdzniwn8m5" class="article-share-link">Share</a>
+      <a data-url="https://videojs.github.io/blog/blog/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/" data-id="ciokkyfkk000z0fcddwxo0ce0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li></ul>
