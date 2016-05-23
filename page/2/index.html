@@ -64,80 +64,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/" class="article-date">
-  <time datetime="2014-02-19T22:49:00.000Z" itemprop="datePublished">2014-02-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/">Video.js version 4.4.0 released - Now supporting RequireJS and Browserify</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Version 4.4.0 is here with over 20 updates and fixes. The most notable addition may be support for AMD and CommonJS module loaders, meaning you can now include Video.js using <a href="http://requirejs.org" target="_blank" rel="external">RequireJS</a> or <a href="http://browserify.org" target="_blank" rel="external">Browserify</a>. Video.js can be installed through <a href="http://www.npmjs.org/package/video.js" target="_blank" rel="external">npm</a> already, and we&rsquo;ll soon add support for <a href="http://bower.io" target="_blank" rel="external">bower</a> and <a href="http://component.io" target="_blank" rel="external">component(1)</a> as well.</p>
-<h3 id="New-plugins"><a href="#New-plugins" class="headerlink" title="New plugins"></a>New plugins</h3><p>The <a href="https://github.com/videojs/video.js/wiki/Plugins" target="_blank" rel="external">plugin list</a> continues to grow, with more in the works. Checkout the new <a href="http://theonion.github.io/videojs-endcard/" target="_blank" rel="external">endcard plugin</a> built by <a href="http://www.theonion.com" target="_blank" rel="external">The Onion</a>.</p>
-<ul>
-<li><a href="https://github.com/spchuang/videojs-markers" target="_blank" rel="external">videojs-markers</a> <a href="http://jsbin.com/befob/7/edit" target="_blank" rel="external">[demo]</a> - Add customizable markers on the progress bar</li>
-<li><a href="https://github.com/several27/videojs-youtube-videowall" target="_blank" rel="external">videojs-youtube-videowall</a> - <a href="http://jsbin.com/tave/3" target="_blank" rel="external">[demo]</a> - Display video wall of related youtube videos after the video finishes</li>
-<li><a href="http://theonion.github.io/videojs-endcard/" target="_blank" rel="external">videojs-endcard</a> - Simple, customizable end card solution for VideoJS</li>
-<li><a href="https://github.com/rsadwick/videojs-akamai-analytics" target="_blank" rel="external">videojs-akamai-analytics</a> - Akamai Sola Analytics for video.js</li>
-<li><a href="https://github.com/cladera/videojs-stereopanner" target="_blank" rel="external">videojs-stereopanner</a> - Adds stereo channel panning functions</li>
-</ul>
-<h3 id="Video-js-in-the-wild"><a href="#Video-js-in-the-wild" class="headerlink" title="Video.js in the wild"></a>Video.js in the wild</h3><p>The <a href="https://play.brightcove.com" target="_blank" rel="external">Brightcove Play 2014</a> website recently went live with Video.js as the player. We&rsquo;re also hard at work building Brightcove&rsquo;s next-gen player with Video.js at the core, so stay tuned.</p>
-<h2 id="Full-list-from-the-changelog"><a href="#Full-list-from-the-changelog" class="headerlink" title="Full list from the changelog"></a>Full list from the changelog</h2><ul>
-<li>Made the poster updateable after initialization (<a href="https://github.com/videojs/video.js/pull/838" target="_blank" rel="external">view</a>)</li>
-<li>Exported more textTrack functions (<a href="https://github.com/videojs/video.js/pull/815" target="_blank" rel="external">view</a>)</li>
-<li>Moved player ID generation to support video tags with no IDs (<a href="https://github.com/videojs/video.js/pull/845" target="_blank" rel="external">view</a>)</li>
-<li>Moved to using QUnit as a dependency (<a href="https://github.com/videojs/video.js/pull/850" target="_blank" rel="external">view</a>)</li>
-<li>Added the util namespace for public utility functions (<a href="https://github.com/videojs/video.js/pull/862" target="_blank" rel="external">view</a>)</li>
-<li>Fixed an issue with calling duration before Flash is loaded (<a href="https://github.com/videojs/video.js/pull/861" target="_blank" rel="external">view</a>)</li>
-<li>Added player methods to externs so they can be overridden (<a href="https://github.com/videojs/video.js/pull/878" target="_blank" rel="external">view</a>)</li>
-<li>Fixed html5 playback when switching between media techs (<a href="https://github.com/videojs/video.js/pull/887" target="_blank" rel="external">view</a>)</li>
-<li>Fixed Firefox+Flash mousemove events so controls don&rsquo;t hide permanently (<a href="https://github.com/videojs/video.js/pull/899" target="_blank" rel="external">view</a>)</li>
-<li>Fixed a test for touch detection (<a href="https://github.com/videojs/video.js/pull/962" target="_blank" rel="external">view</a>)</li>
-<li>Updated the src file list for karma tests (<a href="https://github.com/videojs/video.js/pull/948" target="_blank" rel="external">view</a>)</li>
-<li>Added more tests for API properties after minification (<a href="https://github.com/videojs/video.js/pull/906" target="_blank" rel="external">view</a>)</li>
-<li>Updated projet to use npm version of videojs-swf (<a href="https://github.com/videojs/video.js/pull/930" target="_blank" rel="external">view</a>)</li>
-<li>Added support for dist zipping on windows (<a href="https://github.com/videojs/video.js/pull/944" target="_blank" rel="external">view</a>)</li>
-<li>Fixed iOS fullscreen issue (<a href="https://github.com/videojs/video.js/pull/977" target="_blank" rel="external">view</a>)</li>
-<li>Fixed touch event bubbling (<a href="https://github.com/videojs/video.js/pull/992" target="_blank" rel="external">view</a>)</li>
-<li>Fixed ARIA role attribute for button and slider (<a href="https://github.com/videojs/video.js/pull/988" target="_blank" rel="external">view</a>)</li>
-<li>Fixed and issue where a component&rsquo;s dispose event would bubble up (<a href="https://github.com/videojs/video.js/pull/981" target="_blank" rel="external">view</a>)</li>
-<li>Quieted down deprecation warnings (<a href="https://github.com/videojs/video.js/pull/971" target="_blank" rel="external">view</a>)</li>
-<li>Update seek handle to display the current time (<a href="https://github.com/videojs/video.js/pull/902" target="_blank" rel="external">view</a>)</li>
-<li>Added requirejs and browserify support (UMD) (<a href="https://github.com/videojs/video.js/pull/998" target="_blank" rel="external">view</a>)</li>
-</ul>
-<p>The new version is available on <a href="http://www.videojs.com" target="_blank" rel="external">videojs.com</a> and  has been added to the CDN.</p>
-<p>Cheers,</p>
-<p>-heff<br><img src="http://feeds.feedburner.com/~r/video-js/~4/ZZPGdmp690s" alt=""></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/" data-id="ciokbzt0v000xpacdvneugzuy" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-Video-js-version-4-3-0-released-w-shiny-new-API-docs" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/Video-js-version-4-3-0-released-w-shiny-new-API-docs/" class="article-date">
@@ -213,7 +139,7 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/Video-js-version-4-3-0-released-w-shiny-new-API-docs/" data-id="ciokbzt0r000vpacdecw0vxj4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/Video-js-version-4-3-0-released-w-shiny-new-API-docs/" data-id="ciokf1c4m000v0ncdmvwz8bu8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li></ul>
@@ -255,7 +181,7 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/The-Guardian-uses-Video-js-in-feature-article/" data-id="ciokbzsxy0009pacdzit5s6bi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/The-Guardian-uses-Video-js-in-feature-article/" data-id="ciokf1c3m00090ncdjf3u2rly" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/gallery/">gallery</a></li></ul>
@@ -302,7 +228,7 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/4-2-2-Patch-Release/" data-id="ciokbzswc0000pacd0qsfq9jy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/4-2-2-Patch-Release/" data-id="ciokf1c3000000ncd8q7f6hi5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li></ul>
@@ -347,7 +273,7 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/Running-Video-js-unit-tests-in-real-browsers-with-Karma/" data-id="ciokbzsxi0006pacdqs19mwd0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/Running-Video-js-unit-tests-in-real-browsers-with-Karma/" data-id="ciokf1c3k00080ncd91nzn6s7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -402,7 +328,7 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/Unauthorized-modification-of-Video-js-CDN-files/" data-id="ciokbzsya000bpacdoeerdome" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/Unauthorized-modification-of-Video-js-CDN-files/" data-id="ciokf1c3r000b0ncdjlfh5tu6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -492,7 +418,7 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/" data-id="ciokbzszv000lpacdo8n687t3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/" data-id="ciokf1c47000j0ncd687wex1l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li></ul>
@@ -674,7 +600,7 @@ video.on('tap', function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/Hiding-and-Showing-Video-Player-Controls/" data-id="ciokbzsx20003pacdpx5qzm9d" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/Hiding-and-Showing-Video-Player-Controls/" data-id="ciokf1c3d00030ncdqnlmxlex" class="article-share-link">Share</a>
       
       
     </footer>
@@ -723,7 +649,7 @@ video.on('tap', function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/New-Player-Skin-Designer-for-Video-js/" data-id="ciokbzsx80004pacdzq9fn1gz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/New-Player-Skin-Designer-for-Video-js/" data-id="ciokf1c3f00040ncdgy9l2689" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/html5-video/">html5 video</a></li></ul>
@@ -778,7 +704,83 @@ video.on('tap', function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/blog/Video-js-4-1-0-Released/" data-id="ciokbzsym000cpacdbpgqdjdm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/blog/Video-js-4-1-0-Released/" data-id="ciokf1c41000e0ncdqerf3qgw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Video-js-4-0-now-available" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Video-js-4-0-now-available/" class="article-date">
+  <time datetime="2013-05-09T17:10:00.000Z" itemprop="datePublished">2013-05-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/Video-js-4-0-now-available/">Video.js 4.0 now available!</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Today we&rsquo;re releasing Video.js 4.0, which is the most solid, lightweight, and I dare say prettiest version yet. It&rsquo;s available for download, on Github, and hosted for free on our CDN.</p>
+<p>Version 4.0 received the most community collaboration of any previous version, which speaks to the growing strength of the JavaScript community, the growing popularity of HTML5 video, and an increase in Video.js usage. Over the last year the number of sites using Video.js has more than <a href="http://trends.builtwith.com/media/VideoJS" target="_blank" rel="external">doubled</a>, and each month there are over 200 million hits to the CDN-hosted version alone! Thank you to all of the Video.js community members for contributing code and filing bug reports.</p>
+<p>This version is also a milestone in that it&rsquo;s the first version released since <a href="http://blog.videojs.com/post/35666994917/brightcove-acquires-zencoder" target="_blank" rel="external">Brightcove acquired Zencoder</a> last year. For those who missed the announcement, it was a very good thing for Video.js. In the past, Video.js was a side project for Zencoder that I maintained on top of my regular responsibilities (as if startup life isn&rsquo;t exciting enough). Post-acquisition, Brightcove has not only put me full-time on Video.js, but the Brightcove video player team has become contributors to the project. The Brightcove team is probably the most experienced video player team in the world, supporting the most advanced video technology, for the biggest brands, across all the devices. It&rsquo;s been a privilege to work with them and they&rsquo;ve made major contributions to this version.</p>
+<h3 id="4-0-Major-Feature-Summary"><a href="#4-0-Major-Feature-Summary" class="headerlink" title="4.0 Major Feature Summary:"></a>4.0 Major Feature Summary:</h3><p>Improved performance through an 18% size reduction using Google Closure Compiler in advanced mode</p>
+<ul>
+<li>Greater stability through an automated cross-browser/device test suite using TravisCI, Bunyip, and Browserstack.</li>
+<li>New plugin interface and plugin listing for extending Video.js</li>
+<li>New default skin design that uses font icons for greater customization</li>
+<li>Responsive design and retina display support</li>
+<li>Improved accessibility through better ARIA support</li>
+<li>Moved to Apache 2.0 license</li>
+<li>100% JavaScript development tool set including Grunt</li>
+</ul>
+<h4 id="Improved-Performance"><a href="#Improved-Performance" class="headerlink" title="Improved Performance"></a>Improved Performance</h4><p>With version 4.0, performance was our top priority, and a major factor of performance is the time it takes to load the library. What would seem to be minor size reductions can have a big impact, especially when a library will be loaded millions of times a month all over the world. We chose to use Google’s <a href="https://developers.google.com/closure/compiler/" target="_blank" rel="external">Closure Compiler</a> because its “advanced mode” currently provides the most aggressive options for code minification, and so far we’ve seen an 18% reduction in code size, with the potential for more.</p>
+<p>Closure Compiler also claims to rewrite code for better runtime performance, though we haven’t had a chance to benchmark this yet.</p>
+<p>Some preliminary load-time benchmarking* shows:</p>
+<ul>
+<li>Player load times in under 50 milliseconds</li>
+<li>Playback start times in under 150 milliseconds</li>
+<li>Actual video playback seen in under 0.5 seconds (using a CDN hosted MP4)</li>
+</ul>
+<p>*Initial tests used Chrome with an empty cache on a modern MacBook Pro with a Wi-Fi connection. More formal testing to follow.</p>
+<h4 id="Greater-Stability"><a href="#Greater-Stability" class="headerlink" title="Greater Stability"></a>Greater Stability</h4><p>Automated cross-browser, cross-device testing is the Holy Grail of testing for a JavaScript library. While building version 4.0, we’ve been able to reach that goal through the use of a number of tools, including:</p>
+<ul>
+<li><a href="https://travis-ci.org" target="_blank" rel="external">TravisCI</a> - Automatically runs unit tests through <a href="http://phantomjs.org" target="_blank" rel="external">PhantomJS</a> on every pull request made to the Video.js source code</li>
+<li><a href="http://ryanseddon.github.io/bunyip/" target="_blank" rel="external">Bunyip</a> + <a href="http://www.browserstack.com" target="_blank" rel="external">Browserstack</a> - Allows us to run tests in cloud-hosted instances of any browser from IE6 to the latest Chrome, and also a wide range of iOS and Android devices.</li>
+</ul>
+<p>This ability to easily run tests across environments before any new release will give us more protection against regressions, and can allow for a faster feature release cycle.</p>
+<h4 id="New-Plugin-Interface"><a href="#New-Plugin-Interface" class="headerlink" title="New Plugin Interface"></a>New Plugin Interface</h4><p>The new <a href="https://github.com/videojs/video.js/blob/master/docs/plugins.md" target="_blank" rel="external">plugins API</a> allows developers to more easily add custom features to Video.js. The API works similarly to the jQuery plugin interface, giving developers access to add to or overwrite any piece of Video.js. Once a plugin has been created, it can be shared on the <a href="https://github.com/videojs/video.js/wiki/Plugins" target="_blank" rel="external">Video.js plugin list</a> page on the wiki.</p>
+<h4 id="New-Default-Skin"><a href="#New-Default-Skin" class="headerlink" title="New Default Skin"></a>New Default Skin</h4><p>With help from the Brightcove UX team, we’ve created a new default skin that’s simpler, more polished, and more customizable. One of the most interesting features is that we’ve moved from using images for icons to font icons. The use of font icons allows you to change the color and size of the icons simply by changing a CSS value. You can see an example of this on the <a href="http://videojs.com" target="_blank" rel="external">Video.js homepage</a>.</p>
+<h4 id="Improved-Accessibility"><a href="#Improved-Accessibility" class="headerlink" title="Improved Accessibility"></a>Improved Accessibility</h4><p>Greg Kraus, a Video.js community member from <a href="http://www.NCSU.edu" target="_blank" rel="external">NCSU.edu</a>, did some great work testing and improving Video.js accessibility through better use of <a href="http://www.w3.org/WAI/intro/aria" target="_blank" rel="external">ARIA</a> roles. The changes make it so keyboard-only users, screen reader users, and voice-interface users will be able to interact with the video player. UPDATE: Read more in <a href="http://accessibility.oit.ncsu.edu/blog/2013/05/09/accessible-video-js-player-available-on-global-accessibility-awareness-day/" target="_blank" rel="external">Greg&rsquo;s blog post</a>.</p>
+<h4 id="Moved-to-Apache-2-0-License"><a href="#Moved-to-Apache-2-0-License" class="headerlink" title="Moved to Apache 2.0 License"></a>Moved to Apache 2.0 License</h4><p>Earlier versions of Video.js were released under the LGPLv3 license. LGPL often gets confused with its stricter sibling, GPL, which requires that all code the software touches must also be open source. Video.js is meant to be open and free to use in all contexts, and we want that to be clear, so version 4.0 is now released under Apache 2.0, the same license Twitter Bootstrap is released under.</p>
+<h4 id="100-JavaScript-Tool-Set"><a href="#100-JavaScript-Tool-Set" class="headerlink" title="100% JavaScript Tool Set"></a>100% JavaScript Tool Set</h4><p>Previously Video.js used Ruby for development tools, including Rake for deployment tasks, and zenflow–an internal Zencoder tool that builds on <a href="https://github.com/nvie/gitflow" target="_blank" rel="external">gitflow</a> for development process workflow. With 4.0 we’ve moved to <a href="http://gruntjs.com" target="_blank" rel="external">Grunt</a> for tasks and we’re building out a tool similar to zenflow in Node.js.</p>
+<h4 id="Videojs-com-Now-Open-Source"><a href="#Videojs-com-Now-Open-Source" class="headerlink" title="Videojs.com Now Open Source"></a>Videojs.com Now Open Source</h4><p>As part of this release we’ve also made the Videojs.com website open source. So if you see something that should be added or fixed, <a href="https://github.com/videojs/videojs.com" target="_blank" rel="external">fork it</a>.</p>
+<h3 id="What-now"><a href="#What-now" class="headerlink" title="What now?"></a>What now?</h3><p>Even with all of the updates listed above, this is simply a jumping-off point for what will be an exciting year for Video.js. We’re continuing to improve performance, multi-platform stability, and customizability through plugins and skins. Members of the community have already started work on plugins for some of the more requested features, like playlists, analytics, and advertising.</p>
+<p>Follow <a href="http://twitter.com/videojs" target="_blank" rel="external">@videojs</a> or sign up for our <a href="http://zencoder.us2.list-manage2.com/subscribe?u=36f130c3d3fadb2a21d2983b7&amp;id=0f35b0535c" target="_blank" rel="external">newsletter</a> to stay up-to-date on new features and roadmap updates.</p>
+<p>If you’d like to get involved in the project, check out our <a href="https://github.com/videojs/video.js/blob/master/CONTRIBUTING.md" target="_blank" rel="external">contributing guide</a>.</p>
+<p>Cheers,<br>-<a href="http://blog.heff.me" target="_blank" rel="external">heff</a><br><img src="http://feeds.feedburner.com/~r/video-js/~4/2fKZ1Q5wRIE" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/blog/Video-js-4-0-now-available/" data-id="ciokf1c3x000c0ncdel8i4hid" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/version/">version</a></li></ul>
@@ -793,7 +795,7 @@ video.on('tap', function(){
 
 
   <nav id="page-nav">
-    <a class="extend prev" rel="prev" href="/blog/">&laquo; Prev</a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/3/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/blog/">&laquo; Prev</a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span>
   </nav>
 
 </section>
@@ -826,7 +828,7 @@ video.on('tap', function(){
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/05/">May 2013</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2013/05/">May 2013</a></li></ul>
     </div>
   </div>
 
@@ -837,10 +839,6 @@ video.on('tap', function(){
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/blog/hello-world/">Hello World</a>
-          </li>
         
           <li>
             <a href="/blog/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/">Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name).</a>
@@ -856,6 +854,10 @@ video.on('tap', function(){
         
           <li>
             <a href="/blog/Video-js-4-9-Now-can-join-the-party/">Video.js 4.9 - Now  can join the party!</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Video-js-4-8-0-released-Prost/">Video.js 4.8.0 released...Prost!</a>
           </li>
         
       </ul>
