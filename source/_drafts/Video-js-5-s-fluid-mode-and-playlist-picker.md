@@ -63,6 +63,21 @@ Note: this is super simplistic and probably shouldn't be used in real pages
 
 ![](videojs-playlist-not-fluid.png)
 
+### How to make it fluid
+As you can see in the preceeding screenshot, it isn't aligned correctly with the player like in the screenshot above.
+Video.js calculates the aspect ratio and then adds a stylesheet to the page:
+```css
+.preview-player-dimensions.vjs-fluid {
+  padding-top: 41.66666666666667%;
+}
+```
+That percentage is because the aspect ratio for our oceans clip is 2.4.
+
+So, to make sure that the playlist picker is the same height, we can just add the player dimensions class to it:
+```html
+<ol class="vjs-playlist preview-player-dimensions"></ol>
+```
+
 
 [ratios]: http://alistapart.com/article/creating-intrinsic-ratios-for-video
 [playlist]: https://github.com/brightcove/videojs-playlist
