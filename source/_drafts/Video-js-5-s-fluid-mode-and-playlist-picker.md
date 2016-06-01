@@ -120,7 +120,7 @@ Ultimately, what we need to do is wrap the playlist element in a container that 
   <ol class="vjs-playlist"></ol>
 </div>
 ```
-We also need to change the `vjs-playlist` references above to be `playlist-container`. We also want to absolutely position the playlist inside its container:
+We also change the `vjs-playlist` references to `playlist-container` and absolutely position the playlist picker inside its container:
 ```css
 .playlist-container {
   position: relative;
