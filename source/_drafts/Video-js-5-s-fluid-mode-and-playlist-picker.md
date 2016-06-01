@@ -74,7 +74,7 @@ So, to make sure that the playlist picker is the same height, we can just add th
 ```
 
 ### How to make it line up
-One of the easiest ways of making these two things line up correctly is to use flexbox. It'll make the player and playlist picker grow to fill up as much space as needed and shrink down. Also, the playlist picker collapse underneath the player if the width of the page is too small.
+One of the easiest ways of making these two things line up correctly is to use flexbox. It'll make the player and playlist picker grow to fill up as much space as needed. Also, the playlist picker collapse underneath the player if the width of the page is too small.
 Flexbox is [available][available-flex] on a lot of platforms. However, some browsers were implementing flexbox as the specification for it was evolving. It's probably best to run this css through something like [autoprefixer][]. Using autoprefixer won't make it work on browsers that don't support flexbox but will significantly increase platform support.
 
 First, we set `display` to `flex` and add some properties for wrapping and sizing:
