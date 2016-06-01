@@ -4,7 +4,9 @@ tags:
   - videojs 5
   - fluid
 author: Gary Katsevman
+date: 2016-06-01 14:50:06
 ---
+
 
 ## How it works
 In video.js 5.0, we added support for truly fluid layouts with video.js.
