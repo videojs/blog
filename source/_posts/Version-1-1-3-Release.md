@@ -2,6 +2,9 @@
 title: Version 1.1.3 Release
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2010-10-19 00:00:00
 ---
 

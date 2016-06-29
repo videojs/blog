@@ -2,6 +2,9 @@
 title: HTML5 Video + Google Maps Mashup
 tags:
   - news
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2010-12-16 00:00:00
 ---
 

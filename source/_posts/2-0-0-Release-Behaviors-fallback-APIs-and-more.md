@@ -1,7 +1,10 @@
 ---
-title: "2.0.0 Release -\x80\x93 Behaviors, fallback APIs, and more."
+title: "2.0.0 Release - Behaviors, fallback APIs, and more."
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2010-11-22 00:00:00
 ---
 

@@ -1,6 +1,9 @@
 ---
 title: Repo Moved!
 tags: []
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2013-05-06 16:56:59
 ---
 

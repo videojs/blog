@@ -2,6 +2,9 @@
 title: Facebook Adds HTML5 Video
 tags:
   - news
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2010-10-12 00:00:00
 ---
 

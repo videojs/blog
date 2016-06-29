@@ -3,6 +3,9 @@ title: Lynda.com HTML5 Video Tutorial Released
 tags:
   - news
   - code
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2011-06-17 00:00:00
 ---
 

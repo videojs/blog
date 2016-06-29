@@ -2,6 +2,9 @@
 title: New MPEG LA WebM/VP8 Patent Pool
 tags:
   - news
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2011-02-11 00:00:00
 ---
 

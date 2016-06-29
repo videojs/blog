@@ -3,6 +3,9 @@ title: Google is dropping h.264 from Chrome
 tags:
   - news
   - stats
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2011-01-11 00:00:00
 ---
 

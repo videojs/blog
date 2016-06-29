@@ -2,6 +2,9 @@
 title: iPad & iPhone Video Poster Fix (bonus Javascript Placement Fix)
 tags:
   - code
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2010-09-20 00:00:00
 ---
 

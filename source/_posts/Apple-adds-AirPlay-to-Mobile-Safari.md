@@ -3,6 +3,9 @@ title: Apple adds AirPlay to Mobile Safari
 tags:
   - news
   - code
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2011-01-28 00:00:00
 ---
 

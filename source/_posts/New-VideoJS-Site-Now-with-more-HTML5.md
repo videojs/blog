@@ -1,6 +1,9 @@
 ---
 title: New VideoJS Site (Now with more HTML5)!
 tags: []
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2010-09-15 00:00:00
 ---
 

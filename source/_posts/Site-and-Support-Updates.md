@@ -1,6 +1,9 @@
 ---
 title: Site and Support Updates
 tags: []
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2012-11-15 14:54:18
 ---
 

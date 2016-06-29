@@ -2,6 +2,9 @@
 title: Over 50% of web users now support HTML5 Video
 tags:
   - stats
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2011-01-07 00:00:00
 ---
 

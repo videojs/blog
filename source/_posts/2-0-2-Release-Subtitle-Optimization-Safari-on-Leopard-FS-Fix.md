@@ -2,6 +2,9 @@
 title: 2.0.2 Release - Subtitle Optimization + Safari on Leopard FS Fix
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2010-12-10 00:00:00
 ---
 

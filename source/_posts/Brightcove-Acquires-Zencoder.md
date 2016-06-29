@@ -2,6 +2,9 @@
 title: Brightcove Acquires Zencoder
 tags:
   - news
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2012-07-26 00:00:00
 ---
 

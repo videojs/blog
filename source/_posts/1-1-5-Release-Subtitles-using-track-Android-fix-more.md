@@ -2,6 +2,9 @@
 title: '1.1.5 Release - Subtitles using track, Android fix & more'
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2010-11-09 00:00:00
 ---
 

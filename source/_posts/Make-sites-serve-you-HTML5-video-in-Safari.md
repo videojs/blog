@@ -2,6 +2,9 @@
 title: Make sites serve you HTML5 video in Safari
 tags:
   - code
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2010-11-19 00:00:00
 ---
 

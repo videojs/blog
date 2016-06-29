@@ -2,6 +2,9 @@
 title: Video.js Version 3.0!
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2012-01-10 00:00:00
 ---
 

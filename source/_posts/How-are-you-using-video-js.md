@@ -1,6 +1,9 @@
 ---
 title: How are you using video.js?
 tags: []
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2011-06-07 00:00:00
 ---
 

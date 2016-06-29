@@ -2,6 +2,9 @@
 title: Version 3.2 Update
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2012-03-23 00:00:00
 ---
 

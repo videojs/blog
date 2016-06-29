@@ -2,6 +2,9 @@
 title: Version 1.1.4 Release - CSS Loading Spinner & More
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2010-11-06 00:00:00
 ---
 

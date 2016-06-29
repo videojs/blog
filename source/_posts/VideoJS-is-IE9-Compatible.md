@@ -1,6 +1,9 @@
 ---
 title: VideoJS is IE9 Compatible
 tags: []
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2010-09-15 00:00:00
 ---
 
