@@ -3,7 +3,10 @@ title: Video.js 5's fluid mode and playlist picker
 tags:
   - videojs 5
   - fluid
-author: Gary Katsevman
+author:
+  name: Gary Katsevman
+  github: gkatsev
+  email: videojs@gkatsev.com
 date: 2016-06-01 14:50:06
 ---
 
