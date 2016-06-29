@@ -7,11 +7,24 @@
   padding: 15px
 
 .article-meta
+.article-author
+.article-date
   clearfix()
 
+.article-author
 .article-date
   @extend $block-caption
+  line-height: 3em
+
+.article-date
+  float: right
+  margin-right: 5px
+  margin-left: 0
+
+.article-author
   float: left
+  .author_gravatar
+    vertical-align: middle
 
 .article-category
   float: left
