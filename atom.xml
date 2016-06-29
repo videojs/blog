@@ -847,7 +847,7 @@ var hi;
     <link href="https://videojs.github.io/blog/Running-Video-js-unit-tests-in-real-browsers-with-Karma/"/>
     <id>https://videojs.github.io/blog/Running-Video-js-unit-tests-in-real-browsers-with-Karma/</id>
     <published>2013-09-19T03:21:00.000Z</published>
-    <updated>2016-06-29T20:59:15.000Z</updated>
+    <updated>2016-06-29T21:03:37.000Z</updated>
     
     <content type="html">&lt;p&gt;If you’ve ever cloned the video.js repository, either to contribute or to build your own version, you’ve no doubt run the video.js unit tests. Until just recently, though, we only had support for running unit tests with grunt, using the PhantomJS browser. Well, that’s changed, with the first phase of our integration with Karma. Now, you’ll be able to run your tests in real browsers.&lt;/p&gt;
 &lt;p&gt;Setting things up is a snap. After you pull down the latest from video.js and run &lt;code&gt;npm install&lt;/code&gt;, simply copy the test/karma.conf.js.example file to test/karma.conf.js, add the browsers you wish to test to the browsers array, and run &lt;code&gt;grunt karma:dev&lt;/code&gt;. That’s it. Of course, there are more options that you can configure, but if you want to get the ball rolling quickly, just add browsers, and run the tests. See the test/karma.conf.js.example file for more  instructions.&lt;/p&gt;
@@ -1269,6 +1269,695 @@ video.on(&#39;tap&#39;, function(){
     
     
       <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Repo Moved!</title>
+    <link href="https://videojs.github.io/blog/Repo-Moved/"/>
+    <id>https://videojs.github.io/blog/Repo-Moved/</id>
+    <published>2013-05-06T20:56:59.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;In preparation for the next version we&amp;rsquo;ve moved the source code repository from github.com/zencoder/video-js to &lt;a href=&quot;http://github.com/videojs/video.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github.com/videojs/video.js&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you have a local clone you can update your clone&amp;rsquo;s upstream URL with:&lt;/p&gt;
+&lt;pre&gt;git remote set-url upstream git://github.com/videojs/video.js.git&lt;/pre&gt;
+
+&lt;p&gt;The relationship between your fork (e.g. github.com/you/video-js) should still be intact, including any pull requests.&lt;/p&gt;
+&lt;p&gt;Cheers,&lt;br&gt;-heff&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In preparation for the next version we&amp;rsquo;ve moved the source code repository from github.com/zencoder/video-js to &lt;a href=&quot;http://git
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Site and Support Updates</title>
+    <link href="https://videojs.github.io/blog/Site-and-Support-Updates/"/>
+    <id>https://videojs.github.io/blog/Site-and-Support-Updates/</id>
+    <published>2012-11-15T19:54:18.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;After a brief hiatus of helping &lt;a href=&quot;http://blog.videojs.com/post/35666994917/brightcove-acquires-zencoder&quot; title=&quot;Zencoder acquired by Brightcove&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Brightcove and Zencoder come together&lt;/a&gt;, I&amp;rsquo;m moving full time to developing and supporting Video.js. Thank you to everyone who has continued to commit code and help out in the forums. &lt;/p&gt;
+&lt;p&gt;As part of this move I&amp;rsquo;m trying to optimize the tools used for video.js project management and support. The first big change is that the forums are being replaced with &lt;a href=&quot;http://stackoverflow.com/questions/tagged/video.js&quot; title=&quot;Video.js Support on Stack Overflow&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Stack Overflow&lt;/a&gt; (tag with &amp;ldquo;video.js&amp;rdquo;) and &lt;a href=&quot;https://github.com/zencoder/video-js/issues&quot; title=&quot;Video.js Submit Issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github Issues&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Over the last few years Video.js has become more popular than I ever expected, and at the same time Stack Overflow has come up as an incredible tool for supporting developer communities. So along with many other projects like &lt;a href=&quot;http://blog.stackoverflow.com/2011/08/facebook-stackoverflow/&quot; title=&quot;Facebook on Stack Overflow&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Facebook&lt;/a&gt;, &lt;a href=&quot;http://android-developers.blogspot.com/2009/12/hello-stack-overflow.html&quot; title=&quot;Android on Stack Overflow&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Android&lt;/a&gt;, and &lt;a href=&quot;http://html5boilerplate.com&quot; title=&quot;HTML5 Boilerplate&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTML5 Boilerplate&lt;/a&gt;, I&amp;rsquo;m excited to move support to Stack Overflow&amp;rsquo;s awesome tool and community. I&amp;rsquo;ll be leaving the forums up for bit but from here forward please post questions to Stack Overflow and use the &amp;ldquo;video.js&amp;rdquo; tag.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve also begun cleaning up and organizing the &lt;a href=&quot;https://github.com/zencoder/video-js/issues&quot; title=&quot;Video.js Submit Issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github Issues&lt;/a&gt; for Video.js, which previously existed, but issues were split between the forum and Github. If you find specific bugs with video.js please &lt;a href=&quot;https://github.com/zencoder/video-js/issues/new&quot; title=&quot;Submit Issue&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;submit them there&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;On the project management side of things I&amp;rsquo;ll be using &lt;a href=&quot;https://trello.com&quot; title=&quot;Trello&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Trello&lt;/a&gt;, and exposing boards so others can see the progress of development.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m also paring down the site and moving more complex sections to other services that can better handle them. I&amp;rsquo;ve already moved the blog to &lt;a href=&quot;http://tumblr.com&quot; title=&quot;Tumblr&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Tumblr&lt;/a&gt;, and I&amp;rsquo;m moving the docs to the &lt;a href=&quot;https://github.com/zencoder/video-js/tree/master/docs/index.md&quot; title=&quot;Video.js docs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Github repo&lt;/a&gt;, which has built-in docs formatting.&lt;/p&gt;
+&lt;p&gt;For those starting an open source project today, you can look at this as my guide to supporting an open source project. I wish I would have know to do all this when I started on Video.js.&lt;/p&gt;
+&lt;p&gt;More project updates coming soon.&lt;/p&gt;
+&lt;p&gt;Cheers,&lt;br&gt;-heff &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;After a brief hiatus of helping &lt;a href=&quot;http://blog.videojs.com/post/35666994917/brightcove-acquires-zencoder&quot; title=&quot;Zencoder acquired 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Brightcove Acquires Zencoder</title>
+    <link href="https://videojs.github.io/blog/Brightcove-Acquires-Zencoder/"/>
+    <id>https://videojs.github.io/blog/Brightcove-Acquires-Zencoder/</id>
+    <published>2012-07-26T04:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://66.media.tumblr.com/tumblr_mdgad5rr0S1qzc111.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Today, Zencoder announced that it is being acquired by &lt;a href=&quot;http://brightcove.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Brightcove&lt;/a&gt;, the leading online video platform (OVP). You can read more on the specifics in the &lt;a href=&quot;http://blog.zencoder.com/2012/07/26/brightcove-acquires-zencoder/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Zencoder blog post&lt;/a&gt; and &lt;a href=&quot;http://www.brightcove.com/en/company/press/brightcove-signs-definitive-agreement-acquire-zencoder&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;press release&lt;/a&gt;, but I also wanted to be clear on what this means for Video.js. As you may know, Video.js was created by me (Steve Heffernan, Co-founder of Zencoder) and Zencoder continues to be its core contributor and sponsor (like 37signals to Rails or Joyent to Node.js).&lt;/p&gt;
+&lt;p&gt;This acquisition means only great things for Video.js. To quickly summarize, Video.js will continue to be a free and open source video player &amp;amp; framework, and Brightcove will be investing more in Video.js than Zencoder ever could.&lt;/p&gt;
+&lt;p&gt;I wrote the first version of Video.js in early 2010 during Zencoder’s time in Y Combinator (while secluded in our rented house deep in the Santa Cruz mountains). Over the past few years I’ve continued to build the library and pull in contributions from other Zencoder team members and the community, but only on the side of my ongoing Founder and VP of Marketing duties at Zencoder. While Video.js has continued to gain popularity among developers and is now being &lt;a href=&quot;http://trends.builtwith.com/media/VideoJS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;used on over 25,000 websites&lt;/a&gt;, there’s still work to be done and room to grow. So one of the more significant changes that will be happening is that Brightcove will be putting me on Video.js full time, freeing me up to work on the core of the project and to better support the Video.js community, both users and contributors.&lt;/p&gt;
+&lt;p&gt;Beyond this, Brightcove has a first-class player development team backing their platform’s video player. While the specifics of how the two teams and players will work together are still being discussed, we have agreement on our philosophies and views about where player technology is going. This combined knowledge and collaboration is sure to have a positive impact for both players.&lt;/p&gt;
+&lt;p&gt;While the additional resources will have a big impact, the best open source software projects only got to where they are through the contributions of developers in the community. So if you’ve previously been cautious to dig into the source or push back a specific feature or bug fix, I hope this news only helps encourage you to jump in and help make Video.js the best resource for working with video in the browser.&lt;/p&gt;
+&lt;p&gt;There will be more info to come as things progress, but please feel free to ask any questions in the comments below.&lt;/p&gt;
+&lt;p&gt;Cheers,&lt;/p&gt;
+&lt;p&gt;Steve &amp;amp; The Zencoder Team&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://66.media.tumblr.com/tumblr_mdgad5rr0S1qzc111.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Today, Zencoder announced that it is being acquired by 
+    
+    </summary>
+    
+    
+      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Version 3.2 Update</title>
+    <link href="https://videojs.github.io/blog/Version-3-2-Update/"/>
+    <id>https://videojs.github.io/blog/Version-3-2-Update/</id>
+    <published>2012-03-23T04:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;First of all, check out the new &lt;a href=&quot;/blog/Version-3-2-Update//tag-builder/&quot;&gt;video tag builder&lt;/a&gt;. The previous version of this site had an embed code builder, and people were &lt;a href=&quot;http://help.videojs.com/discussions/problems/873-whered-the-embed-builder-go&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;pretty disappointed&lt;/a&gt; that the new site didn&amp;rsquo;t. So I&amp;rsquo;m happy to announce that it&amp;rsquo;s available again, now as an HTML5 video tag builder that could probably be used outside of Video.js, it includes track tags, and even lets you test the settings. Let me know if you have any feedback on it.&lt;/p&gt;
+&lt;p&gt;The most notable change in this release is probably the completely overhauled &amp;lt;track&amp;gt; tag support.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/4092295.js?file=html5-track-tag.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://gist.github.com/4092295.js?file=html5-track-tag.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The new version supports subtitles, captions, and even chapters. When you include tracks of different kinds, Video.js will automatically create menus in the player where users can select the language to display, or which chapter to jump to. Video.js also now supports the new &lt;a href=&quot;http://dev.w3.org/html5/webvtt/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WebVTT&lt;/a&gt; text format, which is not far off from the previously supported WebSRT format but did take some tweaking in the parser. Not all WebVTT placement features are supported yet, but the basics of displaying text are, and we&amp;rsquo;ll be working to get more WebVTT features built in.&lt;/p&gt;
+&lt;p&gt;Additionally there was work done to make some API methods accessible earlier. For any method that isn&amp;rsquo;t a getter (returns a specific value from the player), if you call the method before the playback technology (HTML5/Flash) is ready, it will now cache the call until it is ready. So where previously you might have had to wait for the ready callback:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/4092295.js?file=wait-for-ready.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://gist.github.com/4092295.js?file=wait-for-ready.js&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You could now do:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/4092295.js?file=no-wait-for-ready.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://gist.github.com/4092295.js?file=no-wait-for-ready.js&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Again, that&amp;rsquo;s just for methods where you are setting a value or triggering an action. If you try to get a value back like &lt;code&gt;myPlayer.duration()&lt;/code&gt;, you&amp;rsquo;ll get nothing until the player is ready.&lt;/p&gt;
+&lt;p&gt;One other feature that was requested in the forums was automatically translating relative video URLs to absolute URLs for the flash fallback. This was an issue with the CDN hosted version which involved loading a remote SWF file which didn&amp;rsquo;t have the same context as the player. Before we would just tell people to use full URLs (http://) but that shouldn&amp;rsquo;t be an issue anymore.&lt;/p&gt;
+&lt;p&gt;Thanks to everyone that&amp;rsquo;s helped contribute code lately, and apologies for any long response times in the forums as I continue to try to push out code.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s the full change log for the release.&lt;/p&gt;
+&lt;h3 id=&quot;3-2-0-2012-03-20-baxter&quot;&gt;&lt;a href=&quot;/blog/Version-3-2-Update/#3-2-0-2012-03-20-baxter&quot; class=&quot;headerlink&quot; title=&quot;3.2.0 / 2012-03-20 / baxter&quot;&gt;&lt;/a&gt;3.2.0 / 2012-03-20 / baxter&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Updated docs with more options.&lt;/li&gt;
+&lt;li&gt;Overhauled HTML5 Track support.&lt;/li&gt;
+&lt;li&gt;Fixed Flash always autoplaying when setting source.&lt;/li&gt;
+&lt;li&gt;Fixed localStorage context&lt;/li&gt;
+&lt;li&gt;Updated &amp;lsquo;fullscreenchange&amp;rsquo; event to be called even if the user presses escape to exit fullscreen.&lt;/li&gt;
+&lt;li&gt;Automatically converting source URL to absolute for Flash fallback.&lt;/li&gt;
+&lt;li&gt;Created new ‘loadedalldata&amp;rsquo; event for when the source is completely downloaded&lt;/li&gt;
+&lt;li&gt;Improved player.destroy(). Now removes elements and references.&lt;/li&gt;
+&lt;li&gt;Refactored API to be more immediately available.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cheers,&lt;br&gt; -Heff&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;First of all, check out the new &lt;a href=&quot;/blog/Version-3-2-Update//tag-builder/&quot;&gt;video tag builder&lt;/a&gt;. The previous version of this site
+    
+    </summary>
+    
+    
+      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Version 3.1 Update</title>
+    <link href="https://videojs.github.io/blog/Version-3-1-Update/"/>
+    <id>https://videojs.github.io/blog/Version-3-1-Update/</id>
+    <published>2012-01-30T05:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;This is the first release since the initial 3.0 launch, aside from some hotfixes that went out immediately. It includes a number of fixes for things that users in the &lt;a href=&quot;http://help.videojs.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;forums&lt;/a&gt; found right off the bat.&lt;/p&gt;
+&lt;p&gt;One feature that&amp;rsquo;s optional for testing in this release is iFrame Mode for Flash. One the of the unique things about Video.js is we haven&amp;rsquo;t built any controls into our Flash player, and instead use HTML and CSS to create the controls for the Flash side as well. This keeps the experience consistent and the Flash player very lightweight, however there&amp;rsquo;s a number of issues that you run into with Flash when you take an approach like this. If you&amp;rsquo;ve ever tried to resize the parent of a Flash object, or hide a Flash object and then show it again, you&amp;rsquo;ve probably run into the issue of Flash reloading in Firefox. This is a bug that&amp;rsquo;s been in Firefox for &lt;a href=&quot;https://bugzilla.mozilla.org/show_bug.cgi?id=90268&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;quite a long time&lt;/a&gt; however it looks like it might be fixed by version 13 (currently 9). To add on top of this, with the new &lt;a href=&quot;https://wiki.mozilla.org/Gecko:FullScreenAPI&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;browser fullscreen API&lt;/a&gt;, the other browsers now also reload Flash when you go to native fullscreen.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve found a bit of a fix where if you embed the Flash object in an iframe first, it can get around the reloading in some of these cases. So in the new version there&amp;rsquo;s an option to turn this on and try it.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/4092929.js?file=iframe-mode.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://gist.github.com/4092929.js?file=iframe-mode.js&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll be doing some more testing to make sure it&amp;rsquo;s stable before we push it out to everyone.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s the full change log for the release.&lt;/p&gt;
+&lt;h4 id=&quot;3-1-0-2012-01-30-leonardo&quot;&gt;&lt;a href=&quot;/blog/Version-3-1-Update/#3-1-0-2012-01-30-leonardo&quot; class=&quot;headerlink&quot; title=&quot;3.1.0 / 2012-01-30 / leonardo&quot;&gt;&lt;/a&gt;3.1.0 / 2012-01-30 / leonardo&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Added CSS fix for Firefox 9 fullscreen (in the rare case that it&amp;rsquo;s enabled)&lt;/li&gt;
+&lt;li&gt;Replaced swfobject with custom embed to save file size.&lt;/li&gt;
+&lt;li&gt;Added flash iframe-mode, an experimental method for getting around flash reloading issues.&lt;/li&gt;
+&lt;li&gt;Fixed issue with volume knob position. Improved controls fading.&lt;/li&gt;
+&lt;li&gt;Fixed ian issue with triggering fullscreen a second time.&lt;/li&gt;
+&lt;li&gt;Fixed issue with getting attributes in Firefox 3.0&lt;/li&gt;
+&lt;li&gt;Escaping special characters in source URL for Flash&lt;/li&gt;
+&lt;li&gt;Added a check for if Firefox is enabled which fixes a Firefox 9 issue&lt;/li&gt;
+&lt;li&gt;Stopped spinner from showing on &amp;lsquo;stalled&amp;rsquo; events since browsers sometimes don&amp;rsquo;t show that they&amp;rsquo;ve recovered.&lt;/li&gt;
+&lt;li&gt;Fixed CDN Version which was breaking dev.html&lt;/li&gt;
+&lt;li&gt;Made full-window mode more independent&lt;/li&gt;
+&lt;li&gt;Added rakefile for release generation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cheers,&lt;br&gt; -Heff&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This is the first release since the initial 3.0 launch, aside from some hotfixes that went out immediately. It includes a number of fixes
+    
+    </summary>
+    
+    
+      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Video.js Version 3.0!</title>
+    <link href="https://videojs.github.io/blog/Video-js-Version-3-0/"/>
+    <id>https://videojs.github.io/blog/Video-js-Version-3-0/</id>
+    <published>2012-01-10T05:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;After months and months of work we&amp;rsquo;re happy to announce Video.js version 3.0. Some of the exiting new features include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Same HTML/CSS Skin for both HTML5 and Flash video&lt;/li&gt;
+&lt;li&gt;Super lightweight Flash fallback player for browsers that don&amp;rsquo;t support HTML5 video&lt;/li&gt;
+&lt;li&gt;Free CDN hosting by Level3 A lot more releases and developments are on their way!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cheers,&lt;br&gt;-Heff&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;After months and months of work we&amp;rsquo;re happy to announce Video.js version 3.0. Some of the exiting new features include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;l
+    
+    </summary>
+    
+    
+      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lynda.com HTML5 Video Tutorial Released</title>
+    <link href="https://videojs.github.io/blog/Lynda-com-HTML5-Video-Tutorial-Released/"/>
+    <id>https://videojs.github.io/blog/Lynda-com-HTML5-Video-Tutorial-Released/</id>
+    <published>2011-06-17T04:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;a href=&quot;http://goo.gl/y0SZb&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img src=&quot;http://videojs.com/img/blog/2011/06/lynda_com.jpg&quot; alt=&quot;Lynda HTML5 Video Tutorial&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I recently filmed a series of &lt;a href=&quot;http://goo.gl/y0SZb&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTML5 video tutorials&lt;/a&gt; for Lynda.com, a really great service for online training. It was a great experience, and the videos are now available for viewing. You can get a &lt;a href=&quot;http://www.lynda.com/promo/trial/Default.aspx?lpk35=1833&amp;amp;utm_medium=affiliate&amp;amp;utm_source=ldc_affiliate&amp;amp;utm_content=655&amp;amp;utm_campaign=CD3175&amp;amp;bid=655&amp;amp;aid=CD3175&amp;amp;opt=&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;7-day free trial here&lt;/a&gt; and check them out. Let me know if they&amp;rsquo;re helpful at all.&lt;/p&gt;
+&lt;p&gt;-Heff&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://goo.gl/y0SZb&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img src=&quot;http://videojs.com/img/blog/2011/06/lynda_com.jpg&quot; alt=&quot;Lynda HTML
+    
+    </summary>
+    
+    
+      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+    
+      <category term="code" scheme="https://videojs.github.io/blog/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How are you using video.js?</title>
+    <link href="https://videojs.github.io/blog/How-are-you-using-video-js/"/>
+    <id>https://videojs.github.io/blog/How-are-you-using-video-js/</id>
+    <published>2011-06-07T04:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;I&amp;rsquo;d love to hear where and how people are using video.js. If you&amp;rsquo;re using it somewhere, leave a note/link in the comments.&lt;/p&gt;
+&lt;p&gt;Cheers,&lt;br&gt;-Heff&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;I&amp;rsquo;d love to hear where and how people are using video.js. If you&amp;rsquo;re using it somewhere, leave a note/link in the comments.&lt;/p
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>New MPEG LA WebM/VP8 Patent Pool</title>
+    <link href="https://videojs.github.io/blog/New-MPEG-LA-WebM-VP8-Patent-Pool/"/>
+    <id>https://videojs.github.io/blog/New-MPEG-LA-WebM-VP8-Patent-Pool/</id>
+    <published>2011-02-11T05:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;One of the things that browser and device vendors stand behind when deciding to support MP4/h.264 over Google&amp;rsquo;s Webm video format and VP8 codec, is that while VP8 is open source, it may still be encumbered by patents. So far none of these &lt;a href=&quot;http://en.wikipedia.org/wiki/Submarine_patent&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;submarine patents&lt;/a&gt; have surfaced, but now MPEG LA has &lt;a href=&quot;http://www.mpegla.com/main/pid/vp8/default.aspx&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;put out a call&lt;/a&gt;, and hopes to form a patent pool that would create a license for VP8, and essentially put a price on it. In &lt;a href=&quot;http://www.webmproject.org/license/additional/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google&amp;rsquo;s own license&lt;/a&gt;, it says:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;If you or your agent or exclusive licensee institute or order or agree to the institution of patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that this implementation of VP8 or any code incorporated within this implementation of VP8 constitutes direct or contributory patent infringement, or inducement of patent infringement, then any patent rights granted to you under this License for this implementation of VP8 shall terminate as of the date such litigation is filed.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So if you claim VP8 infringes on a patent and sue, your license to use VP8 is terminated. Not sure exactly how that would affect a patent pool, but an interesting battle could be ahead.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;One of the things that browser and device vendors stand behind when deciding to support MP4/h.264 over Google&amp;rsquo;s Webm video format a
+    
+    </summary>
+    
+    
+      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Apple adds AirPlay to Mobile Safari</title>
+    <link href="https://videojs.github.io/blog/Apple-adds-AirPlay-to-Mobile-Safari/"/>
+    <id>https://videojs.github.io/blog/Apple-adds-AirPlay-to-Mobile-Safari/</id>
+    <published>2011-01-28T05:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;AirPlay is a video feature on iOS devices that lets you play video from your device on your TV, by streaming it to an Apple TV on the same wireless network. Before now this was only available in the iPod and YouTube apps, but with iOS 4.3 (now in beta) it will be available through Mobile Safari as well.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://macosrumors.com/wp-content/uploads/2011/01/IMG_0169.png&quot; alt=&quot;AirPlay Feature in Mobile Safari&quot;&gt;&lt;/p&gt;
+&lt;p&gt;In order to allow AirPlay as an option, video publishers have to add an attribute to the HTML5 video tag. &amp;lt;video width=&amp;ldquo;480&amp;rdquo; height=&amp;ldquo;300&amp;rdquo; controls x-webkit-airplay=&amp;ldquo;allow&amp;rdquo;&amp;gt; &amp;hellip; We&amp;rsquo;ll be adding this as a default attribute in the next VideoJS version.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://macosrumors.com/2011/01/12/first-look-mobile-safari-airplay/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Read the whole story on MacRumors&lt;/a&gt;.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;AirPlay is a video feature on iOS devices that lets you play video from your device on your TV, by streaming it to an Apple TV on the sam
+    
+    </summary>
+    
+    
+      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+    
+      <category term="code" scheme="https://videojs.github.io/blog/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Google is dropping h.264 from Chrome</title>
+    <link href="https://videojs.github.io/blog/Google-is-dropping-h-264-from-Chrome/"/>
+    <id>https://videojs.github.io/blog/Google-is-dropping-h-264-from-Chrome/</id>
+    <published>2011-01-11T05:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;UPDATE: Added a chart that shows what format support will look like without Chrome supporting h.264.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://videojs.com/img/blog/2011/01/google-chrome-drops-h264.png&quot; alt=&quot;Google Chrome Drops h.264 Support&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Google has decided to support the open source community by dropping h.264 support from Chrome. Previously Chrome was the only browser that could play all 3 major HTML5 formats—MP4/h.264, WebM/VP8, and Ogg/Theora. This is probably a strategic move at the same time, since h.264 seems unlikely to be beaten at this point, especially with IE9 supporting h.264 while requiring an extra plugin to use VP8. In my opinion, there&amp;rsquo;s two major events that could end the format war.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Apple adopts WebM/VP8 (which would require adequate hardware to include in iOS devices)&lt;/li&gt;
+&lt;li&gt;MPEG LA removes all royalties from h.264&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&quot;http://blog.chromium.org/2011/01/html-video-codec-support-in-chrome.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Read the original post&lt;/a&gt;.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;UPDATE: Added a chart that shows what format support will look like without Chrome supporting h.264.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://videojs.com/
+    
+    </summary>
+    
+    
+      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+    
+      <category term="stats" scheme="https://videojs.github.io/blog/tags/stats/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Over 50% of web users now support HTML5 Video</title>
+    <link href="https://videojs.github.io/blog/Over-50-of-web-users-now-support-HTML5-Video/"/>
+    <id>https://videojs.github.io/blog/Over-50-of-web-users-now-support-HTML5-Video/</id>
+    <published>2011-01-07T05:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;As we roll into 2011, HTML5 video hits a major milestone. 50.5% of web users now support HTML5 video playback. This number was gathered by comparing browser versions that support HTML5 video with StatCounter&amp;rsquo;s &lt;a href=&quot;http://gs.statcounter.com/#browser_version-ww-daily-20101201-20101231&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;world-wide browser version statistics&lt;/a&gt;. &lt;img src=&quot;http://videojs.com/img/blog/2011/01/html5-video-user-support.png&quot; alt=&quot;HTML5 Video Statistics&quot;&gt;This is a 66% growth in HTML5 video user support since December of 2009. With the expected release of Internet Explorer 9 in the near future, 2011 could see a major increase in websites adopting HTML5 video as their primary playback method. Of browsers that support HTML5 video, Mozilla&amp;rsquo;s Firefox is the clear leader, with Google&amp;rsquo;s Chrome in second place. Much of the growth in HTML5 video support can be attributed to Chrome&amp;rsquo;s success in stealing market share from Internet Explore over the last year.&lt;/p&gt;
+&lt;h2 id=&quot;Video-Formats&quot;&gt;&lt;a href=&quot;/blog/Over-50-of-web-users-now-support-HTML5-Video/#Video-Formats&quot; class=&quot;headerlink&quot; title=&quot;Video Formats&quot;&gt;&lt;/a&gt;Video Formats&lt;/h2&gt;&lt;p&gt;The format war continues to be a deterrent of HTML5 video adoption, and there&amp;rsquo;s no clear end in sight. While Apple has helped accelerate HTML5 video by requiring it for video playback on the iPhone, it&amp;rsquo;s also the one vendor that will not support Google&amp;rsquo;s WebM/VP8 format, which has the highest potential for becoming the standard format for HTML5 video. Among other reasons, Apple has invested a lot of money in the mp4/h.264 format, including hardware built into iPads and iPhones to decode/encode it. Meaning even if Apple decided to support WebM, it would take more than a simple software update to get WebM to the many iPhone and iPad users. Microsoft has said they will support WebM/VP8 in Internet Explorer 9, however only &amp;ldquo;when the user has installed a VP8 codec&amp;rdquo;. Which basically means they won&amp;rsquo;t support it. Microsoft&amp;rsquo;s preference for MP4/h.264 was made more obvious with their &lt;a href=&quot;http://news.cnet.com/8301-30685_3-20025721-264.html?part=rss&amp;amp;subj=news&amp;amp;tag=2547-1_3-0-20&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;release of a plugin&lt;/a&gt; that allows h.264 to be played back in Firefox on Windows. The following graphs show the support and growth of the different video formats. &lt;img src=&quot;http://videojs.com/img/blog/2011/01/html5-format-statistics.png&quot; alt=&quot;HTML5 Video Format Statistics&quot;&gt; WebM had a sharp rise in August as Google released Chrome 6 and pushed out updates to its users. In the following charts you can see different views of how formats are divided among HTML5 video users. The first chart shows user support by combinations of formats. The second compares support of open vs. closed formats. &lt;img src=&quot;http://videojs.com/img/blog/2011/01/html5-video-format-group-stats.png&quot; alt=&quot;HTML5 Video Format Group Statistics&quot;&gt; From an HTML5 video perspective, open formats win out significantly over closed formats, with Apple and IE9 hanging on to the last 10%. This may change over the next year with the official release of IE9, unless Microsoft decides to support WebM/VP8 without the need for an additional installation. Finally, if you are interested in the Flash vs. HTML5 debate, Flash is well entrenched and HTML5 video still has a long way to catch up. According to Adobe, Flash is supported by over 99% of web users. Statistics from other sites seem to support this, though according to Omniture (now Adobe), the internet average is 116.8% (sic). &lt;img src=&quot;http://videojs.com/img/blog/2011/01/omniture-stat.png&quot; alt=&quot;Omniture Flash Support Statistic&quot;&gt; As of Flash 9 update 3 (9.0.115), Flash has supported the MP4/h.264 format for video playback. In the following chart, you can see how considering Flash affects the comparison of video format support. &lt;img src=&quot;http://videojs.com/img/blog/2011/01/flash-vs-html5-statistics.png&quot; alt=&quot;Flash vs. HTML5 Video Statistics&quot;&gt; However, Adobe has &lt;a href=&quot;http://blogs.adobe.com/flashplatform/2010/05/adobe_support_for_vp8.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;said they will support WebM/VP8&lt;/a&gt; in a later release of Flash. The rate that users upgrade to the latest version of Flash is relatively fast, so this could have a big impact on WebM support when it happens. Overall, Flash will be difficult for HTML5 to dethrone. Beyond user support and format discrepancies there is a long list of features that Flash players have supported for years, which will take time for all browsers to build in. However, many of those features can be built with JavaScript, which allows them to be used across browsers immediately. It&amp;rsquo;s up to the open source community to build the features people need to accept HTML5 as their primary means of video playback. VideoJS is an open source HTML5 video player and framework that makes it easy to support HTML5 video as well as Flash for older browsers. It provides a consistent interface across browsers and solves many browser/mobile device bugs. There are still quite a few rough edges with HTML5 video, but the many contributors to VideoJS are smoothing those over and expanding VideoJS to meet the needs of web users.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;As we roll into 2011, HTML5 video hits a major milestone. 50.5% of web users now support HTML5 video playback. This number was gathered b
+    
+    </summary>
+    
+    
+      <category term="stats" scheme="https://videojs.github.io/blog/tags/stats/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML5 Video + Google Maps Mashup</title>
+    <link href="https://videojs.github.io/blog/HTML5-Video-Google-Maps-Mashup/"/>
+    <id>https://videojs.github.io/blog/HTML5-Video-Google-Maps-Mashup/</id>
+    <published>2010-12-16T05:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Mozilla has a cool demo of playing a video while drawing a line on a Google map similar to what you&amp;rsquo;d see in an Indiana Jones film. Check out the &lt;a href=&quot;http://hacks.mozilla.org/2010/12/spirit-of-indiana-jones-syncing-html5-video-with-maps/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;original post&lt;/a&gt; and the &lt;a href=&quot;http://isithackday.com/spirit-of-indiana/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;demo&lt;/a&gt;.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Mozilla has a cool demo of playing a video while drawing a line on a Google map similar to what you&amp;rsquo;d see in an Indiana Jones film.
+    
+    </summary>
+    
+    
+      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2.0.2 Release - Subtitle Optimization + Safari on Leopard FS Fix</title>
+    <link href="https://videojs.github.io/blog/2-0-2-Release-Subtitle-Optimization-Safari-on-Leopard-FS-Fix/"/>
+    <id>https://videojs.github.io/blog/2-0-2-Release-Subtitle-Optimization-Safari-on-Leopard-FS-Fix/</id>
+    <published>2010-12-10T05:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Smallish update with some fixes and optimizations. Rewrote the subtitles parser so it&amp;rsquo;s a lot more optimized and fixes a subtitle display bug. Put in a check for Safari running on Mac OSX 10.5 (Leopard), which doesn&amp;rsquo;t like native fullscreen for some reason. Triggering full window mode instead.&lt;/p&gt;
+&lt;p&gt;Full List&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature: Rewrote and optimized subtitle code.&lt;/li&gt;
+&lt;li&gt;Feature: Protecting against volume ranges outside of 1 and 0.&lt;/li&gt;
+&lt;li&gt;Fix: Bug in Safari for Mac OS 10.5 (Leopard) that was breaking fullscreen.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://videojs.com/#download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Download version 2.0.2&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Smallish update with some fixes and optimizations. Rewrote the subtitles parser so it&amp;rsquo;s a lot more optimized and fixes a subtitle d
+    
+    </summary>
+    
+    
+      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2.0.0 Release - Behaviors, fallback APIs, and more.</title>
+    <link href="https://videojs.github.io/blog/2-0-0-Release-Behaviors-fallback-APIs-and-more/"/>
+    <id>https://videojs.github.io/blog/2-0-0-Release-Behaviors-fallback-APIs-and-more/</id>
+    <published>2010-11-22T05:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Big update. The biggest change for current users is a move back to using DIVs for control bar elements instead of unordered lists. There were a lot of conflicting styles issues when using lists, which shouldn&amp;rsquo;t be an issue with divs. So if you upgrade, don&amp;rsquo;t forget to upgrade your stylesheets as well.&lt;/p&gt;
+&lt;p&gt;Beyond that, a lot of code was reorganized and modularized to create a platform for further expansion, like custom plugins and controls. The concept of &amp;ldquo;behaviors&amp;rdquo; was added, so you can activate any element on the page to act like a video controls. For instance, the following code snippet will make the specified element act like a play button, and play the video when clicked.&lt;/p&gt;
+&lt;pre&gt;myplayer.activateElement(myElement, &quot;playButton&quot;);
+&lt;/pre&gt;
+
+&lt;p&gt;The next code snippet will make the element act like a play progress bar, meaning it will grow horizontally as the video plays.&lt;/p&gt;
+&lt;pre&gt;myplayer.activateElement(myElement, &quot;playProgressBar&quot;);
+&lt;/pre&gt;
+
+&lt;p&gt;More documentation on this is coming.&lt;/p&gt;
+&lt;p&gt;The code is now prepped for APIs to the fallback flash players. So if you call myPlayer.play(), it will trigger a play in both the HTML5 and the Flash version, whichever is currently being used. A flowplayer API is just about done, and other popular Flash players will follow.&lt;/p&gt;
+&lt;p&gt;Finally, you can change the fallback order by modifying the playerFallbackOrder option, which is an array of player platforms. So if you want Flash to be dominant, you would pass the following option.&lt;/p&gt;
+&lt;pre&gt;VideoJS.setupAllWhenReady({
+  playerFallbackOrder: [&quot;flash&quot;, &quot;html5&quot;, &quot;links&quot;]
+});
+&lt;/pre&gt;
+
+&lt;p&gt;This also leaves room for other platforms to be added, like Quicktime.&lt;/p&gt;
+&lt;p&gt;So coming up is Flash player APIs, and another cool feature I don&amp;rsquo;t want to mention just yet.&lt;/p&gt;
+&lt;p&gt;Full list:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature: Created &amp;ldquo;behaviors&amp;rdquo; concept for adding behaviors to elements - Feature: Switched back to divs for controls, for more portable styles&lt;/li&gt;
+&lt;li&gt;Feature: Created playerFallbackOrder array option. [&amp;ldquo;html5&amp;rdquo;, &amp;ldquo;flash&amp;rdquo;, &amp;ldquo;links&amp;rdquo;]&lt;/li&gt;
+&lt;li&gt;Feature: Created playerType concept, for initializing different platforms&lt;/li&gt;
+&lt;li&gt;Feature: Added play button for Android&lt;/li&gt;
+&lt;li&gt;Feature: Added spinner for iPad (non-fullscreen)&lt;/li&gt;
+&lt;li&gt;Feature: Split into multiple files for easier development&lt;/li&gt;
+&lt;li&gt;Feature: Combined VideoJS &amp;amp; &lt;em&gt;V&lt;/em&gt; into the same variable to reduce confusion&lt;/li&gt;
+&lt;li&gt;Fix: Checking for m3u8 files (Apple HTTP Streaming)&lt;/li&gt;
+&lt;li&gt;Fix: Catching error on localStorage full that safari seems to randomly throw&lt;/li&gt;
+&lt;li&gt;Fix: Scrubbing to end doesn&amp;rsquo;t trigger onEnded&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://videojs.com/#download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Download version 2.0.0&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Big update. The biggest change for current users is a move back to using DIVs for control bar elements instead of unordered lists. There 
+    
+    </summary>
+    
+    
+      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Make sites serve you HTML5 video in Safari</title>
+    <link href="https://videojs.github.io/blog/Make-sites-serve-you-HTML5-video-in-Safari/"/>
+    <id>https://videojs.github.io/blog/Make-sites-serve-you-HTML5-video-in-Safari/</id>
+    <published>2010-11-19T05:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;John Gruber of Daring Fireball has a cool post on &lt;a href=&quot;http://daringfireball.net/2010/11/masquerading_as_mobile_safari&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tricking websites to display HTML5 video&lt;/a&gt; when they say they can only play Flash. Many sites will tell you they require Flash, even when they actually support &lt;a href=&quot;http://videojs.com/html5-video/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTML5 video&lt;/a&gt; for iOS devices.&lt;/p&gt;
+&lt;p&gt;To add to Gruber&amp;rsquo;s post, there&amp;rsquo;s two reasons a site might do this:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;They&amp;rsquo;re trying to protect their content from being easily downloaded, which HTML5 video can&amp;rsquo;t do very well yet.&lt;/li&gt;
+&lt;li&gt;They assume everyone with a browser has Flash, and just serve HTML5 video to iOS devices.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So for this first, this is actually a hack to download content some publishers might not want you to. I probably shouldn&amp;rsquo;t be publishing this since security of the content is one of the main reasons HTML5 video will still take time to spread. But for that purpose, it&amp;rsquo;s really not hard to figure out.&lt;/p&gt;
+&lt;p&gt;For the second, it&amp;rsquo;s kind of lazy implementation of fallbacks. It&amp;rsquo;s pretty easy to check if Flash is supported, and if not, fall back to HTML5, instead of checking for a specific user agent string. So for sites using VideoJS, this method wouldn&amp;rsquo;t work, but there also wouldn&amp;rsquo;t be a need because VideoJS would fallback appropriately to HTML5.&lt;/p&gt;
+&lt;p&gt;Gruber has disabled Flash in Safari for better performance with video. That says a lot. Most people probably won&amp;rsquo;t go to same effort he has, but I know he&amp;rsquo;s not the only one.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;John Gruber of Daring Fireball has a cool post on &lt;a href=&quot;http://daringfireball.net/2010/11/masquerading_as_mobile_safari&quot; target=&quot;_blan
+    
+    </summary>
+    
+    
+      <category term="code" scheme="https://videojs.github.io/blog/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1.1.5 Release - Subtitles using track, Android fix &amp; more</title>
+    <link href="https://videojs.github.io/blog/1-1-5-Release-Subtitles-using-track-Android-fix-more/"/>
+    <id>https://videojs.github.io/blog/1-1-5-Release-Subtitles-using-track-Android-fix-more/</id>
+    <published>2010-11-09T05:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;ul&gt;
+&lt;li&gt;Feature: Switched to track method for setting subtitles. Now works like spec.&lt;/li&gt;
+&lt;li&gt;Feature: Created &amp;ldquo;players&amp;rdquo; concept for defining fallbacks and fallback order&lt;/li&gt;
+&lt;li&gt;Fix: Android playback bug.&lt;/li&gt;
+&lt;li&gt;Fix: Massive reorganization of code to make easier to navigate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&amp;rsquo;ve switched the subtitles to use the new track element defined in the &lt;a href=&quot;http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTML5 spec&lt;/a&gt;. You can now add subtitles by creating a track element pointing to your &lt;a href=&quot;http://www.delphiki.com/websrt/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WebSRT&lt;/a&gt;subtitles source.&lt;/p&gt;
+&lt;pre&gt;&amp;lt;video ...&amp;gt;
+  &amp;lt;track kind=&quot;subtitles&quot; src=&quot;../demo-subtitles.srt&quot; srclang=&quot;en-US&quot; label=&quot;English&quot;&amp;gt;&amp;lt;/track&amp;gt;
+&amp;lt;/vide&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;The closing track tag is needed, otherwise Safari thinks everything else is a child of the track, even with a self-closing track tag. Not sure why that is, but it&amp;rsquo;s kind of annoying.&lt;/p&gt;
+&lt;p&gt;Also a fix for Android playback was added. Android HTML5 video is pretty rough. The canPlayType function returns nothing on Android so VideoJS has a check to see if the source is mp4/m4v, and assumes it&amp;rsquo;ll play. Then VideoJS adds a click event to the video so it&amp;rsquo;ll play when you touch it. Also the Android will show the poster image, but no indication that it&amp;rsquo;s a video and not just an image. Hopefully this will be improved in the next Android version.&lt;/p&gt;
+&lt;p&gt;Beyond that, I did a massive reorganization of the code, so it should be easier to navigate if you&amp;rsquo;re planning to hack at it or contribute.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://videojs.com/downloads/video-js-1.1.5.zip&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Download version 1.1.5&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;Feature: Switched to track method for setting subtitles. Now works like spec.&lt;/li&gt;
+&lt;li&gt;Feature: Created &amp;ldquo;players&amp;rdquo; conce
+    
+    </summary>
+    
+    
+      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Version 1.1.4 Release - CSS Loading Spinner &amp; More</title>
+    <link href="https://videojs.github.io/blog/Version-1-1-4-Release-CSS-Loading-Spinner-More/"/>
+    <id>https://videojs.github.io/blog/Version-1-1-4-Release-CSS-Loading-Spinner-More/</id>
+    <published>2010-11-06T04:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;The most notable update in this version is a loading indicator (spinner), for when the video is buffering or seeking. The spinner works pretty well, however it&amp;rsquo;s limited by how accurately each browser tells us what it&amp;rsquo;s currently doing through triggered events. The spinner works best in Firefox so far. Safari/Chrome are less consistent with what events are triggered and when. For this reason I&amp;rsquo;m using a more careful approach that makes sure the spinner gets hidden, as opposed to making sure the spinner always shows when the player is busy. There&amp;rsquo;s a few bugs I had to account for too, like when Safari throws a &amp;ldquo;waiting&amp;rdquo; event, but then no other event to let us know it&amp;rsquo;s not waiting anymore.&lt;/p&gt;
+&lt;p&gt;The spinner icon is made with CSS3 effects (border-radius and transform). The spinning animation is created with a little javascript for now. In webkit browsers the animation could have been done with CSS3 animation, but I&amp;rsquo;d rather keep it consistent between browsers. The technique comes from &lt;a href=&quot;http://kilianvalkhof.com/2010/css-xhtml/css3-loading-spinners-without-images/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Kilian Valkhof&lt;/a&gt; with initial integration into VideoJS by &lt;a href=&quot;http://twitter.com/#!/dz0ny&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Janez Troha&lt;/a&gt; (&lt;a href=&quot;https://github.com/dz0ny&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;dz0ny&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Other features and fixes include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature: Added loading spinner.&lt;/li&gt;
+&lt;li&gt;Feature: Improved styles loaded checking.&lt;/li&gt;
+&lt;li&gt;Feature: Added volume() function to get and set volume through the player. - Fix: Fix issue where FF would loop video in background when ended.&lt;/li&gt;
+&lt;li&gt;Fix: Bug in Chrome that shows poster &amp;amp; plays audio if you set currentTime too quickly.&lt;/li&gt;
+&lt;li&gt;Fix: Bug in Safari where waiting is triggered and shows spinner when not needed&lt;/li&gt;
+&lt;li&gt;Fix: Updated to show links if only unplayable sources and no Flash.&lt;/li&gt;
+&lt;li&gt;Fix: Issue where if play button was loaded after play, it wouldn&amp;rsquo;t hide.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://videojs.com/downloads/video-js-1.1.4.zip&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Download version 1.1.4&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;The most notable update in this version is a loading indicator (spinner), for when the video is buffering or seeking. The spinner works p
+    
+    </summary>
+    
+    
+      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Version 1.1.3 Release</title>
+    <link href="https://videojs.github.io/blog/Version-1-1-3-Release/"/>
+    <id>https://videojs.github.io/blog/Version-1-1-3-Release/</id>
+    <published>2010-10-19T04:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Version 1.1.3 of VideoJS is now available.&lt;/p&gt;
+&lt;p&gt;Probably the most notable change is a switch to using a big play button before the movie plays for the first time, as opposed to showing the control bar. The main reason for doing this is actually a bug in Safari. If you try to call any functions on the video other than play, before the video has loaded, Safari will error out. Some people mentioned that fullscreen mode did not work in Safari for them, and this is most likely what was happening for them. This would only happen if you were not preloading the video. You can still go back to showing the controls first through the showControlsAtStart option, but it&amp;rsquo;s not recommended.&lt;/p&gt;
+&lt;p&gt;Other features and fixes include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature: Width/Height functions for resizing the player&lt;/li&gt;
+&lt;li&gt;Feature: Made initial click &amp;amp; hold trigger new value on progress and volume&lt;/li&gt;
+&lt;li&gt;Feature: Made controls not hide when hovering over them&lt;/li&gt;
+&lt;li&gt;Fix: Removed trailing comma that was breaking IE7&lt;/li&gt;
+&lt;li&gt;Fix: Removed some vars from global scope&lt;/li&gt;
+&lt;li&gt;Fix: Changed a document.onmousemove to an eventListener to prevent conflicts&lt;/li&gt;
+&lt;li&gt;Fix: Added a unique ID to FlowPlayer demo object to fix a FlowPlayer bug. Thanks @emirpprime.&lt;/li&gt;
+&lt;li&gt;Fix: Safari error on unloaded video&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let me know if you have any questions.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Version 1.1.3 of VideoJS is now available.&lt;/p&gt;
+&lt;p&gt;Probably the most notable change is a switch to using a big play button before the movi
+    
+    </summary>
+    
+    
+      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Facebook Adds HTML5 Video</title>
+    <link href="https://videojs.github.io/blog/Facebook-Adds-HTML5-Video/"/>
+    <id>https://videojs.github.io/blog/Facebook-Adds-HTML5-Video/</id>
+    <published>2010-10-12T04:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/24374884@N08/4603715307/&quot; title=&quot;What&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img src=&quot;http://farm2.static.flickr.com/1199/4603715307_c878c8a77b_m.jpg&quot; alt=&quot;What&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Among other new HTML5 features, Facebook has an HTML5 video player for playback on the iPhone and iPad. They say that on other mobile browsers, Flash outperformed the HTML5 implementation. That&amp;rsquo;s a little discouraging to hear, but HTML5 video is still young.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.facebook.com/notes/facebook-engineering/using-html5-today/438532093919&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Read the full post&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In contrast, check out this video of HTML5 vs. Flash on a Mac. Spoiler: HTML5 wins.&lt;/p&gt;
+&lt;object height=&quot;390&quot; width=&quot;640&quot;&gt;&lt;param name=&quot;movie&quot; value=&quot;http://www.youtube.com/v/IP7A09ty1do&amp;amp;hl=en_US&amp;amp;feature=player_embedded&amp;amp;version=3&quot;&gt;&lt;param name=&quot;allowFullScreen&quot; value=&quot;true&quot;&gt;&lt;param name=&quot;allowScriptAccess&quot; value=&quot;always&quot;&gt;&lt;/object&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/24374884@N08/4603715307/&quot; title=&quot;What&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img src=&quot;http://farm2.static
+    
+    </summary>
+    
+    
+      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iPad &amp; iPhone Video Poster Fix (bonus Javascript Placement Fix)</title>
+    <link href="https://videojs.github.io/blog/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/"/>
+    <id>https://videojs.github.io/blog/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/</id>
+    <published>2010-09-20T04:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;Bug-1-Poster-Attribute&quot;&gt;&lt;a href=&quot;/blog/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/#Bug-1-Poster-Attribute&quot; class=&quot;headerlink&quot; title=&quot;Bug #1 - Poster Attribute&quot;&gt;&lt;/a&gt;Bug #1 - Poster Attribute&lt;/h3&gt;&lt;p&gt;If you include the poster attribute on the video tag when you&amp;rsquo;re using &amp;lt;source&amp;gt; tags, the video won&amp;rsquo;t work on iPads &amp;amp; iPhones using iOS 3. You&amp;rsquo;ll see a broken play button, or no play button at all. On the iPad specifically, playback in inconsistent. Sometimes it&amp;rsquo;ll work and sometimes it won&amp;rsquo;t. This is &lt;a href=&quot;http://camendesign.com/code/video_for_everybody#notes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documented on the Video for Everybody site&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;Bug-2-Javascript-in-the-Head&quot;&gt;&lt;a href=&quot;/blog/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/#Bug-2-Javascript-in-the-Head&quot; class=&quot;headerlink&quot; title=&quot;Bug #2 - Javascript in the Head&quot;&gt;&lt;/a&gt;Bug #2 - Javascript in the Head&lt;/h3&gt;&lt;p&gt;This is a fun one&amp;hellip; If you include Javascript in the head of your page, it&amp;rsquo;ll break playback on the iPad (also inconsistent). If you move the Javascript to the bottom of the page, and still include a stylesheet, the iPad will work, but the iPhone 3 won&amp;rsquo;t. I first read about this in a &lt;a href=&quot;http://blog.noinc.com/2010/05/13/html5-video-tag-iphone-ipad-ihaveheadache&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;post on the No.inc blog&lt;/a&gt;, and then ran into it myself when redesigning the VideoJS site. Their original solution was to put the JS at the bottom of the page for iPads only (fun).&lt;/p&gt;
+&lt;p&gt;Apple&amp;rsquo;s iOS4 seems to fix both of these problems on the iPhone, but until iOS4 is available on the iPad, and everyone in the world upgrades their devices, we have to deal with this.&lt;/p&gt;
+&lt;h3 id=&quot;Fix-for-iOS-3&quot;&gt;&lt;a href=&quot;/blog/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/#Fix-for-iOS-3&quot; class=&quot;headerlink&quot; title=&quot;Fix for iOS 3&quot;&gt;&lt;/a&gt;Fix for iOS 3&lt;/h3&gt;&lt;p&gt;The problem seems to be some kind of race condition, that trips up the devices. The solution that has fixed both of these for me is to add the playable source directly to the video tag, and tell the video to load (all through Javascript).&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve added all this to VideoJS 1.1.2, but here&amp;rsquo;s the basics of how it works.&lt;/p&gt;
+&lt;pre&gt;var video = document.getElementById(&quot;your_video&quot;);
+    var children = video.children;
+    for (var i=0,j=children.length; i&amp;lt;j; i++) {
+      if (children[i].tagName.toUpperCase() == &quot;SOURCE&quot;) {
+        var canPlay = video.canPlayType(children[i].type);
+        if(canPlay == &quot;probably&quot; || canPlay == &quot;maybe&quot;) {
+          video.src = children[i].src;
+          video.load();
+          break; // or return or whatever
+        }
+      }
+    }&lt;/pre&gt;
+
+&lt;p&gt;So loop through the source elements, find the one that&amp;rsquo;s compatible, and add that source to the video src. Then trigger the video&amp;rsquo;s load() function.&lt;/p&gt;
+&lt;p&gt;That seems to fix both issues. &lt;strong&gt;This will not make the poster show up in either device.&lt;/strong&gt;It just makes makes the video playable. Sometimes you&amp;rsquo;ll see it flash the controls and then go back to the big play button.&lt;/p&gt;
+&lt;p&gt;Any feedback is appreciated.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s go Apple, get iOS4 out to everybody!&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Bug-1-Poster-Attribute&quot;&gt;&lt;a href=&quot;/blog/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/#Bug-1-Poster-Attribute&quot; class=&quot;h
+    
+    </summary>
+    
+    
+      <category term="code" scheme="https://videojs.github.io/blog/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>New VideoJS Site (Now with more HTML5)!</title>
+    <link href="https://videojs.github.io/blog/New-VideoJS-Site-Now-with-more-HTML5/"/>
+    <id>https://videojs.github.io/blog/New-VideoJS-Site-Now-with-more-HTML5/</id>
+    <published>2010-09-15T04:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;I told myself when the site reached 100,000 visits I would redesign it. Well that number&amp;rsquo;s come and gone, so &lt;a href=&quot;http://videojs.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here it is&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I also took this as an opportunity to code an HTML5 based site, using tags like &lt;code&gt;header&lt;/code&gt;, &lt;code&gt;footer&lt;/code&gt;, and &lt;code&gt;section&lt;/code&gt;. And I built it on the newly popular &lt;a href=&quot;http://html5boilerplate.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTML5 Boilerplate&lt;/a&gt;. Actually I built a &lt;a href=&quot;http://github.com/zencoder/html5-boilerplate-for-wordpress&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;WordPress them for HTML5 Boilerplate&lt;/a&gt;first, in case you&amp;rsquo;re interested in doing the same.&lt;/p&gt;
+&lt;p&gt;I got to use some fun CSS tricks throughout as well. One of them is the thin color bar at the top of the page. Resize the window and watch it go!&lt;/p&gt;
+&lt;p&gt;I also added this blog and a &lt;a href=&quot;http://twitter.com/videojs&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;twitter account&lt;/a&gt;, where I&amp;rsquo;ll be posting updates to VideoJS, as well as general HTML5 video news.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;I told myself when the site reached 100,000 visits I would redesign it. Well that number&amp;rsquo;s come and gone, so &lt;a href=&quot;http://videoj
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VideoJS is IE9 Compatible</title>
+    <link href="https://videojs.github.io/blog/VideoJS-is-IE9-Compatible/"/>
+    <id>https://videojs.github.io/blog/VideoJS-is-IE9-Compatible/</id>
+    <published>2010-09-15T04:00:00.000Z</published>
+    <updated>2016-06-29T21:05:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;After an initial test, VideoJS works with the new &lt;a href=&quot;http://ie.microsoft.com/testdrive/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Internet Explorer 9 preview&lt;/a&gt;. Great news, and a little surprising considering the CSS layout of the controls, and the general nature of IE. Other VideoJS site layout stuff seems to break, but for now as long as the player works I&amp;rsquo;m happy.&lt;/p&gt;
+&lt;p&gt;If you find differently let me know (along with any info that might be helpful).&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;After an initial test, VideoJS works with the new &lt;a href=&quot;http://ie.microsoft.com/testdrive/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Internet Ex
+    
+    </summary>
+    
     
   </entry>
   
