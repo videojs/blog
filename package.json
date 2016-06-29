@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "hexo": "hexo"
+    "hexo": "hexo",
+    "dev": "hexo server --drafts",
+    "release": "hexo clean && hexo g -d"
   },
   "repository": {
     "type": "git",
