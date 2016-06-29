@@ -1,5 +1,5 @@
 <% if (post.author) { %>
   <a href="<%= ('https://github.com/' + post.author.github) %>" class="<%= class_name %>">
-  <%- image_tag('https://github.com/' + post.author.github + '.png?size=30', {class: 'author_gravatar'}) %>
+  <%- image_tag('https://github.com/' + post.author.github + '.png?size=30', {class: 'author_gravatar', height: 30}) %>
   <span class="author_name"><%= (post.author.name) %></span>
 <% } %>
