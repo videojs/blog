@@ -2,6 +2,9 @@
 title: Video.js version 4.6.0 released! It's been a productive month.
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2014-05-20 17:29:00
 ---
 

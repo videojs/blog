@@ -2,6 +2,9 @@
 title: The Guardian uses Video.js in feature article
 tags:
   - gallery
+author:
+  name: Matthew McClure
+  github: mmcc
 date: 2013-11-05 18:15:11
 ---
 

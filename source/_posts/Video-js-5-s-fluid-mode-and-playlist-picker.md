@@ -6,7 +6,6 @@ tags:
 author:
   name: Gary Katsevman
   github: gkatsev
-  email: videojs@gkatsev.com
 date: 2016-06-01 14:50:06
 ---
 

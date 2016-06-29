@@ -4,6 +4,9 @@ tags:
   - release
   - videojs
   - version
+author:
+  name: Matthew McClure
+  github: mmcc
 date: 2015-06-08 19:59:42
 ---
 

@@ -3,6 +3,9 @@ title: >-
   Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3
   things that didn't (including the name).
 tags: []
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2015-09-29 14:00:16
 ---
 

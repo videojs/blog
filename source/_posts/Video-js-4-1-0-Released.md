@@ -2,6 +2,9 @@
 title: Video.js 4.1.0 Released
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2013-06-28 19:34:00
 ---
 

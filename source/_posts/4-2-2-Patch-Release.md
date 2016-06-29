@@ -2,6 +2,9 @@
 title: 4.2.2 Patch Release
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2013-10-15 18:26:00
 ---
 

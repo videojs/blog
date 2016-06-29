@@ -1,8 +1,11 @@
 ---
-title: Video.js 4.9 - Now  can join the party!
+title: Video.js 4.9 - Now <audio> can join the party!
 tags:
   - news
   - version
+author:
+  name: Matthew McClure
+  github: mmcc
 date: 2014-10-02 20:49:00
 ---
 

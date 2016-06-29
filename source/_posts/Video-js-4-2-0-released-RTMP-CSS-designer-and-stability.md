@@ -2,6 +2,9 @@
 title: 'Video.js 4.2.0 released! RTMP, CSS designer, and stability'
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2013-09-06 15:51:00
 ---
 

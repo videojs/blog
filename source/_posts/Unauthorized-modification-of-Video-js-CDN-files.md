@@ -1,6 +1,9 @@
 ---
 title: Unauthorized modification of Video.js CDN files
 tags: []
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2013-09-15 11:23:00
 ---
 
