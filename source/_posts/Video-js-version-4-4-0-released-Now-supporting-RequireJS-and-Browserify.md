@@ -2,6 +2,9 @@
 title: Video.js version 4.4.0 released - Now supporting RequireJS and Browserify
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2014-02-19 17:49:00
 ---
 

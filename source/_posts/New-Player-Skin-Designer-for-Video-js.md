@@ -2,6 +2,9 @@
 title: New Player Skin Designer for Video.js
 tags:
   - html5 video
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2013-07-15 19:44:00
 ---
 

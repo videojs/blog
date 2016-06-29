@@ -3,6 +3,9 @@ title: Video.js 4.12 - The last of the 4 minors
 tags:
   - news
   - version
+author:
+  name: Matthew McClure
+  github: mmcc
 date: 2015-02-18 13:32:00
 ---
 

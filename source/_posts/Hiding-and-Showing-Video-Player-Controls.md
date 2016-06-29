@@ -1,6 +1,9 @@
 ---
 title: Hiding and Showing Video Player Controls
 tags: []
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2013-08-09 18:51:47
 ---
 

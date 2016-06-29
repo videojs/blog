@@ -2,6 +2,9 @@
 title: Video.js version 4.3.0 released w/ shiny new API docs
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2013-11-05 19:29:00
 ---
 

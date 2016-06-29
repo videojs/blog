@@ -1,6 +1,9 @@
 ---
 title: Running Video.js unit tests in real browsers with Karma
 tags: []
+author:
+  name: Jimbo Wilson
+  github: bcjwilson
 date: 2013-09-18 23:21:00
 ---
 

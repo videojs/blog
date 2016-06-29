@@ -5,6 +5,9 @@ title: >-
 tags:
   - news
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2014-08-06 14:42:00
 ---
 

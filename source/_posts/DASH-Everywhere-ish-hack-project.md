@@ -3,6 +3,9 @@ title: DASH Everywhere-ish (hack project)
 tags:
   - news
   - html5 video
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2014-07-22 11:01:00
 ---
 

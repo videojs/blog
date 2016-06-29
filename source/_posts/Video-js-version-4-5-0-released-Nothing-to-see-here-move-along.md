@@ -2,6 +2,9 @@
 title: 'Video.js version 4.5.0 released! Nothing to see here, move along'
 tags:
   - version
+author:
+  name: Steve Heffernan
+  github: heff
 date: 2014-03-27 18:49:04
 ---
 

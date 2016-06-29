@@ -3,6 +3,9 @@ title: Video.js 4.8.0 released...Prost!
 tags:
   - news
   - version
+author:
+  name: Matthew McClure
+  github: mmcc
 date: 2014-09-03 16:50:09
 ---
 
