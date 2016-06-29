@@ -847,7 +847,7 @@ var hi;
     <link href="https://videojs.github.io/blog/Running-Video-js-unit-tests-in-real-browsers-with-Karma/"/>
     <id>https://videojs.github.io/blog/Running-Video-js-unit-tests-in-real-browsers-with-Karma/</id>
     <published>2013-09-19T03:21:00.000Z</published>
-    <updated>2016-06-29T20:37:18.000Z</updated>
+    <updated>2016-06-29T20:59:15.000Z</updated>
     
     <content type="html">&lt;p&gt;If you’ve ever cloned the video.js repository, either to contribute or to build your own version, you’ve no doubt run the video.js unit tests. Until just recently, though, we only had support for running unit tests with grunt, using the PhantomJS browser. Well, that’s changed, with the first phase of our integration with Karma. Now, you’ll be able to run your tests in real browsers.&lt;/p&gt;
 &lt;p&gt;Setting things up is a snap. After you pull down the latest from video.js and run &lt;code&gt;npm install&lt;/code&gt;, simply copy the test/karma.conf.js.example file to test/karma.conf.js, add the browsers you wish to test to the browsers array, and run &lt;code&gt;grunt karma:dev&lt;/code&gt;. That’s it. Of course, there are more options that you can configure, but if you want to get the ball rolling quickly, just add browsers, and run the tests. See the test/karma.conf.js.example file for more  instructions.&lt;/p&gt;
