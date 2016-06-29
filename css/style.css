@@ -187,6 +187,7 @@ body {
     margin: 0 0.833333333333333%;
   }
 }
+.article-author,
 .article-date,
 .article-category-link,
 .archive-year,
@@ -514,15 +515,33 @@ body {
   padding: 15px;
 }
 .article-meta:before,
-.article-meta:after {
+.article-author:before,
+.article-date:before,
+.article-meta:after,
+.article-author:after,
+.article-date:after {
   content: "";
   display: table;
 }
-.article-meta:after {
+.article-meta:after,
+.article-author:after,
+.article-date:after {
   clear: both;
 }
+.article-author,
 .article-date {
+  line-height: 3em;
+}
+.article-date {
+  float: right;
+  margin-right: 5px;
+  margin-left: 0;
+}
+.article-author {
   float: left;
+}
+.article-author .author_gravatar {
+  vertical-align: middle;
 }
 .article-category {
   float: left;
