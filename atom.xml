@@ -5,7 +5,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://videojs.github.io/blog/"/>
-  <updated>2016-06-01T18:50:06.000Z</updated>
+  <updated>2016-06-29T20:17:22.000Z</updated>
   <id>https://videojs.github.io/blog/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://videojs.github.io/blog/Video-js-5-s-fluid-mode-and-playlist-picker/"/>
     <id>https://videojs.github.io/blog/Video-js-5-s-fluid-mode-and-playlist-picker/</id>
     <published>2016-06-01T18:50:06.000Z</published>
-    <updated>2016-06-01T18:50:06.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;How-it-works&quot;&gt;&lt;a href=&quot;/blog/Video-js-5-s-fluid-mode-and-playlist-picker/#How-it-works&quot; class=&quot;headerlink&quot; title=&quot;How it works&quot;&gt;&lt;/a&gt;How it works&lt;/h2&gt;&lt;p&gt;In video.js 5.0, we added support for truly fluid layouts with video.js.&lt;br&gt;You can see an example of it on the &lt;a href=&quot;//videojs.com&quot;&gt;video.js website&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;It is done by using &lt;a href=&quot;http://alistapart.com/article/creating-intrinsic-ratios-for-video&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;intrinsic ratios&lt;/a&gt;. Video.js does the heavy lifting for you.&lt;/p&gt;
@@ -65,7 +65,7 @@
     <link href="https://videojs.github.io/blog/Video-js-5-The-Only-Thing-That%E2%80%99s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/"/>
     <id>https://videojs.github.io/blog/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/</id>
     <published>2015-09-29T18:00:16.000Z</published>
-    <updated>2016-05-23T20:17:28.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;First and foremost, &lt;strong&gt;THANK YOU&lt;/strong&gt; to the 25 contributors who completed and merged &lt;strong&gt;146 pull requests&lt;/strong&gt; and updated just about every line of code in the project. And thank you to the hundreds of issue commenters and plugin authors who helped shape this latest version. For a widget, we’ve got a pretty awesome community.&lt;/p&gt;
 &lt;p&gt;For 5.0 we have some interesting new features, and we made A LOT of new technology choices. This will include an exhaustive dive into those choices, because… why not?&lt;/p&gt;
@@ -171,7 +171,7 @@
     <link href="https://videojs.github.io/blog/It-s-here-5-0-release-candidates/"/>
     <id>https://videojs.github.io/blog/It-s-here-5-0-release-candidates/</id>
     <published>2015-06-08T23:59:42.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;Today we&amp;rsquo;re releasing our first official 5.0 release candidate. We&amp;rsquo;re really excited to get this into the wild, but a lot has changed under hood. It should be stable for normal usage, but we&amp;rsquo;ve got a limited number of test devices (and testers for that matter), so what we need now is for people to bang on 5.0 and let us know what breaks!&lt;/p&gt;
 &lt;p&gt;You can either grab the master branch from Github and run &lt;code&gt;grunt&lt;/code&gt; to create your own build, or we&amp;rsquo;ll push each new release candidate to the CDN. We&amp;rsquo;re going to be moving quickly and pushing new candidates when we uncover / fix bugs, so be sure to check for new versions! As of this post, the newest release is &lt;a href=&quot;http://vjs.zencdn.net/5.0.0-rc.2/video.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;5.0-rc.2&lt;/a&gt;. If you&amp;rsquo;d like to see a demo, we&amp;rsquo;ve got one up on &lt;a href=&quot;http://jsbin.com/halokodoxo/1/edit?html,output&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;JSBin&lt;/a&gt;.&lt;/p&gt;
@@ -211,7 +211,7 @@
     <link href="https://videojs.github.io/blog/Video-js-4-12-The-last-of-the-4-minors/"/>
     <id>https://videojs.github.io/blog/Video-js-4-12-The-last-of-the-4-minors/</id>
     <published>2015-02-18T18:32:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Much-improved-WebVTT-support&quot;&gt;&lt;a href=&quot;/blog/Video-js-4-12-The-last-of-the-4-minors/#Much-improved-WebVTT-support&quot; class=&quot;headerlink&quot; title=&quot;Much improved WebVTT support&quot;&gt;&lt;/a&gt;Much improved WebVTT support&lt;/h2&gt;&lt;p&gt;We added basic WebVTT support really early on, which we were pretty proud of. As browsers added support, however, our shim started to lag a bit, or at the very least, cause issues with browsers that required native support (here’s looking at you, iOS).&lt;/p&gt;
 &lt;p&gt;So, we’re happy to announce that our text track support is vastly improved with this version! Instead of continuing to try and build out our own WebVTT parser, we’ve pulled in Mozilla’s fantastic work, &lt;a href=&quot;https://github.com/mozilla/vtt.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;VTT.js&lt;/a&gt;. This is the WebVTT implementation used in Firefox / Gecko, so we’re confident that this is a substantial leap forward for Video.js and our accessibility efforts.&lt;/p&gt;
@@ -311,11 +311,11 @@
   </entry>
   
   <entry>
-    <title>Video.js 4.9 - Now  can join the party!</title>
+    <title>Video.js 4.9 - Now &lt;audio&gt; can join the party!</title>
     <link href="https://videojs.github.io/blog/Video-js-4-9-Now-can-join-the-party/"/>
     <id>https://videojs.github.io/blog/Video-js-4-9-Now-can-join-the-party/</id>
     <published>2014-10-03T00:49:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;HTML5-Audio-support&quot;&gt;&lt;a href=&quot;/blog/Video-js-4-9-Now-can-join-the-party/#HTML5-Audio-support&quot; class=&quot;headerlink&quot; title=&quot;HTML5 Audio support&quot;&gt;&lt;/a&gt;HTML5 Audio support&lt;/h3&gt;&lt;p&gt;A common request we&amp;rsquo;ve seen is to be able to use Video.js with an &lt;code&gt;&amp;amp;lt;audio&amp;amp;gt;&lt;/code&gt; tag, and now you can! Usage is almost identical, you can just include a &lt;code&gt;data-setup={}&lt;/code&gt; attribute on an &lt;code&gt;&amp;amp;lt;audio&amp;amp;gt;&lt;/code&gt; tag or initialize via Javascript.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;amp;lt;audio id=&amp;quot;audio_example&amp;quot; class=&amp;quot;video-js vjs-default-skin&amp;quot; controls 
@@ -367,7 +367,7 @@
     <link href="https://videojs.github.io/blog/Video-js-4-8-0-released-Prost/"/>
     <id>https://videojs.github.io/blog/Video-js-4-8-0-released-Prost/</id>
     <published>2014-09-03T20:50:09.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;This isn&amp;rsquo;t the flashiest minor release ever, but it&amp;rsquo;s hot off the press and ready for use. As mentioned in the last (few) release posts, we&amp;rsquo;re making a concerted effort to be more consistent with releases, so hopefully the trend of bite-sized, scheduled releases will continue.&lt;/p&gt;
 &lt;h3 id=&quot;Translations&quot;&gt;&lt;a href=&quot;/blog/Video-js-4-8-0-released-Prost/#Translations&quot; class=&quot;headerlink&quot; title=&quot;Translations&quot;&gt;&lt;/a&gt;Translations&lt;/h3&gt;&lt;p&gt;We only just released localization with &lt;a href=&quot;/blog/Video-js-4-8-0-released-Prost//post/93989313276/video-js-v4-7-0-built-mostly-by-new-contributors&quot;&gt;version 4.7&lt;/a&gt;, but we&amp;rsquo;ve already had two pull-requests for new translations! The German translation is included with this release, and you&amp;rsquo;ll find the French translation in the next patch release. If you&amp;rsquo;re fluent in another language, you can help Video.js be even more internationally accessible by submitting a &lt;a href=&quot;https://github.com/videojs/video.js/blob/master/CONTRIBUTING.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;pull request&lt;/a&gt; translating just 24 words / phrases. &lt;code&gt;&amp;amp;lt;/shameless_plug&amp;amp;gt;&lt;/code&gt;&lt;/p&gt;
@@ -407,7 +407,7 @@
     <link href="https://videojs.github.io/blog/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/"/>
     <id>https://videojs.github.io/blog/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/</id>
     <published>2014-08-06T18:42:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;We&amp;rsquo;re continuing to work hard on improving the contributor experience around the Video.js project and it&amp;rsquo;s paying off. Over half of the changelog is thanks to brand new contributors! Issues and pull requests are getting addressed faster than ever, and I was even allowed to give &lt;a href=&quot;http://www.oscon.com/oscon2014/public/schedule/speaker/104522&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;a talk at OSCON&lt;/a&gt; on some of the strategies we&amp;rsquo;re using. If you&amp;rsquo;re instersted in getting involved, join the #videojs IRC room or post an issue to let us know.&lt;/p&gt;
 &lt;h2 id=&quot;Google-Chooses-Video-js-for-Google-Media-Framework&quot;&gt;&lt;a href=&quot;/blog/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/#Google-Chooses-Video-js-for-Google-Media-Framework&quot; class=&quot;headerlink&quot; title=&quot;Google Chooses Video.js for Google Media Framework&quot;&gt;&lt;/a&gt;Google Chooses Video.js for Google Media Framework&lt;/h2&gt;&lt;p&gt;Google recently &lt;a href=&quot;http://googleadsdeveloper.blogspot.com/2014/07/google-media-framework-making-online.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;announced a new framework&lt;/a&gt; for building video experiences and monetization. There are versions of the framework for native iOS and Android apps, and for the browser they chose to use Video.js. Check out &lt;a href=&quot;https://github.com/googleads/videojs-ima&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;their video.js plugin&lt;/a&gt;, and as it says in their announcement, &amp;ldquo;Stay tuned as well for a deeper dive into Video.js with IMA soon!&amp;rdquo;&lt;/p&gt;
@@ -487,7 +487,7 @@
     <link href="https://videojs.github.io/blog/DASH-Everywhere-ish-hack-project/"/>
     <id>https://videojs.github.io/blog/DASH-Everywhere-ish-hack-project/</id>
     <published>2014-07-22T15:01:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;A couple of times a year Brightcove has an internal hackweek where engineers work on any project they&amp;rsquo;d like. In the latest hackweek (2014-07-14) &lt;a href=&quot;https://github.com/seniorflexdeveloper&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Tom Johnson&lt;/a&gt; decided to see if he could get DASH supported in as many places as possible, by combining a few of the existing DASH player implementations with Video.js.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://dashif.org/mpeg-dash/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MPEG-DASH&lt;/a&gt; (Dynamic Adaptive Streaming over HTTP) is a streaming format similar to Apple&amp;rsquo;s &lt;a href=&quot;https://developer.apple.com/streaming/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTTP Live Streaming (HLS)&lt;/a&gt;. It allows you to provide multiple versions of a video at different bitrates, and then the player can switch between those versions depending on the user&amp;rsquo;s bandwidth (which is more complicated than you might think).&lt;/p&gt;
@@ -559,7 +559,7 @@
     <link href="https://videojs.github.io/blog/Video-js-version-4-6-0-released-It-s-been-a-productive-month/"/>
     <id>https://videojs.github.io/blog/Video-js-version-4-6-0-released-It-s-been-a-productive-month/</id>
     <published>2014-05-20T21:29:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;The video.js community has been in full force lately and it&amp;rsquo;s resulted in a lot of great features and fixes, including UI updates, better error messages, and even a &lt;a href=&quot;https://github.com/addyosmani/video-js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Video.js Polymer element&lt;/a&gt; built by &lt;a href=&quot;https://twitter.com/addyosmani&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Addy Osmani&lt;/a&gt; himself.&lt;/p&gt;
 &lt;h3 id=&quot;New-Live-UI&quot;&gt;&lt;a href=&quot;/blog/Video-js-version-4-6-0-released-It-s-been-a-productive-month/#New-Live-UI&quot; class=&quot;headerlink&quot; title=&quot;New Live UI&quot;&gt;&lt;/a&gt;New Live UI&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://66.media.tumblr.com/18c6ec3dd9a1e04440345bf5ca6630f9/tumblr_inline_n5ue8gvi1Y1qzc111.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
@@ -628,7 +628,7 @@
     <link href="https://videojs.github.io/blog/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/"/>
     <id>https://videojs.github.io/blog/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/</id>
     <published>2014-03-27T22:49:04.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;Well, sort of… this release is the result of a lot of hard work to speed up the version release process, meaning they&amp;rsquo;ll be coming a lot faster now with smaller sets of changes.&lt;/p&gt;
 &lt;p&gt;In this release we&amp;rsquo;ve added support for the &lt;a href=&quot;http://component.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Component(1)&lt;/a&gt; package manager, fixed the captions positioning when the controls are hidden, and helped Android devices know when they can support HLS. ;-) There were a few other changes as well but a lot of the work this round was done on the processes around the project. If you&amp;rsquo;ve spent time in the github issues, you&amp;rsquo;ll hopefully notice an improvement in the response rate on issues and the speed in which bugs get fixed.&lt;/p&gt;
@@ -667,7 +667,7 @@
     <link href="https://videojs.github.io/blog/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/"/>
     <id>https://videojs.github.io/blog/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/</id>
     <published>2014-02-19T22:49:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;Version 4.4.0 is here with over 20 updates and fixes. The most notable addition may be support for AMD and CommonJS module loaders, meaning you can now include Video.js using &lt;a href=&quot;http://requirejs.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RequireJS&lt;/a&gt; or &lt;a href=&quot;http://browserify.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Browserify&lt;/a&gt;. Video.js can be installed through &lt;a href=&quot;http://www.npmjs.org/package/video.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;npm&lt;/a&gt; already, and we&amp;rsquo;ll soon add support for &lt;a href=&quot;http://bower.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;bower&lt;/a&gt; and &lt;a href=&quot;http://component.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;component(1)&lt;/a&gt; as well.&lt;/p&gt;
 &lt;h3 id=&quot;New-plugins&quot;&gt;&lt;a href=&quot;/blog/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/#New-plugins&quot; class=&quot;headerlink&quot; title=&quot;New plugins&quot;&gt;&lt;/a&gt;New plugins&lt;/h3&gt;&lt;p&gt;The &lt;a href=&quot;https://github.com/videojs/video.js/wiki/Plugins&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;plugin list&lt;/a&gt; continues to grow, with more in the works. Checkout the new &lt;a href=&quot;http://theonion.github.io/videojs-endcard/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;endcard plugin&lt;/a&gt; built by &lt;a href=&quot;http://www.theonion.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The Onion&lt;/a&gt;.&lt;/p&gt;
@@ -723,7 +723,7 @@
     <link href="https://videojs.github.io/blog/Video-js-version-4-3-0-released-w-shiny-new-API-docs/"/>
     <id>https://videojs.github.io/blog/Video-js-version-4-3-0-released-w-shiny-new-API-docs/</id>
     <published>2013-11-06T00:29:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;The biggest change in this update is actually an overhaul of the &lt;a href=&quot;https://github.com/videojs/video.js/tree/v4.3.0/docs/api&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;API docs&lt;/a&gt;. The best example of the new docs is the &lt;a href=&quot;https://github.com/videojs/video.js/blob/v4.3.0/docs/api/vjs.Player.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Player doc&lt;/a&gt;, which is the API most video.js users will work with.&lt;/p&gt;
 &lt;p&gt;The new docs are now automatically generated from the code and code comments, making it easier to keep them up to date with what&amp;rsquo;s currently in the codebase.&lt;/p&gt;
@@ -792,7 +792,7 @@ var hi;
     <link href="https://videojs.github.io/blog/The-Guardian-uses-Video-js-in-feature-article/"/>
     <id>https://videojs.github.io/blog/The-Guardian-uses-Video-js-in-feature-article/</id>
     <published>2013-11-05T23:15:11.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;It&amp;rsquo;s always nice to find Video.js in the wild, but this &lt;a href=&quot;http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;article from The Guradian&lt;/a&gt; is an especially cool use case. Most of the players don&amp;rsquo;t use controls at all, but rather play/pause based on the user scrolling the page. The ones that do use controls are styled with a white on light gray theme that matches the rest of the page really well.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;The article begins with a full-width video that includes controls.&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;http://66.media.tumblr.com/14295587c4d822fd6db3a57be2b555cd/tumblr_inline_mvr6sfqy3m1qzxjzy.png&quot; alt=&quot;Big Player&quot;&gt;&lt;/p&gt;
@@ -816,7 +816,7 @@ var hi;
     <link href="https://videojs.github.io/blog/4-2-2-Patch-Release/"/>
     <id>https://videojs.github.io/blog/4-2-2-Patch-Release/</id>
     <published>2013-10-15T22:26:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;Two bugs have been squashed with this patch:&lt;/p&gt;
 &lt;ul&gt;
@@ -847,7 +847,7 @@ var hi;
     <link href="https://videojs.github.io/blog/Running-Video-js-unit-tests-in-real-browsers-with-Karma/"/>
     <id>https://videojs.github.io/blog/Running-Video-js-unit-tests-in-real-browsers-with-Karma/</id>
     <published>2013-09-19T03:21:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;If you’ve ever cloned the video.js repository, either to contribute or to build your own version, you’ve no doubt run the video.js unit tests. Until just recently, though, we only had support for running unit tests with grunt, using the PhantomJS browser. Well, that’s changed, with the first phase of our integration with Karma. Now, you’ll be able to run your tests in real browsers.&lt;/p&gt;
 &lt;p&gt;Setting things up is a snap. After you pull down the latest from video.js and run &lt;code&gt;npm install&lt;/code&gt;, simply copy the test/karma.conf.js.example file to test/karma.conf.js, add the browsers you wish to test to the browsers array, and run &lt;code&gt;grunt karma:dev&lt;/code&gt;. That’s it. Of course, there are more options that you can configure, but if you want to get the ball rolling quickly, just add browsers, and run the tests. See the test/karma.conf.js.example file for more  instructions.&lt;/p&gt;
@@ -872,7 +872,7 @@ var hi;
     <link href="https://videojs.github.io/blog/Unauthorized-modification-of-Video-js-CDN-files/"/>
     <id>https://videojs.github.io/blog/Unauthorized-modification-of-Video-js-CDN-files/</id>
     <published>2013-09-15T15:23:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;UPDATE 2013-09-19:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The CDN continues to be secure and we have taken significant steps to ensure it never falls under a similar attack again.&lt;/p&gt;
@@ -910,7 +910,7 @@ var hi;
     <link href="https://videojs.github.io/blog/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/"/>
     <id>https://videojs.github.io/blog/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/</id>
     <published>2013-09-06T19:51:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;Happy September! The 4.2.0 release of Video.js has a few interesting updates, and a bunch of stability and polish.&lt;/p&gt;
 &lt;h2 id=&quot;RTMP-Support&quot;&gt;&lt;a href=&quot;/blog/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/#RTMP-Support&quot; class=&quot;headerlink&quot; title=&quot;RTMP Support&quot;&gt;&lt;/a&gt;RTMP Support&lt;/h2&gt;&lt;p&gt;First of all, thanks to an impressive collaboration of community members, we now have RTMP support (in &lt;em&gt;beta&lt;/em&gt;). &lt;a href=&quot;http://jsbin.com/cayake&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Check out the example&lt;/a&gt;.&lt;/p&gt;
@@ -985,7 +985,7 @@ var hi;
     <link href="https://videojs.github.io/blog/Hiding-and-Showing-Video-Player-Controls/"/>
     <id>https://videojs.github.io/blog/Hiding-and-Showing-Video-Player-Controls/</id>
     <published>2013-08-09T22:51:47.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;Last week I decided to tackle a number of outstanding issues around the control bar, and then proceeded to fall down a rabbit hole of related player updates. I&amp;rsquo;ve thankfully resurfaced now, and figured I&amp;rsquo;d write about a few of the updates that came from it.&lt;/p&gt;
 &lt;p&gt;One of the expected behaviors of the player&amp;rsquo;s control bar is that it will fade out after a couple of seconds when the user is inactive while watching a video. Previously, the way we achieved this with video.js was through a bit of a CSS trick. When the user&amp;rsquo;s mouse would move out of the video player area, the control bar would be given the classname &lt;code&gt;vjs-fade-out&lt;/code&gt;. This class had a visibility transition with an added 2 second delay.&lt;/p&gt;
@@ -1147,7 +1147,7 @@ video.on(&#39;tap&#39;, function(){
     <link href="https://videojs.github.io/blog/New-Player-Skin-Designer-for-Video-js/"/>
     <id>https://videojs.github.io/blog/New-Player-Skin-Designer-for-Video-js/</id>
     <published>2013-07-15T23:44:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;a href=&quot;http://designer.videojs.com&quot; title=&quot;Video Player Skin Designer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img src=&quot;http://65.media.tumblr.com/e1ce78f8543d5e1fffd65e35cfd41b3e/tumblr_inline_mq1y4zEiqe1qz4rgp.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Last week Brightcove had an internal hack week where everyone could work on any project they wanted. One of the projects that came out of that was a new &lt;a href=&quot;http://designer.videojs.com&quot; title=&quot;Video Player Skin Designer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;video.js skin designer&lt;/a&gt;.&lt;/p&gt;
@@ -1180,7 +1180,7 @@ video.on(&#39;tap&#39;, function(){
     <link href="https://videojs.github.io/blog/Video-js-4-1-0-Released/"/>
     <id>https://videojs.github.io/blog/Video-js-4-1-0-Released/</id>
     <published>2013-06-28T23:34:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;Just in time for the weekend, the next minor version of Video.js is now available. Updates include:&lt;/p&gt;
 &lt;ul&gt;
@@ -1219,7 +1219,7 @@ video.on(&#39;tap&#39;, function(){
     <link href="https://videojs.github.io/blog/Video-js-4-0-now-available/"/>
     <id>https://videojs.github.io/blog/Video-js-4-0-now-available/</id>
     <published>2013-05-09T17:10:00.000Z</published>
-    <updated>2016-05-23T18:13:13.000Z</updated>
+    <updated>2016-06-29T20:17:22.000Z</updated>
     
     <content type="html">&lt;p&gt;Today we&amp;rsquo;re releasing Video.js 4.0, which is the most solid, lightweight, and I dare say prettiest version yet. It&amp;rsquo;s available for download, on Github, and hosted for free on our CDN.&lt;/p&gt;
 &lt;p&gt;Version 4.0 received the most community collaboration of any previous version, which speaks to the growing strength of the JavaScript community, the growing popularity of HTML5 video, and an increase in Video.js usage. Over the last year the number of sites using Video.js has more than &lt;a href=&quot;http://trends.builtwith.com/media/VideoJS&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;doubled&lt;/a&gt;, and each month there are over 200 million hits to the CDN-hosted version alone! Thank you to all of the Video.js community members for contributing code and filing bug reports.&lt;/p&gt;
