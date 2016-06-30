@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/86341869931/videojs-version-460-released-its-been-a/index.html
+  - post/86341869931/index.html
 date: 2014-05-20 17:29:00
 ---
 

@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35887003151/2-0-0-release-behaviors-and-apis/index.html
+  - post/35887003151/index.html
 date: 2010-11-22 00:00:00
 ---
 

@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/60471080014/videojs-420-released-rtmp-css-designer-and/index.html
+  - post/60471080014/index.html
 date: 2013-09-06 15:51:00
 ---
 

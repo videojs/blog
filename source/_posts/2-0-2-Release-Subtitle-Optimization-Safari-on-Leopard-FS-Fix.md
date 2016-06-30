@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35886359508/2-0-2-release-subtitle-optimization-safari-on-leopard-fs/index.html
+  - post/35886359508/index.html
 date: 2010-12-10 00:00:00
 ---
 

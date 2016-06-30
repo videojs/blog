@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35666994917/brightcove-acquires-zencoder/index.html
+  - post/35666994917/index.html
 date: 2012-07-26 00:00:00
 ---
 

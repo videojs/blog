@@ -6,6 +6,9 @@ tags: []
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/130143694631/video-js-5/index.html
+  - post/130143694631/index.html
 date: 2015-09-29 14:00:16
 ---
 

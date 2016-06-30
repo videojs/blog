@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35887203978/make-sites-serve-you-html5-video-in-safari/index.html
+  - post/35887203978/index.html
 date: 2010-11-19 00:00:00
 ---
 

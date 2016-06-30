@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35887731208/version-1-1-3-release/index.html
+  - post/35887731208/index.html
 date: 2010-10-19 00:00:00
 ---
 

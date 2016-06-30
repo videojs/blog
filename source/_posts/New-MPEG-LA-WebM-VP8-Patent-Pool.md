@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35885249818/new-mpeg-la-webmvp8-patent-pool/index.html
+  - post/35885249818/index.html
 date: 2011-02-11 00:00:00
 ---
 

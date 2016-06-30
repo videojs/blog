@@ -7,6 +7,9 @@ tags:
 author:
   name: Matthew McClure
   github: mmcc
+alias:
+  - post/121061752226/its-here-50-release-candidates/index.html
+  - post/121061752226/index.html
 date: 2015-06-08 19:59:42
 ---
 

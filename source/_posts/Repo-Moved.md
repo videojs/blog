@@ -4,6 +4,9 @@ tags: []
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/49797985868/repo-moved/index.html
+  - post/49797985868/index.html
 date: 2013-05-06 16:56:59
 ---
 

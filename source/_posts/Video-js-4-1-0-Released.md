@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/54136228059/videojs-410-released/index.html
+  - post/54136228059/index.html
 date: 2013-06-28 19:34:00
 ---
 

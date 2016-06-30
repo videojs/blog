@@ -4,6 +4,9 @@ tags: []
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35885081376/how-are-you-using-video-js/index.html
+  - post/35885081376/index.html
 date: 2011-06-07 00:00:00
 ---
 

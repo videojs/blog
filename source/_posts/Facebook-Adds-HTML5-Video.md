@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35887879903/facebook-adds-html5-video/index.html
+  - post/35887879903/index.html
 date: 2010-10-12 00:00:00
 ---
 

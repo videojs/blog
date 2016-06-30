@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35888138568/ipad-iphone-video-poster-fix-bonus-javascript-placement/index.html
+  - post/35888138568/index.html
 date: 2010-09-20 00:00:00
 ---
 
