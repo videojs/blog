@@ -6,6 +6,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35884942031/lynda-com-html5-video-tutorial-released/index.html
+  - post/35884942031/index.html
 date: 2011-06-17 00:00:00
 ---
 

@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/55553002104/new-player-skin-designer-for-videojs/index.html
+  - post/55553002104/index.html
 date: 2013-07-15 19:44:00
 ---
 

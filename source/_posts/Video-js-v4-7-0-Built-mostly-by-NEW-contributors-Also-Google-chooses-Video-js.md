@@ -8,6 +8,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/93989313276/videojs-v470-built-mostly-by-new/index.html
+  - post/93989313276/index.html
 date: 2014-08-06 14:42:00
 ---
 

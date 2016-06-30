@@ -6,6 +6,9 @@ tags:
 author:
   name: Matthew McClure
   github: mmcc
+alias:
+  - post/111390879116/videojs-412-the-last-of-the-4-minors/index.html
+  - post/111390879116/index.html
 date: 2015-02-18 13:32:00
 ---
 

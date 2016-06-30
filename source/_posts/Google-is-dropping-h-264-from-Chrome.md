@@ -6,6 +6,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35885627647/google-is-dropping-h-264-from-chrome/index.html
+  - post/35885627647/index.html
 date: 2011-01-11 00:00:00
 ---
 

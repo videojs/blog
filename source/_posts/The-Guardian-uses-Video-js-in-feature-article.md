@@ -5,6 +5,9 @@ tags:
 author:
   name: Matthew McClure
   github: mmcc
+alias:
+  - post/66131645152/the-guardian-uses-videojs-in-feature-article/index.html
+  - post/66131645152/index.html
 date: 2013-11-05 18:15:11
 ---
 

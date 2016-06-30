@@ -6,6 +6,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/92536319027/dash-everywhere-ish-hack-project/index.html
+  - post/92536319027/index.html
 date: 2014-07-22 11:01:00
 ---
 

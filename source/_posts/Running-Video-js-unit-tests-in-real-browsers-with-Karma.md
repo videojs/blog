@@ -4,6 +4,9 @@ tags: []
 author:
   name: Jim Whisenant
   github: BCjwhisenant
+alias:
+  - post/61644484835/running-videojs-unit-tests-in-real-browsers-with/index.html
+  - post/61644484835/index.html
 date: 2013-09-18 23:21:00
 ---
 

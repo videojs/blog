@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35886098711/html5-video-google-maps-mashup/index.html
+  - post/35886098711/index.html
 date: 2010-12-16 00:00:00
 ---
 

@@ -6,6 +6,9 @@ tags:
 author:
   name: Matthew McClure
   github: mmcc
+alias:
+  - post/96564061826/videojs-480-releasedprost/index.html
+  - post/96564061826/index.html
 date: 2014-09-03 16:50:09
 ---
 

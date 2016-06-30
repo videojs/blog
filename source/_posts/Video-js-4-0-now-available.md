@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/50021214078/videojs-40-now-available/index.html
+  - post/50021214078/index.html
 date: 2013-05-09 13:10:00
 ---
 

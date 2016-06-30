@@ -4,6 +4,9 @@ tags: []
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35888302484/videojs-is-ie9-compatible/index.html
+  - post/35888302484/index.html
 date: 2010-09-15 00:00:00
 ---
 

@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/77214236892/videojs-version-440-released-now-supporting/index.html
+  - post/77214236892/index.html
 date: 2014-02-19 17:49:00
 ---
 

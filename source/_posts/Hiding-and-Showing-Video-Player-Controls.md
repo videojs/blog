@@ -4,6 +4,9 @@ tags: []
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/57828375480/hiding-and-showing-video-player-controls/index.html
+  - post/57828375480/index.html
 date: 2013-08-09 18:51:47
 ---
 

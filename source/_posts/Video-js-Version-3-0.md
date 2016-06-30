@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35884704314/video-js-v-3-0/index.html
+  - post/35884704314/index.html
 date: 2012-01-10 00:00:00
 ---
 

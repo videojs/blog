@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35887428303/1-1-5-release-subtitles-using-track-android-fix-more/index.html
+  - post/35887428303/index.html
 date: 2010-11-09 00:00:00
 ---
 

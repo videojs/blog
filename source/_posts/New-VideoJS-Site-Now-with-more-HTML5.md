@@ -4,6 +4,9 @@ tags: []
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35888462908/new-videojs-site-now-with-more-html5/index.html
+  - post/35888462908/index.html
 date: 2010-09-15 00:00:00
 ---
 

@@ -4,6 +4,9 @@ tags: []
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/61309840958/unauthorized-modification-of-videojs-cdn-files/index.html
+  - post/61309840958/index.html
 date: 2013-09-15 11:23:00
 ---
 

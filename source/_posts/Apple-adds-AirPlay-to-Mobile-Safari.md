@@ -6,6 +6,8 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35885444487/index.html
 date: 2011-01-28 00:00:00
 ---
 

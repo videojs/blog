@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/66138384272/videojs-version-430-released-w-shiny-new-api/index.html
+  - post/66138384272/index.html
 date: 2013-11-05 19:29:00
 ---
 

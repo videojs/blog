@@ -5,6 +5,9 @@ tags:
 author:
   name: Steve Heffernan
   github: heff
+alias:
+  - post/35885839763/html5-video-statistics/index.html
+  - post/35885839763/index.html
 date: 2011-01-07 00:00:00
 ---
 

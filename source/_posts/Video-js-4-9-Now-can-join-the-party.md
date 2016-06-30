@@ -6,6 +6,9 @@ tags:
 author:
   name: Matthew McClure
   github: mmcc
+alias:
+  - post/99014232526/videojs-49-now-audio-can-join-the-party/index.html
+  - post/99014232526/index.html
 date: 2014-10-02 20:49:00
 ---
 
