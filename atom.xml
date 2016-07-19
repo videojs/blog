@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Video.js Blog</title>
   
-  <link href="/blog/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="https://videojs.github.io/blog/"/>
+  <link href="http://blog.videojs.com/"/>
   <updated>2016-06-29T20:23:06.000Z</updated>
-  <id>https://videojs.github.io/blog/</id>
+  <id>http://blog.videojs.com/</id>
   
   <author>
     <name>John Doe</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Video.js 5&#39;s fluid mode and playlist picker</title>
-    <link href="https://videojs.github.io/blog/Video-js-5-s-fluid-mode-and-playlist-picker/"/>
-    <id>https://videojs.github.io/blog/Video-js-5-s-fluid-mode-and-playlist-picker/</id>
+    <link href="http://blog.videojs.com/Video-js-5-s-fluid-mode-and-playlist-picker/"/>
+    <id>http://blog.videojs.com/Video-js-5-s-fluid-mode-and-playlist-picker/</id>
     <published>2016-06-01T18:50:06.000Z</published>
     <updated>2016-06-29T20:23:06.000Z</updated>
     
@@ -54,16 +54,16 @@
     </summary>
     
     
-      <category term="videojs 5" scheme="https://videojs.github.io/blog/tags/videojs-5/"/>
+      <category term="videojs 5" scheme="http://blog.videojs.com/tags/videojs-5/"/>
     
-      <category term="fluid" scheme="https://videojs.github.io/blog/tags/fluid/"/>
+      <category term="fluid" scheme="http://blog.videojs.com/tags/fluid/"/>
     
   </entry>
   
   <entry>
     <title>Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name).</title>
-    <link href="https://videojs.github.io/blog/Video-js-5-The-Only-Thing-That%E2%80%99s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/"/>
-    <id>https://videojs.github.io/blog/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/</id>
+    <link href="http://blog.videojs.com/Video-js-5-The-Only-Thing-That%E2%80%99s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/"/>
+    <id>http://blog.videojs.com/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/</id>
     <published>2015-09-29T18:00:16.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -168,8 +168,8 @@
   
   <entry>
     <title>It&#39;s here: 5.0 release candidates!</title>
-    <link href="https://videojs.github.io/blog/It-s-here-5-0-release-candidates/"/>
-    <id>https://videojs.github.io/blog/It-s-here-5-0-release-candidates/</id>
+    <link href="http://blog.videojs.com/It-s-here-5-0-release-candidates/"/>
+    <id>http://blog.videojs.com/It-s-here-5-0-release-candidates/</id>
     <published>2015-06-08T23:59:42.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -198,18 +198,18 @@
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
-      <category term="release" scheme="https://videojs.github.io/blog/tags/release/"/>
+      <category term="release" scheme="http://blog.videojs.com/tags/release/"/>
     
-      <category term="videojs" scheme="https://videojs.github.io/blog/tags/videojs/"/>
+      <category term="videojs" scheme="http://blog.videojs.com/tags/videojs/"/>
     
   </entry>
   
   <entry>
     <title>Video.js 4.12 - The last of the 4 minors</title>
-    <link href="https://videojs.github.io/blog/Video-js-4-12-The-last-of-the-4-minors/"/>
-    <id>https://videojs.github.io/blog/Video-js-4-12-The-last-of-the-4-minors/</id>
+    <link href="http://blog.videojs.com/Video-js-4-12-The-last-of-the-4-minors/"/>
+    <id>http://blog.videojs.com/Video-js-4-12-The-last-of-the-4-minors/</id>
     <published>2015-02-18T18:32:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -304,16 +304,16 @@
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
-      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
   </entry>
   
   <entry>
     <title>Video.js 4.9 - Now &lt;audio&gt; can join the party!</title>
-    <link href="https://videojs.github.io/blog/Video-js-4-9-Now-can-join-the-party/"/>
-    <id>https://videojs.github.io/blog/Video-js-4-9-Now-can-join-the-party/</id>
+    <link href="http://blog.videojs.com/Video-js-4-9-Now-can-join-the-party/"/>
+    <id>http://blog.videojs.com/Video-js-4-9-Now-can-join-the-party/</id>
     <published>2014-10-03T00:49:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -356,16 +356,16 @@
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
-      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
   </entry>
   
   <entry>
     <title>Video.js 4.8.0 released...Prost!</title>
-    <link href="https://videojs.github.io/blog/Video-js-4-8-0-released-Prost/"/>
-    <id>https://videojs.github.io/blog/Video-js-4-8-0-released-Prost/</id>
+    <link href="http://blog.videojs.com/Video-js-4-8-0-released-Prost/"/>
+    <id>http://blog.videojs.com/Video-js-4-8-0-released-Prost/</id>
     <published>2014-09-03T20:50:09.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -396,16 +396,16 @@
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
-      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
   </entry>
   
   <entry>
     <title>Video.js v4.7.0 - Built mostly by NEW contributors! Also Google chooses Video.js</title>
-    <link href="https://videojs.github.io/blog/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/"/>
-    <id>https://videojs.github.io/blog/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/</id>
+    <link href="http://blog.videojs.com/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/"/>
+    <id>http://blog.videojs.com/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/</id>
     <published>2014-08-06T18:42:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -476,16 +476,16 @@
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
-      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
   </entry>
   
   <entry>
     <title>DASH Everywhere-ish (hack project)</title>
-    <link href="https://videojs.github.io/blog/DASH-Everywhere-ish-hack-project/"/>
-    <id>https://videojs.github.io/blog/DASH-Everywhere-ish-hack-project/</id>
+    <link href="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/"/>
+    <id>http://blog.videojs.com/DASH-Everywhere-ish-hack-project/</id>
     <published>2014-07-22T15:01:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -548,16 +548,16 @@
     </summary>
     
     
-      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
-      <category term="html5 video" scheme="https://videojs.github.io/blog/tags/html5-video/"/>
+      <category term="html5 video" scheme="http://blog.videojs.com/tags/html5-video/"/>
     
   </entry>
   
   <entry>
     <title>Video.js version 4.6.0 released! It&#39;s been a productive month.</title>
-    <link href="https://videojs.github.io/blog/Video-js-version-4-6-0-released-It-s-been-a-productive-month/"/>
-    <id>https://videojs.github.io/blog/Video-js-version-4-6-0-released-It-s-been-a-productive-month/</id>
+    <link href="http://blog.videojs.com/Video-js-version-4-6-0-released-It-s-been-a-productive-month/"/>
+    <id>http://blog.videojs.com/Video-js-version-4-6-0-released-It-s-been-a-productive-month/</id>
     <published>2014-05-20T21:29:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -619,14 +619,14 @@
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Video.js version 4.5.0 released! Nothing to see here, move along</title>
-    <link href="https://videojs.github.io/blog/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/"/>
-    <id>https://videojs.github.io/blog/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/</id>
+    <link href="http://blog.videojs.com/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/"/>
+    <id>http://blog.videojs.com/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/</id>
     <published>2014-03-27T22:49:04.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -658,14 +658,14 @@
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Video.js version 4.4.0 released - Now supporting RequireJS and Browserify</title>
-    <link href="https://videojs.github.io/blog/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/"/>
-    <id>https://videojs.github.io/blog/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/</id>
+    <link href="http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/"/>
+    <id>http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/</id>
     <published>2014-02-19T22:49:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -714,14 +714,14 @@
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Video.js version 4.3.0 released w/ shiny new API docs</title>
-    <link href="https://videojs.github.io/blog/Video-js-version-4-3-0-released-w-shiny-new-API-docs/"/>
-    <id>https://videojs.github.io/blog/Video-js-version-4-3-0-released-w-shiny-new-API-docs/</id>
+    <link href="http://blog.videojs.com/Video-js-version-4-3-0-released-w-shiny-new-API-docs/"/>
+    <id>http://blog.videojs.com/Video-js-version-4-3-0-released-w-shiny-new-API-docs/</id>
     <published>2013-11-06T00:29:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -783,14 +783,14 @@ var hi;
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>The Guardian uses Video.js in feature article</title>
-    <link href="https://videojs.github.io/blog/The-Guardian-uses-Video-js-in-feature-article/"/>
-    <id>https://videojs.github.io/blog/The-Guardian-uses-Video-js-in-feature-article/</id>
+    <link href="http://blog.videojs.com/The-Guardian-uses-Video-js-in-feature-article/"/>
+    <id>http://blog.videojs.com/The-Guardian-uses-Video-js-in-feature-article/</id>
     <published>2013-11-05T23:15:11.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -807,14 +807,14 @@ var hi;
     </summary>
     
     
-      <category term="gallery" scheme="https://videojs.github.io/blog/tags/gallery/"/>
+      <category term="gallery" scheme="http://blog.videojs.com/tags/gallery/"/>
     
   </entry>
   
   <entry>
     <title>4.2.2 Patch Release</title>
-    <link href="https://videojs.github.io/blog/4-2-2-Patch-Release/"/>
-    <id>https://videojs.github.io/blog/4-2-2-Patch-Release/</id>
+    <link href="http://blog.videojs.com/4-2-2-Patch-Release/"/>
+    <id>http://blog.videojs.com/4-2-2-Patch-Release/</id>
     <published>2013-10-15T22:26:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -838,14 +838,14 @@ var hi;
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Running Video.js unit tests in real browsers with Karma</title>
-    <link href="https://videojs.github.io/blog/Running-Video-js-unit-tests-in-real-browsers-with-Karma/"/>
-    <id>https://videojs.github.io/blog/Running-Video-js-unit-tests-in-real-browsers-with-Karma/</id>
+    <link href="http://blog.videojs.com/Running-Video-js-unit-tests-in-real-browsers-with-Karma/"/>
+    <id>http://blog.videojs.com/Running-Video-js-unit-tests-in-real-browsers-with-Karma/</id>
     <published>2013-09-19T03:21:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -869,8 +869,8 @@ var hi;
   
   <entry>
     <title>Unauthorized modification of Video.js CDN files</title>
-    <link href="https://videojs.github.io/blog/Unauthorized-modification-of-Video-js-CDN-files/"/>
-    <id>https://videojs.github.io/blog/Unauthorized-modification-of-Video-js-CDN-files/</id>
+    <link href="http://blog.videojs.com/Unauthorized-modification-of-Video-js-CDN-files/"/>
+    <id>http://blog.videojs.com/Unauthorized-modification-of-Video-js-CDN-files/</id>
     <published>2013-09-15T15:23:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -907,8 +907,8 @@ var hi;
   
   <entry>
     <title>Video.js 4.2.0 released! RTMP, CSS designer, and stability</title>
-    <link href="https://videojs.github.io/blog/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/"/>
-    <id>https://videojs.github.io/blog/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/</id>
+    <link href="http://blog.videojs.com/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/"/>
+    <id>http://blog.videojs.com/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/</id>
     <published>2013-09-06T19:51:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -976,14 +976,14 @@ var hi;
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Hiding and Showing Video Player Controls</title>
-    <link href="https://videojs.github.io/blog/Hiding-and-Showing-Video-Player-Controls/"/>
-    <id>https://videojs.github.io/blog/Hiding-and-Showing-Video-Player-Controls/</id>
+    <link href="http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/"/>
+    <id>http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/</id>
     <published>2013-08-09T22:51:47.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1144,8 +1144,8 @@ video.on(&#39;tap&#39;, function(){
   
   <entry>
     <title>New Player Skin Designer for Video.js</title>
-    <link href="https://videojs.github.io/blog/New-Player-Skin-Designer-for-Video-js/"/>
-    <id>https://videojs.github.io/blog/New-Player-Skin-Designer-for-Video-js/</id>
+    <link href="http://blog.videojs.com/New-Player-Skin-Designer-for-Video-js/"/>
+    <id>http://blog.videojs.com/New-Player-Skin-Designer-for-Video-js/</id>
     <published>2013-07-15T23:44:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1171,14 +1171,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="html5 video" scheme="https://videojs.github.io/blog/tags/html5-video/"/>
+      <category term="html5 video" scheme="http://blog.videojs.com/tags/html5-video/"/>
     
   </entry>
   
   <entry>
     <title>Video.js 4.1.0 Released</title>
-    <link href="https://videojs.github.io/blog/Video-js-4-1-0-Released/"/>
-    <id>https://videojs.github.io/blog/Video-js-4-1-0-Released/</id>
+    <link href="http://blog.videojs.com/Video-js-4-1-0-Released/"/>
+    <id>http://blog.videojs.com/Video-js-4-1-0-Released/</id>
     <published>2013-06-28T23:34:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1210,14 +1210,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Video.js 4.0 now available!</title>
-    <link href="https://videojs.github.io/blog/Video-js-4-0-now-available/"/>
-    <id>https://videojs.github.io/blog/Video-js-4-0-now-available/</id>
+    <link href="http://blog.videojs.com/Video-js-4-0-now-available/"/>
+    <id>http://blog.videojs.com/Video-js-4-0-now-available/</id>
     <published>2013-05-09T17:10:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1268,14 +1268,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Repo Moved!</title>
-    <link href="https://videojs.github.io/blog/Repo-Moved/"/>
-    <id>https://videojs.github.io/blog/Repo-Moved/</id>
+    <link href="http://blog.videojs.com/Repo-Moved/"/>
+    <id>http://blog.videojs.com/Repo-Moved/</id>
     <published>2013-05-06T20:56:59.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1298,8 +1298,8 @@ video.on(&#39;tap&#39;, function(){
   
   <entry>
     <title>Site and Support Updates</title>
-    <link href="https://videojs.github.io/blog/Site-and-Support-Updates/"/>
-    <id>https://videojs.github.io/blog/Site-and-Support-Updates/</id>
+    <link href="http://blog.videojs.com/Site-and-Support-Updates/"/>
+    <id>http://blog.videojs.com/Site-and-Support-Updates/</id>
     <published>2012-11-15T19:54:18.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1325,8 +1325,8 @@ video.on(&#39;tap&#39;, function(){
   
   <entry>
     <title>Brightcove Acquires Zencoder</title>
-    <link href="https://videojs.github.io/blog/Brightcove-Acquires-Zencoder/"/>
-    <id>https://videojs.github.io/blog/Brightcove-Acquires-Zencoder/</id>
+    <link href="http://blog.videojs.com/Brightcove-Acquires-Zencoder/"/>
+    <id>http://blog.videojs.com/Brightcove-Acquires-Zencoder/</id>
     <published>2012-07-26T04:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1349,14 +1349,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
   </entry>
   
   <entry>
     <title>Version 3.2 Update</title>
-    <link href="https://videojs.github.io/blog/Version-3-2-Update/"/>
-    <id>https://videojs.github.io/blog/Version-3-2-Update/</id>
+    <link href="http://blog.videojs.com/Version-3-2-Update/"/>
+    <id>http://blog.videojs.com/Version-3-2-Update/</id>
     <published>2012-03-23T04:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1393,14 +1393,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Version 3.1 Update</title>
-    <link href="https://videojs.github.io/blog/Version-3-1-Update/"/>
-    <id>https://videojs.github.io/blog/Version-3-1-Update/</id>
+    <link href="http://blog.videojs.com/Version-3-1-Update/"/>
+    <id>http://blog.videojs.com/Version-3-1-Update/</id>
     <published>2012-01-30T05:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1434,14 +1434,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Video.js Version 3.0!</title>
-    <link href="https://videojs.github.io/blog/Video-js-Version-3-0/"/>
-    <id>https://videojs.github.io/blog/Video-js-Version-3-0/</id>
+    <link href="http://blog.videojs.com/Video-js-Version-3-0/"/>
+    <id>http://blog.videojs.com/Video-js-Version-3-0/</id>
     <published>2012-01-10T05:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1463,14 +1463,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Lynda.com HTML5 Video Tutorial Released</title>
-    <link href="https://videojs.github.io/blog/Lynda-com-HTML5-Video-Tutorial-Released/"/>
-    <id>https://videojs.github.io/blog/Lynda-com-HTML5-Video-Tutorial-Released/</id>
+    <link href="http://blog.videojs.com/Lynda-com-HTML5-Video-Tutorial-Released/"/>
+    <id>http://blog.videojs.com/Lynda-com-HTML5-Video-Tutorial-Released/</id>
     <published>2011-06-17T04:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1486,16 +1486,16 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
-      <category term="code" scheme="https://videojs.github.io/blog/tags/code/"/>
+      <category term="code" scheme="http://blog.videojs.com/tags/code/"/>
     
   </entry>
   
   <entry>
     <title>How are you using video.js?</title>
-    <link href="https://videojs.github.io/blog/How-are-you-using-video-js/"/>
-    <id>https://videojs.github.io/blog/How-are-you-using-video-js/</id>
+    <link href="http://blog.videojs.com/How-are-you-using-video-js/"/>
+    <id>http://blog.videojs.com/How-are-you-using-video-js/</id>
     <published>2011-06-07T04:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1514,8 +1514,8 @@ video.on(&#39;tap&#39;, function(){
   
   <entry>
     <title>New MPEG LA WebM/VP8 Patent Pool</title>
-    <link href="https://videojs.github.io/blog/New-MPEG-LA-WebM-VP8-Patent-Pool/"/>
-    <id>https://videojs.github.io/blog/New-MPEG-LA-WebM-VP8-Patent-Pool/</id>
+    <link href="http://blog.videojs.com/New-MPEG-LA-WebM-VP8-Patent-Pool/"/>
+    <id>http://blog.videojs.com/New-MPEG-LA-WebM-VP8-Patent-Pool/</id>
     <published>2011-02-11T05:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1533,14 +1533,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
   </entry>
   
   <entry>
     <title>Apple adds AirPlay to Mobile Safari</title>
-    <link href="https://videojs.github.io/blog/Apple-adds-AirPlay-to-Mobile-Safari/"/>
-    <id>https://videojs.github.io/blog/Apple-adds-AirPlay-to-Mobile-Safari/</id>
+    <link href="http://blog.videojs.com/Apple-adds-AirPlay-to-Mobile-Safari/"/>
+    <id>http://blog.videojs.com/Apple-adds-AirPlay-to-Mobile-Safari/</id>
     <published>2011-01-28T05:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1557,16 +1557,16 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
-      <category term="code" scheme="https://videojs.github.io/blog/tags/code/"/>
+      <category term="code" scheme="http://blog.videojs.com/tags/code/"/>
     
   </entry>
   
   <entry>
     <title>Google is dropping h.264 from Chrome</title>
-    <link href="https://videojs.github.io/blog/Google-is-dropping-h-264-from-Chrome/"/>
-    <id>https://videojs.github.io/blog/Google-is-dropping-h-264-from-Chrome/</id>
+    <link href="http://blog.videojs.com/Google-is-dropping-h-264-from-Chrome/"/>
+    <id>http://blog.videojs.com/Google-is-dropping-h-264-from-Chrome/</id>
     <published>2011-01-11T05:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1588,16 +1588,16 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
-      <category term="stats" scheme="https://videojs.github.io/blog/tags/stats/"/>
+      <category term="stats" scheme="http://blog.videojs.com/tags/stats/"/>
     
   </entry>
   
   <entry>
     <title>Over 50% of web users now support HTML5 Video</title>
-    <link href="https://videojs.github.io/blog/Over-50-of-web-users-now-support-HTML5-Video/"/>
-    <id>https://videojs.github.io/blog/Over-50-of-web-users-now-support-HTML5-Video/</id>
+    <link href="http://blog.videojs.com/Over-50-of-web-users-now-support-HTML5-Video/"/>
+    <id>http://blog.videojs.com/Over-50-of-web-users-now-support-HTML5-Video/</id>
     <published>2011-01-07T05:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1612,14 +1612,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="stats" scheme="https://videojs.github.io/blog/tags/stats/"/>
+      <category term="stats" scheme="http://blog.videojs.com/tags/stats/"/>
     
   </entry>
   
   <entry>
     <title>HTML5 Video + Google Maps Mashup</title>
-    <link href="https://videojs.github.io/blog/HTML5-Video-Google-Maps-Mashup/"/>
-    <id>https://videojs.github.io/blog/HTML5-Video-Google-Maps-Mashup/</id>
+    <link href="http://blog.videojs.com/HTML5-Video-Google-Maps-Mashup/"/>
+    <id>http://blog.videojs.com/HTML5-Video-Google-Maps-Mashup/</id>
     <published>2010-12-16T05:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1633,14 +1633,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
   </entry>
   
   <entry>
     <title>2.0.2 Release - Subtitle Optimization + Safari on Leopard FS Fix</title>
-    <link href="https://videojs.github.io/blog/2-0-2-Release-Subtitle-Optimization-Safari-on-Leopard-FS-Fix/"/>
-    <id>https://videojs.github.io/blog/2-0-2-Release-Subtitle-Optimization-Safari-on-Leopard-FS-Fix/</id>
+    <link href="http://blog.videojs.com/2-0-2-Release-Subtitle-Optimization-Safari-on-Leopard-FS-Fix/"/>
+    <id>http://blog.videojs.com/2-0-2-Release-Subtitle-Optimization-Safari-on-Leopard-FS-Fix/</id>
     <published>2010-12-10T05:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1661,14 +1661,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>2.0.0 Release - Behaviors, fallback APIs, and more.</title>
-    <link href="https://videojs.github.io/blog/2-0-0-Release-Behaviors-fallback-APIs-and-more/"/>
-    <id>https://videojs.github.io/blog/2-0-0-Release-Behaviors-fallback-APIs-and-more/</id>
+    <link href="http://blog.videojs.com/2-0-0-Release-Behaviors-fallback-APIs-and-more/"/>
+    <id>http://blog.videojs.com/2-0-0-Release-Behaviors-fallback-APIs-and-more/</id>
     <published>2010-11-22T05:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1714,14 +1714,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Make sites serve you HTML5 video in Safari</title>
-    <link href="https://videojs.github.io/blog/Make-sites-serve-you-HTML5-video-in-Safari/"/>
-    <id>https://videojs.github.io/blog/Make-sites-serve-you-HTML5-video-in-Safari/</id>
+    <link href="http://blog.videojs.com/Make-sites-serve-you-HTML5-video-in-Safari/"/>
+    <id>http://blog.videojs.com/Make-sites-serve-you-HTML5-video-in-Safari/</id>
     <published>2010-11-19T05:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1743,14 +1743,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="code" scheme="https://videojs.github.io/blog/tags/code/"/>
+      <category term="code" scheme="http://blog.videojs.com/tags/code/"/>
     
   </entry>
   
   <entry>
     <title>1.1.5 Release - Subtitles using track, Android fix &amp; more</title>
-    <link href="https://videojs.github.io/blog/1-1-5-Release-Subtitles-using-track-Android-fix-more/"/>
-    <id>https://videojs.github.io/blog/1-1-5-Release-Subtitles-using-track-Android-fix-more/</id>
+    <link href="http://blog.videojs.com/1-1-5-Release-Subtitles-using-track-Android-fix-more/"/>
+    <id>http://blog.videojs.com/1-1-5-Release-Subtitles-using-track-Android-fix-more/</id>
     <published>2010-11-09T05:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1780,14 +1780,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Version 1.1.4 Release - CSS Loading Spinner &amp; More</title>
-    <link href="https://videojs.github.io/blog/Version-1-1-4-Release-CSS-Loading-Spinner-More/"/>
-    <id>https://videojs.github.io/blog/Version-1-1-4-Release-CSS-Loading-Spinner-More/</id>
+    <link href="http://blog.videojs.com/Version-1-1-4-Release-CSS-Loading-Spinner-More/"/>
+    <id>http://blog.videojs.com/Version-1-1-4-Release-CSS-Loading-Spinner-More/</id>
     <published>2010-11-06T04:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1813,14 +1813,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Version 1.1.3 Release</title>
-    <link href="https://videojs.github.io/blog/Version-1-1-3-Release/"/>
-    <id>https://videojs.github.io/blog/Version-1-1-3-Release/</id>
+    <link href="http://blog.videojs.com/Version-1-1-3-Release/"/>
+    <id>http://blog.videojs.com/Version-1-1-3-Release/</id>
     <published>2010-10-19T04:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1848,14 +1848,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="version" scheme="https://videojs.github.io/blog/tags/version/"/>
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
   <entry>
     <title>Facebook Adds HTML5 Video</title>
-    <link href="https://videojs.github.io/blog/Facebook-Adds-HTML5-Video/"/>
-    <id>https://videojs.github.io/blog/Facebook-Adds-HTML5-Video/</id>
+    <link href="http://blog.videojs.com/Facebook-Adds-HTML5-Video/"/>
+    <id>http://blog.videojs.com/Facebook-Adds-HTML5-Video/</id>
     <published>2010-10-12T04:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1873,14 +1873,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="news" scheme="https://videojs.github.io/blog/tags/news/"/>
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
   </entry>
   
   <entry>
     <title>iPad &amp; iPhone Video Poster Fix (bonus Javascript Placement Fix)</title>
-    <link href="https://videojs.github.io/blog/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/"/>
-    <id>https://videojs.github.io/blog/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/</id>
+    <link href="http://blog.videojs.com/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/"/>
+    <id>http://blog.videojs.com/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/</id>
     <published>2010-09-20T04:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1915,14 +1915,14 @@ video.on(&#39;tap&#39;, function(){
     </summary>
     
     
-      <category term="code" scheme="https://videojs.github.io/blog/tags/code/"/>
+      <category term="code" scheme="http://blog.videojs.com/tags/code/"/>
     
   </entry>
   
   <entry>
     <title>New VideoJS Site (Now with more HTML5)!</title>
-    <link href="https://videojs.github.io/blog/New-VideoJS-Site-Now-with-more-HTML5/"/>
-    <id>https://videojs.github.io/blog/New-VideoJS-Site-Now-with-more-HTML5/</id>
+    <link href="http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/"/>
+    <id>http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/</id>
     <published>2010-09-15T04:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
@@ -1943,8 +1943,8 @@ video.on(&#39;tap&#39;, function(){
   
   <entry>
     <title>VideoJS is IE9 Compatible</title>
-    <link href="https://videojs.github.io/blog/VideoJS-is-IE9-Compatible/"/>
-    <id>https://videojs.github.io/blog/VideoJS-is-IE9-Compatible/</id>
+    <link href="http://blog.videojs.com/VideoJS-is-IE9-Compatible/"/>
+    <id>http://blog.videojs.com/VideoJS-is-IE9-Compatible/</id>
     <published>2010-09-15T04:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
