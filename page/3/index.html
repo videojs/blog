@@ -91,8 +91,8 @@
       
         <p>Today we&rsquo;re releasing Video.js 4.0, which is the most solid, lightweight, and I dare say prettiest version yet. It&rsquo;s available for download, on Github, and hosted for free on our CDN.</p>
 <p>Version 4.0 received the most community collaboration of any previous version, which speaks to the growing strength of the JavaScript community, the growing popularity of HTML5 video, and an increase in Video.js usage. Over the last year the number of sites using Video.js has more than <a href="http://trends.builtwith.com/media/VideoJS" target="_blank" rel="external">doubled</a>, and each month there are over 200 million hits to the CDN-hosted version alone! Thank you to all of the Video.js community members for contributing code and filing bug reports.</p>
-<p>This version is also a milestone in that it&rsquo;s the first version released since <a href="http://blog.videojs.com/post/35666994917/brightcove-acquires-zencoder" target="_blank" rel="external">Brightcove acquired Zencoder</a> last year. For those who missed the announcement, it was a very good thing for Video.js. In the past, Video.js was a side project for Zencoder that I maintained on top of my regular responsibilities (as if startup life isn&rsquo;t exciting enough). Post-acquisition, Brightcove has not only put me full-time on Video.js, but the Brightcove video player team has become contributors to the project. The Brightcove team is probably the most experienced video player team in the world, supporting the most advanced video technology, for the biggest brands, across all the devices. It&rsquo;s been a privilege to work with them and they&rsquo;ve made major contributions to this version.</p>
-<h3 id="4-0-Major-Feature-Summary"><a href="/blog/Video-js-4-0-now-available/#4-0-Major-Feature-Summary" class="headerlink" title="4.0 Major Feature Summary:"></a>4.0 Major Feature Summary:</h3><p>Improved performance through an 18% size reduction using Google Closure Compiler in advanced mode</p>
+<p>This version is also a milestone in that it&rsquo;s the first version released since <a href="http://blog.videojs.com/post/35666994917/brightcove-acquires-zencoder">Brightcove acquired Zencoder</a> last year. For those who missed the announcement, it was a very good thing for Video.js. In the past, Video.js was a side project for Zencoder that I maintained on top of my regular responsibilities (as if startup life isn&rsquo;t exciting enough). Post-acquisition, Brightcove has not only put me full-time on Video.js, but the Brightcove video player team has become contributors to the project. The Brightcove team is probably the most experienced video player team in the world, supporting the most advanced video technology, for the biggest brands, across all the devices. It&rsquo;s been a privilege to work with them and they&rsquo;ve made major contributions to this version.</p>
+<h3 id="4-0-Major-Feature-Summary"><a href="/Video-js-4-0-now-available/#4-0-Major-Feature-Summary" class="headerlink" title="4.0 Major Feature Summary:"></a>4.0 Major Feature Summary:</h3><p>Improved performance through an 18% size reduction using Google Closure Compiler in advanced mode</p>
 <ul>
 <li>Greater stability through an automated cross-browser/device test suite using TravisCI, Bunyip, and Browserstack.</li>
 <li>New plugin interface and plugin listing for extending Video.js</li>
@@ -102,7 +102,7 @@
 <li>Moved to Apache 2.0 license</li>
 <li>100% JavaScript development tool set including Grunt</li>
 </ul>
-<h4 id="Improved-Performance"><a href="/blog/Video-js-4-0-now-available/#Improved-Performance" class="headerlink" title="Improved Performance"></a>Improved Performance</h4><p>With version 4.0, performance was our top priority, and a major factor of performance is the time it takes to load the library. What would seem to be minor size reductions can have a big impact, especially when a library will be loaded millions of times a month all over the world. We chose to use Google’s <a href="https://developers.google.com/closure/compiler/" target="_blank" rel="external">Closure Compiler</a> because its “advanced mode” currently provides the most aggressive options for code minification, and so far we’ve seen an 18% reduction in code size, with the potential for more.</p>
+<h4 id="Improved-Performance"><a href="/Video-js-4-0-now-available/#Improved-Performance" class="headerlink" title="Improved Performance"></a>Improved Performance</h4><p>With version 4.0, performance was our top priority, and a major factor of performance is the time it takes to load the library. What would seem to be minor size reductions can have a big impact, especially when a library will be loaded millions of times a month all over the world. We chose to use Google’s <a href="https://developers.google.com/closure/compiler/" target="_blank" rel="external">Closure Compiler</a> because its “advanced mode” currently provides the most aggressive options for code minification, and so far we’ve seen an 18% reduction in code size, with the potential for more.</p>
 <p>Closure Compiler also claims to rewrite code for better runtime performance, though we haven’t had a chance to benchmark this yet.</p>
 <p>Some preliminary load-time benchmarking* shows:</p>
 <ul>
@@ -111,19 +111,19 @@
 <li>Actual video playback seen in under 0.5 seconds (using a CDN hosted MP4)</li>
 </ul>
 <p>*Initial tests used Chrome with an empty cache on a modern MacBook Pro with a Wi-Fi connection. More formal testing to follow.</p>
-<h4 id="Greater-Stability"><a href="/blog/Video-js-4-0-now-available/#Greater-Stability" class="headerlink" title="Greater Stability"></a>Greater Stability</h4><p>Automated cross-browser, cross-device testing is the Holy Grail of testing for a JavaScript library. While building version 4.0, we’ve been able to reach that goal through the use of a number of tools, including:</p>
+<h4 id="Greater-Stability"><a href="/Video-js-4-0-now-available/#Greater-Stability" class="headerlink" title="Greater Stability"></a>Greater Stability</h4><p>Automated cross-browser, cross-device testing is the Holy Grail of testing for a JavaScript library. While building version 4.0, we’ve been able to reach that goal through the use of a number of tools, including:</p>
 <ul>
 <li><a href="https://travis-ci.org" target="_blank" rel="external">TravisCI</a> - Automatically runs unit tests through <a href="http://phantomjs.org" target="_blank" rel="external">PhantomJS</a> on every pull request made to the Video.js source code</li>
 <li><a href="http://ryanseddon.github.io/bunyip/" target="_blank" rel="external">Bunyip</a> + <a href="http://www.browserstack.com" target="_blank" rel="external">Browserstack</a> - Allows us to run tests in cloud-hosted instances of any browser from IE6 to the latest Chrome, and also a wide range of iOS and Android devices.</li>
 </ul>
 <p>This ability to easily run tests across environments before any new release will give us more protection against regressions, and can allow for a faster feature release cycle.</p>
-<h4 id="New-Plugin-Interface"><a href="/blog/Video-js-4-0-now-available/#New-Plugin-Interface" class="headerlink" title="New Plugin Interface"></a>New Plugin Interface</h4><p>The new <a href="https://github.com/videojs/video.js/blob/master/docs/plugins.md" target="_blank" rel="external">plugins API</a> allows developers to more easily add custom features to Video.js. The API works similarly to the jQuery plugin interface, giving developers access to add to or overwrite any piece of Video.js. Once a plugin has been created, it can be shared on the <a href="https://github.com/videojs/video.js/wiki/Plugins" target="_blank" rel="external">Video.js plugin list</a> page on the wiki.</p>
-<h4 id="New-Default-Skin"><a href="/blog/Video-js-4-0-now-available/#New-Default-Skin" class="headerlink" title="New Default Skin"></a>New Default Skin</h4><p>With help from the Brightcove UX team, we’ve created a new default skin that’s simpler, more polished, and more customizable. One of the most interesting features is that we’ve moved from using images for icons to font icons. The use of font icons allows you to change the color and size of the icons simply by changing a CSS value. You can see an example of this on the <a href="http://videojs.com" target="_blank" rel="external">Video.js homepage</a>.</p>
-<h4 id="Improved-Accessibility"><a href="/blog/Video-js-4-0-now-available/#Improved-Accessibility" class="headerlink" title="Improved Accessibility"></a>Improved Accessibility</h4><p>Greg Kraus, a Video.js community member from <a href="http://www.NCSU.edu" target="_blank" rel="external">NCSU.edu</a>, did some great work testing and improving Video.js accessibility through better use of <a href="http://www.w3.org/WAI/intro/aria" target="_blank" rel="external">ARIA</a> roles. The changes make it so keyboard-only users, screen reader users, and voice-interface users will be able to interact with the video player. UPDATE: Read more in <a href="http://accessibility.oit.ncsu.edu/blog/2013/05/09/accessible-video-js-player-available-on-global-accessibility-awareness-day/" target="_blank" rel="external">Greg&rsquo;s blog post</a>.</p>
-<h4 id="Moved-to-Apache-2-0-License"><a href="/blog/Video-js-4-0-now-available/#Moved-to-Apache-2-0-License" class="headerlink" title="Moved to Apache 2.0 License"></a>Moved to Apache 2.0 License</h4><p>Earlier versions of Video.js were released under the LGPLv3 license. LGPL often gets confused with its stricter sibling, GPL, which requires that all code the software touches must also be open source. Video.js is meant to be open and free to use in all contexts, and we want that to be clear, so version 4.0 is now released under Apache 2.0, the same license Twitter Bootstrap is released under.</p>
-<h4 id="100-JavaScript-Tool-Set"><a href="/blog/Video-js-4-0-now-available/#100-JavaScript-Tool-Set" class="headerlink" title="100% JavaScript Tool Set"></a>100% JavaScript Tool Set</h4><p>Previously Video.js used Ruby for development tools, including Rake for deployment tasks, and zenflow–an internal Zencoder tool that builds on <a href="https://github.com/nvie/gitflow" target="_blank" rel="external">gitflow</a> for development process workflow. With 4.0 we’ve moved to <a href="http://gruntjs.com" target="_blank" rel="external">Grunt</a> for tasks and we’re building out a tool similar to zenflow in Node.js.</p>
-<h4 id="Videojs-com-Now-Open-Source"><a href="/blog/Video-js-4-0-now-available/#Videojs-com-Now-Open-Source" class="headerlink" title="Videojs.com Now Open Source"></a>Videojs.com Now Open Source</h4><p>As part of this release we’ve also made the Videojs.com website open source. So if you see something that should be added or fixed, <a href="https://github.com/videojs/videojs.com" target="_blank" rel="external">fork it</a>.</p>
-<h3 id="What-now"><a href="/blog/Video-js-4-0-now-available/#What-now" class="headerlink" title="What now?"></a>What now?</h3><p>Even with all of the updates listed above, this is simply a jumping-off point for what will be an exciting year for Video.js. We’re continuing to improve performance, multi-platform stability, and customizability through plugins and skins. Members of the community have already started work on plugins for some of the more requested features, like playlists, analytics, and advertising.</p>
+<h4 id="New-Plugin-Interface"><a href="/Video-js-4-0-now-available/#New-Plugin-Interface" class="headerlink" title="New Plugin Interface"></a>New Plugin Interface</h4><p>The new <a href="https://github.com/videojs/video.js/blob/master/docs/plugins.md" target="_blank" rel="external">plugins API</a> allows developers to more easily add custom features to Video.js. The API works similarly to the jQuery plugin interface, giving developers access to add to or overwrite any piece of Video.js. Once a plugin has been created, it can be shared on the <a href="https://github.com/videojs/video.js/wiki/Plugins" target="_blank" rel="external">Video.js plugin list</a> page on the wiki.</p>
+<h4 id="New-Default-Skin"><a href="/Video-js-4-0-now-available/#New-Default-Skin" class="headerlink" title="New Default Skin"></a>New Default Skin</h4><p>With help from the Brightcove UX team, we’ve created a new default skin that’s simpler, more polished, and more customizable. One of the most interesting features is that we’ve moved from using images for icons to font icons. The use of font icons allows you to change the color and size of the icons simply by changing a CSS value. You can see an example of this on the <a href="http://videojs.com" target="_blank" rel="external">Video.js homepage</a>.</p>
+<h4 id="Improved-Accessibility"><a href="/Video-js-4-0-now-available/#Improved-Accessibility" class="headerlink" title="Improved Accessibility"></a>Improved Accessibility</h4><p>Greg Kraus, a Video.js community member from <a href="http://www.NCSU.edu" target="_blank" rel="external">NCSU.edu</a>, did some great work testing and improving Video.js accessibility through better use of <a href="http://www.w3.org/WAI/intro/aria" target="_blank" rel="external">ARIA</a> roles. The changes make it so keyboard-only users, screen reader users, and voice-interface users will be able to interact with the video player. UPDATE: Read more in <a href="http://accessibility.oit.ncsu.edu/blog/2013/05/09/accessible-video-js-player-available-on-global-accessibility-awareness-day/" target="_blank" rel="external">Greg&rsquo;s blog post</a>.</p>
+<h4 id="Moved-to-Apache-2-0-License"><a href="/Video-js-4-0-now-available/#Moved-to-Apache-2-0-License" class="headerlink" title="Moved to Apache 2.0 License"></a>Moved to Apache 2.0 License</h4><p>Earlier versions of Video.js were released under the LGPLv3 license. LGPL often gets confused with its stricter sibling, GPL, which requires that all code the software touches must also be open source. Video.js is meant to be open and free to use in all contexts, and we want that to be clear, so version 4.0 is now released under Apache 2.0, the same license Twitter Bootstrap is released under.</p>
+<h4 id="100-JavaScript-Tool-Set"><a href="/Video-js-4-0-now-available/#100-JavaScript-Tool-Set" class="headerlink" title="100% JavaScript Tool Set"></a>100% JavaScript Tool Set</h4><p>Previously Video.js used Ruby for development tools, including Rake for deployment tasks, and zenflow–an internal Zencoder tool that builds on <a href="https://github.com/nvie/gitflow" target="_blank" rel="external">gitflow</a> for development process workflow. With 4.0 we’ve moved to <a href="http://gruntjs.com" target="_blank" rel="external">Grunt</a> for tasks and we’re building out a tool similar to zenflow in Node.js.</p>
+<h4 id="Videojs-com-Now-Open-Source"><a href="/Video-js-4-0-now-available/#Videojs-com-Now-Open-Source" class="headerlink" title="Videojs.com Now Open Source"></a>Videojs.com Now Open Source</h4><p>As part of this release we’ve also made the Videojs.com website open source. So if you see something that should be added or fixed, <a href="https://github.com/videojs/videojs.com" target="_blank" rel="external">fork it</a>.</p>
+<h3 id="What-now"><a href="/Video-js-4-0-now-available/#What-now" class="headerlink" title="What now?"></a>What now?</h3><p>Even with all of the updates listed above, this is simply a jumping-off point for what will be an exciting year for Video.js. We’re continuing to improve performance, multi-platform stability, and customizability through plugins and skins. Members of the community have already started work on plugins for some of the more requested features, like playlists, analytics, and advertising.</p>
 <p>Follow <a href="http://twitter.com/videojs" target="_blank" rel="external">@videojs</a> or sign up for our <a href="http://zencoder.us2.list-manage2.com/subscribe?u=36f130c3d3fadb2a21d2983b7&amp;id=0f35b0535c" target="_blank" rel="external">newsletter</a> to stay up-to-date on new features and roadmap updates.</p>
 <p>If you’d like to get involved in the project, check out our <a href="https://github.com/videojs/video.js/blob/master/CONTRIBUTING.md" target="_blank" rel="external">contributing guide</a>.</p>
 <p>Cheers,<br>-<a href="http://blog.heff.me" target="_blank" rel="external">heff</a><br><img src="http://feeds.feedburner.com/~r/video-js/~4/2fKZ1Q5wRIE" alt=""></p>
@@ -131,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-4-0-now-available/" data-id="ciq2qujkt001qozcdfvqe31aj" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-4-0-now-available/" data-id="ciqu3p60b001kwludzl2i6uty" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-4-0-now-available/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -184,7 +184,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Repo-Moved/" data-id="ciq2qujka001eozcdkg5vnxvi" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Repo-Moved/" data-id="ciqu3p5zh0012wlud48sjlj03" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Repo-Moved/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -225,7 +225,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>After a brief hiatus of helping <a href="http://blog.videojs.com/post/35666994917/brightcove-acquires-zencoder" title="Zencoder acquired by Brightcove" target="_blank" rel="external">Brightcove and Zencoder come together</a>, I&rsquo;m moving full time to developing and supporting Video.js. Thank you to everyone who has continued to commit code and help out in the forums. </p>
+        <p>After a brief hiatus of helping <a href="http://blog.videojs.com/post/35666994917/brightcove-acquires-zencoder" title="Zencoder acquired by Brightcove">Brightcove and Zencoder come together</a>, I&rsquo;m moving full time to developing and supporting Video.js. Thank you to everyone who has continued to commit code and help out in the forums. </p>
 <p>As part of this move I&rsquo;m trying to optimize the tools used for video.js project management and support. The first big change is that the forums are being replaced with <a href="http://stackoverflow.com/questions/tagged/video.js" title="Video.js Support on Stack Overflow" target="_blank" rel="external">Stack Overflow</a> (tag with &ldquo;video.js&rdquo;) and <a href="https://github.com/zencoder/video-js/issues" title="Video.js Submit Issues" target="_blank" rel="external">Github Issues</a>.</p>
 <p>Over the last few years Video.js has become more popular than I ever expected, and at the same time Stack Overflow has come up as an incredible tool for supporting developer communities. So along with many other projects like <a href="http://blog.stackoverflow.com/2011/08/facebook-stackoverflow/" title="Facebook on Stack Overflow" target="_blank" rel="external">Facebook</a>, <a href="http://android-developers.blogspot.com/2009/12/hello-stack-overflow.html" title="Android on Stack Overflow" target="_blank" rel="external">Android</a>, and <a href="http://html5boilerplate.com" title="HTML5 Boilerplate" target="_blank" rel="external">HTML5 Boilerplate</a>, I&rsquo;m excited to move support to Stack Overflow&rsquo;s awesome tool and community. I&rsquo;ll be leaving the forums up for bit but from here forward please post questions to Stack Overflow and use the &ldquo;video.js&rdquo; tag.</p>
 <p>I&rsquo;ve also begun cleaning up and organizing the <a href="https://github.com/zencoder/video-js/issues" title="Video.js Submit Issues" target="_blank" rel="external">Github Issues</a> for Video.js, which previously existed, but issues were split between the forum and Github. If you find specific bugs with video.js please <a href="https://github.com/zencoder/video-js/issues/new" title="Submit Issue" target="_blank" rel="external">submit them there</a>.</p>
@@ -238,7 +238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Site-and-Support-Updates/" data-id="ciq2qujkb001fozcdj9xx9zga" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Site-and-Support-Updates/" data-id="ciqu3p5zt0017wlud9r92mvdq" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Site-and-Support-Updates/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -292,7 +292,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Brightcove-Acquires-Zencoder/" data-id="ciq2quji30008ozcdbvadkaei" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Brightcove-Acquires-Zencoder/" data-id="ciqu3p5yd0008wlud1lsw2lmk" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Brightcove-Acquires-Zencoder/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -335,7 +335,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>First of all, check out the new <a href="/blog/Version-3-2-Update//tag-builder/">video tag builder</a>. The previous version of this site had an embed code builder, and people were <a href="http://help.videojs.com/discussions/problems/873-whered-the-embed-builder-go" target="_blank" rel="external">pretty disappointed</a> that the new site didn&rsquo;t. So I&rsquo;m happy to announce that it&rsquo;s available again, now as an HTML5 video tag builder that could probably be used outside of Video.js, it includes track tags, and even lets you test the settings. Let me know if you have any feedback on it.</p>
+        <p>First of all, check out the new <a href="/Version-3-2-Update//tag-builder/">video tag builder</a>. The previous version of this site had an embed code builder, and people were <a href="http://help.videojs.com/discussions/problems/873-whered-the-embed-builder-go" target="_blank" rel="external">pretty disappointed</a> that the new site didn&rsquo;t. So I&rsquo;m happy to announce that it&rsquo;s available again, now as an HTML5 video tag builder that could probably be used outside of Video.js, it includes track tags, and even lets you test the settings. Let me know if you have any feedback on it.</p>
 <p>The most notable change in this release is probably the completely overhauled &lt;track&gt; tag support.</p>
 <p><a href="https://gist.github.com/4092295.js?file=html5-track-tag.html" target="_blank" rel="external">https://gist.github.com/4092295.js?file=html5-track-tag.html</a></p>
 <p>The new version supports subtitles, captions, and even chapters. When you include tracks of different kinds, Video.js will automatically create menus in the player where users can select the language to display, or which chapter to jump to. Video.js also now supports the new <a href="http://dev.w3.org/html5/webvtt/" target="_blank" rel="external">WebVTT</a> text format, which is not far off from the previously supported WebSRT format but did take some tweaking in the parser. Not all WebVTT placement features are supported yet, but the basics of displaying text are, and we&rsquo;ll be working to get more WebVTT features built in.</p>
@@ -347,7 +347,7 @@
 <p>One other feature that was requested in the forums was automatically translating relative video URLs to absolute URLs for the flash fallback. This was an issue with the CDN hosted version which involved loading a remote SWF file which didn&rsquo;t have the same context as the player. Before we would just tell people to use full URLs (http://) but that shouldn&rsquo;t be an issue anymore.</p>
 <p>Thanks to everyone that&rsquo;s helped contribute code lately, and apologies for any long response times in the forums as I continue to try to push out code.</p>
 <p>Here&rsquo;s the full change log for the release.</p>
-<h3 id="3-2-0-2012-03-20-baxter"><a href="/blog/Version-3-2-Update/#3-2-0-2012-03-20-baxter" class="headerlink" title="3.2.0 / 2012-03-20 / baxter"></a>3.2.0 / 2012-03-20 / baxter</h3><ul>
+<h3 id="3-2-0-2012-03-20-baxter"><a href="/Version-3-2-Update/#3-2-0-2012-03-20-baxter" class="headerlink" title="3.2.0 / 2012-03-20 / baxter"></a>3.2.0 / 2012-03-20 / baxter</h3><ul>
 <li>Updated docs with more options.</li>
 <li>Overhauled HTML5 Track support.</li>
 <li>Fixed Flash always autoplaying when setting source.</li>
@@ -363,7 +363,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Version-3-2-Update/" data-id="ciq2qujkq001oozcds1cc450r" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Version-3-2-Update/" data-id="ciqu3p607001iwludq37td51i" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Version-3-2-Update/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -412,7 +412,7 @@
 <p><a href="https://gist.github.com/4092929.js?file=iframe-mode.js" target="_blank" rel="external">https://gist.github.com/4092929.js?file=iframe-mode.js</a></p>
 <p>We&rsquo;ll be doing some more testing to make sure it&rsquo;s stable before we push it out to everyone.</p>
 <p>Here&rsquo;s the full change log for the release.</p>
-<h4 id="3-1-0-2012-01-30-leonardo"><a href="/blog/Version-3-1-Update/#3-1-0-2012-01-30-leonardo" class="headerlink" title="3.1.0 / 2012-01-30 / leonardo"></a>3.1.0 / 2012-01-30 / leonardo</h4><ul>
+<h4 id="3-1-0-2012-01-30-leonardo"><a href="/Version-3-1-Update/#3-1-0-2012-01-30-leonardo" class="headerlink" title="3.1.0 / 2012-01-30 / leonardo"></a>3.1.0 / 2012-01-30 / leonardo</h4><ul>
 <li>Added CSS fix for Firefox 9 fullscreen (in the rare case that it&rsquo;s enabled)</li>
 <li>Replaced swfobject with custom embed to save file size.</li>
 <li>Added flash iframe-mode, an experimental method for getting around flash reloading issues.</li>
@@ -431,7 +431,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Version-3-1-Update/" data-id="ciq2qujko001mozcdnqgofdkv" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Version-3-1-Update/" data-id="ciqu3p60g001nwludw2t7v69f" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Version-3-1-Update/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -485,7 +485,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-Version-3-0/" data-id="ciq2qujli002bozcdxvlu7r6v" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-Version-3-0/" data-id="ciqu3p6180022wlud1db3x8zu" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-Version-3-0/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -535,7 +535,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Lynda-com-HTML5-Video-Tutorial-Released/" data-id="ciq2qujik000nozcdomr7mirm" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Lynda-com-HTML5-Video-Tutorial-Released/" data-id="ciqu3p5z1000nwludw4oemgwg" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Lynda-com-HTML5-Video-Tutorial-Released/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -584,7 +584,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/How-are-you-using-video-js/" data-id="ciq2qujif000iozcdwhjjqsep" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/How-are-you-using-video-js/" data-id="ciqu3p5yt000iwludtnyjfy2l" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/How-are-you-using-video-js/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -634,7 +634,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/New-MPEG-LA-WebM-VP8-Patent-Pool/" data-id="ciq2qujk00018ozcdwmkejtl5" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/New-MPEG-LA-WebM-VP8-Patent-Pool/" data-id="ciqu3p5z6000swludqsui5bve" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/New-MPEG-LA-WebM-VP8-Patent-Pool/#disqus_thread" class="article-comment-link">Comments</a>
       

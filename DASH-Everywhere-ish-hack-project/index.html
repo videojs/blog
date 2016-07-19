@@ -97,8 +97,8 @@
 <p><a href="http://dashif.org/mpeg-dash/" target="_blank" rel="external">MPEG-DASH</a> (Dynamic Adaptive Streaming over HTTP) is a streaming format similar to Apple&rsquo;s <a href="https://developer.apple.com/streaming/" target="_blank" rel="external">HTTP Live Streaming (HLS)</a>. It allows you to provide multiple versions of a video at different bitrates, and then the player can switch between those versions depending on the user&rsquo;s bandwidth (which is more complicated than you might think).</p>
 <p>The two DASH playback implementations used were <a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="external">Dash.js</a> and <a href="https://github.com/castlabs/dashas" target="_blank" rel="external">Dash.as</a>. They were combined using video.js&rsquo;s playback tech architecture, which means you can include <a href="https://github.com/videojs/video.js/wiki/Plugins" target="_blank" rel="external">plugins</a> and custom skins and they&rsquo;ll work the same with either playback method.</p>
 <p><a href="http://mixxture.com/players/brightcove/dash/demo.html" target="_blank" rel="external">See the results.</a></p>
-<h3 id="Browser-Device-Coverage"><a href="/blog/DASH-Everywhere-ish-hack-project/#Browser-Device-Coverage" class="headerlink" title="Browser/Device Coverage"></a>Browser/Device Coverage</h3><p>Using a combination of DASH.AS and DASH.JS will give us the following browser/device coverage:</p>
-<h4 id="DASH-JS-media-source-extensions-support"><a href="/blog/DASH-Everywhere-ish-hack-project/#DASH-JS-media-source-extensions-support" class="headerlink" title="DASH.JS (media source extensions support)"></a>DASH.JS (media source extensions support)</h4><ul>
+<h3 id="Browser-Device-Coverage"><a href="/DASH-Everywhere-ish-hack-project/#Browser-Device-Coverage" class="headerlink" title="Browser/Device Coverage"></a>Browser/Device Coverage</h3><p>Using a combination of DASH.AS and DASH.JS will give us the following browser/device coverage:</p>
+<h4 id="DASH-JS-media-source-extensions-support"><a href="/DASH-Everywhere-ish-hack-project/#DASH-JS-media-source-extensions-support" class="headerlink" title="DASH.JS (media source extensions support)"></a>DASH.JS (media source extensions support)</h4><ul>
 <li>Internet Explorer: 11+</li>
 <li>Chrome: 23+</li>
 <li>FireFox: 25+ (upcoming version)</li>
@@ -106,48 +106,48 @@
 <li>iOS: No</li>
 <li>Android: 4.2+ (Chrome)</li>
 </ul>
-<h4 id="DASH-AS"><a href="/blog/DASH-Everywhere-ish-hack-project/#DASH-AS" class="headerlink" title="DASH.AS"></a>DASH.AS</h4><p>Fallback to any environment that supports Flash Player 10.3</p>
-<h3 id="iOS"><a href="/blog/DASH-Everywhere-ish-hack-project/#iOS" class="headerlink" title="iOS"></a>iOS</h3><p>As you can see, the one remaining holdout is iOS and there&rsquo;s currently no word when or if that will happen. Seeing media source extensions support in Safari 8 gives some hope, but my understanding is the requirements for getting support built into iOS are much more significant. My guess is it will happen eventually, but not for a while (and hopefully in-line playback + the fullscreen API will be supported at the same time).</p>
+<h4 id="DASH-AS"><a href="/DASH-Everywhere-ish-hack-project/#DASH-AS" class="headerlink" title="DASH.AS"></a>DASH.AS</h4><p>Fallback to any environment that supports Flash Player 10.3</p>
+<h3 id="iOS"><a href="/DASH-Everywhere-ish-hack-project/#iOS" class="headerlink" title="iOS"></a>iOS</h3><p>As you can see, the one remaining holdout is iOS and there&rsquo;s currently no word when or if that will happen. Seeing media source extensions support in Safari 8 gives some hope, but my understanding is the requirements for getting support built into iOS are much more significant. My guess is it will happen eventually, but not for a while (and hopefully in-line playback + the fullscreen API will be supported at the same time).</p>
 <p>Today, to provide adaptive streaming everywhere, you still need either DASH + HLS, or just HLS (you can use the <a href="https://github.com/videojs/videojs-contrib-hls" target="_blank" rel="external">video.js HLS plugin</a> to support HLS in more browsers).</p>
-<h2 id="Tom-rsquo-s-Notes"><a href="/blog/DASH-Everywhere-ish-hack-project/#Tom-rsquo-s-Notes" class="headerlink" title="Tom&rsquo;s Notes"></a>Tom&rsquo;s Notes</h2><p>The demo shows that for environments which support <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource" target="_blank" rel="external">Media Source Extensions</a> (MSE) we use a full Javscript implementation via <a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="external">Dash.js</a> and as a fallback we use Flash built around <a href="http://sourceforge.net/adobe/osmf/home/Home/" target="_blank" rel="external">OSMF</a> and <a href="https://github.com/castlabs/dashas" target="_blank" rel="external">Dash.as</a>, an open-source plugin provided by <a href="http://castlabs.com" target="_blank" rel="external">Castlabs</a>.</p>
+<h2 id="Tom-rsquo-s-Notes"><a href="/DASH-Everywhere-ish-hack-project/#Tom-rsquo-s-Notes" class="headerlink" title="Tom&rsquo;s Notes"></a>Tom&rsquo;s Notes</h2><p>The demo shows that for environments which support <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource" target="_blank" rel="external">Media Source Extensions</a> (MSE) we use a full Javscript implementation via <a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="external">Dash.js</a> and as a fallback we use Flash built around <a href="http://sourceforge.net/adobe/osmf/home/Home/" target="_blank" rel="external">OSMF</a> and <a href="https://github.com/castlabs/dashas" target="_blank" rel="external">Dash.as</a>, an open-source plugin provided by <a href="http://castlabs.com" target="_blank" rel="external">Castlabs</a>.</p>
 <blockquote>
 <p><em>Tom has been working on <a href="https://github.com/seniorflexdeveloper/videojs-osmf" target="_blank" rel="external">videojs-osmf</a> on the side, which helped make this possible.</em></p>
 </blockquote>
-<h3 id="DASH-AS-Requirements"><a href="/blog/DASH-Everywhere-ish-hack-project/#DASH-AS-Requirements" class="headerlink" title="DASH.AS Requirements"></a>DASH.AS Requirements</h3><h4 id="Player"><a href="/blog/DASH-Everywhere-ish-hack-project/#Player" class="headerlink" title="Player"></a>Player</h4><ul>
+<h3 id="DASH-AS-Requirements"><a href="/DASH-Everywhere-ish-hack-project/#DASH-AS-Requirements" class="headerlink" title="DASH.AS Requirements"></a>DASH.AS Requirements</h3><h4 id="Player"><a href="/DASH-Everywhere-ish-hack-project/#Player" class="headerlink" title="Player"></a>Player</h4><ul>
 <li>Environment must support Flash Player 10.3+</li>
 <li>Video.js OSMF Tech (<a href="https://github.com/seniorflexdeveloper/videojs-osmf" target="_blank" rel="external">videojs-osmf</a>)</li>
 <li>CastLabs Dash.AS plugin for OSMF (<a href="https://github.com/castlabs/dashas" target="_blank" rel="external">dash.as</a>)</li>
 </ul>
-<h4 id="Server-Host"><a href="/blog/DASH-Everywhere-ish-hack-project/#Server-Host" class="headerlink" title="Server/Host"></a>Server/Host</h4><ul>
+<h4 id="Server-Host"><a href="/DASH-Everywhere-ish-hack-project/#Server-Host" class="headerlink" title="Server/Host"></a>Server/Host</h4><ul>
 <li>Since the requests are fired from within Flash, a crossdomain.xml file is required.*   Ability to serve byte range requests via query string (myFile.mp4?range=0-1000 || myFile.m4s?bytes=0-1000) is necessary because Flash Player restricts use of the ‘Range’ request header. Castlabs has an .htaccess file which uses mod_rewrite to achieve this. Akamai edge servers accept the bytes query string var as well.</li>
 </ul>
-<h4 id="Notes"><a href="/blog/DASH-Everywhere-ish-hack-project/#Notes" class="headerlink" title="Notes"></a>Notes</h4><ul>
+<h4 id="Notes"><a href="/DASH-Everywhere-ish-hack-project/#Notes" class="headerlink" title="Notes"></a>Notes</h4><ul>
 <li>Something we may want to modify is handling the request/response portions of the workload outside of the Flash Player similar to the Video.js HLS solution. This would remove the need for having a crossdomain.xml, which cannot be normally expected to exist in a DASH focused environment.</li>
 <li>Akamai edgesuite appear to be an exception to the above rule, as those domains do in fact have the crossdomain from it’s use as a serving platform under Akamai HD. The Akamai param syntax is ‘myFile.m4s?bytes=XXXX-YYYY’.</li>
 <li>In it’s current form the Dash.AS manifest parser is very rigid. We may want to look into implementing a version of the DASH.JS manifest parsing on the AS side, as it is a lot more flexible in terms of structure recognition.</li>
 <li>Deeper class inspection shows that the Dash.AS plugin is based on using Netstream in data generation mode, similar to our HLS solution. There may be better way to share the codebase between the two to reduce code duplication.</li>
 </ul>
-<h3 id="DASH-JS-Requirements"><a href="/blog/DASH-Everywhere-ish-hack-project/#DASH-JS-Requirements" class="headerlink" title="DASH.JS Requirements"></a>DASH.JS Requirements</h3><h4 id="Player-1"><a href="/blog/DASH-Everywhere-ish-hack-project/#Player-1" class="headerlink" title="Player"></a>Player</h4><ul>
+<h3 id="DASH-JS-Requirements"><a href="/DASH-Everywhere-ish-hack-project/#DASH-JS-Requirements" class="headerlink" title="DASH.JS Requirements"></a>DASH.JS Requirements</h3><h4 id="Player-1"><a href="/DASH-Everywhere-ish-hack-project/#Player-1" class="headerlink" title="Player"></a>Player</h4><ul>
 <li>Environment must support <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource" target="_blank" rel="external">Media Source Extensions</a></li>
 <li>DASH Industry Forum DASH.JS library (<a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="external">dash.js</a>)</li>
 <li>Video.js Dash.js Tech (<a href="https://github.com/Dash-Industry-Forum/dash.js/blob/development/contrib/videojs/videojs-tech-dashjs.js" target="_blank" rel="external">videojs-tech-dashjs</a>)</li>
 </ul>
-<h4 id="Server-Host-1"><a href="/blog/DASH-Everywhere-ish-hack-project/#Server-Host-1" class="headerlink" title="Server/Host"></a>Server/Host</h4><ul>
+<h4 id="Server-Host-1"><a href="/DASH-Everywhere-ish-hack-project/#Server-Host-1" class="headerlink" title="Server/Host"></a>Server/Host</h4><ul>
 <li>Open CORS headers: Access-Control-Allow-Origin: *</li>
 <li>Accept use of the Range request header: Access-Control-Allow-Headers:Range, Options</li>
 </ul>
-<h4 id="Notes-1"><a href="/blog/DASH-Everywhere-ish-hack-project/#Notes-1" class="headerlink" title="Notes"></a>Notes</h4><ul>
+<h4 id="Notes-1"><a href="/DASH-Everywhere-ish-hack-project/#Notes-1" class="headerlink" title="Notes"></a>Notes</h4><ul>
 <li>Dash.js MPD parsing is significantly more robust in comparison to the Dash.AS solution.</li>
 <li>Most streams tested are Akamai based, we should probably try more local and non-Akamai hosted options moving forward.*   In my testing I did see a Youtube DASH/MSE example, and those streams were confirmed to work within Dash.JS as well.</li>
 <li>Dash.JS streaming lifecycle and segment loading lifecycle tend to be directly coupled and don’t necessarily fire the element media events at the time expected. For example is duration. While known at the parse complete stage of the manifest load cycle, is not reported to the player until the first of the segments is received.</li>
 </ul>
-<h3 id="Tech-Compatibility"><a href="/blog/DASH-Everywhere-ish-hack-project/#Tech-Compatibility" class="headerlink" title="Tech Compatibility"></a>Tech Compatibility</h3><p>The independant techs work well together. A slight modification had to be made to the Dash.AS library to insure that it only checked for resources which 1. had a URL and 2. url contained the file extension of either ‘mpd’ or ‘m4s’ for DASH manifests/segments.</p>
+<h3 id="Tech-Compatibility"><a href="/DASH-Everywhere-ish-hack-project/#Tech-Compatibility" class="headerlink" title="Tech Compatibility"></a>Tech Compatibility</h3><p>The independant techs work well together. A slight modification had to be made to the Dash.AS library to insure that it only checked for resources which 1. had a URL and 2. url contained the file extension of either ‘mpd’ or ‘m4s’ for DASH manifests/segments.</p>
 <p><strong>NOTE:</strong> Dash.JS tech should be loaded into DOM prior to OSMF tech to insure the OSMF tech is the fallback scenario for DASH playback.<br><img src="http://feeds.feedburner.com/~r/video-js/~4/Wn1NGaDuYmo" alt=""></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/" data-id="ciq2qujid000fozcd0brdfqun" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/" data-id="ciqu3p5ym000dwludg6jvfmrh" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/#disqus_thread" class="article-comment-link">Comments</a>
       

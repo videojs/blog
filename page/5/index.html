@@ -98,7 +98,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Facebook-Adds-HTML5-Video/" data-id="ciq2quji9000bozcds71p8hi3" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Facebook-Adds-HTML5-Video/" data-id="ciqu3p5yj000bwludc07s0kvz" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Facebook-Adds-HTML5-Video/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -141,10 +141,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Bug-1-Poster-Attribute"><a href="/blog/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/#Bug-1-Poster-Attribute" class="headerlink" title="Bug #1 - Poster Attribute"></a>Bug #1 - Poster Attribute</h3><p>If you include the poster attribute on the video tag when you&rsquo;re using &lt;source&gt; tags, the video won&rsquo;t work on iPads &amp; iPhones using iOS 3. You&rsquo;ll see a broken play button, or no play button at all. On the iPad specifically, playback in inconsistent. Sometimes it&rsquo;ll work and sometimes it won&rsquo;t. This is <a href="http://camendesign.com/code/video_for_everybody#notes" target="_blank" rel="external">documented on the Video for Everybody site</a>.</p>
-<h3 id="Bug-2-Javascript-in-the-Head"><a href="/blog/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/#Bug-2-Javascript-in-the-Head" class="headerlink" title="Bug #2 - Javascript in the Head"></a>Bug #2 - Javascript in the Head</h3><p>This is a fun one&hellip; If you include Javascript in the head of your page, it&rsquo;ll break playback on the iPad (also inconsistent). If you move the Javascript to the bottom of the page, and still include a stylesheet, the iPad will work, but the iPhone 3 won&rsquo;t. I first read about this in a <a href="http://blog.noinc.com/2010/05/13/html5-video-tag-iphone-ipad-ihaveheadache" target="_blank" rel="external">post on the No.inc blog</a>, and then ran into it myself when redesigning the VideoJS site. Their original solution was to put the JS at the bottom of the page for iPads only (fun).</p>
+        <h3 id="Bug-1-Poster-Attribute"><a href="/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/#Bug-1-Poster-Attribute" class="headerlink" title="Bug #1 - Poster Attribute"></a>Bug #1 - Poster Attribute</h3><p>If you include the poster attribute on the video tag when you&rsquo;re using &lt;source&gt; tags, the video won&rsquo;t work on iPads &amp; iPhones using iOS 3. You&rsquo;ll see a broken play button, or no play button at all. On the iPad specifically, playback in inconsistent. Sometimes it&rsquo;ll work and sometimes it won&rsquo;t. This is <a href="http://camendesign.com/code/video_for_everybody#notes" target="_blank" rel="external">documented on the Video for Everybody site</a>.</p>
+<h3 id="Bug-2-Javascript-in-the-Head"><a href="/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/#Bug-2-Javascript-in-the-Head" class="headerlink" title="Bug #2 - Javascript in the Head"></a>Bug #2 - Javascript in the Head</h3><p>This is a fun one&hellip; If you include Javascript in the head of your page, it&rsquo;ll break playback on the iPad (also inconsistent). If you move the Javascript to the bottom of the page, and still include a stylesheet, the iPad will work, but the iPhone 3 won&rsquo;t. I first read about this in a <a href="http://blog.noinc.com/2010/05/13/html5-video-tag-iphone-ipad-ihaveheadache" target="_blank" rel="external">post on the No.inc blog</a>, and then ran into it myself when redesigning the VideoJS site. Their original solution was to put the JS at the bottom of the page for iPads only (fun).</p>
 <p>Apple&rsquo;s iOS4 seems to fix both of these problems on the iPhone, but until iOS4 is available on the iPad, and everyone in the world upgrades their devices, we have to deal with this.</p>
-<h3 id="Fix-for-iOS-3"><a href="/blog/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/#Fix-for-iOS-3" class="headerlink" title="Fix for iOS 3"></a>Fix for iOS 3</h3><p>The problem seems to be some kind of race condition, that trips up the devices. The solution that has fixed both of these for me is to add the playable source directly to the video tag, and tell the video to load (all through Javascript).</p>
+<h3 id="Fix-for-iOS-3"><a href="/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/#Fix-for-iOS-3" class="headerlink" title="Fix for iOS 3"></a>Fix for iOS 3</h3><p>The problem seems to be some kind of race condition, that trips up the devices. The solution that has fixed both of these for me is to add the playable source directly to the video tag, and tell the video to load (all through Javascript).</p>
 <p>I&rsquo;ve added all this to VideoJS 1.1.2, but here&rsquo;s the basics of how it works.</p>
 <pre>var video = document.getElementById("your_video");
     var children = video.children;
@@ -167,7 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/" data-id="ciq2qujlq002mozcd49qrwxt1" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/" data-id="ciqu3p61s002gwlud4dq44fgz" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -218,7 +218,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/" data-id="ciq2qujk30019ozcdj7x0wpyn" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/" data-id="ciqu3p5ze000zwludm4z7lc8t" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -265,7 +265,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/VideoJS-is-IE9-Compatible/" data-id="ciq2qujlk002dozcduuzi5mzi" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/VideoJS-is-IE9-Compatible/" data-id="ciqu3p61u002iwludnbrcnvux" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/VideoJS-is-IE9-Compatible/#disqus_thread" class="article-comment-link">Comments</a>
       

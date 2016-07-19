@@ -133,7 +133,7 @@ player.on('mouseover', function(){
 <li>There is no mouse on mobile devices so different events and interactions are needed to show/hide the controls.</li>
 </ol>
 <p>In addition to these issues, we want it to be possible for any player component or plugin to hook into the same trigger that hides the controls. Components like social sharing icons should fade out in the same way that the controls do.</p>
-<h2 id="User-State"><a href="/blog/Hiding-and-Showing-Video-Player-Controls/#User-State" class="headerlink" title="User State"></a>User State</h2><p>One of the first things that is being added is a <code>userActive</code> property on the player, that can be either <code>true</code> or <code>false</code>. What this does is abstract the controls hiding out to what it is we&rsquo;re actually concerned with, that is, whether the user is currently interacting with the player or just passively watching the video. This also decouples the control bar from tracking the user activity itself, and allows other components to more easily behave the same way as the control bar, through a player-level state.</p>
+<h2 id="User-State"><a href="/Hiding-and-Showing-Video-Player-Controls/#User-State" class="headerlink" title="User State"></a>User State</h2><p>One of the first things that is being added is a <code>userActive</code> property on the player, that can be either <code>true</code> or <code>false</code>. What this does is abstract the controls hiding out to what it is we&rsquo;re actually concerned with, that is, whether the user is currently interacting with the player or just passively watching the video. This also decouples the control bar from tracking the user activity itself, and allows other components to more easily behave the same way as the control bar, through a player-level state.</p>
 <p>That actual property is <code>player.userActive()</code> and returns either <code>true</code> or <code>false</code>. When this value is changed, it triggers an event on the player.</p>
 <pre class="prettyprint">
 player.userActive(true)
@@ -213,14 +213,14 @@ activityCheck = setInterval(function() {
 </pre>
 
 <p>That may be a lot to follow, and it&rsquo;s a bit simplified from what&rsquo;s actually in the player now, but essentially it allows us to take some of the processing weight off of the browser while the mouse is moving.</p>
-<h2 id="Hiding-controls-in-fullscreen"><a href="/blog/Hiding-and-Showing-Video-Player-Controls/#Hiding-controls-in-fullscreen" class="headerlink" title="Hiding controls in fullscreen"></a>Hiding controls in fullscreen</h2><p>Thanks to the new userActive state and the javascript timeout for the delay, the controls no longer require the mouse to move outside of the player area in order to hide, and can now hide in fullscreen mode the same way they do when the player is in the page. This also means we can now hide the mouse cursor in the same way we do the controls, so that it doesn&rsquo;t sit over the player while watching in fullscreen.</p>
+<h2 id="Hiding-controls-in-fullscreen"><a href="/Hiding-and-Showing-Video-Player-Controls/#Hiding-controls-in-fullscreen" class="headerlink" title="Hiding controls in fullscreen"></a>Hiding controls in fullscreen</h2><p>Thanks to the new userActive state and the javascript timeout for the delay, the controls no longer require the mouse to move outside of the player area in order to hide, and can now hide in fullscreen mode the same way they do when the player is in the page. This also means we can now hide the mouse cursor in the same way we do the controls, so that it doesn&rsquo;t sit over the player while watching in fullscreen.</p>
 <pre class="prettyprint">
 .vjs-fullscreen.vjs-user-inactive {
   cursor: none;
 }
 </pre>
 
-<h2 id="Hiding-controls-on-touch-devices"><a href="/blog/Hiding-and-Showing-Video-Player-Controls/#Hiding-controls-on-touch-devices" class="headerlink" title="Hiding controls on touch devices"></a>Hiding controls on touch devices</h2><p>The expected behavior on touch devices is a little different than in desktop browsers. There is no <code>mousemove</code> event to help determine if the user is active or inactive, so typically a longer delay is added before the controls are faded out. Also, while a click on the video itself in desktop browsers will typically toggle between play and pause, a tap on the video on mobile devices will toggle the controls visibility.</p>
+<h2 id="Hiding-controls-on-touch-devices"><a href="/Hiding-and-Showing-Video-Player-Controls/#Hiding-controls-on-touch-devices" class="headerlink" title="Hiding controls on touch devices"></a>Hiding controls on touch devices</h2><p>The expected behavior on touch devices is a little different than in desktop browsers. There is no <code>mousemove</code> event to help determine if the user is active or inactive, so typically a longer delay is added before the controls are faded out. Also, while a click on the video itself in desktop browsers will typically toggle between play and pause, a tap on the video on mobile devices will toggle the controls visibility.</p>
 <p>Luckily the framework we&rsquo;ve set up around userActive has made this last part easy enough to set up.</p>
 <pre class="prettyprint">
 video.on('tap', function(){
@@ -234,14 +234,14 @@ video.on('tap', function(){
 
 <p>Manually toggling userActive between true and false will apply the appropriate classnames and trigger the events needed to show and hide the controls as you&rsquo;d expect on a mobile device.</p>
 <p>The <code>tap</code> event is actually a custom made event, similar to the tap event you&rsquo;ll find in <a href="http://jquerymobile.com" target="_blank" rel="external">jQuery mobile</a>, <a href="http://eightmedia.github.io/hammer.js/" target="_blank" rel="external">Hammer.js</a>, and other mobile touch libraries. A tap event occurs whenever a <code>touchstart</code> event is fired with the associated <code>touchend</code> event firing within 250 milliseconds. If the <code>touchend</code> event takes longer to fire, or if a <code>touchmove</code> event happens between the two, it is not considered a <code>tap</code>.</p>
-<h2 id="Conclusion"><a href="/blog/Hiding-and-Showing-Video-Player-Controls/#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>I hope this has given some insight into how that piece of the controls operate in Video.js, and how you can mimic the same interaction if you&rsquo;re building your own plugins for Video.js. Feedback is always appreciated.</p>
+<h2 id="Conclusion"><a href="/Hiding-and-Showing-Video-Player-Controls/#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>I hope this has given some insight into how that piece of the controls operate in Video.js, and how you can mimic the same interaction if you&rsquo;re building your own plugins for Video.js. Feedback is always appreciated.</p>
 <p>Cheers,</p>
 <p>-heff<br><img src="http://feeds.feedburner.com/~r/video-js/~4/70tJSFYIq9Y" alt=""></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/" data-id="ciq2qujj3000sozcdscj6s8a9" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/" data-id="ciqu3p5yw000lwludoc74kxzl" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/#disqus_thread" class="article-comment-link">Comments</a>
       
