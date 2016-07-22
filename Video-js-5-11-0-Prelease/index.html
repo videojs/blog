@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Video.js 5.11.0 Prelease | Video.js Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Today sees the prerelease of version 5.11.0. I wanted to take a moment to talk about some of the changes, additions, and known issues.
+This is a pre-release only. It’s available on npm under the next">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Video.js 5.11.0 Prelease">
+<meta property="og:url" content="http://blog.videojs.com/Video-js-5-11-0-Prelease/index.html">
+<meta property="og:site_name" content="Video.js Blog">
+<meta property="og:description" content="Today sees the prerelease of version 5.11.0. I wanted to take a moment to talk about some of the changes, additions, and known issues.
+This is a pre-release only. It’s available on npm under the next">
+<meta property="og:updated_time" content="2016-07-22T21:20:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Video.js 5.11.0 Prelease">
+<meta name="twitter:description" content="Today sees the prerelease of version 5.11.0. I wanted to take a moment to talk about some of the changes, additions, and known issues.
+This is a pre-release only. It’s available on npm under the next">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Video.js Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Video.js Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.videojs.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Video-js-5-11-0-Prelease" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  <a href="https://github.com/gkatsev" class="article-author">
+  <img src="https://github.com/gkatsev.png?size=30" class="author_gravatar" height="30">
+  <span class="author_name">Gary Katsevman</span>
+
+
+    <a href="/Video-js-5-11-0-Prelease/" class="article-date">
+  <time datetime="2016-07-22T19:46:51.000Z" itemprop="datePublished">2016-07-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Video.js 5.11.0 Prelease
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Today sees the prerelease of version 5.11.0. I wanted to take a moment to talk about some of the changes, additions, and known issues.</p>
+<p>This is a pre-release only. It’s available on npm under the <code>next</code> tag and also available on the CDN under the fully qualified version number: <code>//vjs.zencdn.net/5.11.0/video.js</code>. It’ll stay in pre-release state for around a week or more to make sure that there aren’t any glaring bugs, so, please give it a shot and <a href="https://github.com/videojs/video.js/issues/new" target="_blank" rel="external">open issues</a> if you find anything.</p>
+<h2 id="Notable-Changes"><a href="/Video-js-5-11-0-Prelease/#Notable-Changes" class="headerlink" title="Notable Changes"></a>Notable Changes</h2><ul>
+<li>In version 5.0, we wanted to deprecate <code>videojs.players</code> property in favor of of the <code>videojs.getPlayers()</code> getter. However, it’s proved to be very useful and it is now being un-deprecated so it will no longer print deprecations in the console.</li>
+<li>If the player is created without a source set and a user hits play, video.js will now wait for the a source to be provided before starting playback. This eliminates an error that happens when we try to play an empty source.</li>
+<li>Our custom captions settings dialog was updated to be more accessible by using more aria attributes and better option names in drop downs.</li>
+</ul>
+<h2 id="Known-Issues"><a href="/Video-js-5-11-0-Prelease/#Known-Issues" class="headerlink" title="Known Issues"></a>Known Issues</h2><ul>
+<li>In video.js 5.10, to be able to better respond to the source of the video element changing directly without going through video.js, we <a href="https://github.com/videojs/video.js/pull/3285" target="_blank" rel="external">disposed SourceHandlers on subsequent loadstarts</a> and <a href="https://github.com/videojs/video.js/pull/3314" target="_blank" rel="external">cleared out the current source</a>. However, this causes an <a href="https://github.com/videojs/video.js/issues/3428" target="_blank" rel="external">issue with videojs-contrib-dash</a>. A contributor investigated and found out that the two PRs mentioned before cause the issue. If a video is created with an MPEG-DASH source element, we end up seeing a <code>loadstart</code> event because of the source element and then when Dash.js kicks in and starts playback using MSE, we get another <code>loadstart</code> event. Since we see the second <code>loadstat</code> event we dispose of the SourceHandler, that is, videojs-contrib-dash and Dash.js, and the video doesn’t play. A work around, while we figure out a correct solution, would be not to use source elements with DASH sources and only use the video.js API in the meantime.</li>
+</ul>
+<h2 id="Raw-Changelog"><a href="/Video-js-5-11-0-Prelease/#Raw-Changelog" class="headerlink" title="Raw Changelog"></a>Raw Changelog</h2><ul>
+<li>@BrandonOCasey Document audio/video track usage (<a href="https://github.com/videojs/video.js/pull/3295" target="_blank" rel="external">view</a>)</li>
+<li>@hartman Correct documentation to refer to nativeTextTracks option (<a href="https://github.com/videojs/video.js/pull/3309" target="_blank" rel="external">view</a>)</li>
+<li>@nickygerritsen Also pass tech options to canHandleSource (<a href="https://github.com/videojs/video.js/pull/3303" target="_blank" rel="external">view</a>)</li>
+<li>@misteroneill Un-deprecate the videojs.players property (<a href="https://github.com/videojs/video.js/pull/3299" target="_blank" rel="external">view</a>)</li>
+<li>@nickygerritsen Add title to all clickable components (<a href="https://github.com/videojs/video.js/pull/3296" target="_blank" rel="external">view</a>)</li>
+<li>@nickygerritsen Update Dutch language file (<a href="https://github.com/videojs/video.js/pull/3297" target="_blank" rel="external">view</a>)</li>
+<li>@hartman Add descriptions and audio button to adaptive classes (<a href="https://github.com/videojs/video.js/pull/3312" target="_blank" rel="external">view</a>)</li>
+<li>@MattiasBuelens Retain details from tech error (<a href="https://github.com/videojs/video.js/pull/3313" target="_blank" rel="external">view</a>)</li>
+<li>@nickygerritsen Fix test for tooltips in IE8 (<a href="https://github.com/videojs/video.js/pull/3327" target="_blank" rel="external">view</a>)</li>
+<li>@mboles added loadstart event to jsdoc (<a href="https://github.com/videojs/video.js/pull/3370" target="_blank" rel="external">view</a>)</li>
+<li>@hartman added default print styling (<a href="https://github.com/videojs/video.js/pull/3304" target="_blank" rel="external">view</a>)</li>
+<li>@ldayananda updated videojs to not do anything if no src is set (<a href="https://github.com/videojs/video.js/pull/3378" target="_blank" rel="external">view</a>)</li>
+<li>@nickygerritsen removed unused tracks when changing sources. Fixes ##3000 (<a href="https://github.com/videojs/video.js/pull/3002" target="_blank" rel="external">view</a>)</li>
+<li>@vit-koumar updated Flash tech to return Infinity from duration instead of -1 (<a href="https://github.com/videojs/video.js/pull/3128" target="_blank" rel="external">view</a>)</li>
+<li>@alex-phillips added ontextdata to Flash tech (<a href="https://github.com/videojs/video.js/pull/2748" target="_blank" rel="external">view</a>)</li>
+<li>@MattiasBuelens updated components to use durationchange only (<a href="https://github.com/videojs/video.js/pull/3349" target="_blank" rel="external">view</a>)</li>
+<li>@misteroneill improved Logging for IE &lt; 11 (<a href="https://github.com/videojs/video.js/pull/3356" target="_blank" rel="external">view</a>)</li>
+<li>@vdeshpande updated control text of modal dialog (<a href="https://github.com/videojs/video.js/pull/3400" target="_blank" rel="external">view</a>)</li>
+<li>@ldayananda fixed mouse handling on menus by using mouseleave over mouseout (<a href="https://github.com/videojs/video.js/pull/3404" target="_blank" rel="external">view</a>)</li>
+<li>@mister-ben updated language to inherit correctly and respect the attribute on the player (<a href="https://github.com/videojs/video.js/pull/3426" target="_blank" rel="external">view</a>)</li>
+<li>@sashyro fixed nativeControlsForTouch option (<a href="https://github.com/videojs/video.js/pull/3410" target="_blank" rel="external">view</a>)</li>
+<li>@tbasse fixed techCall null check against tech (<a href="https://github.com/videojs/video.js/pull/2676" target="_blank" rel="external">view</a>)</li>
+<li>@rbran100 checked src and currentSrc in handleTechReady to work around mixed content issues in chrome (<a href="https://github.com/videojs/video.js/pull/3287" target="_blank" rel="external">view</a>)</li>
+<li>@OwenEdwards fixed caption settings dialog labels for accessibility (<a href="https://github.com/videojs/video.js/pull/3281" target="_blank" rel="external">view</a>)</li>
+<li>@OwenEdwards removed spurious head tags in the simple-embed example (<a href="https://github.com/videojs/video.js/pull/3438" target="_blank" rel="external">view</a>)</li>
+<li>@ntadej added a null check to errorDisplay usage (<a href="https://github.com/videojs/video.js/pull/3440" target="_blank" rel="external">view</a>)</li>
+<li>@misteroneill fixed logging issues on IE by separating fn.apply and stringify checks (<a href="https://github.com/videojs/video.js/pull/3444" target="_blank" rel="external">view</a>)</li>
+<li>@misteroneill fixed npm test from running coveralls locally (<a href="https://github.com/videojs/video.js/pull/3449" target="_blank" rel="external">view</a>)</li>
+<li>@gkatsev added es6-shim to tests. Fixes Flash duration test (<a href="https://github.com/videojs/video.js/pull/3453" target="_blank" rel="external">view</a>)</li>
+<li>@misteroneill corrects test assertions for older IEs in the log module (<a href="https://github.com/videojs/video.js/pull/3454" target="_blank" rel="external">view</a>)</li>
+<li>@gkatsev fixed setting lang by looping through loop element variable and not constant tag (<a href="https://github.com/videojs/video.js/pull/3455" target="_blank" rel="external">view</a>)</li>
+</ul>
+<h2 id="Git-diffstats"><a href="/Video-js-5-11-0-Prelease/#Git-diffstats" class="headerlink" title="Git diffstats"></a>Git diffstats</h2><p>These are deltas between 5.11.0 and 5.10.7<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">CHANGELOG.md                                       |    33 +</div><div class="line">build/grunt.js                                     |     3 +-</div><div class="line">component.json                                     |     2 +-</div><div class="line">docs/examples/simple-embed/index.html              |     3 -</div><div class="line">docs/guides/audio-tracks.md                        |    69 +</div><div class="line">docs/guides/languages.md                           |    12 +-</div><div class="line">docs/guides/text-tracks.md                         |   184 +</div><div class="line">docs/guides/tracks.md                              |   186 +-</div><div class="line">docs/guides/video-tracks.md                        |    70 +</div><div class="line">docs/index.md                                      |     2 +-</div><div class="line">lang/en.json                                       |     1 +</div><div class="line">lang/nl.json                                       |    19 +-</div><div class="line">package.json                                       |     7 +-</div><div class="line">src/css/_print.scss                                |     5 +</div><div class="line">src/css/components/_adaptive.scss                  |     9 +-</div><div class="line">src/css/components/_captions-settings.scss         |    26 +-</div><div class="line">src/css/video-js.scss                              |     2 +</div><div class="line">src/js/clickable-component.js                      |    12 +-</div><div class="line">.../control-bar/time-controls/duration-display.js  |     8 +-</div><div class="line">.../time-controls/remaining-time-display.js        |     1 +</div><div class="line">src/js/menu/menu-button.js                         |     4 +-</div><div class="line">src/js/modal-dialog.js                             |     2 +-</div><div class="line">src/js/player.js                                   |    68 +-</div><div class="line">src/js/tech/flash-rtmp.js                          |     3 +-</div><div class="line">src/js/tech/flash.js                               |    21 +-</div><div class="line">src/js/tech/html5.js                               |    73 +-</div><div class="line">src/js/tech/tech.js                                |    16 +-</div><div class="line">src/js/tracks/text-track-settings.js               |   176 +-</div><div class="line">src/js/utils/browser.js                            |     3 +</div><div class="line">src/js/utils/create-deprecation-proxy.js           |    50 -</div><div class="line">src/js/utils/log.js                                |   124 +-</div><div class="line">src/js/video.js                                    |    16 +-</div><div class="line">test/globals-shim.js                               |     1 +</div><div class="line">test/unit/button.test.js                           |     5 +-</div><div class="line">test/unit/player.test.js                           |    22 +-</div><div class="line">test/unit/plugins.test.js                          |    20 +-</div><div class="line">test/unit/tech/flash.test.js                       |    51 +-</div><div class="line">test/unit/tech/html5.test.js                       |    16 +-</div><div class="line">test/unit/tech/tech.test.js                        |    17 +-</div><div class="line">test/unit/tracks/text-track-settings.test.js       |    51 +-</div><div class="line">test/unit/tracks/text-track.test.js                |    13 +-</div><div class="line">test/unit/utils/create-deprecation-proxy.test.js   |    45 -</div><div class="line">test/unit/utils/log.test.js                        |   104 +-</div><div class="line">103 files changed, 971 insertions(+), 55554 deletions(-)</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.videojs.com/Video-js-5-11-0-Prelease/" data-id="ciqy5ri5z00242kcdjocaefdh" class="article-share-link">Share</a>
+      
+        <a href="http://blog.videojs.com/Video-js-5-11-0-Prelease/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/news/">news</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/releases/">releases</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/Video-js-5-s-fluid-mode-and-playlist-picker/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Video.js 5&#39;s fluid mode and playlist picker</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/html5-video/" style="font-size: 12.5px;">html5 video</a> <a href="/tags/news/" style="font-size: 17.5px;">news</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 10px;">releases</a> <a href="/tags/stats/" style="font-size: 12.5px;">stats</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/Video-js-5-11-0-Prelease/">Video.js 5.11.0 Prelease</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-5-s-fluid-mode-and-playlist-picker/">Video.js 5&#39;s fluid mode and playlist picker</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/">Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name).</a>
+          </li>
+        
+          <li>
+            <a href="/It-s-here-5-0-release-candidates/">It&#39;s here: 5.0 release candidates!</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-4-12-The-last-of-the-4-minors/">Video.js 4.12 - The last of the 4 minors</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'videojs';
+  
+  var disqus_url = 'http://blog.videojs.com/Video-js-5-11-0-Prelease/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
