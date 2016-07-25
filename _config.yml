@@ -82,5 +82,5 @@ feed:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/videojs/blog
+  repo: git@github.com:videojs/blog.git
   branch: gh-pages
