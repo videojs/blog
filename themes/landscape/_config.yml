@@ -2,7 +2,7 @@
 menu:
   Home: /
   Archives: /archives
-rss: /blog/atom.xml
+rss: /atom.xml
 
 # Content
 excerpt_link: Read More
