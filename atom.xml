@@ -19,7 +19,7 @@
     <title>Video.js 5.11.0 Prelease</title>
     <link href="http://blog.videojs.com/Video-js-5-11-0-Prelease/"/>
     <id>http://blog.videojs.com/Video-js-5-11-0-Prelease/</id>
-    <published>2016-07-22T19:46:51.000Z</published>
+    <published>2016-07-22T22:46:51.000Z</published>
     <updated>2016-07-22T21:20:26.000Z</updated>
     
     <content type="html">&lt;p&gt;Today sees the prerelease of version 5.11.0. I wanted to take a moment to talk about some of the changes, additions, and known issues.&lt;/p&gt;
@@ -87,7 +87,7 @@
     <title>Video.js 5&#39;s fluid mode and playlist picker</title>
     <link href="http://blog.videojs.com/Video-js-5-s-fluid-mode-and-playlist-picker/"/>
     <id>http://blog.videojs.com/Video-js-5-s-fluid-mode-and-playlist-picker/</id>
-    <published>2016-06-01T18:50:06.000Z</published>
+    <published>2016-06-01T21:50:06.000Z</published>
     <updated>2016-06-29T20:23:06.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;How-it-works&quot;&gt;&lt;a href=&quot;/Video-js-5-s-fluid-mode-and-playlist-picker/#How-it-works&quot; class=&quot;headerlink&quot; title=&quot;How it works&quot;&gt;&lt;/a&gt;How it works&lt;/h2&gt;&lt;p&gt;In video.js 5.0, we added support for truly fluid layouts with video.js.&lt;br&gt;You can see an example of it on the &lt;a href=&quot;//videojs.com&quot;&gt;video.js website&lt;/a&gt;.&lt;/p&gt;
@@ -132,7 +132,7 @@
     <title>Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name).</title>
     <link href="http://blog.videojs.com/Video-js-5-The-Only-Thing-That%E2%80%99s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/"/>
     <id>http://blog.videojs.com/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/</id>
-    <published>2015-09-29T18:00:16.000Z</published>
+    <published>2015-09-29T21:00:16.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;First and foremost, &lt;strong&gt;THANK YOU&lt;/strong&gt; to the 25 contributors who completed and merged &lt;strong&gt;146 pull requests&lt;/strong&gt; and updated just about every line of code in the project. And thank you to the hundreds of issue commenters and plugin authors who helped shape this latest version. For a widget, we’ve got a pretty awesome community.&lt;/p&gt;
@@ -238,7 +238,7 @@
     <title>It&#39;s here: 5.0 release candidates!</title>
     <link href="http://blog.videojs.com/It-s-here-5-0-release-candidates/"/>
     <id>http://blog.videojs.com/It-s-here-5-0-release-candidates/</id>
-    <published>2015-06-08T23:59:42.000Z</published>
+    <published>2015-06-09T02:59:42.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;Today we&amp;rsquo;re releasing our first official 5.0 release candidate. We&amp;rsquo;re really excited to get this into the wild, but a lot has changed under hood. It should be stable for normal usage, but we&amp;rsquo;ve got a limited number of test devices (and testers for that matter), so what we need now is for people to bang on 5.0 and let us know what breaks!&lt;/p&gt;
@@ -278,7 +278,7 @@
     <title>Video.js 4.12 - The last of the 4 minors</title>
     <link href="http://blog.videojs.com/Video-js-4-12-The-last-of-the-4-minors/"/>
     <id>http://blog.videojs.com/Video-js-4-12-The-last-of-the-4-minors/</id>
-    <published>2015-02-18T18:32:00.000Z</published>
+    <published>2015-02-18T21:32:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Much-improved-WebVTT-support&quot;&gt;&lt;a href=&quot;/Video-js-4-12-The-last-of-the-4-minors/#Much-improved-WebVTT-support&quot; class=&quot;headerlink&quot; title=&quot;Much improved WebVTT support&quot;&gt;&lt;/a&gt;Much improved WebVTT support&lt;/h2&gt;&lt;p&gt;We added basic WebVTT support really early on, which we were pretty proud of. As browsers added support, however, our shim started to lag a bit, or at the very least, cause issues with browsers that required native support (here’s looking at you, iOS).&lt;/p&gt;
@@ -382,7 +382,7 @@
     <title>Video.js 4.9 - Now &lt;audio&gt; can join the party!</title>
     <link href="http://blog.videojs.com/Video-js-4-9-Now-can-join-the-party/"/>
     <id>http://blog.videojs.com/Video-js-4-9-Now-can-join-the-party/</id>
-    <published>2014-10-03T00:49:00.000Z</published>
+    <published>2014-10-03T03:49:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;HTML5-Audio-support&quot;&gt;&lt;a href=&quot;/Video-js-4-9-Now-can-join-the-party/#HTML5-Audio-support&quot; class=&quot;headerlink&quot; title=&quot;HTML5 Audio support&quot;&gt;&lt;/a&gt;HTML5 Audio support&lt;/h3&gt;&lt;p&gt;A common request we&amp;rsquo;ve seen is to be able to use Video.js with an &lt;code&gt;&amp;amp;lt;audio&amp;amp;gt;&lt;/code&gt; tag, and now you can! Usage is almost identical, you can just include a &lt;code&gt;data-setup={}&lt;/code&gt; attribute on an &lt;code&gt;&amp;amp;lt;audio&amp;amp;gt;&lt;/code&gt; tag or initialize via Javascript.&lt;/p&gt;
@@ -434,7 +434,7 @@
     <title>Video.js 4.8.0 released...Prost!</title>
     <link href="http://blog.videojs.com/Video-js-4-8-0-released-Prost/"/>
     <id>http://blog.videojs.com/Video-js-4-8-0-released-Prost/</id>
-    <published>2014-09-03T20:50:09.000Z</published>
+    <published>2014-09-03T23:50:09.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;This isn&amp;rsquo;t the flashiest minor release ever, but it&amp;rsquo;s hot off the press and ready for use. As mentioned in the last (few) release posts, we&amp;rsquo;re making a concerted effort to be more consistent with releases, so hopefully the trend of bite-sized, scheduled releases will continue.&lt;/p&gt;
@@ -474,7 +474,7 @@
     <title>Video.js v4.7.0 - Built mostly by NEW contributors! Also Google chooses Video.js</title>
     <link href="http://blog.videojs.com/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/"/>
     <id>http://blog.videojs.com/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/</id>
-    <published>2014-08-06T18:42:00.000Z</published>
+    <published>2014-08-06T21:42:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;We&amp;rsquo;re continuing to work hard on improving the contributor experience around the Video.js project and it&amp;rsquo;s paying off. Over half of the changelog is thanks to brand new contributors! Issues and pull requests are getting addressed faster than ever, and I was even allowed to give &lt;a href=&quot;http://www.oscon.com/oscon2014/public/schedule/speaker/104522&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;a talk at OSCON&lt;/a&gt; on some of the strategies we&amp;rsquo;re using. If you&amp;rsquo;re instersted in getting involved, join the #videojs IRC room or post an issue to let us know.&lt;/p&gt;
@@ -554,7 +554,7 @@
     <title>DASH Everywhere-ish (hack project)</title>
     <link href="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/"/>
     <id>http://blog.videojs.com/DASH-Everywhere-ish-hack-project/</id>
-    <published>2014-07-22T15:01:00.000Z</published>
+    <published>2014-07-22T18:01:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;A couple of times a year Brightcove has an internal hackweek where engineers work on any project they&amp;rsquo;d like. In the latest hackweek (2014-07-14) &lt;a href=&quot;https://github.com/seniorflexdeveloper&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Tom Johnson&lt;/a&gt; decided to see if he could get DASH supported in as many places as possible, by combining a few of the existing DASH player implementations with Video.js.&lt;/p&gt;
@@ -626,7 +626,7 @@
     <title>Video.js version 4.6.0 released! It&#39;s been a productive month.</title>
     <link href="http://blog.videojs.com/Video-js-version-4-6-0-released-It-s-been-a-productive-month/"/>
     <id>http://blog.videojs.com/Video-js-version-4-6-0-released-It-s-been-a-productive-month/</id>
-    <published>2014-05-20T21:29:00.000Z</published>
+    <published>2014-05-21T00:29:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;The video.js community has been in full force lately and it&amp;rsquo;s resulted in a lot of great features and fixes, including UI updates, better error messages, and even a &lt;a href=&quot;https://github.com/addyosmani/video-js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Video.js Polymer element&lt;/a&gt; built by &lt;a href=&quot;https://twitter.com/addyosmani&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Addy Osmani&lt;/a&gt; himself.&lt;/p&gt;
@@ -695,7 +695,7 @@
     <title>Video.js version 4.5.0 released! Nothing to see here, move along</title>
     <link href="http://blog.videojs.com/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/"/>
     <id>http://blog.videojs.com/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/</id>
-    <published>2014-03-27T22:49:04.000Z</published>
+    <published>2014-03-28T01:49:04.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;Well, sort of… this release is the result of a lot of hard work to speed up the version release process, meaning they&amp;rsquo;ll be coming a lot faster now with smaller sets of changes.&lt;/p&gt;
@@ -734,7 +734,7 @@
     <title>Video.js version 4.4.0 released - Now supporting RequireJS and Browserify</title>
     <link href="http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/"/>
     <id>http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/</id>
-    <published>2014-02-19T22:49:00.000Z</published>
+    <published>2014-02-20T01:49:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;Version 4.4.0 is here with over 20 updates and fixes. The most notable addition may be support for AMD and CommonJS module loaders, meaning you can now include Video.js using &lt;a href=&quot;http://requirejs.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RequireJS&lt;/a&gt; or &lt;a href=&quot;http://browserify.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Browserify&lt;/a&gt;. Video.js can be installed through &lt;a href=&quot;http://www.npmjs.org/package/video.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;npm&lt;/a&gt; already, and we&amp;rsquo;ll soon add support for &lt;a href=&quot;http://bower.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;bower&lt;/a&gt; and &lt;a href=&quot;http://component.io&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;component(1)&lt;/a&gt; as well.&lt;/p&gt;
@@ -790,7 +790,7 @@
     <title>Video.js version 4.3.0 released w/ shiny new API docs</title>
     <link href="http://blog.videojs.com/Video-js-version-4-3-0-released-w-shiny-new-API-docs/"/>
     <id>http://blog.videojs.com/Video-js-version-4-3-0-released-w-shiny-new-API-docs/</id>
-    <published>2013-11-06T00:29:00.000Z</published>
+    <published>2013-11-06T03:29:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;The biggest change in this update is actually an overhaul of the &lt;a href=&quot;https://github.com/videojs/video.js/tree/v4.3.0/docs/api&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;API docs&lt;/a&gt;. The best example of the new docs is the &lt;a href=&quot;https://github.com/videojs/video.js/blob/v4.3.0/docs/api/vjs.Player.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Player doc&lt;/a&gt;, which is the API most video.js users will work with.&lt;/p&gt;
@@ -859,7 +859,7 @@ var hi;
     <title>The Guardian uses Video.js in feature article</title>
     <link href="http://blog.videojs.com/The-Guardian-uses-Video-js-in-feature-article/"/>
     <id>http://blog.videojs.com/The-Guardian-uses-Video-js-in-feature-article/</id>
-    <published>2013-11-05T23:15:11.000Z</published>
+    <published>2013-11-06T02:15:11.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;It&amp;rsquo;s always nice to find Video.js in the wild, but this &lt;a href=&quot;http://www.theguardian.com/world/interactive/2013/nov/01/snowden-nsa-files-surveillance-revelations-decoded&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;article from The Guradian&lt;/a&gt; is an especially cool use case. Most of the players don&amp;rsquo;t use controls at all, but rather play/pause based on the user scrolling the page. The ones that do use controls are styled with a white on light gray theme that matches the rest of the page really well.&lt;/p&gt;
@@ -883,7 +883,7 @@ var hi;
     <title>4.2.2 Patch Release</title>
     <link href="http://blog.videojs.com/4-2-2-Patch-Release/"/>
     <id>http://blog.videojs.com/4-2-2-Patch-Release/</id>
-    <published>2013-10-15T22:26:00.000Z</published>
+    <published>2013-10-16T01:26:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;Two bugs have been squashed with this patch:&lt;/p&gt;
@@ -914,7 +914,7 @@ var hi;
     <title>Running Video.js unit tests in real browsers with Karma</title>
     <link href="http://blog.videojs.com/Running-Video-js-unit-tests-in-real-browsers-with-Karma/"/>
     <id>http://blog.videojs.com/Running-Video-js-unit-tests-in-real-browsers-with-Karma/</id>
-    <published>2013-09-19T03:21:00.000Z</published>
+    <published>2013-09-19T06:21:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;If you’ve ever cloned the video.js repository, either to contribute or to build your own version, you’ve no doubt run the video.js unit tests. Until just recently, though, we only had support for running unit tests with grunt, using the PhantomJS browser. Well, that’s changed, with the first phase of our integration with Karma. Now, you’ll be able to run your tests in real browsers.&lt;/p&gt;
@@ -939,7 +939,7 @@ var hi;
     <title>Unauthorized modification of Video.js CDN files</title>
     <link href="http://blog.videojs.com/Unauthorized-modification-of-Video-js-CDN-files/"/>
     <id>http://blog.videojs.com/Unauthorized-modification-of-Video-js-CDN-files/</id>
-    <published>2013-09-15T15:23:00.000Z</published>
+    <published>2013-09-15T18:23:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;strong&gt;UPDATE 2013-09-19:&lt;/strong&gt;&lt;/p&gt;
@@ -977,7 +977,7 @@ var hi;
     <title>Video.js 4.2.0 released! RTMP, CSS designer, and stability</title>
     <link href="http://blog.videojs.com/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/"/>
     <id>http://blog.videojs.com/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/</id>
-    <published>2013-09-06T19:51:00.000Z</published>
+    <published>2013-09-06T22:51:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;Happy September! The 4.2.0 release of Video.js has a few interesting updates, and a bunch of stability and polish.&lt;/p&gt;
@@ -1052,7 +1052,7 @@ var hi;
     <title>Hiding and Showing Video Player Controls</title>
     <link href="http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/"/>
     <id>http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/</id>
-    <published>2013-08-09T22:51:47.000Z</published>
+    <published>2013-08-10T01:51:47.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;Last week I decided to tackle a number of outstanding issues around the control bar, and then proceeded to fall down a rabbit hole of related player updates. I&amp;rsquo;ve thankfully resurfaced now, and figured I&amp;rsquo;d write about a few of the updates that came from it.&lt;/p&gt;
@@ -1214,7 +1214,7 @@ video.on(&#39;tap&#39;, function(){
     <title>New Player Skin Designer for Video.js</title>
     <link href="http://blog.videojs.com/New-Player-Skin-Designer-for-Video-js/"/>
     <id>http://blog.videojs.com/New-Player-Skin-Designer-for-Video-js/</id>
-    <published>2013-07-15T23:44:00.000Z</published>
+    <published>2013-07-16T02:44:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;a href=&quot;http://designer.videojs.com&quot; title=&quot;Video Player Skin Designer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img src=&quot;http://65.media.tumblr.com/e1ce78f8543d5e1fffd65e35cfd41b3e/tumblr_inline_mq1y4zEiqe1qz4rgp.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -1247,7 +1247,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Video.js 4.1.0 Released</title>
     <link href="http://blog.videojs.com/Video-js-4-1-0-Released/"/>
     <id>http://blog.videojs.com/Video-js-4-1-0-Released/</id>
-    <published>2013-06-28T23:34:00.000Z</published>
+    <published>2013-06-29T02:34:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;Just in time for the weekend, the next minor version of Video.js is now available. Updates include:&lt;/p&gt;
@@ -1286,7 +1286,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Video.js 4.0 now available!</title>
     <link href="http://blog.videojs.com/Video-js-4-0-now-available/"/>
     <id>http://blog.videojs.com/Video-js-4-0-now-available/</id>
-    <published>2013-05-09T17:10:00.000Z</published>
+    <published>2013-05-09T20:10:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;Today we&amp;rsquo;re releasing Video.js 4.0, which is the most solid, lightweight, and I dare say prettiest version yet. It&amp;rsquo;s available for download, on Github, and hosted for free on our CDN.&lt;/p&gt;
@@ -1344,7 +1344,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Repo Moved!</title>
     <link href="http://blog.videojs.com/Repo-Moved/"/>
     <id>http://blog.videojs.com/Repo-Moved/</id>
-    <published>2013-05-06T20:56:59.000Z</published>
+    <published>2013-05-06T23:56:59.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;In preparation for the next version we&amp;rsquo;ve moved the source code repository from github.com/zencoder/video-js to &lt;a href=&quot;http://github.com/videojs/video.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;github.com/videojs/video.js&lt;/a&gt;&lt;/p&gt;
@@ -1368,7 +1368,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Site and Support Updates</title>
     <link href="http://blog.videojs.com/Site-and-Support-Updates/"/>
     <id>http://blog.videojs.com/Site-and-Support-Updates/</id>
-    <published>2012-11-15T19:54:18.000Z</published>
+    <published>2012-11-15T22:54:18.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;After a brief hiatus of helping &lt;a href=&quot;http://blog.videojs.com/post/35666994917/brightcove-acquires-zencoder&quot; title=&quot;Zencoder acquired by Brightcove&quot;&gt;Brightcove and Zencoder come together&lt;/a&gt;, I&amp;rsquo;m moving full time to developing and supporting Video.js. Thank you to everyone who has continued to commit code and help out in the forums. &lt;/p&gt;
@@ -1395,7 +1395,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Brightcove Acquires Zencoder</title>
     <link href="http://blog.videojs.com/Brightcove-Acquires-Zencoder/"/>
     <id>http://blog.videojs.com/Brightcove-Acquires-Zencoder/</id>
-    <published>2012-07-26T04:00:00.000Z</published>
+    <published>2012-07-26T07:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://66.media.tumblr.com/tumblr_mdgad5rr0S1qzc111.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
@@ -1425,7 +1425,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Version 3.2 Update</title>
     <link href="http://blog.videojs.com/Version-3-2-Update/"/>
     <id>http://blog.videojs.com/Version-3-2-Update/</id>
-    <published>2012-03-23T04:00:00.000Z</published>
+    <published>2012-03-23T07:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;First of all, check out the new &lt;a href=&quot;/Version-3-2-Update//tag-builder/&quot;&gt;video tag builder&lt;/a&gt;. The previous version of this site had an embed code builder, and people were &lt;a href=&quot;http://help.videojs.com/discussions/problems/873-whered-the-embed-builder-go&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;pretty disappointed&lt;/a&gt; that the new site didn&amp;rsquo;t. So I&amp;rsquo;m happy to announce that it&amp;rsquo;s available again, now as an HTML5 video tag builder that could probably be used outside of Video.js, it includes track tags, and even lets you test the settings. Let me know if you have any feedback on it.&lt;/p&gt;
@@ -1469,7 +1469,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Version 3.1 Update</title>
     <link href="http://blog.videojs.com/Version-3-1-Update/"/>
     <id>http://blog.videojs.com/Version-3-1-Update/</id>
-    <published>2012-01-30T05:00:00.000Z</published>
+    <published>2012-01-30T08:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;This is the first release since the initial 3.0 launch, aside from some hotfixes that went out immediately. It includes a number of fixes for things that users in the &lt;a href=&quot;http://help.videojs.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;forums&lt;/a&gt; found right off the bat.&lt;/p&gt;
@@ -1510,7 +1510,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Video.js Version 3.0!</title>
     <link href="http://blog.videojs.com/Video-js-Version-3-0/"/>
     <id>http://blog.videojs.com/Video-js-Version-3-0/</id>
-    <published>2012-01-10T05:00:00.000Z</published>
+    <published>2012-01-10T08:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;After months and months of work we&amp;rsquo;re happy to announce Video.js version 3.0. Some of the exiting new features include:&lt;/p&gt;
@@ -1539,7 +1539,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Lynda.com HTML5 Video Tutorial Released</title>
     <link href="http://blog.videojs.com/Lynda-com-HTML5-Video-Tutorial-Released/"/>
     <id>http://blog.videojs.com/Lynda-com-HTML5-Video-Tutorial-Released/</id>
-    <published>2011-06-17T04:00:00.000Z</published>
+    <published>2011-06-17T07:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;a href=&quot;http://goo.gl/y0SZb&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img src=&quot;http://videojs.com/img/blog/2011/06/lynda_com.jpg&quot; alt=&quot;Lynda HTML5 Video Tutorial&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -1564,7 +1564,7 @@ video.on(&#39;tap&#39;, function(){
     <title>How are you using video.js?</title>
     <link href="http://blog.videojs.com/How-are-you-using-video-js/"/>
     <id>http://blog.videojs.com/How-are-you-using-video-js/</id>
-    <published>2011-06-07T04:00:00.000Z</published>
+    <published>2011-06-07T07:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;I&amp;rsquo;d love to hear where and how people are using video.js. If you&amp;rsquo;re using it somewhere, leave a note/link in the comments.&lt;/p&gt;
@@ -1584,7 +1584,7 @@ video.on(&#39;tap&#39;, function(){
     <title>New MPEG LA WebM/VP8 Patent Pool</title>
     <link href="http://blog.videojs.com/New-MPEG-LA-WebM-VP8-Patent-Pool/"/>
     <id>http://blog.videojs.com/New-MPEG-LA-WebM-VP8-Patent-Pool/</id>
-    <published>2011-02-11T05:00:00.000Z</published>
+    <published>2011-02-11T08:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;One of the things that browser and device vendors stand behind when deciding to support MP4/h.264 over Google&amp;rsquo;s Webm video format and VP8 codec, is that while VP8 is open source, it may still be encumbered by patents. So far none of these &lt;a href=&quot;http://en.wikipedia.org/wiki/Submarine_patent&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;submarine patents&lt;/a&gt; have surfaced, but now MPEG LA has &lt;a href=&quot;http://www.mpegla.com/main/pid/vp8/default.aspx&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;put out a call&lt;/a&gt;, and hopes to form a patent pool that would create a license for VP8, and essentially put a price on it. In &lt;a href=&quot;http://www.webmproject.org/license/additional/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google&amp;rsquo;s own license&lt;/a&gt;, it says:&lt;/p&gt;
@@ -1609,7 +1609,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Apple adds AirPlay to Mobile Safari</title>
     <link href="http://blog.videojs.com/Apple-adds-AirPlay-to-Mobile-Safari/"/>
     <id>http://blog.videojs.com/Apple-adds-AirPlay-to-Mobile-Safari/</id>
-    <published>2011-01-28T05:00:00.000Z</published>
+    <published>2011-01-28T08:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;AirPlay is a video feature on iOS devices that lets you play video from your device on your TV, by streaming it to an Apple TV on the same wireless network. Before now this was only available in the iPod and YouTube apps, but with iOS 4.3 (now in beta) it will be available through Mobile Safari as well.&lt;/p&gt;
@@ -1635,7 +1635,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Google is dropping h.264 from Chrome</title>
     <link href="http://blog.videojs.com/Google-is-dropping-h-264-from-Chrome/"/>
     <id>http://blog.videojs.com/Google-is-dropping-h-264-from-Chrome/</id>
-    <published>2011-01-11T05:00:00.000Z</published>
+    <published>2011-01-11T08:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;UPDATE: Added a chart that shows what format support will look like without Chrome supporting h.264.&lt;/p&gt;
@@ -1666,7 +1666,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Over 50% of web users now support HTML5 Video</title>
     <link href="http://blog.videojs.com/Over-50-of-web-users-now-support-HTML5-Video/"/>
     <id>http://blog.videojs.com/Over-50-of-web-users-now-support-HTML5-Video/</id>
-    <published>2011-01-07T05:00:00.000Z</published>
+    <published>2011-01-07T08:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;As we roll into 2011, HTML5 video hits a major milestone. 50.5% of web users now support HTML5 video playback. This number was gathered by comparing browser versions that support HTML5 video with StatCounter&amp;rsquo;s &lt;a href=&quot;http://gs.statcounter.com/#browser_version-ww-daily-20101201-20101231&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;world-wide browser version statistics&lt;/a&gt;. &lt;img src=&quot;http://videojs.com/img/blog/2011/01/html5-video-user-support.png&quot; alt=&quot;HTML5 Video Statistics&quot;&gt;This is a 66% growth in HTML5 video user support since December of 2009. With the expected release of Internet Explorer 9 in the near future, 2011 could see a major increase in websites adopting HTML5 video as their primary playback method. Of browsers that support HTML5 video, Mozilla&amp;rsquo;s Firefox is the clear leader, with Google&amp;rsquo;s Chrome in second place. Much of the growth in HTML5 video support can be attributed to Chrome&amp;rsquo;s success in stealing market share from Internet Explore over the last year.&lt;/p&gt;
@@ -1688,7 +1688,7 @@ video.on(&#39;tap&#39;, function(){
     <title>HTML5 Video + Google Maps Mashup</title>
     <link href="http://blog.videojs.com/HTML5-Video-Google-Maps-Mashup/"/>
     <id>http://blog.videojs.com/HTML5-Video-Google-Maps-Mashup/</id>
-    <published>2010-12-16T05:00:00.000Z</published>
+    <published>2010-12-16T08:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;Mozilla has a cool demo of playing a video while drawing a line on a Google map similar to what you&amp;rsquo;d see in an Indiana Jones film. Check out the &lt;a href=&quot;http://hacks.mozilla.org/2010/12/spirit-of-indiana-jones-syncing-html5-video-with-maps/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;original post&lt;/a&gt; and the &lt;a href=&quot;http://isithackday.com/spirit-of-indiana/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;demo&lt;/a&gt;.&lt;/p&gt;
@@ -1709,7 +1709,7 @@ video.on(&#39;tap&#39;, function(){
     <title>2.0.2 Release - Subtitle Optimization + Safari on Leopard FS Fix</title>
     <link href="http://blog.videojs.com/2-0-2-Release-Subtitle-Optimization-Safari-on-Leopard-FS-Fix/"/>
     <id>http://blog.videojs.com/2-0-2-Release-Subtitle-Optimization-Safari-on-Leopard-FS-Fix/</id>
-    <published>2010-12-10T05:00:00.000Z</published>
+    <published>2010-12-10T08:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;Smallish update with some fixes and optimizations. Rewrote the subtitles parser so it&amp;rsquo;s a lot more optimized and fixes a subtitle display bug. Put in a check for Safari running on Mac OSX 10.5 (Leopard), which doesn&amp;rsquo;t like native fullscreen for some reason. Triggering full window mode instead.&lt;/p&gt;
@@ -1737,7 +1737,7 @@ video.on(&#39;tap&#39;, function(){
     <title>2.0.0 Release - Behaviors, fallback APIs, and more.</title>
     <link href="http://blog.videojs.com/2-0-0-Release-Behaviors-fallback-APIs-and-more/"/>
     <id>http://blog.videojs.com/2-0-0-Release-Behaviors-fallback-APIs-and-more/</id>
-    <published>2010-11-22T05:00:00.000Z</published>
+    <published>2010-11-22T08:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;Big update. The biggest change for current users is a move back to using DIVs for control bar elements instead of unordered lists. There were a lot of conflicting styles issues when using lists, which shouldn&amp;rsquo;t be an issue with divs. So if you upgrade, don&amp;rsquo;t forget to upgrade your stylesheets as well.&lt;/p&gt;
@@ -1790,7 +1790,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Make sites serve you HTML5 video in Safari</title>
     <link href="http://blog.videojs.com/Make-sites-serve-you-HTML5-video-in-Safari/"/>
     <id>http://blog.videojs.com/Make-sites-serve-you-HTML5-video-in-Safari/</id>
-    <published>2010-11-19T05:00:00.000Z</published>
+    <published>2010-11-19T08:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;John Gruber of Daring Fireball has a cool post on &lt;a href=&quot;http://daringfireball.net/2010/11/masquerading_as_mobile_safari&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;tricking websites to display HTML5 video&lt;/a&gt; when they say they can only play Flash. Many sites will tell you they require Flash, even when they actually support &lt;a href=&quot;http://videojs.com/html5-video/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HTML5 video&lt;/a&gt; for iOS devices.&lt;/p&gt;
@@ -1819,7 +1819,7 @@ video.on(&#39;tap&#39;, function(){
     <title>1.1.5 Release - Subtitles using track, Android fix &amp; more</title>
     <link href="http://blog.videojs.com/1-1-5-Release-Subtitles-using-track-Android-fix-more/"/>
     <id>http://blog.videojs.com/1-1-5-Release-Subtitles-using-track-Android-fix-more/</id>
-    <published>2010-11-09T05:00:00.000Z</published>
+    <published>2010-11-09T08:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;ul&gt;
@@ -1856,7 +1856,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Version 1.1.4 Release - CSS Loading Spinner &amp; More</title>
     <link href="http://blog.videojs.com/Version-1-1-4-Release-CSS-Loading-Spinner-More/"/>
     <id>http://blog.videojs.com/Version-1-1-4-Release-CSS-Loading-Spinner-More/</id>
-    <published>2010-11-06T04:00:00.000Z</published>
+    <published>2010-11-06T07:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;The most notable update in this version is a loading indicator (spinner), for when the video is buffering or seeking. The spinner works pretty well, however it&amp;rsquo;s limited by how accurately each browser tells us what it&amp;rsquo;s currently doing through triggered events. The spinner works best in Firefox so far. Safari/Chrome are less consistent with what events are triggered and when. For this reason I&amp;rsquo;m using a more careful approach that makes sure the spinner gets hidden, as opposed to making sure the spinner always shows when the player is busy. There&amp;rsquo;s a few bugs I had to account for too, like when Safari throws a &amp;ldquo;waiting&amp;rdquo; event, but then no other event to let us know it&amp;rsquo;s not waiting anymore.&lt;/p&gt;
@@ -1889,7 +1889,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Version 1.1.3 Release</title>
     <link href="http://blog.videojs.com/Version-1-1-3-Release/"/>
     <id>http://blog.videojs.com/Version-1-1-3-Release/</id>
-    <published>2010-10-19T04:00:00.000Z</published>
+    <published>2010-10-19T07:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;Version 1.1.3 of VideoJS is now available.&lt;/p&gt;
@@ -1924,7 +1924,7 @@ video.on(&#39;tap&#39;, function(){
     <title>Facebook Adds HTML5 Video</title>
     <link href="http://blog.videojs.com/Facebook-Adds-HTML5-Video/"/>
     <id>http://blog.videojs.com/Facebook-Adds-HTML5-Video/</id>
-    <published>2010-10-12T04:00:00.000Z</published>
+    <published>2010-10-12T07:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;&lt;a href=&quot;http://www.flickr.com/photos/24374884@N08/4603715307/&quot; title=&quot;What&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&lt;img src=&quot;http://farm2.static.flickr.com/1199/4603715307_c878c8a77b_m.jpg&quot; alt=&quot;What&quot;&gt;&lt;/a&gt;&lt;/p&gt;
@@ -1949,7 +1949,7 @@ video.on(&#39;tap&#39;, function(){
     <title>iPad &amp; iPhone Video Poster Fix (bonus Javascript Placement Fix)</title>
     <link href="http://blog.videojs.com/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/"/>
     <id>http://blog.videojs.com/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/</id>
-    <published>2010-09-20T04:00:00.000Z</published>
+    <published>2010-09-20T07:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;Bug-1-Poster-Attribute&quot;&gt;&lt;a href=&quot;/iPad-iPhone-Video-Poster-Fix-bonus-Javascript-Placement-Fix/#Bug-1-Poster-Attribute&quot; class=&quot;headerlink&quot; title=&quot;Bug #1 - Poster Attribute&quot;&gt;&lt;/a&gt;Bug #1 - Poster Attribute&lt;/h3&gt;&lt;p&gt;If you include the poster attribute on the video tag when you&amp;rsquo;re using &amp;lt;source&amp;gt; tags, the video won&amp;rsquo;t work on iPads &amp;amp; iPhones using iOS 3. You&amp;rsquo;ll see a broken play button, or no play button at all. On the iPad specifically, playback in inconsistent. Sometimes it&amp;rsquo;ll work and sometimes it won&amp;rsquo;t. This is &lt;a href=&quot;http://camendesign.com/code/video_for_everybody#notes&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documented on the Video for Everybody site&lt;/a&gt;.&lt;/p&gt;
@@ -1991,7 +1991,7 @@ video.on(&#39;tap&#39;, function(){
     <title>New VideoJS Site (Now with more HTML5)!</title>
     <link href="http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/"/>
     <id>http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/</id>
-    <published>2010-09-15T04:00:00.000Z</published>
+    <published>2010-09-15T07:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;I told myself when the site reached 100,000 visits I would redesign it. Well that number&amp;rsquo;s come and gone, so &lt;a href=&quot;http://videojs.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here it is&lt;/a&gt;.&lt;/p&gt;
@@ -2013,7 +2013,7 @@ video.on(&#39;tap&#39;, function(){
     <title>VideoJS is IE9 Compatible</title>
     <link href="http://blog.videojs.com/VideoJS-is-IE9-Compatible/"/>
     <id>http://blog.videojs.com/VideoJS-is-IE9-Compatible/</id>
-    <published>2010-09-15T04:00:00.000Z</published>
+    <published>2010-09-15T07:00:00.000Z</published>
     <updated>2016-06-30T19:25:15.000Z</updated>
     
     <content type="html">&lt;p&gt;After an initial test, VideoJS works with the new &lt;a href=&quot;http://ie.microsoft.com/testdrive/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Internet Explorer 9 preview&lt;/a&gt;. Great news, and a little surprising considering the CSS layout of the controls, and the general nature of IE. Other VideoJS site layout stuff seems to break, but for now as long as the player works I&amp;rsquo;m happy.&lt;/p&gt;
