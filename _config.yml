@@ -76,6 +76,7 @@ marked:
   smartypants: true
 
 feed:
+  path: rss
   limit: 0
 
 # Deployment
