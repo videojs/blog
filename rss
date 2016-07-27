@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Video.js Blog</title>
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/rss" rel="self"/>
   
   <link href="http://blog.videojs.com/"/>
   <updated>2016-07-22T21:20:26.000Z</updated>
