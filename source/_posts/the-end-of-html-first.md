@@ -3,7 +3,7 @@ title: The End of "HTML-First"
 author:
   name: David LaPalomento
   github: dmlap
-date: 2016-08-09 10:34:33
+date: 2016-08-10 15:58:44
 tags:
  - flash
  - news
