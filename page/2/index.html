@@ -61,103 +61,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-DASH-Everywhere-ish-hack-project" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    
-  <a href="https://github.com/heff" class="article-author">
-  <img src="https://github.com/heff.png?size=30" class="author_gravatar" height="30">
-  <span class="author_name">Steve Heffernan</span>
-
-
-    <a href="/DASH-Everywhere-ish-hack-project/" class="article-date">
-  <time datetime="2014-07-22T15:01:00.000Z" itemprop="datePublished">2014-07-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/DASH-Everywhere-ish-hack-project/">DASH Everywhere-ish (hack project)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>A couple of times a year Brightcove has an internal hackweek where engineers work on any project they&rsquo;d like. In the latest hackweek (2014-07-14) <a href="https://github.com/seniorflexdeveloper" target="_blank" rel="external">Tom Johnson</a> decided to see if he could get DASH supported in as many places as possible, by combining a few of the existing DASH player implementations with Video.js.</p>
-<p><a href="http://dashif.org/mpeg-dash/" target="_blank" rel="external">MPEG-DASH</a> (Dynamic Adaptive Streaming over HTTP) is a streaming format similar to Apple&rsquo;s <a href="https://developer.apple.com/streaming/" target="_blank" rel="external">HTTP Live Streaming (HLS)</a>. It allows you to provide multiple versions of a video at different bitrates, and then the player can switch between those versions depending on the user&rsquo;s bandwidth (which is more complicated than you might think).</p>
-<p>The two DASH playback implementations used were <a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="external">Dash.js</a> and <a href="https://github.com/castlabs/dashas" target="_blank" rel="external">Dash.as</a>. They were combined using video.js&rsquo;s playback tech architecture, which means you can include <a href="https://github.com/videojs/video.js/wiki/Plugins" target="_blank" rel="external">plugins</a> and custom skins and they&rsquo;ll work the same with either playback method.</p>
-<p><a href="http://mixxture.com/players/brightcove/dash/demo.html" target="_blank" rel="external">See the results.</a></p>
-<h3 id="Browser-Device-Coverage"><a href="/DASH-Everywhere-ish-hack-project/#Browser-Device-Coverage" class="headerlink" title="Browser/Device Coverage"></a>Browser/Device Coverage</h3><p>Using a combination of DASH.AS and DASH.JS will give us the following browser/device coverage:</p>
-<h4 id="DASH-JS-media-source-extensions-support"><a href="/DASH-Everywhere-ish-hack-project/#DASH-JS-media-source-extensions-support" class="headerlink" title="DASH.JS (media source extensions support)"></a>DASH.JS (media source extensions support)</h4><ul>
-<li>Internet Explorer: 11+</li>
-<li>Chrome: 23+</li>
-<li>FireFox: 25+ (upcoming version)</li>
-<li>Safari (Desktop): 8+ (OSX Yosemite - Fall 2014)</li>
-<li>iOS: No</li>
-<li>Android: 4.2+ (Chrome)</li>
-</ul>
-<h4 id="DASH-AS"><a href="/DASH-Everywhere-ish-hack-project/#DASH-AS" class="headerlink" title="DASH.AS"></a>DASH.AS</h4><p>Fallback to any environment that supports Flash Player 10.3</p>
-<h3 id="iOS"><a href="/DASH-Everywhere-ish-hack-project/#iOS" class="headerlink" title="iOS"></a>iOS</h3><p>As you can see, the one remaining holdout is iOS and there&rsquo;s currently no word when or if that will happen. Seeing media source extensions support in Safari 8 gives some hope, but my understanding is the requirements for getting support built into iOS are much more significant. My guess is it will happen eventually, but not for a while (and hopefully in-line playback + the fullscreen API will be supported at the same time).</p>
-<p>Today, to provide adaptive streaming everywhere, you still need either DASH + HLS, or just HLS (you can use the <a href="https://github.com/videojs/videojs-contrib-hls" target="_blank" rel="external">video.js HLS plugin</a> to support HLS in more browsers).</p>
-<h2 id="Tom-rsquo-s-Notes"><a href="/DASH-Everywhere-ish-hack-project/#Tom-rsquo-s-Notes" class="headerlink" title="Tom&rsquo;s Notes"></a>Tom&rsquo;s Notes</h2><p>The demo shows that for environments which support <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource" target="_blank" rel="external">Media Source Extensions</a> (MSE) we use a full Javscript implementation via <a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="external">Dash.js</a> and as a fallback we use Flash built around <a href="http://sourceforge.net/adobe/osmf/home/Home/" target="_blank" rel="external">OSMF</a> and <a href="https://github.com/castlabs/dashas" target="_blank" rel="external">Dash.as</a>, an open-source plugin provided by <a href="http://castlabs.com" target="_blank" rel="external">Castlabs</a>.</p>
-<blockquote>
-<p><em>Tom has been working on <a href="https://github.com/seniorflexdeveloper/videojs-osmf" target="_blank" rel="external">videojs-osmf</a> on the side, which helped make this possible.</em></p>
-</blockquote>
-<h3 id="DASH-AS-Requirements"><a href="/DASH-Everywhere-ish-hack-project/#DASH-AS-Requirements" class="headerlink" title="DASH.AS Requirements"></a>DASH.AS Requirements</h3><h4 id="Player"><a href="/DASH-Everywhere-ish-hack-project/#Player" class="headerlink" title="Player"></a>Player</h4><ul>
-<li>Environment must support Flash Player 10.3+</li>
-<li>Video.js OSMF Tech (<a href="https://github.com/seniorflexdeveloper/videojs-osmf" target="_blank" rel="external">videojs-osmf</a>)</li>
-<li>CastLabs Dash.AS plugin for OSMF (<a href="https://github.com/castlabs/dashas" target="_blank" rel="external">dash.as</a>)</li>
-</ul>
-<h4 id="Server-Host"><a href="/DASH-Everywhere-ish-hack-project/#Server-Host" class="headerlink" title="Server/Host"></a>Server/Host</h4><ul>
-<li>Since the requests are fired from within Flash, a crossdomain.xml file is required.*   Ability to serve byte range requests via query string (myFile.mp4?range=0-1000 || myFile.m4s?bytes=0-1000) is necessary because Flash Player restricts use of the ‘Range’ request header. Castlabs has an .htaccess file which uses mod_rewrite to achieve this. Akamai edge servers accept the bytes query string var as well.</li>
-</ul>
-<h4 id="Notes"><a href="/DASH-Everywhere-ish-hack-project/#Notes" class="headerlink" title="Notes"></a>Notes</h4><ul>
-<li>Something we may want to modify is handling the request/response portions of the workload outside of the Flash Player similar to the Video.js HLS solution. This would remove the need for having a crossdomain.xml, which cannot be normally expected to exist in a DASH focused environment.</li>
-<li>Akamai edgesuite appear to be an exception to the above rule, as those domains do in fact have the crossdomain from it’s use as a serving platform under Akamai HD. The Akamai param syntax is ‘myFile.m4s?bytes=XXXX-YYYY’.</li>
-<li>In it’s current form the Dash.AS manifest parser is very rigid. We may want to look into implementing a version of the DASH.JS manifest parsing on the AS side, as it is a lot more flexible in terms of structure recognition.</li>
-<li>Deeper class inspection shows that the Dash.AS plugin is based on using Netstream in data generation mode, similar to our HLS solution. There may be better way to share the codebase between the two to reduce code duplication.</li>
-</ul>
-<h3 id="DASH-JS-Requirements"><a href="/DASH-Everywhere-ish-hack-project/#DASH-JS-Requirements" class="headerlink" title="DASH.JS Requirements"></a>DASH.JS Requirements</h3><h4 id="Player-1"><a href="/DASH-Everywhere-ish-hack-project/#Player-1" class="headerlink" title="Player"></a>Player</h4><ul>
-<li>Environment must support <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource" target="_blank" rel="external">Media Source Extensions</a></li>
-<li>DASH Industry Forum DASH.JS library (<a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="external">dash.js</a>)</li>
-<li>Video.js Dash.js Tech (<a href="https://github.com/Dash-Industry-Forum/dash.js/blob/development/contrib/videojs/videojs-tech-dashjs.js" target="_blank" rel="external">videojs-tech-dashjs</a>)</li>
-</ul>
-<h4 id="Server-Host-1"><a href="/DASH-Everywhere-ish-hack-project/#Server-Host-1" class="headerlink" title="Server/Host"></a>Server/Host</h4><ul>
-<li>Open CORS headers: Access-Control-Allow-Origin: *</li>
-<li>Accept use of the Range request header: Access-Control-Allow-Headers:Range, Options</li>
-</ul>
-<h4 id="Notes-1"><a href="/DASH-Everywhere-ish-hack-project/#Notes-1" class="headerlink" title="Notes"></a>Notes</h4><ul>
-<li>Dash.js MPD parsing is significantly more robust in comparison to the Dash.AS solution.</li>
-<li>Most streams tested are Akamai based, we should probably try more local and non-Akamai hosted options moving forward.*   In my testing I did see a Youtube DASH/MSE example, and those streams were confirmed to work within Dash.JS as well.</li>
-<li>Dash.JS streaming lifecycle and segment loading lifecycle tend to be directly coupled and don’t necessarily fire the element media events at the time expected. For example is duration. While known at the parse complete stage of the manifest load cycle, is not reported to the player until the first of the segments is received.</li>
-</ul>
-<h3 id="Tech-Compatibility"><a href="/DASH-Everywhere-ish-hack-project/#Tech-Compatibility" class="headerlink" title="Tech Compatibility"></a>Tech Compatibility</h3><p>The independant techs work well together. A slight modification had to be made to the Dash.AS library to insure that it only checked for resources which 1. had a URL and 2. url contained the file extension of either ‘mpd’ or ‘m4s’ for DASH manifests/segments.</p>
-<p><strong>NOTE:</strong> Dash.JS tech should be loaded into DOM prior to OSMF tech to insure the OSMF tech is the fallback scenario for DASH playback.<br><img src="http://feeds.feedburner.com/~r/video-js/~4/Wn1NGaDuYmo" alt=""></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/" data-id="cirpblvup000dy8cdm3zawej3" class="article-share-link">Share</a>
-      
-        <a href="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/news/">news</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-Video-js-version-4-6-0-released-It-s-been-a-productive-month" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     
@@ -823,6 +726,195 @@ var hi;
 
 
   
+    <article id="post-Hiding-and-Showing-Video-Player-Controls" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  <a href="https://github.com/heff" class="article-author">
+  <img src="https://github.com/heff.png?size=30" class="author_gravatar" height="30">
+  <span class="author_name">Steve Heffernan</span>
+
+
+    <a href="/Hiding-and-Showing-Video-Player-Controls/" class="article-date">
+  <time datetime="2013-08-09T22:51:47.000Z" itemprop="datePublished">2013-08-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Hiding-and-Showing-Video-Player-Controls/">Hiding and Showing Video Player Controls</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Last week I decided to tackle a number of outstanding issues around the control bar, and then proceeded to fall down a rabbit hole of related player updates. I&rsquo;ve thankfully resurfaced now, and figured I&rsquo;d write about a few of the updates that came from it.</p>
+<p>One of the expected behaviors of the player&rsquo;s control bar is that it will fade out after a couple of seconds when the user is inactive while watching a video. Previously, the way we achieved this with video.js was through a bit of a CSS trick. When the user&rsquo;s mouse would move out of the video player area, the control bar would be given the classname <code>vjs-fade-out</code>. This class had a visibility transition with an added 2 second delay.</p>
+<pre class="prettyprint">
+.vjs-fade-out {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: visibility 1.5s, opacity 1.5s;
+     -moz-transition: visibility 1.5s, opacity 1.5s;
+      -ms-transition: visibility 1.5s, opacity 1.5s;
+       -o-transition: visibility 1.5s, opacity 1.5s;
+          transition: visibility 1.5s, opacity 1.5s;
+
+  /* Wait a moment before fading out the control bar */
+  -webkit-transition-delay: 2s;
+     -moz-transition-delay: 2s;
+      -ms-transition-delay: 2s;
+       -o-transition-delay: 2s;
+          transition-delay: 2s;
+}
+</pre>
+
+<p>When the user&rsquo;s mouse moved back over the player, the class would be removed, canceling any delayed fade-out. This provided a similar experience to how you might expect the controls fading to work, and only took a few lines of javascript to add/remove the class.</p>
+<pre class="prettyprint">
+player.on('mouseout', function(){ 
+  controlBar.addClass('vjs-fade-out'); 
+});
+
+player.on('mouseover', function(){ 
+  controlBar.removeClass('vjs-fade-out'); 
+});
+</pre>
+
+<p>There&rsquo;s a few drawbacks though that have made it necessary to move away from this approach.</p>
+<ol>
+<li>Controls don&rsquo;t fade out in fullscreen mode because the mouse can never move out of the player area.</li>
+<li>There is no mouse on mobile devices so different events and interactions are needed to show/hide the controls.</li>
+</ol>
+<p>In addition to these issues, we want it to be possible for any player component or plugin to hook into the same trigger that hides the controls. Components like social sharing icons should fade out in the same way that the controls do.</p>
+<h2 id="User-State"><a href="/Hiding-and-Showing-Video-Player-Controls/#User-State" class="headerlink" title="User State"></a>User State</h2><p>One of the first things that is being added is a <code>userActive</code> property on the player, that can be either <code>true</code> or <code>false</code>. What this does is abstract the controls hiding out to what it is we&rsquo;re actually concerned with, that is, whether the user is currently interacting with the player or just passively watching the video. This also decouples the control bar from tracking the user activity itself, and allows other components to more easily behave the same way as the control bar, through a player-level state.</p>
+<p>That actual property is <code>player.userActive()</code> and returns either <code>true</code> or <code>false</code>. When this value is changed, it triggers an event on the player.</p>
+<pre class="prettyprint">
+player.userActive(true)
+    // -&gt; 'useractive' event triggered
+player.userActive(false)
+    // -&gt; 'userinactive' event triggered
+</pre>
+
+<p>A CSS classname of either <code>vjs-user-active</code> or <code>vjs-user-inactive</code> is also added to the player element. The classname is what&rsquo;s actually used now to hide and show the control bar.</p>
+<pre class="prettyprint">
+.vjs-default-skin.vjs-user-inactive .vjs-control-bar {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: visibility 1.5s, opacity 1.5s;
+     -moz-transition: visibility 1.5s, opacity 1.5s;
+      -ms-transition: visibility 1.5s, opacity 1.5s;
+       -o-transition: visibility 1.5s, opacity 1.5s;
+          transition: visibility 1.5s, opacity 1.5s;
+}
+</pre>
+
+<p>The 2 second delay has been removed from the CSS, and instead will be built into the process of setting the userActive state to false through a javascript timeout. Anytime a mouse event occurs on the player, this timeout will reset. e.g.</p>
+<pre class="prettyprint">
+var resetDelay, inactivityTimeout;
+
+resetDelay = function(){
+    clearTimeout(inactivityTimeout);
+    inactivityTimeout = setTimeout(function(){
+        player.userActive(false);
+    }, 2000);
+};
+
+player.on('mousemove', function(){
+    resetDelay();
+})
+</pre>
+
+<p>The mousemove event is called very rapidly while the mouse is moving, and we want to bog down the player process as little as possible during this action, so we&rsquo;re using a technique <a href="http://ejohn.org/blog/learning-from-twitter/" target="_blank" rel="external">written about by John Resig</a>.</p>
+<p>Instead of resetting the timeout for every <code>mousemove</code>, the <code>mousemove</code> event will instead set a variable that can be picked up by a javascript interval that&rsquo;s running at a controlled pace.</p>
+<pre class="prettyprint">
+var userActivity, activityCheck;
+
+player.on('mousemove', function(){
+    userActivity = true;
+});
+
+activityCheck = setInterval(function() {
+
+  // Check to see if the mouse has been moved
+  if (userActivity) {
+
+    // Reset the activity tracker
+    userActivity = false;
+
+    // If the user state was inactive, set the state to active
+    if (player.userActive() === false) {
+      player.userActive(true);
+    }
+
+    // Clear any existing inactivity timeout to start the timer over
+    clearTimeout(inactivityTimeout);
+
+    // In X seconds, if no more activity has occurred 
+    // the user will be considered inactive
+    inactivityTimeout = setTimeout(function() {
+      // Protect against the case where the inactivity timeout can trigger
+      // before the next user activity is picked up  by the 
+      // activityCheck loop.
+      if (!userActivity) {
+        this.userActive(false);
+      }
+    }, 2000);
+  }
+}, 250);
+</pre>
+
+<p>That may be a lot to follow, and it&rsquo;s a bit simplified from what&rsquo;s actually in the player now, but essentially it allows us to take some of the processing weight off of the browser while the mouse is moving.</p>
+<h2 id="Hiding-controls-in-fullscreen"><a href="/Hiding-and-Showing-Video-Player-Controls/#Hiding-controls-in-fullscreen" class="headerlink" title="Hiding controls in fullscreen"></a>Hiding controls in fullscreen</h2><p>Thanks to the new userActive state and the javascript timeout for the delay, the controls no longer require the mouse to move outside of the player area in order to hide, and can now hide in fullscreen mode the same way they do when the player is in the page. This also means we can now hide the mouse cursor in the same way we do the controls, so that it doesn&rsquo;t sit over the player while watching in fullscreen.</p>
+<pre class="prettyprint">
+.vjs-fullscreen.vjs-user-inactive {
+  cursor: none;
+}
+</pre>
+
+<h2 id="Hiding-controls-on-touch-devices"><a href="/Hiding-and-Showing-Video-Player-Controls/#Hiding-controls-on-touch-devices" class="headerlink" title="Hiding controls on touch devices"></a>Hiding controls on touch devices</h2><p>The expected behavior on touch devices is a little different than in desktop browsers. There is no <code>mousemove</code> event to help determine if the user is active or inactive, so typically a longer delay is added before the controls are faded out. Also, while a click on the video itself in desktop browsers will typically toggle between play and pause, a tap on the video on mobile devices will toggle the controls visibility.</p>
+<p>Luckily the framework we&rsquo;ve set up around userActive has made this last part easy enough to set up.</p>
+<pre class="prettyprint">
+video.on('tap', function(){
+  if (player.userActive() === true) {
+    player.userActive(false);
+  } else {
+    player.userActive(true);
+  }
+});
+</pre>
+
+<p>Manually toggling userActive between true and false will apply the appropriate classnames and trigger the events needed to show and hide the controls as you&rsquo;d expect on a mobile device.</p>
+<p>The <code>tap</code> event is actually a custom made event, similar to the tap event you&rsquo;ll find in <a href="http://jquerymobile.com" target="_blank" rel="external">jQuery mobile</a>, <a href="http://eightmedia.github.io/hammer.js/" target="_blank" rel="external">Hammer.js</a>, and other mobile touch libraries. A tap event occurs whenever a <code>touchstart</code> event is fired with the associated <code>touchend</code> event firing within 250 milliseconds. If the <code>touchend</code> event takes longer to fire, or if a <code>touchmove</code> event happens between the two, it is not considered a <code>tap</code>.</p>
+<h2 id="Conclusion"><a href="/Hiding-and-Showing-Video-Player-Controls/#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>I hope this has given some insight into how that piece of the controls operate in Video.js, and how you can mimic the same interaction if you&rsquo;re building your own plugins for Video.js. Feedback is always appreciated.</p>
+<p>Cheers,</p>
+<p>-heff<br><img src="http://feeds.feedburner.com/~r/video-js/~4/70tJSFYIq9Y" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/" data-id="cirpblvux000iy8cdai6ea9nh" class="article-share-link">Share</a>
+      
+        <a href="http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
 
 
   <nav id="page-nav">
@@ -876,10 +968,6 @@ var hi;
           </li>
         
           <li>
-            <a href="/foo/">foo</a>
-          </li>
-        
-          <li>
             <a href="/Video-js-5-11-0-Prelease/">Video.js 5.11.0 Prelease</a>
           </li>
         
@@ -889,6 +977,10 @@ var hi;
         
           <li>
             <a href="/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/">Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name).</a>
+          </li>
+        
+          <li>
+            <a href="/It-s-here-5-0-release-candidates/">It&#39;s here: 5.0 release candidates!</a>
           </li>
         
       </ul>

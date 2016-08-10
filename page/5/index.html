@@ -61,68 +61,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-1-1-5-Release-Subtitles-using-track-Android-fix-more" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    
-  <a href="https://github.com/heff" class="article-author">
-  <img src="https://github.com/heff.png?size=30" class="author_gravatar" height="30">
-  <span class="author_name">Steve Heffernan</span>
-
-
-    <a href="/1-1-5-Release-Subtitles-using-track-Android-fix-more/" class="article-date">
-  <time datetime="2010-11-09T05:00:00.000Z" itemprop="datePublished">2010-11-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/1-1-5-Release-Subtitles-using-track-Android-fix-more/">1.1.5 Release - Subtitles using track, Android fix &amp; more</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>Feature: Switched to track method for setting subtitles. Now works like spec.</li>
-<li>Feature: Created &ldquo;players&rdquo; concept for defining fallbacks and fallback order</li>
-<li>Fix: Android playback bug.</li>
-<li>Fix: Massive reorganization of code to make easier to navigate</li>
-</ul>
-<p>I&rsquo;ve switched the subtitles to use the new track element defined in the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/video.html" target="_blank" rel="external">HTML5 spec</a>. You can now add subtitles by creating a track element pointing to your <a href="http://www.delphiki.com/websrt/" target="_blank" rel="external">WebSRT</a>subtitles source.</p>
-<pre>&lt;video ...&gt;
-  &lt;track kind="subtitles" src="../demo-subtitles.srt" srclang="en-US" label="English"&gt;&lt;/track&gt;
-&lt;/vide&gt;</pre>
-
-<p>The closing track tag is needed, otherwise Safari thinks everything else is a child of the track, even with a self-closing track tag. Not sure why that is, but it&rsquo;s kind of annoying.</p>
-<p>Also a fix for Android playback was added. Android HTML5 video is pretty rough. The canPlayType function returns nothing on Android so VideoJS has a check to see if the source is mp4/m4v, and assumes it&rsquo;ll play. Then VideoJS adds a click event to the video so it&rsquo;ll play when you touch it. Also the Android will show the poster image, but no indication that it&rsquo;s a video and not just an image. Hopefully this will be improved in the next Android version.</p>
-<p>Beyond that, I did a massive reorganization of the code, so it should be easier to navigate if you&rsquo;re planning to hack at it or contribute.</p>
-<p><a href="http://videojs.com/downloads/video-js-1.1.5.zip" target="_blank" rel="external">Download version 1.1.5</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/1-1-5-Release-Subtitles-using-track-Android-fix-more/" data-id="cirpblvtp0000y8cdx3a606qx" class="article-share-link">Share</a>
-      
-        <a href="http://blog.videojs.com/1-1-5-Release-Subtitles-using-track-Android-fix-more/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-Version-1-1-4-Release-CSS-Loading-Spinner-More" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     
@@ -365,6 +303,53 @@
 
 
   
+    <article id="post-VideoJS-is-IE9-Compatible" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  <a href="https://github.com/heff" class="article-author">
+  <img src="https://github.com/heff.png?size=30" class="author_gravatar" height="30">
+  <span class="author_name">Steve Heffernan</span>
+
+
+    <a href="/VideoJS-is-IE9-Compatible/" class="article-date">
+  <time datetime="2010-09-15T04:00:00.000Z" itemprop="datePublished">2010-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/VideoJS-is-IE9-Compatible/">VideoJS is IE9 Compatible</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>After an initial test, VideoJS works with the new <a href="http://ie.microsoft.com/testdrive/" target="_blank" rel="external">Internet Explorer 9 preview</a>. Great news, and a little surprising considering the CSS layout of the controls, and the general nature of IE. Other VideoJS site layout stuff seems to break, but for now as long as the player works I&rsquo;m happy.</p>
+<p>If you find differently let me know (along with any info that might be helpful).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.videojs.com/VideoJS-is-IE9-Compatible/" data-id="cirpblw02002my8cd8zyy4cte" class="article-share-link">Share</a>
+      
+        <a href="http://blog.videojs.com/VideoJS-is-IE9-Compatible/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-New-VideoJS-Site-Now-with-more-HTML5" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     
@@ -404,53 +389,6 @@
       <a data-url="http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/" data-id="cirpblvvq000xy8cdz6n0ooq5" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-VideoJS-is-IE9-Compatible" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    
-  <a href="https://github.com/heff" class="article-author">
-  <img src="https://github.com/heff.png?size=30" class="author_gravatar" height="30">
-  <span class="author_name">Steve Heffernan</span>
-
-
-    <a href="/VideoJS-is-IE9-Compatible/" class="article-date">
-  <time datetime="2010-09-15T04:00:00.000Z" itemprop="datePublished">2010-09-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/VideoJS-is-IE9-Compatible/">VideoJS is IE9 Compatible</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>After an initial test, VideoJS works with the new <a href="http://ie.microsoft.com/testdrive/" target="_blank" rel="external">Internet Explorer 9 preview</a>. Great news, and a little surprising considering the CSS layout of the controls, and the general nature of IE. Other VideoJS site layout stuff seems to break, but for now as long as the player works I&rsquo;m happy.</p>
-<p>If you find differently let me know (along with any info that might be helpful).</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/VideoJS-is-IE9-Compatible/" data-id="cirpblw02002my8cd8zyy4cte" class="article-share-link">Share</a>
-      
-        <a href="http://blog.videojs.com/VideoJS-is-IE9-Compatible/#disqus_thread" class="article-comment-link">Comments</a>
       
       
     </footer>
@@ -514,10 +452,6 @@
           </li>
         
           <li>
-            <a href="/foo/">foo</a>
-          </li>
-        
-          <li>
             <a href="/Video-js-5-11-0-Prelease/">Video.js 5.11.0 Prelease</a>
           </li>
         
@@ -527,6 +461,10 @@
         
           <li>
             <a href="/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/">Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name).</a>
+          </li>
+        
+          <li>
+            <a href="/It-s-here-5-0-release-candidates/">It&#39;s here: 5.0 release candidates!</a>
           </li>
         
       </ul>

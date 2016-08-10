@@ -44,20 +44,6 @@
   </entry>
   
   <entry>
-    <title>foo</title>
-    <link href="http://blog.videojs.com/foo/"/>
-    <id>http://blog.videojs.com/foo/</id>
-    <published>2016-08-10T19:58:44.000Z</published>
-    <updated>2016-08-10T19:58:44.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Video.js 5.11.0 Prelease</title>
     <link href="http://blog.videojs.com/Video-js-5-11-0-Prelease/"/>
     <id>http://blog.videojs.com/Video-js-5-11-0-Prelease/</id>
@@ -2030,6 +2016,26 @@ video.on('tap', function(){
   </entry>
   
   <entry>
+    <title>VideoJS is IE9 Compatible</title>
+    <link href="http://blog.videojs.com/VideoJS-is-IE9-Compatible/"/>
+    <id>http://blog.videojs.com/VideoJS-is-IE9-Compatible/</id>
+    <published>2010-09-15T04:00:00.000Z</published>
+    <updated>2016-06-30T19:25:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>After an initial test, VideoJS works with the new <a href="http://ie.microsoft.com/testdrive/" target="_blank" rel="external">Internet Explorer 9 preview</a>. Great news, and a little surprising considering the CSS layout of the controls, and the general nature of IE. Other VideoJS site layout stuff seems to break, but for now as long as the player works I&rsquo;m happy.</p>
+<p>If you find differently let me know (along with any info that might be helpful).</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;After an initial test, VideoJS works with the new &lt;a href=&quot;http://ie.microsoft.com/testdrive/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Internet Ex
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>New VideoJS Site (Now with more HTML5)!</title>
     <link href="http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/"/>
     <id>http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/</id>
@@ -2045,26 +2051,6 @@ video.on('tap', function(){
     <summary type="html">
     
       &lt;p&gt;I told myself when the site reached 100,000 visits I would redesign it. Well that number&amp;rsquo;s come and gone, so &lt;a href=&quot;http://videoj
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>VideoJS is IE9 Compatible</title>
-    <link href="http://blog.videojs.com/VideoJS-is-IE9-Compatible/"/>
-    <id>http://blog.videojs.com/VideoJS-is-IE9-Compatible/</id>
-    <published>2010-09-15T04:00:00.000Z</published>
-    <updated>2016-06-30T19:25:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>After an initial test, VideoJS works with the new <a href="http://ie.microsoft.com/testdrive/" target="_blank" rel="external">Internet Explorer 9 preview</a>. Great news, and a little surprising considering the CSS layout of the controls, and the general nature of IE. Other VideoJS site layout stuff seems to break, but for now as long as the player works I&rsquo;m happy.</p>
-<p>If you find differently let me know (along with any info that might be helpful).</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;After an initial test, VideoJS works with the new &lt;a href=&quot;http://ie.microsoft.com/testdrive/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Internet Ex
     
     </summary>
     
