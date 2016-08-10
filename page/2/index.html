@@ -61,6 +61,199 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-DASH-Everywhere-ish-hack-project" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  <a href="https://github.com/heff" class="article-author">
+  <img src="https://github.com/heff.png?size=30" class="author_gravatar" height="30">
+  <span class="author_name">Steve Heffernan</span>
+
+
+    <a href="/DASH-Everywhere-ish-hack-project/" class="article-date">
+  <time datetime="2014-07-22T15:01:00.000Z" itemprop="datePublished">2014-07-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/DASH-Everywhere-ish-hack-project/">DASH Everywhere-ish (hack project)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>A couple of times a year Brightcove has an internal hackweek where engineers work on any project they&rsquo;d like. In the latest hackweek (2014-07-14) <a href="https://github.com/seniorflexdeveloper" target="_blank" rel="external">Tom Johnson</a> decided to see if he could get DASH supported in as many places as possible, by combining a few of the existing DASH player implementations with Video.js.</p>
+<p><a href="http://dashif.org/mpeg-dash/" target="_blank" rel="external">MPEG-DASH</a> (Dynamic Adaptive Streaming over HTTP) is a streaming format similar to Apple&rsquo;s <a href="https://developer.apple.com/streaming/" target="_blank" rel="external">HTTP Live Streaming (HLS)</a>. It allows you to provide multiple versions of a video at different bitrates, and then the player can switch between those versions depending on the user&rsquo;s bandwidth (which is more complicated than you might think).</p>
+<p>The two DASH playback implementations used were <a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="external">Dash.js</a> and <a href="https://github.com/castlabs/dashas" target="_blank" rel="external">Dash.as</a>. They were combined using video.js&rsquo;s playback tech architecture, which means you can include <a href="https://github.com/videojs/video.js/wiki/Plugins" target="_blank" rel="external">plugins</a> and custom skins and they&rsquo;ll work the same with either playback method.</p>
+<p><a href="http://mixxture.com/players/brightcove/dash/demo.html" target="_blank" rel="external">See the results.</a></p>
+<h3 id="Browser-Device-Coverage"><a href="/DASH-Everywhere-ish-hack-project/#Browser-Device-Coverage" class="headerlink" title="Browser/Device Coverage"></a>Browser/Device Coverage</h3><p>Using a combination of DASH.AS and DASH.JS will give us the following browser/device coverage:</p>
+<h4 id="DASH-JS-media-source-extensions-support"><a href="/DASH-Everywhere-ish-hack-project/#DASH-JS-media-source-extensions-support" class="headerlink" title="DASH.JS (media source extensions support)"></a>DASH.JS (media source extensions support)</h4><ul>
+<li>Internet Explorer: 11+</li>
+<li>Chrome: 23+</li>
+<li>FireFox: 25+ (upcoming version)</li>
+<li>Safari (Desktop): 8+ (OSX Yosemite - Fall 2014)</li>
+<li>iOS: No</li>
+<li>Android: 4.2+ (Chrome)</li>
+</ul>
+<h4 id="DASH-AS"><a href="/DASH-Everywhere-ish-hack-project/#DASH-AS" class="headerlink" title="DASH.AS"></a>DASH.AS</h4><p>Fallback to any environment that supports Flash Player 10.3</p>
+<h3 id="iOS"><a href="/DASH-Everywhere-ish-hack-project/#iOS" class="headerlink" title="iOS"></a>iOS</h3><p>As you can see, the one remaining holdout is iOS and there&rsquo;s currently no word when or if that will happen. Seeing media source extensions support in Safari 8 gives some hope, but my understanding is the requirements for getting support built into iOS are much more significant. My guess is it will happen eventually, but not for a while (and hopefully in-line playback + the fullscreen API will be supported at the same time).</p>
+<p>Today, to provide adaptive streaming everywhere, you still need either DASH + HLS, or just HLS (you can use the <a href="https://github.com/videojs/videojs-contrib-hls" target="_blank" rel="external">video.js HLS plugin</a> to support HLS in more browsers).</p>
+<h2 id="Tom-rsquo-s-Notes"><a href="/DASH-Everywhere-ish-hack-project/#Tom-rsquo-s-Notes" class="headerlink" title="Tom&rsquo;s Notes"></a>Tom&rsquo;s Notes</h2><p>The demo shows that for environments which support <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource" target="_blank" rel="external">Media Source Extensions</a> (MSE) we use a full Javscript implementation via <a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="external">Dash.js</a> and as a fallback we use Flash built around <a href="http://sourceforge.net/adobe/osmf/home/Home/" target="_blank" rel="external">OSMF</a> and <a href="https://github.com/castlabs/dashas" target="_blank" rel="external">Dash.as</a>, an open-source plugin provided by <a href="http://castlabs.com" target="_blank" rel="external">Castlabs</a>.</p>
+<blockquote>
+<p><em>Tom has been working on <a href="https://github.com/seniorflexdeveloper/videojs-osmf" target="_blank" rel="external">videojs-osmf</a> on the side, which helped make this possible.</em></p>
+</blockquote>
+<h3 id="DASH-AS-Requirements"><a href="/DASH-Everywhere-ish-hack-project/#DASH-AS-Requirements" class="headerlink" title="DASH.AS Requirements"></a>DASH.AS Requirements</h3><h4 id="Player"><a href="/DASH-Everywhere-ish-hack-project/#Player" class="headerlink" title="Player"></a>Player</h4><ul>
+<li>Environment must support Flash Player 10.3+</li>
+<li>Video.js OSMF Tech (<a href="https://github.com/seniorflexdeveloper/videojs-osmf" target="_blank" rel="external">videojs-osmf</a>)</li>
+<li>CastLabs Dash.AS plugin for OSMF (<a href="https://github.com/castlabs/dashas" target="_blank" rel="external">dash.as</a>)</li>
+</ul>
+<h4 id="Server-Host"><a href="/DASH-Everywhere-ish-hack-project/#Server-Host" class="headerlink" title="Server/Host"></a>Server/Host</h4><ul>
+<li>Since the requests are fired from within Flash, a crossdomain.xml file is required.*   Ability to serve byte range requests via query string (myFile.mp4?range=0-1000 || myFile.m4s?bytes=0-1000) is necessary because Flash Player restricts use of the ‘Range’ request header. Castlabs has an .htaccess file which uses mod_rewrite to achieve this. Akamai edge servers accept the bytes query string var as well.</li>
+</ul>
+<h4 id="Notes"><a href="/DASH-Everywhere-ish-hack-project/#Notes" class="headerlink" title="Notes"></a>Notes</h4><ul>
+<li>Something we may want to modify is handling the request/response portions of the workload outside of the Flash Player similar to the Video.js HLS solution. This would remove the need for having a crossdomain.xml, which cannot be normally expected to exist in a DASH focused environment.</li>
+<li>Akamai edgesuite appear to be an exception to the above rule, as those domains do in fact have the crossdomain from it’s use as a serving platform under Akamai HD. The Akamai param syntax is ‘myFile.m4s?bytes=XXXX-YYYY’.</li>
+<li>In it’s current form the Dash.AS manifest parser is very rigid. We may want to look into implementing a version of the DASH.JS manifest parsing on the AS side, as it is a lot more flexible in terms of structure recognition.</li>
+<li>Deeper class inspection shows that the Dash.AS plugin is based on using Netstream in data generation mode, similar to our HLS solution. There may be better way to share the codebase between the two to reduce code duplication.</li>
+</ul>
+<h3 id="DASH-JS-Requirements"><a href="/DASH-Everywhere-ish-hack-project/#DASH-JS-Requirements" class="headerlink" title="DASH.JS Requirements"></a>DASH.JS Requirements</h3><h4 id="Player-1"><a href="/DASH-Everywhere-ish-hack-project/#Player-1" class="headerlink" title="Player"></a>Player</h4><ul>
+<li>Environment must support <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource" target="_blank" rel="external">Media Source Extensions</a></li>
+<li>DASH Industry Forum DASH.JS library (<a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="external">dash.js</a>)</li>
+<li>Video.js Dash.js Tech (<a href="https://github.com/Dash-Industry-Forum/dash.js/blob/development/contrib/videojs/videojs-tech-dashjs.js" target="_blank" rel="external">videojs-tech-dashjs</a>)</li>
+</ul>
+<h4 id="Server-Host-1"><a href="/DASH-Everywhere-ish-hack-project/#Server-Host-1" class="headerlink" title="Server/Host"></a>Server/Host</h4><ul>
+<li>Open CORS headers: Access-Control-Allow-Origin: *</li>
+<li>Accept use of the Range request header: Access-Control-Allow-Headers:Range, Options</li>
+</ul>
+<h4 id="Notes-1"><a href="/DASH-Everywhere-ish-hack-project/#Notes-1" class="headerlink" title="Notes"></a>Notes</h4><ul>
+<li>Dash.js MPD parsing is significantly more robust in comparison to the Dash.AS solution.</li>
+<li>Most streams tested are Akamai based, we should probably try more local and non-Akamai hosted options moving forward.*   In my testing I did see a Youtube DASH/MSE example, and those streams were confirmed to work within Dash.JS as well.</li>
+<li>Dash.JS streaming lifecycle and segment loading lifecycle tend to be directly coupled and don’t necessarily fire the element media events at the time expected. For example is duration. While known at the parse complete stage of the manifest load cycle, is not reported to the player until the first of the segments is received.</li>
+</ul>
+<h3 id="Tech-Compatibility"><a href="/DASH-Everywhere-ish-hack-project/#Tech-Compatibility" class="headerlink" title="Tech Compatibility"></a>Tech Compatibility</h3><p>The independant techs work well together. A slight modification had to be made to the Dash.AS library to insure that it only checked for resources which 1. had a URL and 2. url contained the file extension of either ‘mpd’ or ‘m4s’ for DASH manifests/segments.</p>
+<p><strong>NOTE:</strong> Dash.JS tech should be loaded into DOM prior to OSMF tech to insure the OSMF tech is the fallback scenario for DASH playback.<br><img src="http://feeds.feedburner.com/~r/video-js/~4/Wn1NGaDuYmo" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/" data-id="cirpblvup000dy8cdm3zawej3" class="article-share-link">Share</a>
+      
+        <a href="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/news/">news</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Video-js-version-4-6-0-released-It-s-been-a-productive-month" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  <a href="https://github.com/heff" class="article-author">
+  <img src="https://github.com/heff.png?size=30" class="author_gravatar" height="30">
+  <span class="author_name">Steve Heffernan</span>
+
+
+    <a href="/Video-js-version-4-6-0-released-It-s-been-a-productive-month/" class="article-date">
+  <time datetime="2014-05-20T21:29:00.000Z" itemprop="datePublished">2014-05-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Video-js-version-4-6-0-released-It-s-been-a-productive-month/">Video.js version 4.6.0 released! It&#39;s been a productive month.</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The video.js community has been in full force lately and it&rsquo;s resulted in a lot of great features and fixes, including UI updates, better error messages, and even a <a href="https://github.com/addyosmani/video-js" target="_blank" rel="external">Video.js Polymer element</a> built by <a href="https://twitter.com/addyosmani" target="_blank" rel="external">Addy Osmani</a> himself.</p>
+<h3 id="New-Live-UI"><a href="/Video-js-version-4-6-0-released-It-s-been-a-productive-month/#New-Live-UI" class="headerlink" title="New Live UI"></a>New Live UI</h3><p><img src="http://66.media.tumblr.com/18c6ec3dd9a1e04440345bf5ca6630f9/tumblr_inline_n5ue8gvi1Y1qzc111.png" alt=""></p>
+<p>Video.js has supported different forms of live video for a while, but a recent update has made the user experience a little clearer. Specifically, a &lsquo;LIVE&rsquo; badge is added to the controls and the seek bar is hidden when seeking isn&rsquo;t permitted.</p>
+<h3 id="Clearer-Errors"><a href="/Video-js-version-4-6-0-released-It-s-been-a-productive-month/#Clearer-Errors" class="headerlink" title="Clearer Errors"></a>Clearer Errors</h3><p>A big effort went into improving error situations that developers and viewers might encounter. In cases where the viewer&rsquo;s browser supports neither JavaScript nor HTML5 Video, a more helpful message is shown that informs the viewer how they can support video playback.</p>
+<p><img src="http://66.media.tumblr.com/ce08d85f3a1538eecd1d58eccddaa0b6/tumblr_inline_n5ue7u9l4H1qzc111.png" alt=""></p>
+<p>In cases where a common media error occurs (e.g. the file doesn&rsquo;t exist or the network fails), an &ldquo;X&rdquo; icon is displayed showing that playback can&rsquo;t continue, and a message is shown describing the issue. Additionally an error message is logged to the javascript console.</p>
+<p><img src="http://67.media.tumblr.com/72b11aeeab66657ec39c09366bd19f0e/tumblr_inline_n5ue8z9ZFH1qzc111.png" alt=""></p>
+<p>For developers, better logging functions have been added including <code>videojs.log.error()</code>, and they&rsquo;re being used throughout the code base to provide better information and help track down issues.</p>
+<h3 id="IE11-Fullscreen"><a href="/Video-js-version-4-6-0-released-It-s-been-a-productive-month/#IE11-Fullscreen" class="headerlink" title="IE11 Fullscreen"></a>IE11 Fullscreen</h3><p>Video.js relies on native browser fullscreen even when Flash is used. IE11 is the first version of Internet Explorer to support native browser fullscreen, and video.js has now been updated to take advantage of that feature and provide a better fullscreen experience for those users.</p>
+<h3 id="Playback-Rate-Switching"><a href="/Video-js-version-4-6-0-released-It-s-been-a-productive-month/#Playback-Rate-Switching" class="headerlink" title="Playback Rate Switching"></a>Playback Rate Switching</h3><p>If you ever wanted to speed up or slow down the rate of a video, now you can! HTML5 video browsers have been adding support for playback rate switching, and video.js now has an optional UI component that will let you select the speed. Flash however does not support playback rate switching, so unfortunately it&rsquo;s not a feature that users on older browsers (e.g. IE8) can use.</p>
+<p><a href="http://jsbin.com/vikun/1/edit" target="_blank" rel="external">See a demo.</a></p>
+<h3 id="New-community-plugins"><a href="/Video-js-version-4-6-0-released-It-s-been-a-productive-month/#New-community-plugins" class="headerlink" title="New community plugins"></a>New community plugins</h3><p>The latest plugins to be added to the <a href="https://github.com/videojs/video.js/wiki/Plugins" target="_blank" rel="external">video.js plugins list</a>.</p>
+<ul>
+<li><a href="https://github.com/slawrence/videojs-vr" target="_blank" rel="external">videojs-vr</a>: Project video onto different geometric shapes (Sphere, Cube, Cylinder) and view in 3d with optional Oculus Rift support</li>
+<li><a href="https://github.com/nicetip/videojs-speed" target="_blank" rel="external">video-speed</a>: Adds customizable video-speed control</li>
+<li><a href="https://github.com/CtrHellenicStudies/OpenVideoAnnotation" target="_blank" rel="external">OpenVideoAnnotation</a> - create annotations in video-js using annotator</li>
+<li><a href="https://github.com/brightcove/videojs-overlay" target="_blank" rel="external">videojs-overlay</a>: display simple HTML overlays during video playback</li>
+<li><a href="https://github.com/addyosmani/video-js" target="_blank" rel="external">video.js-polymer</a>: A video.js element for the Polymer web components framework</li>
+</ul>
+<p>If you&rsquo;d like a head-start on the scaffolding for a new video.js plugin, check out the <a href="https://github.com/dmlap/generator-videojs-plugin" target="_blank" rel="external">Yeoman video.js plugin generator</a>.</p>
+<h2 id="Full-list-from-the-change-log"><a href="/Video-js-version-4-6-0-released-It-s-been-a-productive-month/#Full-list-from-the-change-log" class="headerlink" title="Full list from the change log"></a>Full list from the change log</h2><ul>
+<li>Updated the UI to support live video (<a href="https://github.com/videojs/video.js/pull/1121" target="_blank" rel="external">view</a>)</li>
+<li>The UI now resets after a source change (<a href="https://github.com/videojs/video.js/pull/1124" target="_blank" rel="external">view</a>)</li>
+<li>Now assuming smart CSS defaults for sliders to prevent reflow on player init (<a href="https://github.com/videojs/video.js/pull/1122" target="_blank" rel="external">view</a>)</li>
+<li>Fixed the title element placement in menus (<a href="https://github.com/videojs/video.js/pull/1114" target="_blank" rel="external">view</a>)</li>
+<li>Fixed title support for menu buttons (<a href="https://github.com/videojs/video.js/pull/1128" target="_blank" rel="external">view</a>)</li>
+<li>Fixed extra mousemove events on Windows caused by certain apps, not users (<a href="https://github.com/videojs/video.js/pull/1068" target="_blank" rel="external">view</a>)</li>
+<li>Fixed error due to undefined tech when no source is supported (<a href="https://github.com/videojs/video.js/pull/1172" target="_blank" rel="external">view</a>)</li>
+<li>Fixed the progress bar not finishing when manual timeupdate events are used (<a href="https://github.com/videojs/video.js/pull/1173" target="_blank" rel="external">view</a>)</li>
+<li>Added a more informative and styled fallback message for non-html5 browsers (<a href="https://github.com/videojs/video.js/pull/1181" target="_blank" rel="external">view</a>)</li>
+<li>Added the option to provide an array of child components instead of an object (<a href="https://github.com/videojs/video.js/pull/1093" target="_blank" rel="external">view</a>)</li>
+<li>Fixed casing on webkitRequestFullscreen (<a href="https://github.com/videojs/video.js/pull/1101" target="_blank" rel="external">view</a>)</li>
+<li>Made tap events on mobile less sensitive to touch moves (<a href="https://github.com/videojs/video.js/pull/1111" target="_blank" rel="external">view</a>)</li>
+<li>Fixed the default flag for captions/subtitles tracks (<a href="https://github.com/videojs/video.js/pull/1153" target="_blank" rel="external">view</a>)</li>
+<li>Fixed compilation failures with LESS v1.7.0 and GRUNT v0.4.4 (<a href="https://github.com/videojs/video.js/pull/1180" target="_blank" rel="external">view</a>)</li>
+<li>Added better error handling across the library (<a href="https://github.com/videojs/video.js/pull/1197" target="_blank" rel="external">view</a>)</li>
+<li>Updated captions/subtiles file fetching to support cross-origin requests in older IE browsers (<a href="https://github.com/videojs/video.js/pull/1095" target="_blank" rel="external">view</a>)</li>
+<li>Added support for playback rate switching (<a href="https://github.com/videojs/video.js/pull/1132" target="_blank" rel="external">view</a>)</li>
+<li>Fixed an issue with the loadstart event order that caused the big play button to not hide (<a href="https://github.com/videojs/video.js/pull/1209" target="_blank" rel="external">view</a>)</li>
+<li>Modernized the fullscreen API and added support for IE11 (<a href="https://github.com/videojs/video.js/pull/1205" target="_blank" rel="external">view</a>)</li>
+<li>Added cross-browser testing with SauceLabs, and added Karma as the default test runner (<a href="https://github.com/videojs/video.js/pull/1187" target="_blank" rel="external">view</a>)</li>
+<li>Fixed saucelabs integration to run on commits in TravisCI (<a href="https://github.com/videojs/video.js/pull/1214" target="_blank" rel="external">view</a>)</li>
+<li>Added a clearer error message when a tech is undefined (<a href="https://github.com/videojs/video.js/pull/1210" target="_blank" rel="external">view</a>)</li>
+<li>Added a cog icon to the font icons (<a href="https://github.com/videojs/video.js/pull/1211" target="_blank" rel="external">view</a>)</li>
+<li>Added a player option to offset the subtitles/captions timing (<a href="https://github.com/videojs/video.js/pull/1212" target="_blank" rel="external">view</a>)</li>
+</ul>
+<p>The new version is available on <a href="http://www.videojs.com" target="_blank" rel="external">videojs.com</a> and  has been added to the CDN.</p>
+<p>Cheers,</p>
+<p>-<a href="http://blog.heff.me" target="_blank" rel="external">heff</a><br><img src="http://feeds.feedburner.com/~r/video-js/~4/Ho_lv_Coqlc" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.videojs.com/Video-js-version-4-6-0-released-It-s-been-a-productive-month/" data-id="cirpblvzs002jy8cdjdpdenbf" class="article-share-link">Share</a>
+      
+        <a href="http://blog.videojs.com/Video-js-version-4-6-0-released-It-s-been-a-productive-month/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Video-js-version-4-5-0-released-Nothing-to-see-here-move-along" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     
@@ -70,7 +263,7 @@
 
 
     <a href="/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/" class="article-date">
-  <time datetime="2014-03-28T01:49:04.000Z" itemprop="datePublished">2014-03-27</time>
+  <time datetime="2014-03-27T22:49:04.000Z" itemprop="datePublished">2014-03-27</time>
 </a>
     
   </div>
@@ -112,7 +305,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/" data-id="cir45w1w0002hagudomjzqwi3" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/" data-id="cirpblvzg002ey8cdvp26mpa6" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -136,7 +329,7 @@
 
 
     <a href="/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/" class="article-date">
-  <time datetime="2014-02-20T01:49:00.000Z" itemprop="datePublished">2014-02-19</time>
+  <time datetime="2014-02-19T22:49:00.000Z" itemprop="datePublished">2014-02-19</time>
 </a>
     
   </div>
@@ -195,7 +388,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/" data-id="cir45w1w1002jagudy2rv25c3" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/" data-id="cirpblw0b002oy8cdnjjn5c3h" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -219,7 +412,7 @@
 
 
     <a href="/Video-js-version-4-3-0-released-w-shiny-new-API-docs/" class="article-date">
-  <time datetime="2013-11-06T03:29:00.000Z" itemprop="datePublished">2013-11-05</time>
+  <time datetime="2013-11-06T00:29:00.000Z" itemprop="datePublished">2013-11-05</time>
 </a>
     
   </div>
@@ -291,7 +484,7 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-version-4-3-0-released-w-shiny-new-API-docs/" data-id="cir45w1vw002fagud2nta3def" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-version-4-3-0-released-w-shiny-new-API-docs/" data-id="cirpblvzn002hy8cdnrfgr69x" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-version-4-3-0-released-w-shiny-new-API-docs/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -315,7 +508,7 @@ var hi;
 
 
     <a href="/The-Guardian-uses-Video-js-in-feature-article/" class="article-date">
-  <time datetime="2013-11-06T02:15:11.000Z" itemprop="datePublished">2013-11-05</time>
+  <time datetime="2013-11-05T23:15:11.000Z" itemprop="datePublished">2013-11-05</time>
 </a>
     
   </div>
@@ -342,7 +535,7 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/The-Guardian-uses-Video-js-in-feature-article/" data-id="cir45w1ut001lagudogtv11oj" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/The-Guardian-uses-Video-js-in-feature-article/" data-id="cirpblvyq0027y8cdage3k26q" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/The-Guardian-uses-Video-js-in-feature-article/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -366,7 +559,7 @@ var hi;
 
 
     <a href="/4-2-2-Patch-Release/" class="article-date">
-  <time datetime="2013-10-16T01:26:00.000Z" itemprop="datePublished">2013-10-15</time>
+  <time datetime="2013-10-15T22:26:00.000Z" itemprop="datePublished">2013-10-15</time>
 </a>
     
   </div>
@@ -398,7 +591,7 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/4-2-2-Patch-Release/" data-id="cir45w1sf0004agudrkm0evev" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/4-2-2-Patch-Release/" data-id="cirpblvuc0006y8cdkkt4b87k" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/4-2-2-Patch-Release/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -422,7 +615,7 @@ var hi;
 
 
     <a href="/Running-Video-js-unit-tests-in-real-browsers-with-Karma/" class="article-date">
-  <time datetime="2013-09-19T06:21:00.000Z" itemprop="datePublished">2013-09-18</time>
+  <time datetime="2013-09-19T03:21:00.000Z" itemprop="datePublished">2013-09-18</time>
 </a>
     
   </div>
@@ -452,7 +645,7 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Running-Video-js-unit-tests-in-real-browsers-with-Karma/" data-id="cir45w1uh001cagudnrbk9884" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Running-Video-js-unit-tests-in-real-browsers-with-Karma/" data-id="cirpblvw10014y8cdb82a9c07" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Running-Video-js-unit-tests-in-real-browsers-with-Karma/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -474,7 +667,7 @@ var hi;
 
 
     <a href="/Unauthorized-modification-of-Video-js-CDN-files/" class="article-date">
-  <time datetime="2013-09-15T18:23:00.000Z" itemprop="datePublished">2013-09-15</time>
+  <time datetime="2013-09-15T15:23:00.000Z" itemprop="datePublished">2013-09-15</time>
 </a>
     
   </div>
@@ -516,7 +709,7 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Unauthorized-modification-of-Video-js-CDN-files/" data-id="cir45w1uq001iagud2raqf5e9" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Unauthorized-modification-of-Video-js-CDN-files/" data-id="cirpblvwe001cy8cdslhjazns" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Unauthorized-modification-of-Video-js-CDN-files/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -538,7 +731,7 @@ var hi;
 
 
     <a href="/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/" class="article-date">
-  <time datetime="2013-09-06T22:51:00.000Z" itemprop="datePublished">2013-09-06</time>
+  <time datetime="2013-09-06T19:51:00.000Z" itemprop="datePublished">2013-09-06</time>
 </a>
     
   </div>
@@ -615,261 +808,12 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/" data-id="cir45w1vi0023agud3yv8lz57" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/" data-id="cirpblvx2001qy8cdjynasgn6" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Hiding-and-Showing-Video-Player-Controls" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    
-  <a href="https://github.com/heff" class="article-author">
-  <img src="https://github.com/heff.png?size=30" class="author_gravatar" height="30">
-  <span class="author_name">Steve Heffernan</span>
-
-
-    <a href="/Hiding-and-Showing-Video-Player-Controls/" class="article-date">
-  <time datetime="2013-08-10T01:51:47.000Z" itemprop="datePublished">2013-08-09</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Hiding-and-Showing-Video-Player-Controls/">Hiding and Showing Video Player Controls</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Last week I decided to tackle a number of outstanding issues around the control bar, and then proceeded to fall down a rabbit hole of related player updates. I&rsquo;ve thankfully resurfaced now, and figured I&rsquo;d write about a few of the updates that came from it.</p>
-<p>One of the expected behaviors of the player&rsquo;s control bar is that it will fade out after a couple of seconds when the user is inactive while watching a video. Previously, the way we achieved this with video.js was through a bit of a CSS trick. When the user&rsquo;s mouse would move out of the video player area, the control bar would be given the classname <code>vjs-fade-out</code>. This class had a visibility transition with an added 2 second delay.</p>
-<pre class="prettyprint">
-.vjs-fade-out {
-  display: block;
-  visibility: hidden;
-  opacity: 0;
-
-  -webkit-transition: visibility 1.5s, opacity 1.5s;
-     -moz-transition: visibility 1.5s, opacity 1.5s;
-      -ms-transition: visibility 1.5s, opacity 1.5s;
-       -o-transition: visibility 1.5s, opacity 1.5s;
-          transition: visibility 1.5s, opacity 1.5s;
-
-  /* Wait a moment before fading out the control bar */
-  -webkit-transition-delay: 2s;
-     -moz-transition-delay: 2s;
-      -ms-transition-delay: 2s;
-       -o-transition-delay: 2s;
-          transition-delay: 2s;
-}
-</pre>
-
-<p>When the user&rsquo;s mouse moved back over the player, the class would be removed, canceling any delayed fade-out. This provided a similar experience to how you might expect the controls fading to work, and only took a few lines of javascript to add/remove the class.</p>
-<pre class="prettyprint">
-player.on('mouseout', function(){ 
-  controlBar.addClass('vjs-fade-out'); 
-});
-
-player.on('mouseover', function(){ 
-  controlBar.removeClass('vjs-fade-out'); 
-});
-</pre>
-
-<p>There&rsquo;s a few drawbacks though that have made it necessary to move away from this approach.</p>
-<ol>
-<li>Controls don&rsquo;t fade out in fullscreen mode because the mouse can never move out of the player area.</li>
-<li>There is no mouse on mobile devices so different events and interactions are needed to show/hide the controls.</li>
-</ol>
-<p>In addition to these issues, we want it to be possible for any player component or plugin to hook into the same trigger that hides the controls. Components like social sharing icons should fade out in the same way that the controls do.</p>
-<h2 id="User-State"><a href="/Hiding-and-Showing-Video-Player-Controls/#User-State" class="headerlink" title="User State"></a>User State</h2><p>One of the first things that is being added is a <code>userActive</code> property on the player, that can be either <code>true</code> or <code>false</code>. What this does is abstract the controls hiding out to what it is we&rsquo;re actually concerned with, that is, whether the user is currently interacting with the player or just passively watching the video. This also decouples the control bar from tracking the user activity itself, and allows other components to more easily behave the same way as the control bar, through a player-level state.</p>
-<p>That actual property is <code>player.userActive()</code> and returns either <code>true</code> or <code>false</code>. When this value is changed, it triggers an event on the player.</p>
-<pre class="prettyprint">
-player.userActive(true)
-    // -&gt; 'useractive' event triggered
-player.userActive(false)
-    // -&gt; 'userinactive' event triggered
-</pre>
-
-<p>A CSS classname of either <code>vjs-user-active</code> or <code>vjs-user-inactive</code> is also added to the player element. The classname is what&rsquo;s actually used now to hide and show the control bar.</p>
-<pre class="prettyprint">
-.vjs-default-skin.vjs-user-inactive .vjs-control-bar {
-  display: block;
-  visibility: hidden;
-  opacity: 0;
-
-  -webkit-transition: visibility 1.5s, opacity 1.5s;
-     -moz-transition: visibility 1.5s, opacity 1.5s;
-      -ms-transition: visibility 1.5s, opacity 1.5s;
-       -o-transition: visibility 1.5s, opacity 1.5s;
-          transition: visibility 1.5s, opacity 1.5s;
-}
-</pre>
-
-<p>The 2 second delay has been removed from the CSS, and instead will be built into the process of setting the userActive state to false through a javascript timeout. Anytime a mouse event occurs on the player, this timeout will reset. e.g.</p>
-<pre class="prettyprint">
-var resetDelay, inactivityTimeout;
-
-resetDelay = function(){
-    clearTimeout(inactivityTimeout);
-    inactivityTimeout = setTimeout(function(){
-        player.userActive(false);
-    }, 2000);
-};
-
-player.on('mousemove', function(){
-    resetDelay();
-})
-</pre>
-
-<p>The mousemove event is called very rapidly while the mouse is moving, and we want to bog down the player process as little as possible during this action, so we&rsquo;re using a technique <a href="http://ejohn.org/blog/learning-from-twitter/" target="_blank" rel="external">written about by John Resig</a>.</p>
-<p>Instead of resetting the timeout for every <code>mousemove</code>, the <code>mousemove</code> event will instead set a variable that can be picked up by a javascript interval that&rsquo;s running at a controlled pace.</p>
-<pre class="prettyprint">
-var userActivity, activityCheck;
-
-player.on('mousemove', function(){
-    userActivity = true;
-});
-
-activityCheck = setInterval(function() {
-
-  // Check to see if the mouse has been moved
-  if (userActivity) {
-
-    // Reset the activity tracker
-    userActivity = false;
-
-    // If the user state was inactive, set the state to active
-    if (player.userActive() === false) {
-      player.userActive(true);
-    }
-
-    // Clear any existing inactivity timeout to start the timer over
-    clearTimeout(inactivityTimeout);
-
-    // In X seconds, if no more activity has occurred 
-    // the user will be considered inactive
-    inactivityTimeout = setTimeout(function() {
-      // Protect against the case where the inactivity timeout can trigger
-      // before the next user activity is picked up  by the 
-      // activityCheck loop.
-      if (!userActivity) {
-        this.userActive(false);
-      }
-    }, 2000);
-  }
-}, 250);
-</pre>
-
-<p>That may be a lot to follow, and it&rsquo;s a bit simplified from what&rsquo;s actually in the player now, but essentially it allows us to take some of the processing weight off of the browser while the mouse is moving.</p>
-<h2 id="Hiding-controls-in-fullscreen"><a href="/Hiding-and-Showing-Video-Player-Controls/#Hiding-controls-in-fullscreen" class="headerlink" title="Hiding controls in fullscreen"></a>Hiding controls in fullscreen</h2><p>Thanks to the new userActive state and the javascript timeout for the delay, the controls no longer require the mouse to move outside of the player area in order to hide, and can now hide in fullscreen mode the same way they do when the player is in the page. This also means we can now hide the mouse cursor in the same way we do the controls, so that it doesn&rsquo;t sit over the player while watching in fullscreen.</p>
-<pre class="prettyprint">
-.vjs-fullscreen.vjs-user-inactive {
-  cursor: none;
-}
-</pre>
-
-<h2 id="Hiding-controls-on-touch-devices"><a href="/Hiding-and-Showing-Video-Player-Controls/#Hiding-controls-on-touch-devices" class="headerlink" title="Hiding controls on touch devices"></a>Hiding controls on touch devices</h2><p>The expected behavior on touch devices is a little different than in desktop browsers. There is no <code>mousemove</code> event to help determine if the user is active or inactive, so typically a longer delay is added before the controls are faded out. Also, while a click on the video itself in desktop browsers will typically toggle between play and pause, a tap on the video on mobile devices will toggle the controls visibility.</p>
-<p>Luckily the framework we&rsquo;ve set up around userActive has made this last part easy enough to set up.</p>
-<pre class="prettyprint">
-video.on('tap', function(){
-  if (player.userActive() === true) {
-    player.userActive(false);
-  } else {
-    player.userActive(true);
-  }
-});
-</pre>
-
-<p>Manually toggling userActive between true and false will apply the appropriate classnames and trigger the events needed to show and hide the controls as you&rsquo;d expect on a mobile device.</p>
-<p>The <code>tap</code> event is actually a custom made event, similar to the tap event you&rsquo;ll find in <a href="http://jquerymobile.com" target="_blank" rel="external">jQuery mobile</a>, <a href="http://eightmedia.github.io/hammer.js/" target="_blank" rel="external">Hammer.js</a>, and other mobile touch libraries. A tap event occurs whenever a <code>touchstart</code> event is fired with the associated <code>touchend</code> event firing within 250 milliseconds. If the <code>touchend</code> event takes longer to fire, or if a <code>touchmove</code> event happens between the two, it is not considered a <code>tap</code>.</p>
-<h2 id="Conclusion"><a href="/Hiding-and-Showing-Video-Player-Controls/#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>I hope this has given some insight into how that piece of the controls operate in Video.js, and how you can mimic the same interaction if you&rsquo;re building your own plugins for Video.js. Feedback is always appreciated.</p>
-<p>Cheers,</p>
-<p>-heff<br><img src="http://feeds.feedburner.com/~r/video-js/~4/70tJSFYIq9Y" alt=""></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/" data-id="cir45w1tp000pagudopfw3g1m" class="article-share-link">Share</a>
-      
-        <a href="http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-New-Player-Skin-Designer-for-Video-js" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    
-  <a href="https://github.com/heff" class="article-author">
-  <img src="https://github.com/heff.png?size=30" class="author_gravatar" height="30">
-  <span class="author_name">Steve Heffernan</span>
-
-
-    <a href="/New-Player-Skin-Designer-for-Video-js/" class="article-date">
-  <time datetime="2013-07-16T02:44:00.000Z" itemprop="datePublished">2013-07-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/New-Player-Skin-Designer-for-Video-js/">New Player Skin Designer for Video.js</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://designer.videojs.com" title="Video Player Skin Designer" target="_blank" rel="external"><img src="http://65.media.tumblr.com/e1ce78f8543d5e1fffd65e35cfd41b3e/tumblr_inline_mq1y4zEiqe1qz4rgp.png" alt=""></a></p>
-<p>Last week Brightcove had an internal hack week where everyone could work on any project they wanted. One of the projects that came out of that was a new <a href="http://designer.videojs.com" title="Video Player Skin Designer" target="_blank" rel="external">video.js skin designer</a>.</p>
-<p>The designer allows you to watch changes happen to the skin live as you edit the CSS, making it easier to create a custom look.</p>
-<p>Check out <a href="http://codepen.io/heff/pen/wtrHL" target="_blank" rel="external">this familiar looking example</a> that was done in just a few minutes.</p>
-<p>Try creating your own and let us know what you think. Better yet, create your own, share it on CodePen.io and post a link in the comments. (It&rsquo;s probably easiest if you start by forking <a href="http://codepen.io/heff/pen/EarCt" title="Video.js Default Skin" target="_blank" rel="external">this unedited example</a>.)</p>
-<p>One of my favorite things about video.js is that the skins are built in HTML and CSS, while working across both HTML5 <em>and</em> Flash video. I think this designer does a nice job of showing off how easy that makes it to customize a player&rsquo;s skin.</p>
-<p><strong>Some notes on how we built it&hellip;</strong></p>
-<p>As a starting point we used Brian Frichette&rsquo;s awesome <a href="https://github.com/brian-frichette/less-preview/" target="_blank" rel="external">LESS2CSS</a>, which gave us a huge head start. Brian has offered to help with the skin designer as well, so that&rsquo;s great!</p>
-<p>We haven&rsquo;t added a CSS preprocessor to video.js before because we didn&rsquo;t want the extra layer of abstraction, or the extra step in the build process. When looking at the CSS in the new designer however, it became clear how valuable things like variables can be for helping people understand what&rsquo;s happening in the CSS. Still, we&rsquo;re trying to find the balance between using LESS features and keeping the CSS easily readable by anyone who just knows CSS. That means avoiding some of the more advanced LESS features like conditional statements (though we do use one for big play button positioning).</p>
-<p>We chose to use <a href="http://lesscss.org" target="_blank" rel="external">LESS</a> because of the ability to parse the LESS markup in javascript in the browser. I&rsquo;m not aware of any up-to-date in-browser <a href="http://sass-lang.com" target="_blank" rel="external">SASS</a> parsers. The completeness of LESS2CSS also influenced that decision. We&rsquo;re using a small enough subset of features that it doesn&rsquo;t really matter which one we use otherwise, though I do like the idea of using $ for variables over @.</p>
-<p>It&rsquo;s hosted on <a href="https://www.nodejitsu.com" target="_blank" rel="external">Nodejitsu</a>, and we&rsquo;re taking advantage of their free hosting for open source. I have to say, it was pretty simple to get the app deployed with their command line tool.</p>
-<p>Let us know if you have any thoughts. The code for the designer can be found here: <a href="https://github.com/videojs/designer" target="_blank" rel="external">https://github.com/videojs/designer</a></p>
-<p>Cheers,<br>-heff<br><img src="http://feeds.feedburner.com/~r/video-js/~4/-k5HhU559kM" alt=""></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/New-Player-Skin-Designer-for-Video-js/" data-id="cir45w1ua0013agudryr50vef" class="article-share-link">Share</a>
-      
-        <a href="http://blog.videojs.com/New-Player-Skin-Designer-for-Video-js/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5-video/">html5 video</a></li></ul>
 
     </footer>
   </div>
@@ -896,7 +840,7 @@ video.on('tap', function(){
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li></ul>
     </div>
   </div>
 
@@ -906,7 +850,7 @@ video.on('tap', function(){
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/html5-video/" style="font-size: 12.5px;">html5 video</a> <a href="/tags/news/" style="font-size: 17.5px;">news</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 10px;">releases</a> <a href="/tags/stats/" style="font-size: 12.5px;">stats</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a>
+      <a href="/tags/code/" style="font-size: 16px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/html5-video/" style="font-size: 14px;">html5 video</a> <a href="/tags/news/" style="font-size: 18px;">news</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 10px;">releases</a> <a href="/tags/stats/" style="font-size: 12px;">stats</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a>
     </div>
   </div>
 
@@ -915,7 +859,7 @@ video.on('tap', function(){
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
     </div>
   </div>
 
@@ -928,6 +872,14 @@ video.on('tap', function(){
       <ul>
         
           <li>
+            <a href="/the-end-of-html-first/">The End of &quot;HTML-First&quot;</a>
+          </li>
+        
+          <li>
+            <a href="/foo/">foo</a>
+          </li>
+        
+          <li>
             <a href="/Video-js-5-11-0-Prelease/">Video.js 5.11.0 Prelease</a>
           </li>
         
@@ -937,14 +889,6 @@ video.on('tap', function(){
         
           <li>
             <a href="/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/">Video.js 5: The Only Thing That’s Changed Is Everything...except for like 3 things that didn&#39;t (including the name).</a>
-          </li>
-        
-          <li>
-            <a href="/It-s-here-5-0-release-candidates/">It&#39;s here: 5.0 release candidates!</a>
-          </li>
-        
-          <li>
-            <a href="/Video-js-4-12-The-last-of-the-4-minors/">Video.js 4.12 - The last of the 4 minors</a>
           </li>
         
       </ul>
