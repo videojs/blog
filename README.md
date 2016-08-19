@@ -4,6 +4,7 @@ The new video.js blog based on [hexo][].
 [hexo]: https://www.npmjs.com/package/hexo
 
 Lead Maintainer: Gary Katsevman [@gkatsev](https://github.com/gkatsev])
+
 Maintenance Status: Stable
 
 # Writing New Posts
