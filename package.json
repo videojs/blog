@@ -8,6 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "draft": "hexo new draft",
+    "publish": "hexo publish",
     "hexo": "hexo",
     "dev": "hexo server --drafts",
     "release": "hexo clean && hexo g -d"
