@@ -3,12 +3,23 @@ The new video.js blog based on [hexo][].
 
 [hexo]: https://www.npmjs.com/package/hexo
 
+Lead Maintainer: Gary Katsevman [@gkatsev](https://github.com/gkatsev])
+Maintenance Status: Stable
+
 # Writing New Posts
 To write a new post on the blog, first run
 ```
 npm run draft "blog title"
 ```
 This will create a markdown file with the filename as a slug of the blog title in `source/_drafts`. For example: `source/_drafts/blog-title.md`.
+Make sure to fill out the yaml front matter:
+```yml
+author:
+  name: Your Name
+  github: githubusername
+```
+
+The github username is used to display your github avatar.
 
 ## Assets
 When generating a draft, a folder with the same slug as the blog post is generated as a sibling of the blog post: `source/_drafts/blog-title/`.
