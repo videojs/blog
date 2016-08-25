@@ -1,15 +1,17 @@
 ---
 title: Video.js 5.12.0 and 5.11.5 releases
+tags:
+  - news
+  - releases
+  - version
+  - webpack
+  - babel
 author:
   name: Gary Katsevman
   github: gkatsev
-tags:
-   - news
-   - releases
-   - version
-   - webpack
-   - babel
+date: 2016-08-25 19:28:03
 ---
+
 
 Today, there are two releases of video.js.
 The first, is a patch release for the 5.11 branch. With this release, we're also updating 5.11 to stable and publishing it to the CDN.
