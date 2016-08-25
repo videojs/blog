@@ -11,7 +11,7 @@ tags:
    - babel
 ---
 
-Today, two there are two releases of video.js.
+Today, there are two releases of video.js.
 The first, is a patch release for the 5.11 branch. With this release, we're also updating 5.11 to stable and publishing it to the CDN.
 
 The 5.12 release is a pre-release. It's a pretty big milestone too. Video.js finally outputs non-pre-built files so bundlers like webpack can decide what to do with them.
