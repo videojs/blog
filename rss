@@ -5,7 +5,7 @@
   <link href="/rss" rel="self"/>
   
   <link href="http://blog.videojs.com/"/>
-  <updated>2016-08-10T19:59:53.000Z</updated>
+  <updated>2016-08-25T23:29:39.000Z</updated>
   <id>http://blog.videojs.com/</id>
   
   <author>
@@ -14,6 +14,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Video.js 5.12.0 and 5.11.5 releases</title>
+    <link href="http://blog.videojs.com/Video-js-5-12-0-and-5-11-5-releases/"/>
+    <id>http://blog.videojs.com/Video-js-5-12-0-and-5-11-5-releases/</id>
+    <published>2016-08-25T23:28:03.000Z</published>
+    <updated>2016-08-25T23:29:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Today, there are two releases of video.js.<br>The first, is a patch release for the 5.11 branch. With this release, we’re also updating 5.11 to stable and publishing it to the CDN.</p>
+<p>The 5.12 release is a pre-release. It’s a pretty big milestone too. Video.js finally outputs non-pre-built files so bundlers like webpack can decide what to do with them.</p>
+<h2 id="Notable-Changes"><a href="/Video-js-5-12-0-and-5-11-5-releases/#Notable-Changes" class="headerlink" title="Notable Changes"></a>Notable Changes</h2><p>This release is mostly a maintenance and build-change release.</p>
+<ul>
+<li>Lint the entire codebase with our <a href="https://github.com/videojs/standard" target="_blank" rel="external">linter</a> and run the linter as a pre-push git hook.</li>
+<li>Fix CSS issues in IE8.</li>
+<li>Updated dependencies using Greenkeeper.io</li>
+<li>Make video.js provide ES5 source files for bundlers like webpack and browserify to use. This also makes video.js requirable in node.<ul>
+<li>Video.js still provides a pre-build dist files for the CSS and JavaScript for those that aren’t using bundlers.</li>
+</ul>
+</li>
+<li>We’ve added a grunt task called <code>check-translations</code> that will output a <a href="https://github.com/videojs/video.js/blob/master/docs/translations-needed.md" target="_blank" rel="external">list of translations missing</a> from language files based on the <a href="https://github.com/videojs/video.js/blob/master/lang/en.json" target="_blank" rel="external"><code>en.json</code></a> file which serves as a template. If you know another lanugage, this would be an easy and quick way to get started contriburing to video.js!</li>
+</ul>
+<h2 id="Known-Issues"><a href="/Video-js-5-12-0-and-5-11-5-releases/#Known-Issues" class="headerlink" title="Known Issues"></a>Known Issues</h2><p>No new known issues but we have started looking into the <a href="http://blog.videojs.com/Video-js-5-11-0-Prelease/#Known-Issues">known issues from the last release</a>.</p>
+<h2 id="Looking-forward"><a href="/Video-js-5-12-0-and-5-11-5-releases/#Looking-forward" class="headerlink" title="Looking forward"></a>Looking forward</h2><p>Going forward, we’re <a href="https://github.com/videojs/video.js/issues/3503" target="_blank" rel="external">looking into</a> switching to <a href="https://github.com/conventional-changelog/standard-version" target="_blank" rel="external">standard-version</a>. This will allow us to accept PRs more easily and have the changelog generated for us. Also, this will make it easier for other core contributors to accept PRs. We’ve previously been using the <a href="https://github.com/contrib/contrib" target="_blank" rel="external">contrib</a> tool for accepting PRs and have the CHANGELOG generated automatically at that time but getting new people started with it for merging PRs was not the easiest experience.</p>
+<h2 id="Raw-Changelog"><a href="/Video-js-5-12-0-and-5-11-5-releases/#Raw-Changelog" class="headerlink" title="Raw Changelog"></a>Raw Changelog</h2><ul>
+<li>@misteroneill, @BrandonOCasey, and @pagarwal123 updates all the code to pass the linter (<a href="https://github.com/videojs/video.js/pull/3459" target="_blank" rel="external">view</a>)</li>
+<li>@misteroneill added ghooks to run linter on git push (<a href="https://github.com/videojs/video.js/pull/3459" target="_blank" rel="external">view</a>)</li>
+<li>@BrandonOCasey removed unused base-styles.js file (<a href="https://github.com/videojs/video.js/pull/3486" target="_blank" rel="external">view</a>)</li>
+<li>@erikyuzwa, @gkatsev updated CSS build to inlcude the IE8-specific CSS from a separate file instead of it being inside of sass (<a href="https://github.com/videojs/video.js/pull/3380" target="_blank" rel="external">view</a>) (<a href="https://github.com/erikyuzwa/video.js/pull/1" target="_blank" rel="external">view2</a>)</li>
+<li>@gkatsev added null checks around navigator.userAgent (<a href="https://github.com/videojs/video.js/pull/3502" target="_blank" rel="external">view</a>)</li>
+<li>greenkeeper updated karma dependencies (<a href="https://github.com/videojs/video.js/pull/3523" target="_blank" rel="external">view</a>)</li>
+<li>@BrandonOCasey updated language docs to link to IANA language registry (<a href="https://github.com/videojs/video.js/pull/3493" target="_blank" rel="external">view</a>)</li>
+<li>@gkatsev removed unused dependencies (<a href="https://github.com/videojs/video.js/pull/3516" target="_blank" rel="external">view</a>)</li>
+<li>@misteroneill enabled and updated videojs-standard and fixed an issue with linting (<a href="https://github.com/videojs/video.js/pull/3508" target="_blank" rel="external">view</a>)</li>
+<li>@misteroneill updated tests to qunit 2.0 (<a href="https://github.com/videojs/video.js/pull/3509" target="_blank" rel="external">view</a>)</li>
+<li>@gkatsev added slack badge to README (<a href="https://github.com/videojs/video.js/pull/3527" target="_blank" rel="external">view</a>)</li>
+<li>@gkatsev reverted back to qunitjs 1.x to unbreak IE8. Added es5-shim to tests (<a href="https://github.com/videojs/video.js/pull/3533" target="_blank" rel="external">view</a>)</li>
+<li>@gkatsev updated build system to open es5 folder for bundles and dist folder other users (<a href="https://github.com/videojs/video.js/pull/3445" target="_blank" rel="external">view</a>)</li>
+<li>greenkeeper updated uglify (<a href="https://github.com/videojs/video.js/pull/3547" target="_blank" rel="external">view</a>)</li>
+<li>greenkeeper updated grunt-concurrent (<a href="https://github.com/videojs/video.js/pull/3532" target="_blank" rel="external">view</a>)</li>
+<li>greenkeeper updated karma-chrome-launcher (<a href="https://github.com/videojs/video.js/pull/3553" target="_blank" rel="external">view</a>)</li>
+<li>@gkatsev added tests for webpack and browserify bundling and node.js requiring (<a href="https://github.com/videojs/video.js/pull/3558" target="_blank" rel="external">view</a>)</li>
+<li>@rlchung fixed tests that weren’t disposing players when they finished (<a href="https://github.com/videojs/video.js/pull/3524" target="_blank" rel="external">view</a>)</li>
+</ul>
+<h2 id="Git-diffstats"><a href="/Video-js-5-12-0-and-5-11-5-releases/#Git-diffstats" class="headerlink" title="Git diffstats"></a>Git diffstats</h2><p>These are deltas between 5.11.5 and 5.12.0 with the <code>dist</code> folder ignored.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div></pre></td><td class="code"><pre><div class="line">.babelrc                                           |   4 -</div><div class="line">.gitignore                                         |   1 -</div><div class="line">.jshintrc                                          |  49 ++</div><div class="line">.npmignore                                         |   1 -</div><div class="line">.travis.yml                                        |   2 +-</div><div class="line">CHANGELOG.md                                       |  26 -</div><div class="line">Gruntfile.js                                       |   2 +-</div><div class="line">README.md                                          |   2 -</div><div class="line">build/grunt.js                                     | 131 ++-</div><div class="line">build/tasks/cdn-links.js                           |   2 +-</div><div class="line">build/tasks/languages.js                           |  35 -</div><div class="line">build/tasks/saucelabs.js                           |  24 +</div><div class="line">component.json                                     |   2 +-</div><div class="line">docs/guides/languages.md                           | 164 +++-</div><div class="line">docs/translations-needed.md                        | 363 --------</div><div class="line">lang/de.json                                       |   8 +-</div><div class="line">lang/en.json                                       |   2 -</div><div class="line">lang/fr.json                                       |  19 +-</div><div class="line">package.json                                       |  80 +-</div><div class="line">src/css/_utilities.scss                            |   2 +-</div><div class="line">src/css/components/_control-bar.scss               |  16 +</div><div class="line">src/css/components/_fullscreen.scss                |   2 +</div><div class="line">src/css/components/_play-pause.scss                |   2 +</div><div class="line">src/css/components/_progress.scss                  |   2 +-</div><div class="line">src/css/components/menu/_menu.scss                 |   3 +-</div><div class="line">src/css/ie8.css                                    |  30 -</div><div class="line">src/js/base-styles.js                              |  18 +</div><div class="line">src/js/button.js                                   |  28 +-</div><div class="line">src/js/clickable-component.js                      |  29 +-</div><div class="line">src/js/component.js                                |  79 +-</div><div class="line">.../audio-track-controls/audio-track-button.js     |  11 +-</div><div class="line">.../audio-track-controls/audio-track-menu-item.js  |  18 +-</div><div class="line">src/js/control-bar/control-bar.js                  |  39 +-</div><div class="line">src/js/control-bar/fullscreen-toggle.js            |   2 +-</div><div class="line">src/js/control-bar/live-display.js                 |   2 +-</div><div class="line">src/js/control-bar/mute-toggle.js                  |  20 +-</div><div class="line">src/js/control-bar/play-toggle.js                  |   8 +-</div><div class="line">.../playback-rate-menu-button.js                   |  27 +-</div><div class="line">.../playback-rate-menu/playback-rate-menu-item.js  |  10 +-</div><div class="line">.../progress-control/load-progress-bar.js          |  22 +-</div><div class="line">.../progress-control/mouse-time-display.js         |  22 +-</div><div class="line">.../progress-control/play-progress-bar.js          |   6 +-</div><div class="line">.../progress-control/progress-control.js           |   5 +-</div><div class="line">src/js/control-bar/progress-control/seek-bar.js    |  41 +-</div><div class="line">.../progress-control/tooltip-progress-bar.js       |  10 +-</div><div class="line">.../spacer-controls/custom-control-spacer.js       |   4 +-</div><div class="line">.../caption-settings-menu-item.js                  |  18 +-</div><div class="line">.../text-track-controls/captions-button.js         |  13 +-</div><div class="line">.../text-track-controls/chapters-button.js         |  57 +-</div><div class="line">.../chapters-track-menu-item.js                    |  18 +-</div><div class="line">.../text-track-controls/descriptions-button.js     |  15 +-</div><div class="line">.../off-text-track-menu-item.js                    |  25 +-</div><div class="line">.../text-track-controls/subtitles-button.js        |   4 +-</div><div class="line">.../text-track-controls/text-track-button.js       |  17 +-</div><div class="line">.../text-track-controls/text-track-menu-item.js    |  36 +-</div><div class="line">.../time-controls/current-time-display.js          |  13 +-</div><div class="line">.../control-bar/time-controls/duration-display.js  |  15 +-</div><div class="line">.../time-controls/remaining-time-display.js        |   7 +-</div><div class="line">src/js/control-bar/track-button.js                 |   7 +-</div><div class="line">src/js/control-bar/volume-control/volume-bar.js    |  12 +-</div><div class="line">.../control-bar/volume-control/volume-control.js   |  10 +-</div><div class="line">src/js/control-bar/volume-menu-button.js           |  19 +-</div><div class="line">src/js/error-display.js                            |   5 +-</div><div class="line">src/js/event-target.js                             |  17 +-</div><div class="line">src/js/extend.js                                   |   7 +-</div><div class="line">src/js/fullscreen-api.js                           |   6 +-</div><div class="line">src/js/media-error.js                              |  57 +-</div><div class="line">src/js/menu/menu-button.js                         |  31 +-</div><div class="line">src/js/menu/menu-item.js                           |  10 +-</div><div class="line">src/js/menu/menu.js                                |  63 +-</div><div class="line">src/js/modal-dialog.js                             |  20 +-</div><div class="line">src/js/player.js                                   | 383 ++++-----</div><div class="line">src/js/plugins.js                                  |   2 +-</div><div class="line">src/js/popup/popup-button.js                       |  10 +-</div><div class="line">src/js/popup/popup.js                              |  11 +-</div><div class="line">src/js/poster-image.js                             |   7 +-</div><div class="line">src/js/setup.js                                    |  40 +-</div><div class="line">src/js/slider/slider.js                            |  34 +-</div><div class="line">src/js/tech/flash-rtmp.js                          |  25 +-</div><div class="line">src/js/tech/flash.js                               | 157 ++--</div><div class="line">src/js/tech/html5.js                               | 347 +++-----</div><div class="line">src/js/tech/loader.js                              |  20 +-</div><div class="line">src/js/tech/tech.js                                | 210 +++--</div><div class="line">src/js/tracks/audio-track-list.js                  |   5 +-</div><div class="line">src/js/tracks/audio-track.js                       |  10 +-</div><div class="line">src/js/tracks/html-track-element-list.js           |   4 +-</div><div class="line">src/js/tracks/html-track-element.js                |   8 +-</div><div class="line">src/js/tracks/text-track-cue-list.js               |  12 +-</div><div class="line">src/js/tracks/text-track-display.js                | 144 ++--</div><div class="line">src/js/tracks/text-track-list-converter.js         |  28 +-</div><div class="line">src/js/tracks/text-track-list.js                   |   6 +-</div><div class="line">src/js/tracks/text-track-settings.js               | 347 ++++----</div><div class="line">src/js/tracks/text-track.js                        |  51 +-</div><div class="line">src/js/tracks/track-enums.js                       |  29 +-</div><div class="line">src/js/tracks/track-list.js                        |  12 +-</div><div class="line">src/js/tracks/track.js                             |  13 +-</div><div class="line">src/js/tracks/video-track-list.js                  |   4 +-</div><div class="line">src/js/tracks/video-track.js                       |  10 +-</div><div class="line">src/js/utils/browser.js                            |  32 +-</div><div class="line">src/js/utils/buffer.js                             |   9 +-</div><div class="line">src/js/utils/dom.js                                |  95 +--</div><div class="line">src/js/utils/events.js                             | 429 +++++-----</div><div class="line">src/js/utils/fn.js                                 |   6 +-</div><div class="line">src/js/utils/format-time.js                        |   2 +-</div><div class="line">src/js/utils/guid.js                               |   2 +-</div><div class="line">src/js/utils/log.js                                |  14 +-</div><div class="line">src/js/utils/merge-options.js                      |  14 +-</div><div class="line">src/js/utils/stylesheet.js                         |   7 +-</div><div class="line">src/js/utils/time-ranges.js                        |  68 +-</div><div class="line">src/js/utils/to-title-case.js                      |   2 +-</div><div class="line">src/js/utils/url.js                                |  29 +-</div><div class="line">src/js/video.js                                    |  53 +-</div><div class="line">test/api/api.js                                    | 421 +++++-----</div><div class="line">test/globals-shim.js                               |   2 -</div><div class="line">test/index.html                                    |   2 -</div><div class="line">test/karma.conf.js                                 |  17 +-</div><div class="line">test/require/browserify.js                         |   8 -</div><div class="line">test/require/node.js                               |   9 -</div><div class="line">test/require/webpack.js                            |   8 -</div><div class="line">test/unit/button.test.js                           |  32 +-</div><div class="line">test/unit/clickable-component.test.js              |  31 +-</div><div class="line">test/unit/close-button.test.js                     |  22 +-</div><div class="line">test/unit/component.test.js                        | 639 +++++++--------</div><div class="line">test/unit/controls.test.js                         | 101 ++-</div><div class="line">test/unit/events.test.js                           | 240 +++---</div><div class="line">test/unit/extend.test.js                           |  20 +-</div><div class="line">test/unit/media-error.test.js                      |  69 --</div><div class="line">test/unit/menu.test.js                             |  54 +-</div><div class="line">test/unit/modal-dialog.test.js                     | 138 ++--</div><div class="line">test/unit/player.test.js                           | 912 ++++++++++-----------</div><div class="line">test/unit/plugins.test.js                          | 196 +++--</div><div class="line">test/unit/poster.test.js                           |  68 +-</div><div class="line">test/unit/setup.test.js                            |  20 +-</div><div class="line">test/unit/tech/flash-rtmp.test.js                  |  68 +-</div><div class="line">test/unit/tech/flash.test.js                       | 203 ++---</div><div class="line">test/unit/tech/html5.test.js                       | 491 +++++------</div><div class="line">test/unit/tech/tech-faker.js                       |  86 +-</div><div class="line">test/unit/tech/tech.test.js                        | 438 +++++-----</div><div class="line">test/unit/test-helpers.js                          |  71 +-</div><div class="line">test/unit/tracks/audio-track-list.test.js          | 108 ++-</div><div class="line">test/unit/tracks/audio-track.test.js               |  88 +-</div><div class="line">test/unit/tracks/audio-tracks.test.js              |  70 +-</div><div class="line">test/unit/tracks/html-track-element-list.test.js   |  50 +-</div><div class="line">test/unit/tracks/html-track-element.test.js        |  68 +-</div><div class="line">test/unit/tracks/text-track-controls.test.js       | 202 ++---</div><div class="line">test/unit/tracks/text-track-cue-list.test.js       |  79 +-</div><div class="line">test/unit/tracks/text-track-list-converter.test.js |  67 +-</div><div class="line">test/unit/tracks/text-track-list.test.js           |  23 +-</div><div class="line">test/unit/tracks/text-track-settings.test.js       | 178 ++--</div><div class="line">test/unit/tracks/text-track.test.js                | 203 +++--</div><div class="line">test/unit/tracks/text-tracks.test.js               | 401 +++++----</div><div class="line">test/unit/tracks/track-baseline.js                 |  37 +-</div><div class="line">test/unit/tracks/track-list.test.js                | 104 ++-</div><div class="line">test/unit/tracks/track.test.js                     |  16 +-</div><div class="line">test/unit/tracks/video-track-list.test.js          | 111 ++-</div><div class="line">test/unit/tracks/video-track.test.js               |  87 +-</div><div class="line">test/unit/tracks/video-tracks.test.js              |  71 +-</div><div class="line">test/unit/utils/dom.test.js                        | 426 ++++------</div><div class="line">test/unit/utils/fn.test.js                         |  13 +-</div><div class="line">test/unit/utils/format-time.test.js                |  48 +-</div><div class="line">test/unit/utils/log.test.js                        |  26 +-</div><div class="line">test/unit/utils/merge-options.test.js              |  16 +-</div><div class="line">test/unit/utils/time-ranges.test.js                |  49 +-</div><div class="line">test/unit/utils/to-title-case.test.js              |  10 +-</div><div class="line">test/unit/utils/url.test.js                        | 103 ++-</div><div class="line">test/unit/video.test.js                            | 186 ++---</div><div class="line">166 files changed, 5233 insertions(+), 6541 deletions(-)</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Today, there are two releases of video.js.&lt;br&gt;The first, is a patch release for the 5.11 branch. With this release, we’re also updating 5
+    
+    </summary>
+    
+    
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
+    
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
+    
+      <category term="releases" scheme="http://blog.videojs.com/tags/releases/"/>
+    
+      <category term="webpack" scheme="http://blog.videojs.com/tags/webpack/"/>
+    
+      <category term="babel" scheme="http://blog.videojs.com/tags/babel/"/>
+    
+  </entry>
   
   <entry>
     <title>The End of &quot;HTML-First&quot;</title>
@@ -103,9 +167,9 @@
     </summary>
     
     
-      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
-    
       <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
+    
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
       <category term="releases" scheme="http://blog.videojs.com/tags/releases/"/>
     
@@ -400,9 +464,9 @@
     </summary>
     
     
-      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
-    
       <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
+    
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
@@ -452,9 +516,9 @@
     </summary>
     
     
-      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
-    
       <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
+    
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
@@ -492,9 +556,9 @@
     </summary>
     
     
-      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
-    
       <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
+    
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
@@ -572,9 +636,9 @@
     </summary>
     
     
-      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
-    
       <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
+    
+      <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
     
   </entry>
   
@@ -2016,26 +2080,6 @@ video.on('tap', function(){
   </entry>
   
   <entry>
-    <title>VideoJS is IE9 Compatible</title>
-    <link href="http://blog.videojs.com/VideoJS-is-IE9-Compatible/"/>
-    <id>http://blog.videojs.com/VideoJS-is-IE9-Compatible/</id>
-    <published>2010-09-15T04:00:00.000Z</published>
-    <updated>2016-06-30T19:25:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>After an initial test, VideoJS works with the new <a href="http://ie.microsoft.com/testdrive/" target="_blank" rel="external">Internet Explorer 9 preview</a>. Great news, and a little surprising considering the CSS layout of the controls, and the general nature of IE. Other VideoJS site layout stuff seems to break, but for now as long as the player works I&rsquo;m happy.</p>
-<p>If you find differently let me know (along with any info that might be helpful).</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;After an initial test, VideoJS works with the new &lt;a href=&quot;http://ie.microsoft.com/testdrive/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Internet Ex
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>New VideoJS Site (Now with more HTML5)!</title>
     <link href="http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/"/>
     <id>http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/</id>
@@ -2051,6 +2095,26 @@ video.on('tap', function(){
     <summary type="html">
     
       &lt;p&gt;I told myself when the site reached 100,000 visits I would redesign it. Well that number&amp;rsquo;s come and gone, so &lt;a href=&quot;http://videoj
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VideoJS is IE9 Compatible</title>
+    <link href="http://blog.videojs.com/VideoJS-is-IE9-Compatible/"/>
+    <id>http://blog.videojs.com/VideoJS-is-IE9-Compatible/</id>
+    <published>2010-09-15T04:00:00.000Z</published>
+    <updated>2016-06-30T19:25:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>After an initial test, VideoJS works with the new <a href="http://ie.microsoft.com/testdrive/" target="_blank" rel="external">Internet Explorer 9 preview</a>. Great news, and a little surprising considering the CSS layout of the controls, and the general nature of IE. Other VideoJS site layout stuff seems to break, but for now as long as the player works I&rsquo;m happy.</p>
+<p>If you find differently let me know (along with any info that might be helpful).</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;After an initial test, VideoJS works with the new &lt;a href=&quot;http://ie.microsoft.com/testdrive/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Internet Ex
     
     </summary>
     
