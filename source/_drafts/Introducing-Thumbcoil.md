@@ -17,7 +17,7 @@ A **transmuxer** takes media contained in some file format, extracts the raw com
 
 While building [Mux.js](https://github.com/videojs/mux.js) - the transmuxer at the heart of [videojs-contrib-hls](https://github.com/videojs/videojs-contrib-hls) - we faced a problem: How do we determine if the output from Mux.js is correct?
 
-Early on we managed to figure out how to coax FFmpeg into creating [MP4s](https://en.wikipedia.org/wiki/MPEG-4_Part_14) from [MPEG2-TS](https://en.wikipedia.org/wiki/MPEG_transport_stream) segments that would play back in a browser with [Media Source Extensions](https://en.wikipedia.org/wiki/Media_Source_Extensions) (MSE) which at the time that meant only Chrome. But we needed a simple way to compare the output of our transmuxer with what was produced by FFmpeg. The comparison had to be aware of the MP4 format since the two outputs are extremely unlikely to be byte-identical.
+Early on we managed to figure out how to coax FFmpeg into creating [MP4s](https://en.wikipedia.org/wiki/MPEG-4_Part_14) from [MPEG2-TS](https://en.wikipedia.org/wiki/MPEG_transport_stream) segments that would play back in a browser with [Media Source Extensions](https://en.wikipedia.org/wiki/Media_Source_Extensions) (MSE) which at the time meant only Chrome. However, we needed a simple way to compare the output of our transmuxer with what was produced by FFmpeg. The comparison had to be aware of the MP4 format since the two outputs are extremely unlikely to be byte-identical.
 
 {% pullquote left %}
 MP4 files are composed of **boxes** - hierarchical logical units that, conveniently, all start with a 32-bit length and a 32-bit box-type. Boxes will often contain other sub-boxes.
@@ -32,7 +32,7 @@ The "mp4-inspector" was built as a web page so that we can have a graphical colo
 A **media container** such as MP4 encapsulates the video and audio stream. It has metadata describing the streams, timing information for each frame, and the stream data itself.
 {% endpullquote %}
 
-As development continued, we would sometimes encounter streams that would fail in new and interesting ways. Some of these failures were, admittedly, due to bugs in Mux.js; as Mux.js itself became more robust they were increasingly caused by problems with the streams or issues with a particular implementation of the [MSE specification](http://www.w3.org/TR/2014/CR-media-source-20140717/).
+As development continued, we would sometimes encounter streams that would fail in new and interesting ways. Some of these failures were, admittedly, due to bugs in Mux.js. As Mux.js itself became more robust, failures were increasingly caused by problems with the streams or issues with a particular implementation of the [MSE specification](http://www.w3.org/TR/2014/CR-media-source-20140717/).
 
 It eventually dawned on us that we really needed to learn more about what was happening inside of those videos. We needed to see not just what was happening at the media container level but we had to go deeper - we needed to peek into the video data itself. For that purpose we created [Thumbcoil](http://thumb.co.il).
 
