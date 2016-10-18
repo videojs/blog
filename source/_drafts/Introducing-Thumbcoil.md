@@ -34,7 +34,7 @@ A **media container** such as MP4 encapsulates the video and audio stream. It ha
 
 As development continued, we would sometimes encounter streams that would fail in new and interesting ways. Some of these failures were, admittedly, due to bugs in Mux.js; as Mux.js itself became more robust they were increasingly caused by problems with the streams or issues with a particular implementation of the [MSE specification](http://www.w3.org/TR/2014/CR-media-source-20140717/).
 
-It eventually dawned on us that we really needed to learn more about what was happening inside of those videos. We needed to see not just what was happening at the media container level but we had to go deeper - we needed to peek into the video data itself. For that purpose we created Thumbcoil.
+It eventually dawned on us that we really needed to learn more about what was happening inside of those videos. We needed to see not just what was happening at the media container level but we had to go deeper - we needed to peek into the video data itself. For that purpose we created [Thumbcoil](http://thumb.co.il).
 
 {% pullquote left %}
 Inside of a container, video and audio are contained in data called **bitstreams**. Bitstreams are the data produced by encoders to represent the audio signals or video frames. Some common bitstreams are [AAC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) for audio and [H.264](https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC) for video.
@@ -42,9 +42,9 @@ Inside of a container, video and audio are contained in data called **bitstreams
 
 ## Thumbcoil
 
-Thumbcoil is a suite of tools designed to give you a peek into the internals of H.264 video bitstreams contained inside either an MP4 or MPEG2-TS container file. Using the tools in Thumbcoil you can get a detailed view of the internal structure of the two supported media container formats.
+[Thumbcoil](http://thumb.co.il) is a suite of tools designed to give you a peek into the internals of H.264 video bitstreams contained inside either an MP4 or MPEG2-TS container file. Using the tools in [Thumbcoil](http://thumb.co.il) you can get a detailed view of the internal structure of the two supported media container formats.
 
-In addition, the tools have the ability to show you the information contained within the most important NAL-units that make up the H.264 bitstream. Ever wonder what kind of secret information the video encoder has squirreled away for decoders to use? Now, with Thumbcoil, you can finally see for yourself!
+In addition, the tools have the ability to show you the information contained within the most important NAL-units that make up the H.264 bitstream. Ever wonder what kind of secret information the video encoder has squirreled away for decoders to use? Now, with [Thumbcoil](http://thumb.co.il), you can finally see for yourself!
 
 ## Motivation
 {% pullquote right %}
@@ -59,11 +59,11 @@ The exact data inside of the various parameter sets for instance is not availabl
 In H.264, there are two special types of NAL-units - the SPS or **seq_parameter_set** and the PPS or **pic_parameter_set**. These two NAL units contain a lot of information. The decoders require this information to reconstruct the video.
 {% endpullquote %}
 
-Thumbcoil not only provides parameter set information in excruciating detail but also keeps the information with its surrounding context - the boxes it was contained by or the frame it was specified along with. This context is often very important to understanding issues or peculiarities in streams.
+[Thumbcoil](http://thumb.co.il) not only provides parameter set information in excruciating detail but also keeps the information with its surrounding context - the boxes it was contained by or the frame it was specified along with. This context is often very important to understanding issues or peculiarities in streams.
 
 ## Built Upon Fancy Stuff
 
-One of the more interesting things about how Thumbcoil parses parameter sets is that is builds what is internally called a "codec" for each NAL unit type. These codecs are specified using what is essentially a fancy [parser combinator](https://en.wikipedia.org/wiki/Parser_combinator)-type setup.
+One of the more interesting things about how [Thumbcoil](http://thumb.co.il) parses parameter sets is that is builds what is internally called a "codec" for each NAL unit type. These codecs are specified using what is essentially a fancy [parser combinator](https://en.wikipedia.org/wiki/Parser_combinator)-type setup.
 
 {% pullquote right %}
 Much of the data in the two parameter sets are stored using a method called [**exponential-golomb encoding.**](https://en.wikipedia.org/wiki/Exponential-Golomb_coding) This method uses a variable number of bits to store numbers and is particularly suited to values that tends to be small.
@@ -71,10 +71,12 @@ Much of the data in the two parameter sets are stored using a method called [**e
 
 Each function used to build the codec returns an object with two functions: *decode* and *encode*. This means that we can specify the format of, say, a seq_parameter_set NAL unit just once and then we can both parse from and write to the bitstream for that particular NAL unit.
 
-The "grammar" used to specify NAL unit codecs is very similar to the grammar used by the H.264 specification (ISO/IEC 14496-10). The data-types that the codecs in Thumbcoil understand are, with some extensions, merely the same types defined in the specification such as signed- and unsigned- exponential golomb encoded integers.
+The "grammar" used to specify NAL unit codecs is very similar to the grammar used by the H.264 specification (ISO/IEC 14496-10). The data-types that the codecs in [Thumbcoil](http://thumb.co.il) understand are, with some extensions, merely the same types defined in the specification such as signed- and unsigned- exponential golomb encoded integers.
 
-In addition to the parameter sets, Thumbcoil provides insight into the structure of the slice layers themselves by parsing the slice_header data though we stop short of parsing any of the actual slice_data because things quickly become more difficult and less useful as you descend into that madness.
+In addition to the parameter sets, [Thumbcoil](http://thumb.co.il) provides insight into the structure of the slice layers themselves by parsing the slice_header data though we stop short of parsing any of the actual slice_data because things quickly become more difficult and less useful as you descend into that madness.
 
 ## But what is the deal with the name?
 
-"Thumbcoil" doesn't mean anything, really. It's an inside joke that is funny to exactly 3 people in the world - myself included. Naming things is the hardest part of software development and I have a long-held belief that a memorable but meaningless name is preferable to a descriptive name that is made of generic terms.
+"[Thumbcoil](http://thumb.co.il)" doesn't mean anything, really. It's an inside joke that is funny to exactly 3 people in the world - myself included. The odd name does have one benefit in that it makes for a short and easy to remember domain-name: [thumb.co.il](http://thumb.co.il).
+
+As with all Video.js projects, [Thumbcoil](http://thumb.co.il) is open-source software and we welcome suggestions, issues, and contributions at [https://github.com/videojs/thumbcoil](https://github.com/videojs/thumbcoil).
