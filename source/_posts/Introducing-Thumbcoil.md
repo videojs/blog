@@ -1,13 +1,15 @@
 ---
 title: Introducing Thumbcoil
-author:
-  name: Jon-Carlos Rivera
-  github: imbcmdth
 tags:
   - thumbcoil
   - mse
   - hls
+author:
+  name: null
+  github: null
+date: 2016-10-19 16:47:37
 ---
+
 
 {% pullquote right %}
 A **transmuxer** takes media contained in some file format, extracts the raw compressed video and audio from inside (a process called demuxing) and repackages the compressed data  into another format (termed remuxing) without performing any re-compression.
