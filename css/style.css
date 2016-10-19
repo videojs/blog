@@ -685,7 +685,14 @@ a.article-title:hover {
 }
 .article-entry .pullquote {
   text-align: left;
-  width: 45%;
+  width: 30%;
+  margin: 0;
+  padding: 1.5em;
+  color: #666;
+  background-color: #eee;
+  font-size: 1.2em;
+}
+.article-entry .pullquote p {
   margin: 0;
 }
 .article-entry .pullquote.left {

@@ -5,7 +5,7 @@
   <link href="/rss" rel="self"/>
   
   <link href="http://blog.videojs.com/"/>
-  <updated>2016-08-25T23:29:39.000Z</updated>
+  <updated>2016-10-19T20:47:37.000Z</updated>
   <id>http://blog.videojs.com/</id>
   
   <author>
@@ -14,6 +14,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Introducing Thumbcoil</title>
+    <link href="http://blog.videojs.com/Introducing-Thumbcoil/"/>
+    <id>http://blog.videojs.com/Introducing-Thumbcoil/</id>
+    <published>2016-10-19T20:47:37.000Z</published>
+    <updated>2016-10-19T20:47:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote class="pullquote right"><p>A <strong>transmuxer</strong> takes media contained in some file format, extracts the raw compressed video and audio from inside (a process called demuxing) and repackages the compressed data  into another format (termed remuxing) without performing any re-compression.</p>
+</blockquote>
+<h2 id="In-the-Beginning"><a href="/Introducing-Thumbcoil/#In-the-Beginning" class="headerlink" title="In the Beginning"></a>In the Beginning</h2><p>While building <a href="https://github.com/videojs/mux.js" target="_blank" rel="external">Mux.js</a> - the transmuxer at the heart of <a href="https://github.com/videojs/videojs-contrib-hls" target="_blank" rel="external">videojs-contrib-hls</a> - we faced a problem: How do we determine if the output from Mux.js is correct?</p>
+<p>Early on we managed to figure out how to coax FFmpeg into creating <a href="https://en.wikipedia.org/wiki/MPEG-4_Part_14" target="_blank" rel="external">MP4s</a> from <a href="https://en.wikipedia.org/wiki/MPEG_transport_stream" target="_blank" rel="external">MPEG2-TS</a> segments that would play back in a browser with <a href="https://en.wikipedia.org/wiki/Media_Source_Extensions" target="_blank" rel="external">Media Source Extensions</a> (MSE) which at the time meant only Chrome. However, we needed a simple way to compare the output of our transmuxer with what was produced by FFmpeg. The comparison had to be aware of the MP4 format since the two outputs are extremely unlikely to be byte-identical.</p>
+<blockquote class="pullquote left"><p>MP4 files are composed of <strong>boxes</strong> - hierarchical logical units that, conveniently, all start with a 32-bit length and a 32-bit box-type. Boxes will often contain other sub-boxes.</p>
+</blockquote>
+<p>The answer to that problem was to build an “mp4-inspector” - a tool that would parse MP4 and display a sort of JSON-like dump of any relevant boxes and their contents. By generating a dump of the output from Mux.js and comparing it to a known-good fragment generated with FFmpeg, we could see where our transmuxer’s output differed.</p>
+<p>The “mp4-inspector” was built as a web page so that we can have a graphical color-coded diff of the two segments. Over time the page gained a video element and we started appending the results of transmuxing segments directly into the video element’s MediaSource to aid in instant feedback and validation of changes to Mux.js.</p>
+<h2 id="A-Brave-New-World"><a href="/Introducing-Thumbcoil/#A-Brave-New-World" class="headerlink" title="A Brave New World"></a>A Brave New World</h2><blockquote class="pullquote right"><p>A <strong>media container</strong> such as MP4 encapsulates the video and audio stream. It has metadata describing the streams, timing information for each frame, and the stream data itself.</p>
+</blockquote>
+<p>As development continued, we would sometimes encounter streams that would fail in new and interesting ways. Some of these failures were, admittedly, due to bugs in Mux.js. As Mux.js itself became more robust, failures were increasingly caused by problems with the streams or issues with a particular implementation of the <a href="http://www.w3.org/TR/2014/CR-media-source-20140717/" target="_blank" rel="external">MSE specification</a>.</p>
+<p>It eventually dawned on us that we really needed to learn more about what was happening inside of those videos. We needed to see not just what was happening at the media container level but we had to go deeper - we needed to peek into the video data itself. For that purpose we created <a href="http://thumb.co.il" target="_blank" rel="external">Thumbcoil</a>.</p>
+<blockquote class="pullquote left"><p>Inside of a container, video and audio are contained in data called <strong>bitstreams</strong>. Bitstreams are the data produced by encoders to represent the audio signals or video frames. Some common bitstreams are <a href="https://en.wikipedia.org/wiki/Advanced_Audio_Coding" target="_blank" rel="external">AAC</a> for audio and <a href="https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC" target="_blank" rel="external">H.264</a> for video.</p>
+</blockquote>
+<h2 id="Thumbcoil"><a href="/Introducing-Thumbcoil/#Thumbcoil" class="headerlink" title="Thumbcoil"></a>Thumbcoil</h2><p><a href="http://thumb.co.il" target="_blank" rel="external">Thumbcoil</a> is a suite of tools designed to give you a peek into the internals of H.264 video bitstreams contained inside either an MP4 or MPEG2-TS container file. Using the tools in <a href="http://thumb.co.il" target="_blank" rel="external">Thumbcoil</a> you can get a detailed view of the internal structure of the two supported media container formats.</p>
+<p>In addition, the tools have the ability to show you the information contained within the most important NAL-units that make up the H.264 bitstream. Ever wonder what kind of secret information the video encoder has squirreled away for decoders to use? Now, with <a href="http://thumb.co.il" target="_blank" rel="external">Thumbcoil</a>, you can finally see for yourself!</p>
+<h2 id="Motivation"><a href="/Introducing-Thumbcoil/#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><blockquote class="pullquote right"><p>An H.264 encoded bitstream is composed of what are called <strong>NAL</strong>, or network abstraction layer, units. NALs are a simple packet format designed to use bits as efficiently as possible.</p>
+</blockquote>
+<p>Believe it or not, there are very few good tools to generate a somewhat graphical display of the structure of media containers and the data that they contain. Debugging problems with video playback is usually a tedious task involving various esoteric <em>FFmpeg</em> and <em>FFprobe</em> incantations. Unfortunately at it’s best, <em>FFprobe</em> is only able to print out a small portion of the data we were interested in.</p>
+<p>The exact data inside of the various parameter sets for instance is not available via the command-line. Inside of FFprobe, that data is parsed and stored but there is no easy way to dump that information in a human readable form.</p>
+<blockquote class="pullquote left"><p>In H.264, there are two special types of NAL-units - the SPS or <strong>seq_parameter_set</strong> and the PPS or <strong>pic_parameter_set</strong>. These two NAL units contain a lot of information. The decoders require this information to reconstruct the video.</p>
+</blockquote>
+<p><a href="http://thumb.co.il" target="_blank" rel="external">Thumbcoil</a> not only provides parameter set information in excruciating detail but also keeps the information with its surrounding context - the boxes it was contained by or the frame it was specified along with. This context is often very important to understanding issues or peculiarities in streams.</p>
+<h2 id="Built-Upon-Fancy-Stuff"><a href="/Introducing-Thumbcoil/#Built-Upon-Fancy-Stuff" class="headerlink" title="Built Upon Fancy Stuff"></a>Built Upon Fancy Stuff</h2><p>One of the more interesting things about how <a href="http://thumb.co.il" target="_blank" rel="external">Thumbcoil</a> parses parameter sets is that is builds what is internally called a “codec” for each NAL unit type. These codecs are specified using what is essentially a fancy <a href="https://en.wikipedia.org/wiki/Parser_combinator" target="_blank" rel="external">parser combinator</a>-type setup.</p>
+<blockquote class="pullquote right"><p>Much of the data in the two parameter sets are stored using a method called <a href="https://en.wikipedia.org/wiki/Exponential-Golomb_coding" target="_blank" rel="external"><strong>exponential-golomb encoding.</strong></a> This method uses a variable number of bits to store numbers and is particularly suited to values that tends to be small.</p>
+</blockquote>
+<p>Each function used to build the codec returns an object with two functions: <em>decode</em> and <em>encode</em>. This means that we can specify the format of, say, a seq_parameter_set NAL unit just once and then we can both parse from and write to the bitstream for that particular NAL unit.</p>
+<p>The “grammar” used to specify NAL unit codecs is very similar to the grammar used by the H.264 specification (ISO/IEC 14496-10). The data-types that the codecs in <a href="http://thumb.co.il" target="_blank" rel="external">Thumbcoil</a> understand are, with some extensions, merely the same types defined in the specification such as signed- and unsigned- exponential golomb encoded integers.</p>
+<p>In addition to the parameter sets, <a href="http://thumb.co.il" target="_blank" rel="external">Thumbcoil</a> provides insight into the structure of the slice layers themselves by parsing the slice_header data though we stop short of parsing any of the actual slice_data because things quickly become more difficult and less useful as you descend into that madness.</p>
+<h2 id="But-what-is-the-deal-with-the-name"><a href="/Introducing-Thumbcoil/#But-what-is-the-deal-with-the-name" class="headerlink" title="But what is the deal with the name?"></a>But what is the deal with the name?</h2><p>“<a href="http://thumb.co.il" target="_blank" rel="external">Thumbcoil</a>“ doesn’t mean anything, really. It’s an inside joke that is funny to exactly 3 people in the world - myself included. The odd name does have one benefit in that it makes for a short and easy to remember domain-name: <a href="http://thumb.co.il" target="_blank" rel="external">thumb.co.il</a>.</p>
+<p>As with all Video.js projects, <a href="http://thumb.co.il" target="_blank" rel="external">Thumbcoil</a> is open-source software and we welcome suggestions, issues, and contributions at <a href="https://github.com/videojs/thumbcoil" target="_blank" rel="external">https://github.com/videojs/thumbcoil</a>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote class=&quot;pullquote right&quot;&gt;&lt;p&gt;A &lt;strong&gt;transmuxer&lt;/strong&gt; takes media contained in some file format, extracts the raw compressed 
+    
+    </summary>
+    
+    
+      <category term="thumbcoil" scheme="http://blog.videojs.com/tags/thumbcoil/"/>
+    
+      <category term="mse" scheme="http://blog.videojs.com/tags/mse/"/>
+    
+      <category term="hls" scheme="http://blog.videojs.com/tags/hls/"/>
+    
+  </entry>
   
   <entry>
     <title>Video.js 5.12.0 and 5.11.5 releases</title>
@@ -67,9 +122,9 @@
     </summary>
     
     
-      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
-    
       <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
+    
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
       <category term="releases" scheme="http://blog.videojs.com/tags/releases/"/>
     
@@ -167,9 +222,9 @@
     </summary>
     
     
-      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
-    
       <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
+    
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
       <category term="releases" scheme="http://blog.videojs.com/tags/releases/"/>
     
@@ -464,9 +519,9 @@
     </summary>
     
     
-      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
-    
       <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
+    
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
   </entry>
   
@@ -516,9 +571,9 @@
     </summary>
     
     
-      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
-    
       <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
+    
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
   </entry>
   
@@ -556,9 +611,9 @@
     </summary>
     
     
-      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
-    
       <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
+    
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
   </entry>
   
@@ -636,9 +691,9 @@
     </summary>
     
     
-      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
-    
       <category term="version" scheme="http://blog.videojs.com/tags/version/"/>
+    
+      <category term="news" scheme="http://blog.videojs.com/tags/news/"/>
     
   </entry>
   
