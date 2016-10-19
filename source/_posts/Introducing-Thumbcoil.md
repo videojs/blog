@@ -5,8 +5,9 @@ tags:
   - mse
   - hls
 author:
-  name: null
-  github: null
+  name: Jon-Carlos Rivera
+  github: imbcmdth
+
 date: 2016-10-19 16:47:37
 ---
 
