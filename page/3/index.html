@@ -74,6 +74,70 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-Unauthorized-modification-of-Video-js-CDN-files" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  <a href="https://github.com/heff" class="article-author">
+  <img src="https://github.com/heff.png?size=30" class="author_gravatar" height="30">
+  <span class="author_name">Steve Heffernan</span>
+
+
+    <a href="/Unauthorized-modification-of-Video-js-CDN-files/" class="article-date">
+  <time datetime="2013-09-15T15:23:00.000Z" itemprop="datePublished">2013-09-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Unauthorized-modification-of-Video-js-CDN-files/">Unauthorized modification of Video.js CDN files</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>UPDATE 2013-09-19:</strong></p>
+<p>The CDN continues to be secure and we have taken significant steps to ensure it never falls under a similar attack again.</p>
+<ul>
+<li>Access to the CDN has been restricted to a few key individuals</li>
+<li>A third-party service is now monitoring changes made to the CDN</li>
+<li>Processes have been defined for responding to any such future issues</li>
+</ul>
+<p>The original source of this event was the <a href="https://isc.sans.edu/forums/diary/Suspect+Sendori+software/16466" target="_blank" rel="external">Sendori Auto-update Hack</a>, which possibly affected millions of people including, unfortunately, an admin of the CDN.</p>
+<hr>
+<p>On the morning of September 14, 2013 at 6:25am PDST, we discovered that certain versions of video.js being served from our content delivery network (CDN) had been modified by an unknown attacker. The file was changed to contain malicious code that would attempt to install malware on any Windows or Macintosh computer that loaded the video.js file.  The malware has been identified to be a variant of <a href="https://www.virustotal.com/en/file/ea3be0fb4367e038c602a3de5811821d2367f3326ab2a12f469db4cda06fafa7/analysis/" target="_blank" rel="external">Trojan.PWS.Stealer.1932 or Trojan.Ransom.ED</a>.  We quickly reverted to safe versions of the video.js file, and took steps to ensure that the issue could not reoccur.</p>
+<p>The specific files affected were:</p>
+<p>vjs.zencdn.net/c/video.js</p>
+<p>vjs.zencdn.net/4.0/video.js</p>
+<p>vjs.zencdn.net/4.1/video.js</p>
+<p>No patch-level versions (e.g. vjs.zencdn.net/4.1.0/video.js) were affected, and neither was the latest version (4.2). Users who host their own copy of Video.js were also not affected.</p>
+<p>Potential Impact: Any browsers that loaded the affected files during the compromised period may have prompted users to install malicious software on their computers.</p>
+<p>It has been determined that the files were originally modified at 4:30am PDST. The files were repaired at 7:15am PDST and completed propagation to CDN edge caches around the world at 7:51am PDST.</p>
+<p>Rest assured that video.js is once again safe to load.  We are currently investigating the root cause. Once we fully understand the nature of the incident, we will provide an update with additional information.</p>
+<p>Keeping our users safe is one of our top priorities, and we sincerely apologize to anyone who was negatively impacted by this event.<br><img src="http://feeds.feedburner.com/~r/video-js/~4/wMwHep00UvY" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.videojs.com/Unauthorized-modification-of-Video-js-CDN-files/" data-id="ciyan1s0i001euteemf0w9oq4" class="article-share-link">Share</a>
+      
+        <a href="http://blog.videojs.com/Unauthorized-modification-of-Video-js-CDN-files/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Video-js-4-2-0-released-RTMP-CSS-designer-and-stability" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     
@@ -160,7 +224,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/" data-id="ciyan0nc5001uqjee3vgs9dh7" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/" data-id="ciyan1s15001xuteew2fzii2o" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-4-2-0-released-RTMP-CSS-designer-and-stability/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -351,7 +415,7 @@ video.on('tap', function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/" data-id="ciyan0na5000lqjeesgt453bd" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/" data-id="ciyan1rz1000luteebb4a0404" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Hiding-and-Showing-Video-Player-Controls/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -409,7 +473,7 @@ video.on('tap', function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/New-Player-Skin-Designer-for-Video-js/" data-id="ciyan0nao000vqjeeiwm5w25z" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/New-Player-Skin-Designer-for-Video-js/" data-id="ciyan1rzf000tuteeo4yq14cc" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/New-Player-Skin-Designer-for-Video-js/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -473,7 +537,7 @@ video.on('tap', function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-4-1-0-Released/" data-id="ciyan0nbo001pqjeezh75l9b8" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-4-1-0-Released/" data-id="ciyan1s0y001suteetv9n7zub" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-4-1-0-Released/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -558,7 +622,7 @@ video.on('tap', function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-4-0-now-available/" data-id="ciyan0nc1001sqjeedach1xq5" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-4-0-now-available/" data-id="ciyan1s0w001putee0sksk58a" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-4-0-now-available/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -611,7 +675,7 @@ video.on('tap', function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Repo-Moved/" data-id="ciyan0nb30018qjeev24hh6yj" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Repo-Moved/" data-id="ciyan1s060014uteeodjufoqj" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Repo-Moved/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -665,7 +729,7 @@ video.on('tap', function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Site-and-Support-Updates/" data-id="ciyan0nb5001aqjee80enigpi" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Site-and-Support-Updates/" data-id="ciyan1s0e0019utee094g0aer" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Site-and-Support-Updates/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -719,7 +783,7 @@ video.on('tap', function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Brightcove-Acquires-Zencoder/" data-id="ciyan0n9m0008qjeesz62jwnp" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Brightcove-Acquires-Zencoder/" data-id="ciyan1ryl0008uteejxr2emop" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Brightcove-Acquires-Zencoder/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -790,77 +854,9 @@ video.on('tap', function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Version-3-2-Update/" data-id="ciyan0nbi001kqjeeg5klun9x" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Version-3-2-Update/" data-id="ciyan1s0u001nuteenc4wsygp" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Version-3-2-Update/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Version-3-1-Update" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    
-  <a href="https://github.com/heff" class="article-author">
-  <img src="https://github.com/heff.png?size=30" class="author_gravatar" height="30">
-  <span class="author_name">Steve Heffernan</span>
-
-
-    <a href="/Version-3-1-Update/" class="article-date">
-  <time datetime="2012-01-30T05:00:00.000Z" itemprop="datePublished">2012-01-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Version-3-1-Update/">Version 3.1 Update</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>This is the first release since the initial 3.0 launch, aside from some hotfixes that went out immediately. It includes a number of fixes for things that users in the <a href="http://help.videojs.com" target="_blank" rel="external">forums</a> found right off the bat.</p>
-<p>One feature that&rsquo;s optional for testing in this release is iFrame Mode for Flash. One the of the unique things about Video.js is we haven&rsquo;t built any controls into our Flash player, and instead use HTML and CSS to create the controls for the Flash side as well. This keeps the experience consistent and the Flash player very lightweight, however there&rsquo;s a number of issues that you run into with Flash when you take an approach like this. If you&rsquo;ve ever tried to resize the parent of a Flash object, or hide a Flash object and then show it again, you&rsquo;ve probably run into the issue of Flash reloading in Firefox. This is a bug that&rsquo;s been in Firefox for <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=90268" target="_blank" rel="external">quite a long time</a> however it looks like it might be fixed by version 13 (currently 9). To add on top of this, with the new <a href="https://wiki.mozilla.org/Gecko:FullScreenAPI" target="_blank" rel="external">browser fullscreen API</a>, the other browsers now also reload Flash when you go to native fullscreen.</p>
-<p>We&rsquo;ve found a bit of a fix where if you embed the Flash object in an iframe first, it can get around the reloading in some of these cases. So in the new version there&rsquo;s an option to turn this on and try it.</p>
-<p><a href="https://gist.github.com/4092929.js?file=iframe-mode.js" target="_blank" rel="external">https://gist.github.com/4092929.js?file=iframe-mode.js</a></p>
-<p>We&rsquo;ll be doing some more testing to make sure it&rsquo;s stable before we push it out to everyone.</p>
-<p>Here&rsquo;s the full change log for the release.</p>
-<h4 id="3-1-0-2012-01-30-leonardo"><a href="/Version-3-1-Update/#3-1-0-2012-01-30-leonardo" class="headerlink" title="3.1.0 / 2012-01-30 / leonardo"></a>3.1.0 / 2012-01-30 / leonardo</h4><ul>
-<li>Added CSS fix for Firefox 9 fullscreen (in the rare case that it&rsquo;s enabled)</li>
-<li>Replaced swfobject with custom embed to save file size.</li>
-<li>Added flash iframe-mode, an experimental method for getting around flash reloading issues.</li>
-<li>Fixed issue with volume knob position. Improved controls fading.</li>
-<li>Fixed ian issue with triggering fullscreen a second time.</li>
-<li>Fixed issue with getting attributes in Firefox 3.0</li>
-<li>Escaping special characters in source URL for Flash</li>
-<li>Added a check for if Firefox is enabled which fixes a Firefox 9 issue</li>
-<li>Stopped spinner from showing on &lsquo;stalled&rsquo; events since browsers sometimes don&rsquo;t show that they&rsquo;ve recovered.</li>
-<li>Fixed CDN Version which was breaking dev.html</li>
-<li>Made full-window mode more independent</li>
-<li>Added rakefile for release generation</li>
-</ul>
-<p>Cheers,<br> -Heff</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Version-3-1-Update/" data-id="ciyan0nbm001nqjeegcyapz5l" class="article-share-link">Share</a>
-      
-        <a href="http://blog.videojs.com/Version-3-1-Update/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
@@ -890,7 +886,7 @@ video.on('tap', function(){
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hls/">hls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mse/">mse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thumbcoil/">thumbcoil</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hls/">hls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mse/">mse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thumbcoil/">thumbcoil</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
     </div>
   </div>
 
@@ -900,7 +896,7 @@ video.on('tap', function(){
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 16px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5-video/" style="font-size: 14px;">html5 video</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18px;">news</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 12px;">releases</a> <a href="/tags/stats/" style="font-size: 12px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
+      <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 16px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5-video/" style="font-size: 14px;">html5 video</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18px;">news</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 12px;">releases</a> <a href="/tags/stats/" style="font-size: 12px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 10px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
     </div>
   </div>
 
@@ -909,7 +905,7 @@ video.on('tap', function(){
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
     </div>
   </div>
 
@@ -920,6 +916,10 @@ video.on('tap', function(){
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/Video-js-6-0-0-RC-0-The-first-RC/">Video.js 6.0.0-RC.0: The first Release Candidate</a>
+          </li>
         
           <li>
             <a href="/Introducing-Thumbcoil/">Introducing Thumbcoil</a>
@@ -935,10 +935,6 @@ video.on('tap', function(){
         
           <li>
             <a href="/Video-js-5-11-0-Prelease/">Video.js 5.11.0 Prelease</a>
-          </li>
-        
-          <li>
-            <a href="/Video-js-5-s-fluid-mode-and-playlist-picker/">Video.js 5&#39;s fluid mode and playlist picker</a>
           </li>
         
       </ul>

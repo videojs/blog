@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2013/7 | Video.js Blog</title>
+  <title>Video.js 6.0.0-RC.0: The first Release Candidate | Video.js Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Video.js Blog">
-<meta property="og:url" content="http://blog.videojs.com/archives/2013/07/index.html">
+  <meta name="description" content="The first Release Candidate for 6.0 has been releasedLast week, we began wrapping up months of effort to make Video.js even better with the first Release Candidate (RC) of Video.js 6.0. In order to ma">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Video.js 6.0.0-RC.0: The first Release Candidate">
+<meta property="og:url" content="http://blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/index.html">
 <meta property="og:site_name" content="Video.js Blog">
+<meta property="og:description" content="The first Release Candidate for 6.0 has been releasedLast week, we began wrapping up months of effort to make Video.js even better with the first Release Candidate (RC) of Video.js 6.0. In order to ma">
+<meta property="og:updated_time" content="2017-01-23T22:01:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Video.js Blog">
+<meta name="twitter:title" content="Video.js 6.0.0-RC.0: The first Release Candidate">
+<meta name="twitter:description" content="The first Release Candidate for 6.0 has been releasedLast week, we began wrapping up months of effort to make Video.js even better with the first Release Candidate (RC) of Video.js 6.0. In order to ma">
   
     <link rel="alternate" href="/rss" title="Video.js Blog" type="application/atom+xml">
   
@@ -72,40 +76,79 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
+        <section id="main"><article id="post-Video-js-6-0-0-RC-0-The-first-RC" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2013" class="archive-year">2013</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/New-Player-Skin-Designer-for-Video-js/" class="archive-article-date">
-  <time datetime="2013-07-15T23:44:00.000Z" itemprop="datePublished">Jul 15</time>
+  <a href="https://github.com/gkatsev" class="article-author">
+  <img src="https://github.com/gkatsev.png?size=30" class="author_gravatar" height="30">
+  <span class="author_name">Gary Katsevman</span>
+
+
+    <a href="/Video-js-6-0-0-RC-0-The-first-RC/" class="article-date">
+  <time datetime="2017-01-23T21:59:11.000Z" itemprop="datePublished">2017-01-23</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/New-Player-Skin-Designer-for-Video-js/">New Player Skin Designer for Video.js</a>
+    <h1 class="article-title" itemprop="name">
+      Video.js 6.0.0-RC.0: The first Release Candidate
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="The-first-Release-Candidate-for-6-0-has-been-released"><a href="/Video-js-6-0-0-RC-0-The-first-RC/#The-first-Release-Candidate-for-6-0-has-been-released" class="headerlink" title="The first Release Candidate for 6.0 has been released"></a>The first Release Candidate for 6.0 has been released</h2><p>Last week, we began wrapping up months of effort to make Video.js even better with the first Release Candidate (RC) of Video.js 6.0. In order to make it better, however, we had to make a <a href="https://github.com/videojs/video.js/compare/v5.16.0...v6.0.0-RC.0" target="_blank" rel="external">few breaking changes</a> and we also made a lot of improvements under the hood.</p>
+<h2 id="How-to-try-it-out"><a href="/Video-js-6-0-0-RC-0-The-first-RC/#How-to-try-it-out" class="headerlink" title="How to try it out"></a>How to try it out</h2><p>The RC is now published on npm under the <code>beta</code> tag with verion <code>6.0.0-RC.0</code>.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install video.js@beta</div></pre></td></tr></table></figure>
+<p>Please try it out and let us know how it is on <a href="https://github.com/videojs/video.js/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="What-to-look-forward-to"><a href="/Video-js-6-0-0-RC-0-The-first-RC/#What-to-look-forward-to" class="headerlink" title="What to look forward to"></a>What to look forward to</h2><ul>
+<li>We’re finally removing Flash from core as outlines in <a href="http://blog.videojs.com/the-end-of-html-first/">a previous post</a>.</li>
+<li>Plugins are being updated to a React-inspired component architecture. The old style is staying around.</li>
+<li>We’re recommitting to accessiblity by fixing the accessibilty of our volume control and bringing back outlines!</li>
+<li>Middleware. A brand new feature to interface between Video.js’s techs and the player.</li>
+</ul>
+<h2 id="Feature-Spotlights"><a href="/Video-js-6-0-0-RC-0-The-first-RC/#Feature-Spotlights" class="headerlink" title="Feature Spotlights"></a>Feature Spotlights</h2><p>Over the coming weeks, we’ll post feature spotlights talking about the big things that are happening.<br>We might also revisit some old features.</p>
 
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/" data-id="ciyan1s1r002euteejg6fvxai" class="article-share-link">Share</a>
+      
+        <a href="http://blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/Introducing-Thumbcoil/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Introducing Thumbcoil</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 
 </section>
         
@@ -198,11 +241,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'videojs';
   
+  var disqus_url = 'http://blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
