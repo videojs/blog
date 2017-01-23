@@ -1,7 +1,5 @@
 ---
 title: 'Video.js 6.0.0-RC.0: The first Release Candidate'
-tags:
-  - video.js 6.0
 author:
   name: Gary Katsevman
   github: gkatsev
