@@ -1,11 +1,15 @@
 ---
 title: 'Video.js 6.0.0-RC.0: The first Release Candidate'
+tags:
+  - video.js 6.0
 author:
   name: Gary Katsevman
   github: gkatsev
 tags:
   - video.js 6.0
+date: 2017-01-23 16:59:11
 ---
+
 
 ## The first Release Candidate for 6.0 has been released
 Last week, we began wrapping up months of effort to make Video.js even better with the first Release Candidate (RC) of Video.js 6.0. In order to make it better, however, we had to make a [few breaking changes](https://github.com/videojs/video.js/compare/v5.16.0...v6.0.0-RC.0) and we also made a lot of improvements under the hood.
