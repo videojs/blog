@@ -8,7 +8,7 @@ tags:
 ---
 
 ## The first Release Candidate for 6.0 has been released
-Last week, we began wrapping up months of effort to make Video.js even better with the first Release Candidate (RC) of Video.js 6.0. To make it even better, however, we had to make a [few breaking changes](https://github.com/videojs/video.js/compare/v5.16.0...v6.0.0-RC.0).
+Last week, we began wrapping up months of effort to make Video.js even better with the first Release Candidate (RC) of Video.js 6.0. In order to make it better, however, we had to make a [few breaking changes](https://github.com/videojs/video.js/compare/v5.16.0...v6.0.0-RC.0) and we also made a lot of improvements under the hood.
 
 ## How to try it out
 The RC is now published on npm under the `beta` tag with verion `6.0.0-RC.0`.
