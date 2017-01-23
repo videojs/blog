@@ -25,5 +25,5 @@ Please try it out and let us know how it is on [github](https://github.com/video
 * Middleware. A brand new feature to interface between Video.js's techs and the player.
 
 ## Feature Spotlights
-Over the coming few weeks, wee'll post feature spotlights talking about the big new things that are happening.
-We might also revisit some old features as well.
+Over the coming weeks, we'll post feature spotlights talking about the big things that are happening.
+We might also revisit some old features.
