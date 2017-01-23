@@ -16,11 +16,11 @@ The RC is now published on npm under the `beta` tag with verion 6.0.0-RC.0.
 ```sh
 npm install video.js@beta
 ```
-Please try it out and let us know how it is on [github](https://github.com/videojs/video.js/issues).
+Please try it out and let us know how it is on [GitHub](https://github.com/videojs/video.js/issues).
 
 ## What to look forward to
-* We're finally removing flash from core as outlines in [a previous post](http://blog.videojs.com/the-end-of-html-first/).
-* Plugins are being updated to a React-inspired component architecture. (The old style is staying around).
+* We're finally removing Flash from core as outlines in [a previous post](http://blog.videojs.com/the-end-of-html-first/).
+* Plugins are being updated to a React-inspired component architecture. The old style is staying around.
 * We're recommitting to accessiblity by fixing the accessibilty of our volume control and bringing back outlines!
 * Middleware. A brand new feature to interface between Video.js's techs and the player.
 
