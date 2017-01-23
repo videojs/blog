@@ -7,13 +7,18 @@ tags:
   - video.js 6.0
 ---
 
-## Release Candiate Released
-Last week, we published the first Release Candidate (RC) of Video.js 6.0 on npm.
-This was a months-long team effort to make Video.js even better.
-However, to do so, we had to make a few breaking changes.
+## The first Release Candidate for 6.0 has been released
+Last week, we began wrapping up months of effort to make Video.js even better with the first Release Candidate (RC) of Video.js 6.0. To make it even better, however, we had to make a [few breaking changes](https://github.com/videojs/video.js/compare/v5.16.0...v6.0.0-RC.0).
+
+## How to try it out
+The RC is now published on npm under the `beta` tag with verion 6.0.0-RC.0.
+
+```sh
+npm install video.js@beta
+```
+Please try it out and let us know how it is on [github](https://github.com/videojs/video.js/issues).
 
 ## What to look forward to
-There are several big things that changed in Video.js 6.0.
 * We're finally removing flash from core as outlines in [a previous post](http://blog.videojs.com/the-end-of-html-first/).
 * Plugins are being updated to a React-inspired component architecture. (The old style is staying around).
 * We're recommitting to accessiblity by fixing the accessibilty of our volume control and bringing back outlines!
