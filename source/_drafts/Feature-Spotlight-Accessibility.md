@@ -72,6 +72,18 @@ The solution to this problem was to use a regular `div` to house the `MuteToggle
 
 ![After The Fix](after-the-fix.gif)
 
+### Outlines
+
+On top of fixing a accessibility issue with our controls, we decided to remove the following css from video.js:
+
+```css
+{
+  outline: none;
+}
+```
+
+Why did we do it? With feedback from the community and [external resources](http://www.outlinenone.com/) we learned that outlines should always be on. Without outlines there is no focus on navigation elements and without that you page is much less accessible for the visually impaired and keyboard users.
+
 ### Wrap up
 
 Hopefully this post has given you some insight into making a web application accessible. If you find any issue or have any suggestions for our accessibility or in general feel free to [contribute to Video.js](https://github.com/videojs/video.js/blob/master/CONTRIBUTING.md).
@@ -88,3 +100,4 @@ Resources for learning more about web accessibility:
 
 * [WebAIM](http://webaim.org/)
 * [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
+* [Outline None](http://www.outlinenone.com/)
