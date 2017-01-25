@@ -17,8 +17,11 @@ to allow developers to continue to support legacy browsers by adding the tech th
 us to minimize legacy code in video.js and decrease the footprint of the player.
 
 This follows in the footsteps of Chrome, Safari and Firefox which are all taking steps to depricate flash.
+
 Chrome: [Chrome 56 disables flash by default]
+
 Safari: [Safari makes Flash a legacy plugin]
+
 Firefox: [Reducing Adobe Flash Usage in Firefox]
 
 As of the videojs 6.0 release, the dream of a flashless future will come closer to a reality.
