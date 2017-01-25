@@ -21,11 +21,11 @@ As of the videojs 6.0 release, the dream of a flashless future will come closer 
 In the meantime, the separate [videojs-flash] project has been created for Flash tech support.
 
 ```html
- <link rel="stylesheet" href="path/video.js/dist/video-js.css">
- <script src="path/video.js/dist/video.js"></script>
- <script src="path/videojs-flash/dist/videojs-flash.js"></script>
+<link rel="stylesheet" href="path/video.js/dist/video-js.css">
+<script src="path/video.js/dist/video.js"></script>
+<script src="path/videojs-flash/dist/videojs-flash.js"></script>
 <video  id='vid' class='video-js' controls height=300 width=600>
- <source src="video.mp4" type="video/mp4">
+<source src="video.mp4" type="video/mp4">
 </video>
 <script> var player = videojs('vid', {techOrder: ['flash']}); </script>
 ```
