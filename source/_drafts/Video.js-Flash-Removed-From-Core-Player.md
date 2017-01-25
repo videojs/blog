@@ -7,7 +7,7 @@ tags:
 author:
   name: Michael Roca
   github: mrocajr
-date: 2016-06-01 14:50:06
+date: 2017-01-25 14:50:06
 ---
 
 In August of 2016, we [announced] our intention of removing flash as a part of the core video.js project.
