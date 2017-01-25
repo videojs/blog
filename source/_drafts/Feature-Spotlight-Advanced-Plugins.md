@@ -5,9 +5,12 @@ author:
   github: 'misteroneill'
 tags:
   - plugins
+  - video.js 6.0
 ---
 
-> **Note:** Advanced plugins are being introduced in Video.js 6.0 and are only supported from that version forward.
+{% pullquote %}
+**Note:** Advanced plugins are being introduced in Video.js 6.0 and are only supported from that version forward.
+{% endpullquote %}
 
 If you've been a Video.js user for a while, you're likely familiar with the concept of plugins: functions that become methods of any player you create. If you're not familiar with Video.js plugins, we have a comprehensive [plugins guide][plugins-guide] available.
 
@@ -68,15 +71,31 @@ Similar to components, advanced plugins can listen to and trigger events via the
 
 This provides a loosely coupled communication channel for plugins and other objects (components, players, etc) to manage their own state and respond to changes in the state of one another.
 
-#### Plugin Event Hash
+#### Additional Event Data
 
-The Video.js event system allows additional data - the "event hash" - to be passed to listeners as a _second argument_ when triggering events (the first argument is the event object itself).
+The Video.js event system allows additional data to be passed to listeners as a _second argument_ when triggering events (the first argument is the event object itself).
 
-Plugin events pass a consistent minimum set of properties with this hash:
+Plugin events pass a consistent set of properties in this object (including any custom properties passed to `trigger`):
 
 - `instance`: The plugin instance, which triggered the event.
 - `name`: The name of the plugin as a string (e.g. `'helloWorld'`).
 - `plugin`: The plugin class/constructor function (e.g. `HelloWorld`).
+
+For example, a listener for an event on a plugin can expect something like this:
+
+```js
+const player = videojs('my-player');
+const instance = player.helloWorld();
+
+instance.on('some-custom-event', (e, data) => {
+  videojs.log(data.instance === instance); // true
+  videojs.log(data.name === 'helloWorld'); // true
+  videojs.log(data.plugin === videojs.getPlugin('helloWorld')); // true
+  videojs.log(data.foo); // "bar"
+});
+
+instance.trigger('some-custom-event', {foo: 'bar'});
+```
 
 ### Lifecycle
 
