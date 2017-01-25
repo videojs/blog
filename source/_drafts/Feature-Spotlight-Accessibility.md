@@ -4,46 +4,63 @@ author:
   name: Brandon Casey
   github: brandonocasey
 tags:
-  - videojs-6
+  - video.js 6.0
   - accessibility
+  - a11y
 ---
 
 Accessibility! The most important feature you never knew about.
 
-In the Video.js organization we try hard to have good accessiblity. Like most other software any change can effect the system in unintended ways. For example `MuteToggle` and `VolumeControl` were recently married into `VolumeMenuButton`. While this change did allow these controls to work in tandem. It also did something unintended. It broke accessibility. In this post we will go over what broke, what the fix was, what accessibility is, and how to test and make sure it works.
+In the Video.js organization we try hard to have good accessiblity. Like most other software any change can effect the system in unintended ways. For example `MuteToggle` and `VolumeControl` were recently (in video.js 5) married into `VolumeMenuButton`. While this change did allow these controls to work in tandem. It also did something unintended. It broke accessibility. In this post we will go over what broke, what the fix was, what accessibility is, and how to test and make sure it works.
 
 > Feel free to skip to the [last section](#The-problem-and-the-solution) if you already know what accessibility is.
 
 ### Accessibility? What's that?
-Accessible software has support for users with vision, hearing, or other impairments. Out of the box web applications have some accessibility due to the nature of HTML, but this is only the case if you are using native elements in intended ways. If you cannot use native DOM elements like button, and instead must use a div for buttons. Then you need worry about accessibility in your page.
+Accessible software has support for users with vision, hearing, or other impairments. It also helps users that just want to use the keyboard to navigate. Out of the box web applications have some accessibility due to the nature of HTML, but this is only the case if you are using native elements in intended ways. If you cannot use native DOM elements like button, and instead must use a div for buttons. Then you need worry about accessibility in your page.
 
-Supporting hearing impairment is not something that we can do for the users of Video.js. Instead we must indirectly support these users by supporting captions in their videos. In Video.js we have had support for captions/subtitles for some time, internally they are called `TextTracks`.
+Supporting hearing impairment is not something that we can do for the users of Video.js. Instead we must indirectly support these users by supporting captions in their videos. In Video.js we have had support for captions and subtitles for some time, internally they are called `TextTracks`.
 
-Supporting vision impairment is harder, but fully in our control. To support this group of users our player must be accessible to "screen readers". A "Screen reader" is an application that reads elements off of the screen to the user (as the name implies). HTML has certain rules that must be followed so that a page can be accessible. We will go over the basics of these rules in the next section.
+Supporting vision impairment is harder, but fully in our control. To support this group of users our player must be accessible to "screen readers". A "Screen reader" is an application that reads elements off of the screen to the user (as the name implies). HTML has certain rules that must be followed so that a page can be accessible. We will go over the basics of these rules in the next section. Screen readers are further supported by having description tracks that can be read out by screen readers during video playback (that is another type of `TextTrack`).
 
-Here are some popular screen readers that are actually used in the wild:
+See the [resources section at the end of this post](#resources) for a list of screen readers.
 
-* [VoiceOver for macOS](https://en.wikipedia.org/wiki/VoiceOver)
-* [JAWS for Windows](https://en.wikipedia.org/wiki/JAWS_(screen_reader))
 
 ### How do you make a web application screen reader accessible?
-The most basic way to make a website accessible is to add the `role=""` attribute to an HTML element.
+If you use the native elements for the purposes that they were intended you will be most of the way towards beings accessible. Using the native element is the recommendede way to make anything accessible for a screen reader. For instance if you use a `<button>` element you will get the following accessiblity attributes (without them actually being on the button):
+* `tabIndex` which allows users to tab to the button
+* `role="button"` which tells the screen reader that this is a button
+* The space and the enter key will both press the button
 
-> A list of roles can be found on [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Composite_roles).
+In some cases, such as in Video.js, it will not be possible to use the native button element. So you will have to mimic the accessible functionality from the list above and use a `div`. For a `div` that wants to be classified as a button:
+* You have to add the `role="button"` attribute to classify it as a button.
+* You have to add a `tabIndex` which will allow the `div` to be navigated to using only the `tab` key
+* You have to add handling for the space and enter key that press the button
 
-Some Examples (assume all of these are plain `div`s):
-* A `MuteToggle` button would have a `role` attribute with a value of `button` like this: `role="button"`
-A `VolumeBar` slider would have a `role` attribute with a value of `slider` like this: `role="slider"`.
-
-If you use the native `<button>` element, you will not have to use the button role. This is the recommended way to make an element a button to the screen reader. In some cases (such as in Video.js) it will not be possible to use the native button element. So you will have to role instead.
-
-Another important point is that all ARIA controls must be usable with the keyboard alone. This is somewhat outside of the scope of this blog post but, usually you will have to add `tabindex`s to elements.
+{% pullquote %}
+A list of role attribute values can be found on [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Composite_roles).
+{% endpullquote %}
 
 After adding roles to the controls and content in your webpage. The next thing to look over are `aria` attributes. For instance we use `aria-live` for our `ProgressBar` slider. This is because the `ProgressBar` is always updating when a video is playing.
 
-> A list of attributes can be found in the [ARIA specification](https://www.w3.org/TR/wai-aria-1.1/)
+{% pullquote %}
+For a more complete list of [ARIA attributes see the specification](https://www.w3.org/TR/wai-aria-1.1/).
+{% endpullquote %}
 
-Finally you need to add an accessible name an element so that it can be referred to correctly. For instance a "Mute Button" with only a `role` of `button` would be read to the user as "button". If you add an accessible name to it, it will then be read as "Mute Button". In Video.js we refer to the accessible name as "Control Text". When we change the "Control Text" for a `Component`. A span with the specified text is added as a child element to the `Component` in question. This will let the screen reader know how to refer to the control.
+Finally you need to add an accessible "name" and "status" to an element so that it can be referred to correctly. For instance to indicate that the `MuteToggle` is not just a "button" we have to set the `title` and the `innerHTML`/`innerText` to "Mute Toggle". In Video.js we refer to accessible "name"/"status" updates as "ControlText". This will allow the screen reader to refer to the `MuteToggle` as "Mute Toggle" rather than button. We also have to update the button whenever it is "pressed" to indicate that it will now "Mute" or "Unmute" depending on its state.
+
+Here are some examples of accessiblity straight from Video.js:
+* The `MuteToggle` `<button>`:
+  * Has `aria-live` set to polite, which means that the screen reader should wait until the user is idle to send valuenow updates to the user
+  * Has "ControlText" of "Mute" or "Unmute" which indicates the current status of the button to the user. "ControlText" is a Video.js-ism that indicates a change in the `innerHTML` and `title` attribute that is localized along the way.
+* The `VolumeBar` slider `<div>`:
+  * Has a `role` attribute with a value of `slider` like this: `role="slider"`
+  * Has a `tabIndex` attribute
+  * Has `EventHandlers` that listen for:
+    * The up and right arrow keys to increase the volume and the slider percentage
+    * The down and left arrow keys to decrease the volume and the slider percentage
+  * Has `aria-label` of "volume level" which is an accessible name that the screen reader schould refer to this with
+  * Has `aria-valuenow` and `aria-valuetext` properties that update to indicate the current volume level (so the screen reader can read it)
+  * Has `aria-live` set to polite, which means that the screen reader should wait until the user is idle to send valuenow updates to the user
 
 ### The problem and the solution
 
@@ -58,3 +75,16 @@ The solution to this problem was to use a regular `div` to house the `MuteToggle
 ### Wrap up
 
 Hopefully this post has given you some insight into making a web application accessible. If you find any issue or have any suggestions for our accessibility or in general feel free to [contribute to Video.js](https://github.com/videojs/video.js/blob/master/CONTRIBUTING.md).
+
+### Resources
+
+Here are some popular screen readers that are actually used in the wild:
+
+* [VoiceOver for macOS](http://www.apple.com/accessibility/mac/vision/)
+* [JAWS for Windows](https://www.freedomscientific.com/Downloads/JAWS)
+* [NVDA for Windows](http://www.nvaccess.org/)
+
+Resources for learning more about web accessibility:
+
+* [WebAIM](http://webaim.org/)
+* [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
