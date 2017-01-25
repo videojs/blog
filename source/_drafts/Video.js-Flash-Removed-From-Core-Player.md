@@ -1,3 +1,4 @@
+---
 title: Video.js 5's fluid mode and playlist picker
 tags:
   - videojs 6
