@@ -5,7 +5,7 @@
   <link href="/rss" rel="self"/>
   
   <link href="http://blog.videojs.com/"/>
-  <updated>2017-01-23T22:01:40.000Z</updated>
+  <updated>2017-01-25T19:01:52.000Z</updated>
   <id>http://blog.videojs.com/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/"/>
     <id>http://blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/</id>
     <published>2017-01-23T21:59:11.000Z</published>
-    <updated>2017-01-23T22:01:40.000Z</updated>
+    <updated>2017-01-25T19:01:52.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="The-first-Release-Candidate-for-6-0-has-been-released"><a href="/Video-js-6-0-0-RC-0-The-first-RC/#The-first-Release-Candidate-for-6-0-has-been-released" class="headerlink" title="The first Release Candidate for 6.0 has been released"></a>The first Release Candidate for 6.0 has been released</h2><p>Last week, we began wrapping up months of effort to make Video.js even better with the first Release Candidate (RC) of Video.js 6.0. In order to make it better, however, we had to make a <a href="https://github.com/videojs/video.js/compare/v5.16.0...v6.0.0-RC.0" target="_blank" rel="external">few breaking changes</a> and we also made a lot of improvements under the hood.</p>
 <h2 id="How-to-try-it-out"><a href="/Video-js-6-0-0-RC-0-The-first-RC/#How-to-try-it-out" class="headerlink" title="How to try it out"></a>How to try it out</h2><p>The RC is now published on npm under the <code>beta</code> tag with verion <code>6.0.0-RC.0</code>.</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install video.js@beta</div></pre></td></tr></table></figure>
 <p>Please try it out and let us know how it is on <a href="https://github.com/videojs/video.js/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="What-to-look-forward-to"><a href="/Video-js-6-0-0-RC-0-The-first-RC/#What-to-look-forward-to" class="headerlink" title="What to look forward to"></a>What to look forward to</h2><ul>
-<li>We’re finally removing Flash from core as outlines in <a href="http://blog.videojs.com/the-end-of-html-first/">a previous post</a>.</li>
+<li>We’re finally removing Flash from core as outlined in <a href="http://blog.videojs.com/the-end-of-html-first/">a previous post</a>.</li>
 <li>Plugins are being updated to a React-inspired component architecture. The old style is staying around.</li>
 <li>We’re recommitting to accessiblity by fixing the accessibilty of our volume control and bringing back outlines!</li>
 <li>Middleware. A brand new feature to interface between Video.js’s techs and the player.</li>
