@@ -1,5 +1,5 @@
 ---
-title: Video.js 5's fluid mode and playlist picker
+title: Video.js removes flash from core player
 tags:
   - videojs 6
   - flash
