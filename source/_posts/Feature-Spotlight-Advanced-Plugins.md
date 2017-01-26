@@ -1,12 +1,14 @@
 ---
 title: 'Feature Spotlight: Advanced Plugins'
-author:
-  name: "Pat O'Neill"
-  github: 'misteroneill'
 tags:
   - plugins
   - video.js 6.0
+author:
+  name: "Pat O'Neill"
+  github: 'misteroneill'
+date: 2017-01-26 14:41:32
 ---
+
 
 {% pullquote right %}
 **Note:** Advanced plugins are being introduced in Video.js 6.0 and are only supported from that version forward.
