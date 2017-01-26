@@ -1,7 +1,7 @@
 ---
 title: Video.js removes flash from core player
 tags:
-  - videojs 6
+  - videojs 6.0
   - flash
   - html5
 author:
@@ -16,7 +16,7 @@ to remove flash from the core player and move it to a separate code base.  This 
 to allow developers to continue to support legacy browsers by adding the tech themselves, while allowing 
 us to minimize legacy code in video.js and decrease the footprint of the player.
 
-This follows in the footsteps of Chrome, Safari and Firefox which are all taking steps to depricate flash.
+This follows in the footsteps of Chrome, Safari and Firefox which are all taking steps to deprecate flash.
 
 Chrome: [Chrome 56 disables flash by default]
 
