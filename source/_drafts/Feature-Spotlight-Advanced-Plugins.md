@@ -8,7 +8,7 @@ tags:
   - video.js 6.0
 ---
 
-{% pullquote %}
+{% pullquote right %}
 **Note:** Advanced plugins are being introduced in Video.js 6.0 and are only supported from that version forward.
 {% endpullquote %}
 
