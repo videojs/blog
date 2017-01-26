@@ -74,6 +74,83 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-Video-js-4-9-Now-can-join-the-party" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  <a href="https://github.com/mmcc" class="article-author">
+  <img src="https://github.com/mmcc.png?size=30" class="author_gravatar" height="30">
+  <span class="author_name">Matthew McClure</span>
+
+
+    <a href="/Video-js-4-9-Now-can-join-the-party/" class="article-date">
+  <time datetime="2014-10-03T00:49:00.000Z" itemprop="datePublished">2014-10-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Video-js-4-9-Now-can-join-the-party/">Video.js 4.9 - Now &lt;audio&gt; can join the party!</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="HTML5-Audio-support"><a href="/Video-js-4-9-Now-can-join-the-party/#HTML5-Audio-support" class="headerlink" title="HTML5 Audio support"></a>HTML5 Audio support</h3><p>A common request we&rsquo;ve seen is to be able to use Video.js with an <code>&amp;lt;audio&amp;gt;</code> tag, and now you can! Usage is almost identical, you can just include a <code>data-setup={}</code> attribute on an <code>&amp;lt;audio&amp;gt;</code> tag or initialize via Javascript.</p>
+<pre><code>&amp;lt;audio id=&quot;audio_example&quot; class=&quot;video-js vjs-default-skin&quot; controls 
+  preload=&quot;auto&quot; width=&quot;600&quot; height=&quot;600&quot; 
+  poster=&quot;/img/awesome-album-art.png&quot; data-setup=&apos;{}&apos;&amp;gt;
+  &amp;lt;source src=&quot;/audio/awesome-music.mp3&quot; type=&apos;audio/mp3&apos;/&amp;gt;
+&amp;lt;/audio&amp;gt;
+</code></pre><p>The only differences in behavior are that the poster image and controls are never hidden. This allows you to keep up something like album art during playback rather than a black video element. Since there&rsquo;s no interesting content to hide (other than the poster image), we leave the controls showing to mimic a familiar audio player experience.</p>
+<p><img src="https://cloudup.com/cp544DZlhuV+" alt="Audio Screenshot"></p>
+<p><strong>Note</strong>: The Flash fallback still doesn&rsquo;t support audio-only sources, but we&rsquo;d like to add that in the future. In the meantime, audio playback with MP3 and Ogg sources should work fine in any (modern) browser that&rsquo;s not IE8, so enjoy!</p>
+<h3 id="More-translations"><a href="/Video-js-4-9-Now-can-join-the-party/#More-translations" class="headerlink" title="More translations!"></a>More translations!</h3><p>We&rsquo;ve been really excited by the continued support in terms of new translations. This release contains Brazilian Portuguese, Japanese, Italian, French, and Korean, as well as some improvements to the previous Spanish translation. We&rsquo;d love to see the trend continue, so if you&rsquo;re fluent in a language please consider <a href="https://github.com/videojs/video.js/blob/master/CONTRIBUTING.md" target="_blank" rel="external">submitting</a> improvements or whole new localizations!</p>
+<h3 id="Video-js-in-the-wild"><a href="/Video-js-4-9-Now-can-join-the-party/#Video-js-in-the-wild" class="headerlink" title="Video.js in the wild"></a>Video.js in the wild</h3><p><a href="http://coursera.org" target="_blank" rel="external">Coursera</a> is an education platform that offers free courses online from some of the world&rsquo;s top institutions. They&rsquo;ve built great tools for video interaction on top of Video.js, and are even going to talk about some of the work they&rsquo;re doing at October&rsquo;s <a href="http://sfvideo.org" target="_blank" rel="external">SF Video Meetup</a>.</p>
+<p><img src="https://cloudup.com/cotq6_EJ69v+" alt="Coursera Screenshot"></p>
+<h3 id="New-Plugins"><a href="/Video-js-4-9-Now-can-join-the-party/#New-Plugins" class="headerlink" title="New Plugins"></a>New Plugins</h3><p><a href="https://github.com/collab-project/videojs-wavesurfer" target="_blank" rel="external">videojs-wavesurfer</a> - Adds a navigable waveform for audio files, using the excellent wavesurfer.js library.</p>
+<h3 id="Full-list-of-changes"><a href="/Video-js-4-9-Now-can-join-the-party/#Full-list-of-changes" class="headerlink" title="Full list of changes"></a>Full list of changes</h3><ul>
+<li>@deedos added a Brazilian Portuguese translation (<a href="https://github.com/videojs/video.js/pull/1520" target="_blank" rel="external">view</a>)</li>
+<li>@baloneysandwiches added a hasClass method (<a href="https://github.com/videojs/video.js/pull/1464" target="_blank" rel="external">view</a>)</li>
+<li>@mynameisstephen fixed an issue where slider event listeners were not being cleaned up (<a href="https://github.com/videojs/video.js/pull/1475" target="_blank" rel="external">view</a>)</li>
+<li>@alexrqs cleaned up the Spanish translation (<a href="https://github.com/videojs/video.js/pull/1494" target="_blank" rel="external">view</a>)</li>
+<li>@t2y added a Japanese translation (<a href="https://github.com/videojs/video.js/pull/1497" target="_blank" rel="external">view</a>)</li>
+<li>@chikathreesix fixed an issue where data-setup options could be missed (<a href="https://github.com/videojs/video.js/pull/1514" target="_blank" rel="external">view</a>)</li>
+<li>@seniorflexdeveloper added new translations and translation updates (<a href="https://github.com/videojs/video.js/pull/1530" target="_blank" rel="external">view</a>)</li>
+<li>@chikathreesix exported the videojs.Flash.embed method (<a href="https://github.com/videojs/video.js/pull/1533" target="_blank" rel="external">view</a>)</li>
+<li>@doublex fixed an issue with IE7 backwards compatibility (<a href="https://github.com/videojs/video.js/pull/1542" target="_blank" rel="external">view</a>)</li>
+<li>@mmcc made it possible to override the font-size of captions and subtitles (<a href="https://github.com/videojs/video.js/pull/1547" target="_blank" rel="external">view</a>)</li>
+<li>@philipgiuliani added an Italian translation (<a href="https://github.com/videojs/video.js/pull/1550" target="_blank" rel="external">view</a>)</li>
+<li>@twentyrogersc fixed the return value when setting the poster source (<a href="https://github.com/videojs/video.js/pull/1552" target="_blank" rel="external">view</a>)</li>
+<li>@heff updated to swf v4.5.0 to fix event issues (<a href="https://github.com/videojs/video.js/pull/1554" target="_blank" rel="external">view</a>)</li>
+<li>@rpless made the VolumeMenuButton volume more accesible via tab navigation (<a href="https://github.com/videojs/video.js/pull/1519" target="_blank" rel="external">view</a>)</li>
+<li>@mmcc added support for audio tags (html5 audio only) (<a href="https://github.com/videojs/video.js/pull/1540" target="_blank" rel="external">view</a>)<img src="http://feeds.feedburner.com/~r/video-js/~4/gKkF36A9CFY" alt=""></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.videojs.com/Video-js-4-9-Now-can-join-the-party/" data-id="ciyesed7h0023o4ee39qixaaw" class="article-share-link">Share</a>
+      
+        <a href="http://blog.videojs.com/Video-js-4-9-Now-can-join-the-party/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/news/">news</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Video-js-4-8-0-released-Prost" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     
@@ -124,7 +201,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-4-8-0-released-Prost/" data-id="ciydbhu8v001zimeexgrgvzi2" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-4-8-0-released-Prost/" data-id="ciyesed7e0021o4ee3c50jp9i" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-4-8-0-released-Prost/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -229,7 +306,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/" data-id="ciydbhu9i002jimeeinn1z9yp" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/" data-id="ciyesed90002no4ee9mswtffa" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -326,7 +403,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/" data-id="ciydbhu6d000bimee0pkqvpg2" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/" data-id="ciyesed3t0008o4ee9eck19ho" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -422,7 +499,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-version-4-6-0-released-It-s-been-a-productive-month/" data-id="ciydbhu9r002qimeeigdapvi1" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-version-4-6-0-released-It-s-been-a-productive-month/" data-id="ciyesed9a002xo4eermri6l5l" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-version-4-6-0-released-It-s-been-a-productive-month/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -488,7 +565,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/" data-id="ciydbhu9x002vimeeurx1lie2" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/" data-id="ciyesed95002so4eeue52noha" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -571,7 +648,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/" data-id="ciydbhu9p002oimeezzgeel84" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/" data-id="ciyesed92002qo4eeot1m7i02" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -667,7 +744,7 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-version-4-3-0-released-w-shiny-new-API-docs/" data-id="ciydbhu9m002limee3p8jnq7y" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-version-4-3-0-released-w-shiny-new-API-docs/" data-id="ciyesed97002uo4ee8brjbs64" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-version-4-3-0-released-w-shiny-new-API-docs/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -718,7 +795,7 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/The-Guardian-uses-Video-js-in-feature-article/" data-id="ciydbhu7u001eimee6ri0qhzc" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/The-Guardian-uses-Video-js-in-feature-article/" data-id="ciyesed6r001mo4ee0jvnplt1" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/The-Guardian-uses-Video-js-in-feature-article/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -774,65 +851,13 @@ var hi;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/4-2-2-Patch-Release/" data-id="ciydbhu620004imeeyolcct1y" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/4-2-2-Patch-Release/" data-id="ciyesed3c0003o4eevmb55o7r" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/4-2-2-Patch-Release/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Running-Video-js-unit-tests-in-real-browsers-with-Karma" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    
-  <a href="https://github.com/BCjwhisenant" class="article-author">
-  <img src="https://github.com/BCjwhisenant.png?size=30" class="author_gravatar" height="30">
-  <span class="author_name">Jim Whisenant</span>
-
-
-    <a href="/Running-Video-js-unit-tests-in-real-browsers-with-Karma/" class="article-date">
-  <time datetime="2013-09-19T03:21:00.000Z" itemprop="datePublished">2013-09-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Running-Video-js-unit-tests-in-real-browsers-with-Karma/">Running Video.js unit tests in real browsers with Karma</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>If you’ve ever cloned the video.js repository, either to contribute or to build your own version, you’ve no doubt run the video.js unit tests. Until just recently, though, we only had support for running unit tests with grunt, using the PhantomJS browser. Well, that’s changed, with the first phase of our integration with Karma. Now, you’ll be able to run your tests in real browsers.</p>
-<p>Setting things up is a snap. After you pull down the latest from video.js and run <code>npm install</code>, simply copy the test/karma.conf.js.example file to test/karma.conf.js, add the browsers you wish to test to the browsers array, and run <code>grunt karma:dev</code>. That’s it. Of course, there are more options that you can configure, but if you want to get the ball rolling quickly, just add browsers, and run the tests. See the test/karma.conf.js.example file for more  instructions.</p>
-<p>For our next phases of integration, we’re planning to include support for running tests on mobile devices, as well as running these  tests in a publicly-available location, so that anyone can tell at a glance how things are going.</p>
-<p>You can learn more about Karma <a href="https://npmjs.org/package/karma" target="_blank" rel="external">here</a>.</p>
-<p>Cheers!</p>
-<p>-Jim</p>
-<p><img src="http://feeds.feedburner.com/~r/video-js/~4/Iv1mc-5p_Og" alt=""></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Running-Video-js-unit-tests-in-real-browsers-with-Karma/" data-id="ciydbhu7c0012imeenhjfbisr" class="article-share-link">Share</a>
-      
-        <a href="http://blog.videojs.com/Running-Video-js-unit-tests-in-real-browsers-with-Karma/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
     </footer>
   </div>
   
@@ -858,7 +883,7 @@ var hi;
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hls/">hls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mse/">mse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thumbcoil/">thumbcoil</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hls/">hls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mse/">mse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugins/">plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thumbcoil/">thumbcoil</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
     </div>
   </div>
 
@@ -868,7 +893,7 @@ var hi;
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 16px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5-video/" style="font-size: 14px;">html5 video</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18px;">news</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 12px;">releases</a> <a href="/tags/stats/" style="font-size: 12px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 10px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
+      <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 16px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5-video/" style="font-size: 14px;">html5 video</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18px;">news</a> <a href="/tags/plugins/" style="font-size: 10px;">plugins</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 12px;">releases</a> <a href="/tags/stats/" style="font-size: 12px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 12px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
     </div>
   </div>
 
@@ -890,6 +915,10 @@ var hi;
       <ul>
         
           <li>
+            <a href="/Feature-Spotlight-Advanced-Plugins/">Feature Spotlight: Advanced Plugins</a>
+          </li>
+        
+          <li>
             <a href="/Video-js-6-0-0-RC-0-The-first-RC/">Video.js 6.0.0-RC.0: The first Release Candidate</a>
           </li>
         
@@ -903,10 +932,6 @@ var hi;
         
           <li>
             <a href="/the-end-of-html-first/">The End of &quot;HTML-First&quot;</a>
-          </li>
-        
-          <li>
-            <a href="/Video-js-5-11-0-Prelease/">Video.js 5.11.0 Prelease</a>
           </li>
         
       </ul>

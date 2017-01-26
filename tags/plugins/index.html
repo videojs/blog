@@ -3,18 +3,14 @@
 <head>
   <meta charset="utf-8">
   
-  <title>The End of &quot;HTML-First&quot; | Video.js Blog</title>
+  <title>Tag: plugins | Video.js Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="When video.js was first released all the way back in 2010, Flash was the only way to play video in Firefox, IE, and the Android browser. And when you could use HTML video, it was really complicated to">
-<meta property="og:type" content="article">
-<meta property="og:title" content="The End of "HTML-First"">
-<meta property="og:url" content="http://blog.videojs.com/the-end-of-html-first/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Video.js Blog">
+<meta property="og:url" content="http://blog.videojs.com/tags/plugins/index.html">
 <meta property="og:site_name" content="Video.js Blog">
-<meta property="og:description" content="When video.js was first released all the way back in 2010, Flash was the only way to play video in Firefox, IE, and the Android browser. And when you could use HTML video, it was really complicated to">
-<meta property="og:updated_time" content="2016-08-10T19:59:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The End of "HTML-First"">
-<meta name="twitter:description" content="When video.js was first released all the way back in 2010, Flash was the only way to play video in Firefox, IE, and the Android browser. And when you could use HTML video, it was really complicated to">
+<meta name="twitter:title" content="Video.js Blog">
   
     <link rel="alternate" href="/rss" title="Video.js Blog" type="application/atom+xml">
   
@@ -76,81 +72,40 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-the-end-of-html-first" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    
-  <a href="https://github.com/dmlap" class="article-author">
-  <img src="https://github.com/dmlap.png?size=30" class="author_gravatar" height="30">
-  <span class="author_name">David LaPalomento</span>
-
-
-    <a href="/the-end-of-html-first/" class="article-date">
-  <time datetime="2016-08-10T19:58:44.000Z" itemprop="datePublished">2016-08-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      The End of &quot;HTML-First&quot;
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/Feature-Spotlight-Advanced-Plugins/" class="archive-article-date">
+  <time datetime="2017-01-26T19:41:32.000Z" itemprop="datePublished">Jan 26</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/Feature-Spotlight-Advanced-Plugins/">Feature Spotlight: Advanced Plugins</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>When video.js was <a href="https://github.com/videojs/video.js/commit/abe9252bbb7d255dd4671cf0afd93d980c2bf6df" target="_blank" rel="external">first released</a> all the way back in 2010, Flash was the only way to play video in Firefox, IE, and the Android browser. And when you <em>could</em> use HTML video, it was <a href="http://diveinto.html5doctor.com/video.html" target="_blank" rel="external">really complicated to get right</a> and broken in all sorts of scenarios (live streaming, anyone?). Those problems were a big part of why we wrote video.js in the first place. The HTML standard provided a simple, powerful, and universal API for video: why use anything else?</p>
-<p>The superiority of HTML video is pretty well established these days and <a href="http://caniuse.com/#feat=video" target="_blank" rel="external">browser support for <code>video</code></a> reflects that. If you have your videos in MP4 format, video.js will play them natively in HTML on every modern desktop and mobile browser out there. In <a href="http://blog.videojs.com/Video-js-5-The-Only-Thing-That%E2%80%99s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/">video.js 5.0</a>, we started the process of deprecating the last holdout in our supported browsers: the dreaded Internet Explorer 8. If you’re saying to yourself “Wha?! You still support IE8??”, I share your shock and horror. It’s no fun but we’ve been holding out for the couple folks who want to use video on their sites and still have to support ancient clients. There’s <a href="http://docs.videojs.com/docs/guides/setup.html#step-1-include-the-video-js-javascript-and-css-files-in-the-head-of-your-page-" target="_blank" rel="external">a couple more hoops</a> to jump through however, and you should start emotionally preparing yourself for the end of IE8 support if you’re one of the people using it. With IE8 heading out to pasture, including a Flash fallback by default in video.js is starting to look a little silly.</p>
-<p>So here’s what we’re thinking: move Flash support out of the core of video.js and into our <a href="https://github.com/videojs/ie8" target="_blank" rel="external">legacy-compatiblity shim</a> around the time <a href="https://chrome.googleblog.com/2016/08/flash-and-chrome.html" target="_blank" rel="external">Chrome begins deprecating Flash</a> this December. We’ll keep it around for awhile to support some more complex usage (say, live streaming in IE10) but the heart of video.js will go from “HTML-first” to “HTML-only.” That should mean more focus from the core committers on some amazing <strong>new</strong> stuff like improving our plugin framework, enhancing our support for <a href="http://videojs.github.io/videojs-contrib-hls/" target="_blank" rel="external">HLS</a> and <a href="http://videojs.github.io/videojs-contrib-dash/" target="_blank" rel="external">DASH</a>, and making advanced features like <a href="https://github.com/videojs/videojs-contrib-ads" target="_blank" rel="external">ads</a> easier to integrate and better for viewers.</p>
-<p>How does that sound? Let us know in this <a href="https://github.com/videojs/video.js/issues/3520" target="_blank" rel="external">issue</a>, ping <a href="https://twitter.com/videojs" target="_blank" rel="external">@videojs</a> on Twitter, or come say “hi” in our <a href="http://slack.videojs.com/" target="_blank" rel="external">Slack channel</a>.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/the-end-of-html-first/" data-id="ciyesed9g0034o4ee5mhq223v" class="article-share-link">Share</a>
-      
-        <a href="http://blog.videojs.com/the-end-of-html-first/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flash/">flash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/news/">news</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/Video-js-5-12-0-and-5-11-5-releases/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Video.js 5.12.0 and 5.11.5 releases
-        
-      </div>
-    </a>
-  
-  
-    <a href="/Video-js-5-11-0-Prelease/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Video.js 5.11.0 Prelease</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
 
 </section>
         
@@ -243,13 +198,11 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'videojs';
   
-  var disqus_url = 'http://blog.videojs.com/the-end-of-html-first/';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
