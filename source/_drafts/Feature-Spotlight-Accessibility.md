@@ -46,7 +46,9 @@ After adding roles to the controls and content in your webpage, the next thing t
 For a more complete list of [ARIA attributes see the specification](https://www.w3.org/TR/wai-aria-1.1/).
 {% endpullquote %}
 
-Finally you need to add an accessible "name" and "status" to an element so that it can be referred to correctly. For instance to indicate that the `MuteToggle` is not just a "button" we have to set the `title` and the `innerHTML`/`innerText` to "Mute Toggle". In Video.js we refer to accessible "name"/"status" updates as "control text". This will allow the screen reader to refer to the `MuteToggle` as "Mute Toggle" rather than button. We also have to update the button whenever it is "pressed" to indicate that it will now "Mute" or "Unmute" depending on its state.
+In video "the action, from which the status can be inferred" covers both bases and describes the status quo
+
+Finally you need to add an accessible "name" to an element so that it can be referred to correctly. For instance to indicate that the `MuteToggle` is not just a "button" we have to set the `title` and the `innerHTML`/`innerText` to "Mute Toggle". In Video.js we refer to the accessible name and the action that a control performs as "control text". When the action the a control performs changes so does the control text. This will allow the screen reader to refer to the `MuteToggle` as "Mute Toggle" rather than "button". It will also update the "Mute Toggle" action to be defined as "Mute" or "Unmute" depending on what the button would do when pressed (ie the state of the button).
 
 Here are some examples of accessiblity straight from Video.js:
 * The `MuteToggle` `<button>`:
