@@ -1,8 +1,8 @@
 ---
 title: Video.js removes flash from core player
 tags:
-  - video.js 6.0
-  - flash
+  - Video.js 6.0
+  - Flash
   - html5
 author:
   name: Michael Roca
