@@ -9,86 +9,85 @@ tags:
   - a11y
 ---
 
-Accessibility! The most important feature you never knew about.
+### Accessibility! The most important feature you never knew about.
 
-In the Video.js organization we try hard to have good accessiblity. Like most other software any change can affect the system in unintended ways. For example `MuteToggle` and `VolumeControl` were recently (in Video.js 5) married into `VolumeMenuButton`. While this change did allow these controls to work in tandem, it also did something unintended. It broke accessibility. In this post we will go over what broke, what the fix was, what accessibility is, and how to test and make sure it works.
+In the Video.js organization we try hard to have good accessibility. Like most other software, any change can affect the system in unintended ways. For example `MuteToggle` and `VolumeControl` were married into `VolumeMenuButton` in Video.js 5. While this change did allow these controls to work in tandem visually, it also did something unintended. It broke accessibility. In this post we will go over what broke, what the fix was, what accessibility is, and how to test and make sure it works.
 
 > Feel free to skip to the [last section](#The-problem-and-the-solution) if you already know what accessibility is.
 
 ### Accessibility? What's that?
-Accessible software has support for users with vision, hearing, or other impairments. It also helps users that just want to use the keyboard to navigate. Out of the box web applications have some accessibility due to the nature of HTML, but this is only the case if you are using native elements in intended ways. If you cannot use native DOM elements, like button, and instead must use a div for buttons, then you need worry about accessibility in your page.
 
-Supporting hearing impairment is not something that we can do for the users of Video.js. Instead we must indirectly support these users by supporting captions in their videos. In Video.js we have had support for captions and subtitles for some time, internally they are called `TextTracks`.
+Accessible software has support for users with vision, hearing, movement/dexterity, or other impairments. It also helps users that want to use the keyboard to navigate. Out of the box web applications have some accessibility due to the nature of HTML, but this is only the case if you are using native elements in intended ways. If you cannot use native DOM elements, like `<button>`, and instead must use a `<div>` for buttons, then you need worry about accessibility in your page.
 
-Supporting vision impairment is harder, but fully in our control. To support this group of users our player must be accessible to screen readers. A screen reader is an application that reads elements off of the screen to the user (as the name implies). HTML has certain rules that must be followed so that a page can be accessible. We will go over the basics of these rules in the next section. Screen readers are further supported by having description tracks that can be read out by screen readers during video playback (that is another type of `TextTrack`).
+Supporting users with hearing impairment is not something that we can do directly for the users of Video.js. Instead we must indirectly support these users by adding support for captions in videos. In Video.js we have had support for captions and subtitles for some time, internally they are called `TextTracks`. In fact Video.js has had support for `WebVTT` format `TextTrack`, which is much more accessible, since version 4.
+
+Supporting users with vision impairment is harder, but fully in our control. To support this group of users our player must be accessible to screen readers. A screen reader is an application that reads elements off of the screen to the user (as the name implies). On top of reading from the screen it also allows the user to interact with the page using only the keyboard or specific gestures on a touchscreen (without using a mouse or needing to directly touch visible items). HTML has certain rules that must be followed so that a page can be accessible. We will go over the basics of these rules in the next section. Screen readers are further supported by having description tracks that can be read out by screen readers during video playback (this is another `TextTrack`).
 
 See the [resources section at the end of this post](#resources) for a list of screen readers.
 
-
 ### How do you make a web application screen reader accessible?
-If you use the native elements for the purposes that they were intended you will be most of the way towards beings accessible. Using the native element is the recomended way to make anything accessible for a screen reader. For instance if you use a `<button>` element you will get the following accessiblity attributes (without them actually being on the button):
+
+If you use the native elements for the purposes that they were intended, you will already have most of the work done.This is why the use of the native element is the recommended way to make anything accessible for a screen reader. For instance if you use a `<button>` element you will get the following accessibility attributes (without them actually being on the button):
 * `tabIndex` which allows users to tab to the button
 * `role="button"` which tells the screen reader that this is a button
 * The space and the enter key will both press the button
 
-In some cases, such as in Video.js, it will not be possible to use the native button element. So you will have to mimic the accessible functionality from the list above and use a `div`. For a `div` that wants to be classified as a button:
+In some cases, such as in Video.js, it will not be possible to use the native `<button>` element. You will have to mimic the accessible functionality from the list above and use a `div`. Here is a list of what you will have to add:
 * You have to add the `role="button"` attribute to classify it as a button.
-* You have to add a `tabIndex` which will allow the `div` to be navigated to using only the `tab` key
+* You have to add a `tabIndex` which will allow the `div` to be navigated to using the `tab` key
 * You have to add handling for the space and enter key that press the button
 
 {% pullquote %}
-A list of role attribute values can be found on [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Composite_roles).
+A list of `role` attribute values can be found on [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Composite_roles).
 {% endpullquote %}
 
-After adding roles to the controls and content in your webpage, the next thing to look over are `aria` attributes. For instance, we use `aria-live` for our `ProgressBar` slider. This is because the `ProgressBar` is always updating when a video is playing.
+After mimicking or adding native accessibility on the controls and content in your webpage, the next thing to look over are `aria` attributes. For instance, we use `aria-live="polite"` for our `ProgressBar` slider. By default `aria-live` is set `off`, which means updates to controls should not be read to the user unless the un-focus and re-focus an element. The value of `polite` which we use allows us to convey the position of the slider to screen reader without them having to change focus on the control. This is useful because the `ProgressBar` is always updating while a video is playing. A value of `polite` will also wait to convey said updates until the screen reader is done reading other information to the user.
 
 {% pullquote %}
 For a more complete list of [ARIA attributes see the specification](https://www.w3.org/TR/wai-aria-1.1/).
 {% endpullquote %}
 
-In video "the action, from which the status can be inferred" covers both bases and describes the status quo
+Finally you need to add an accessible "name" to an element so that it can be referred to. A good example of this is can be seen in the `MuteToggle` control. Since it is not a simple "button" we include `innerHTML`/`innerText` of "Mute" or "Unmute" in a way that is hidden from most users but announced to screen readers. In Video.js we refer to the accessible name and the action that a control performs as "control text". Control text also updates the `title` attribute of an element in most cases, which is important for visual accessibility. When the action the a control performs changes so does the control text. This will allow the screen reader to refer to the `MuteToggle` as "Mute Toggle" rather than "button". It will also convey the current action of the `MuteToggle`. In this case that will be either "Mute" or "Unmute" depending on what the button would do when pressed (ie the state of the button).
 
-Finally you need to add an accessible "name" to an element so that it can be referred to correctly. For instance to indicate that the `MuteToggle` is not just a "button" we have to set the `title` and the `innerHTML`/`innerText` to "Mute Toggle". In Video.js we refer to the accessible name and the action that a control performs as "control text". When the action the a control performs changes so does the control text. This will allow the screen reader to refer to the `MuteToggle` as "Mute Toggle" rather than "button". It will also update the "Mute Toggle" action to be defined as "Mute" or "Unmute" depending on what the button would do when pressed (ie the state of the button).
-
-Here are some examples of accessiblity straight from Video.js:
+Here are some examples of accessibility straight from Video.js:
 * The `MuteToggle` `<button>`:
-  * Has `aria-live` set to `polite`, which means that the screen reader should wait until the user is idle to send `aria-valuenow` updates to the user
-  * Has control text of "Mute" or "Unmute" which indicates the current status of the button to the user
+  * Has `aria-live` set to `polite`, rather than the default value of `off`. `aria-live` with any value other than `off` indicates that `innerText`/`innerHTML` updates can be sent to the screen reader without the user needing to move focus off of the control. The value of `polite` maens that the screen reader should wait until it is done speaking to convey these updates to the user.
+  * Has control text of "Mute" or "Unmute" which indicates the current status of the button to the use
 * The `VolumeBar` slider `<div>`:
-  * Has a `role` attribute with a value of `slider` like this: `role="slider"`
-  * Has a `tabIndex` attribute
+  * Has a `role` attribute with a value of `slider`. Like this: `role="slider"`
+  * Has a `tabIndex` attribute as it is not a native control element
   * Has `EventHandlers` that listen for:
     * The up and right arrow keys to increase the volume and the slider percentage
     * The down and left arrow keys to decrease the volume and the slider percentage
-  * Has `aria-label` of "volume level" which is an accessible name that the screen reader should refer to this with
+  * Has `aria-label` of "volume level" which is an accessible label that the screen reader will use to refer to it
   * Has `aria-valuenow` and `aria-valuetext` properties that update to indicate the current volume level (so the screen reader can read it)
-  * Has `aria-live` set to `polite`, which means that the screen reader should wait until the user is idle to send `aria-valuenow` updates to the user
+  * Has `aria-live` set to `polite`, rather than the default value of `off`. `aria-live` with any value other than `off` indicates that `innerText`/`innerHTML` updates can be sent to the screen reader without the user needing to move focus off of the control. The value of `polite` means that the screen reader should wait until it is done speaking to convey these updates to the user.
 
 ### The problem and the solution
 
-Now let's talk about how screen reader accessibility broke in Video.js 5. First `VolumeMenuButton` replaced `MuteToggle` and `VolumeControl` on the `ControlBar`. `VolumeMenuButton` was set to mimic `MuteToggle` when clicked. It would also show the `VolumeControl` on mouseover or focus. This was a problem because a `VolumeControl` was a now a child of a button, and buttons should not contain other controls. So to the screen reader and to the DOM there are two `MuteToggle button` controls. When visually there is a `VolumeControl` and a `MuteToggle`. Below you can see a gif of this behavior in action:
+Now let's talk about how screen reader accessibility broke in Video.js 5. First `VolumeMenuButton` replaced `MuteToggle` and `VolumeControl` on the `ControlBar`. `VolumeMenuButton` was set to mimic `MuteToggle` when clicked. It would also show the `VolumeControl` on mouseover or focus. This was a problem because a `VolumeControl` was a now a child of a button, and buttons should not contain other controls. To the screen reader and to the DOM there are two `MuteToggle button` controls. When visually there is a `VolumeControl` and a `MuteToggle`. Below you can see a gif of this behavior in action :
 
-![Before The Fix](before-the-fix.gif)
+![macOS `VoiceOver` Before The Fix](before-the-fix.gif)
 
-The solution to this problem was to use a regular `div` to house the `MuteToggle` and `VolumeControl`. This regular `div` would have no role or control text so that it would be invisible to a screen reader. From that point forward we just needed to mimic the old UI. For those who are wondering, this new `Component` is called the `VolumePanel`. See the new screen reader behavior in a gif below:
+The solution to this problem was to use a regular `div` to house the `MuteToggle` and `VolumeControl`. This regular `div` would have no role or control text so that it would be invisible to a screen reader. From that point forward we just needed to mimic the old UI. For those who are wondering, this new `Component` is called the `VolumePanel`. See the new behavior in a gif below:
 
-![After The Fix](after-the-fix.gif)
+![macOS `VoiceOver` After The Fix](after-the-fix.gif)
 
 ### Outlines
 
-On top of fixing an accessibility issue with our controls, we decided to remove the following CSS from Video.js:
+Another big accessibility fix for controls comes from the removal of one small css rule:
 
 ```css
-{
-  outline: none;
-}
+outline: none;
 ```
 
-Why did we do it? With feedback from the community and [external resources](http://www.outlinenone.com/), we learned that outlines should always be on. Without outlines there is no focus on navigation elements and without that you page is much less accessible for the visually impaired and keyboard users.
+Why did we do it? With feedback from the community and [external resources](http://www.outlinenone.com/), we learned that outlines should always be on. Without outlines there is no visual indication of keyboard focus on control elements and without that, keyboard users who are not visually impaired have a hard time using the controls.
 
 ### Wrap up
 
 Hopefully this post has given you some insight into making a web application accessible. If you find any issues or have any suggestions for our accessibility or in general feel free to [contribute to Video.js](https://github.com/videojs/video.js/blob/master/CONTRIBUTING.md).
+
+If you want to keep up to date on the current state of accessibility work see the a11y label on [PRs](https://github.com/videojs/video.js/pulls?q=is%3Apr+is%3Aopen+label%3Aa11y) and [issues](https://github.com/videojs/video.js/issues?q=is%3Aissue+is%3Aopen+label%3Aa11y).
 
 ### Resources
 
@@ -103,3 +102,4 @@ Resources for learning more about web accessibility:
 * [WebAIM](http://webaim.org/)
 * [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 * [Outline None](http://www.outlinenone.com/)
+
