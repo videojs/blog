@@ -74,6 +74,121 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-Feature-Spotlight-Accessibility" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  <a href="https://github.com/brandonocasey" class="article-author">
+  <img src="https://github.com/brandonocasey.png?size=30" class="author_gravatar" height="30">
+  <span class="author_name">Brandon Casey</span>
+
+
+    <a href="/Feature-Spotlight-Accessibility/" class="article-date">
+  <time datetime="2017-02-03T20:10:33.000Z" itemprop="datePublished">2017-02-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Feature-Spotlight-Accessibility/">Feature Spotlight: Accessibility</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Accessibility-The-most-important-feature-you-never-knew-about"><a href="/Feature-Spotlight-Accessibility/#Accessibility-The-most-important-feature-you-never-knew-about" class="headerlink" title="Accessibility! The most important feature you never knew about."></a>Accessibility! The most important feature you never knew about.</h3><p>In the Video.js organization we try hard to have good accessibility. Like most other software, any change can affect the system in unintended ways. For example <code>MuteToggle</code> and <code>VolumeControl</code> were married into <code>VolumeMenuButton</code> in Video.js 5. While this change did allow these controls to work in tandem visually, it also did something unintended. It broke accessibility. In this post we will go over what broke, what the fix was, what accessibility is, and how to test and make sure it works.</p>
+<blockquote>
+<p>Feel free to skip to the <a href="/Feature-Spotlight-Accessibility/#The-problem-and-the-solution">last section</a> if you already know what accessibility is.</p>
+</blockquote>
+<h3 id="Accessibility-What’s-that"><a href="/Feature-Spotlight-Accessibility/#Accessibility-What’s-that" class="headerlink" title="Accessibility? What’s that?"></a>Accessibility? What’s that?</h3><p>Accessible software has support for users with vision, hearing, movement/dexterity, or other impairments. It also helps users that want to use the keyboard to navigate. Out of the box web applications have some accessibility due to the nature of HTML, but this is only the case if you are using native elements in intended ways. If you cannot use native DOM elements, like <code>&lt;button&gt;</code>, and instead must use a <code>&lt;div&gt;</code> for buttons, then you need worry about accessibility in your page.</p>
+<p>Supporting users with hearing impairment is not something that we can do directly for the users of Video.js. Instead we must indirectly support these users by adding support for captions in videos. In Video.js we have had support for captions and subtitles for some time, internally they are called <code>TextTracks</code>. In fact Video.js has had support for <code>WebVTT</code> format <code>TextTrack</code>, which is much more accessible, since version 4.</p>
+<p>Supporting users with vision impairment is harder, but partly in our control. To support this group of users our player must be accessible to screen readers. A screen reader is an application that reads elements off of the screen to the user (as the name implies). On top of reading from the screen it also allows the user to interact with the page using only the keyboard or specific gestures on a touchscreen (without using a mouse or needing to directly touch visible items). HTML has certain rules that must be followed so that a page can be accessible. We will go over the basics of these rules in the next section. Screen readers are further supported by having description tracks that can be read out during video playback. Description tracks are a sub-type of <code>TextTrack</code>, and as previously stated we cannot automatically add them to videos, we can only have support for them in the Video.js.</p>
+<p>See the <a href="/Feature-Spotlight-Accessibility/#resources">resources section at the end of this post</a> for a list of screen readers.</p>
+<h3 id="How-do-you-make-a-web-application-screen-reader-accessible"><a href="/Feature-Spotlight-Accessibility/#How-do-you-make-a-web-application-screen-reader-accessible" class="headerlink" title="How do you make a web application screen reader accessible?"></a>How do you make a web application screen reader accessible?</h3><p>If you use the native elements for the purposes that they were intended, you will already have most of the work done.This is why the use of the native element is the recommended way to make anything accessible for a screen reader. For instance if you use a <code>&lt;button&gt;</code> element you will get the following accessibility attributes (without them actually being on the button):</p>
+<ul>
+<li><code>tabIndex</code> which allows users to tab to the button</li>
+<li><code>role=&quot;button&quot;</code> which tells the screen reader that this is a button</li>
+<li>The space and the enter key will both press the button</li>
+</ul>
+<p>In some cases, such as in Video.js, it will not be possible to use the native <code>&lt;button&gt;</code> element. You will have to mimic the accessible functionality from the list above and use a <code>div</code>. Here is a list of what you will have to add:</p>
+<ul>
+<li>You have to add the <code>role=&quot;button&quot;</code> attribute to classify it as a button.</li>
+<li>You have to add a <code>tabIndex</code> which will allow the <code>div</code> to be navigated to using the <code>tab</code> key</li>
+<li>You have to add handling for the space and enter key that press the button</li>
+</ul>
+<blockquote class="pullquote right"><p>A list of <code>role</code> attribute values can be found on <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Composite_roles" target="_blank" rel="external">Mozilla Developer Network</a>.</p>
+</blockquote>
+<p>After mimicking or adding native accessibility on the controls and content in your webpage, the next thing to look over are <code>aria</code> attributes. For instance, we use <code>aria-live=&quot;polite&quot;</code> for our <code>ProgressBar</code> slider. By default <code>aria-live</code> is set <code>off</code>, which means updates to controls should not be read to the user unless they un-focus and re-focus an element. The value of <code>polite</code> which we use allows us to convey the position of the slider to screen reader without them having to change focus on the control. This is useful because the <code>ProgressBar</code> is always updating while a video is playing. A value of <code>polite</code> will also wait to convey said updates until the screen reader is done reading other information to the user.</p>
+<blockquote class="pullquote right"><p>For a more complete list of <a href="https://www.w3.org/TR/wai-aria-1.1/" target="_blank" rel="external">ARIA attributes see the specification</a>.</p>
+</blockquote>
+<p>Finally you need to add an accessible “name” to an element so that it can be referred to. A good example of this is can be seen in the <code>MuteToggle</code> control. Since it is not a simple “button” we include <code>innerHTML</code>/<code>innerText</code> of “Mute” or “Unmute” in a way that is hidden from most users but announced to screen readers. In Video.js we refer to the accessible name and the action that a control performs as “control text”. Control text also updates the <code>title</code> attribute of an element in most cases, which is important for visual accessibility. When the action the a control performs changes so does the control text. This will allow the screen reader to refer to the <code>MuteToggle</code> as “Mute Toggle” rather than “button”. It will also convey the current action of the <code>MuteToggle</code>. In this case that will be either “Mute” or “Unmute” depending on what the button would do when pressed (ie the state of the button).</p>
+<p>Here are some examples of accessibility straight from Video.js:</p>
+<ul>
+<li>The <code>MuteToggle</code> <code>&lt;button&gt;</code>:<ul>
+<li>Has <code>aria-live</code> set to <code>polite</code>, rather than the default value of <code>off</code>. <code>aria-live</code> with any value other than <code>off</code> indicates that <code>innerText</code>/<code>innerHTML</code> updates can be sent to the screen reader without the user needing to move focus off of the control. The value of <code>polite</code> means that the screen reader should wait until it is done speaking to convey these updates to the user.</li>
+<li>Has control text of “Mute” or “Unmute” which indicates the current status of the button to the use</li>
+</ul>
+</li>
+<li>The <code>VolumeBar</code> slider <code>&lt;div&gt;</code>:<ul>
+<li>Has a <code>role</code> attribute with a value of <code>slider</code>. Like this: <code>role=&quot;slider&quot;</code></li>
+<li>Has a <code>tabIndex</code> attribute as it is not a native control element</li>
+<li>Has <code>EventHandlers</code> that listen for:<ul>
+<li>The up and right arrow keys to increase the volume and the slider percentage</li>
+<li>The down and left arrow keys to decrease the volume and the slider percentage</li>
+</ul>
+</li>
+<li>Has <code>aria-label</code> of “volume level” which is an accessible label that the screen reader will use to refer to it</li>
+<li>Has <code>aria-valuenow</code> and <code>aria-valuetext</code> properties that update to indicate the current volume level (so the screen reader can read it)</li>
+<li>Has <code>aria-live</code> set to <code>polite</code>, rather than the default value of <code>off</code>. <code>aria-live</code> with any value other than <code>off</code> indicates that <code>innerText</code>/<code>innerHTML</code> updates can be sent to the screen reader without the user needing to move focus off of the control. The value of <code>polite</code> means that the screen reader should wait until it is done speaking to convey these updates to the user.</li>
+</ul>
+</li>
+</ul>
+<h3 id="The-problem-and-the-solution"><a href="/Feature-Spotlight-Accessibility/#The-problem-and-the-solution" class="headerlink" title="The problem and the solution"></a>The problem and the solution</h3><p>Now let’s talk about how screen reader accessibility broke in Video.js 5. First <code>VolumeMenuButton</code> replaced <code>MuteToggle</code> and <code>VolumeControl</code> on the <code>ControlBar</code>. <code>VolumeMenuButton</code> was set to mimic <code>MuteToggle</code> when clicked. It would also show the <code>VolumeControl</code> on mouseover or focus. This was a problem because a <code>VolumeControl</code> was a now a child of a button, and buttons should not contain other controls. To the screen reader and to the DOM there are two <code>MuteToggle button</code> controls. When visually there is a <code>VolumeControl</code> and a <code>MuteToggle</code>. Below you can see a gif of this behavior in action :</p>
+<p><img src="/Feature-Spotlight-Accessibility/before-the-fix.gif" alt="macOS `VoiceOver` Before The Fix"></p>
+<p>The solution to this problem was to use a regular <code>div</code> to house the <code>MuteToggle</code> and <code>VolumeControl</code>. This regular <code>div</code> would have no role or control text so that it would be invisible to a screen reader. From that point forward we just needed to mimic the old UI. For those who are wondering, this new <code>Component</code> is called the <code>VolumePanel</code>. See the new behavior in a gif below:</p>
+<p><img src="/Feature-Spotlight-Accessibility/after-the-fix.gif" alt="macOS `VoiceOver` After The Fix"></p>
+<h3 id="Outlines"><a href="/Feature-Spotlight-Accessibility/#Outlines" class="headerlink" title="Outlines"></a>Outlines</h3><p>Another big accessibility fix for controls comes from the removal of one small css rule:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">outline</span>: <span class="selector-tag">none</span>;</div></pre></td></tr></table></figure>
+<p>Why did we do it? With feedback from the community and <a href="http://www.outlinenone.com/" target="_blank" rel="external">external resources</a>, we learned that outlines should always be on. Without outlines there is no visual indication of keyboard focus on control elements and without that, keyboard users who are not visually impaired have a hard time using the controls.</p>
+<h3 id="Wrap-up"><a href="/Feature-Spotlight-Accessibility/#Wrap-up" class="headerlink" title="Wrap up"></a>Wrap up</h3><p>Hopefully this post has given you some insight into making a web application accessible. If you find any issues or have any suggestions for our accessibility or in general feel free to <a href="https://github.com/videojs/video.js/blob/master/CONTRIBUTING.md" target="_blank" rel="external">contribute to Video.js</a>.</p>
+<p>If you want to keep up to date on the current state of accessibility work see the a11y label on <a href="https://github.com/videojs/video.js/pulls?q=is%3Apr+is%3Aopen+label%3Aa11y" target="_blank" rel="external">PRs</a> and <a href="https://github.com/videojs/video.js/issues?q=is%3Aissue+is%3Aopen+label%3Aa11y" target="_blank" rel="external">issues</a>.</p>
+<h3 id="Resources"><a href="/Feature-Spotlight-Accessibility/#Resources" class="headerlink" title="Resources"></a>Resources</h3><p>Here are some popular screen readers that are actually used in the wild:</p>
+<ul>
+<li><a href="http://www.apple.com/accessibility/mac/vision/" target="_blank" rel="external">VoiceOver for macOS</a></li>
+<li><a href="https://www.freedomscientific.com/Downloads/JAWS" target="_blank" rel="external">JAWS for Windows</a></li>
+<li><a href="http://www.nvaccess.org/" target="_blank" rel="external">NVDA for Windows</a></li>
+</ul>
+<p>Resources for learning more about web accessibility:</p>
+<ul>
+<li><a href="http://webaim.org/" target="_blank" rel="external">WebAIM</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank" rel="external">Mozilla Developer Network</a></li>
+<li><a href="http://www.outlinenone.com/" target="_blank" rel="external">Outline None</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.videojs.com/Feature-Spotlight-Accessibility/" data-id="ciyq91lye0008tleetz8487eh" class="article-share-link">Share</a>
+      
+        <a href="http://blog.videojs.com/Feature-Spotlight-Accessibility/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/a11y/">a11y</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/accessibility/">accessibility</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Feature-Spotlight-Advanced-Plugins" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     
@@ -155,7 +270,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Feature-Spotlight-Advanced-Plugins/" data-id="ciyesed43000do4eeo7dbggop" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Feature-Spotlight-Advanced-Plugins/" data-id="ciyq91lyo000htleeb75lr4j2" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Feature-Spotlight-Advanced-Plugins/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -213,7 +328,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/" data-id="ciyesed7s002bo4ee0itmt2wg" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/" data-id="ciyq91m1k002vtlee9d7h6tfz" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -291,7 +406,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Introducing-Thumbcoil/" data-id="ciyesed59000yo4ee0m97jy0y" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Introducing-Thumbcoil/" data-id="ciyq91lyy000ptleehn0xifua" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Introducing-Thumbcoil/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -374,7 +489,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-5-12-0-and-5-11-5-releases/" data-id="ciyesed7x002do4eec1i52rz1" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-5-12-0-and-5-11-5-releases/" data-id="ciyq91m0w0026tleealwh5ox7" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-5-12-0-and-5-11-5-releases/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -425,7 +540,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/the-end-of-html-first/" data-id="ciyesed9g0034o4ee5mhq223v" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/the-end-of-html-first/" data-id="ciyq91m1q0030tleepeqvu6mz" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/the-end-of-html-first/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -516,7 +631,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-5-11-0-Prelease/" data-id="ciyesed7p0028o4eel1s4dcwh" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-5-11-0-Prelease/" data-id="ciyq91m0z0029tleeovdomvv3" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-5-11-0-Prelease/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -586,7 +701,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-5-s-fluid-mode-and-playlist-picker/" data-id="ciyesed88002lo4eehuckbk8h" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-5-s-fluid-mode-and-playlist-picker/" data-id="ciyq91m1g002qtleedaan7wy0" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-5-s-fluid-mode-and-playlist-picker/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -721,7 +836,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/" data-id="ciyesed81002go4eecxhjuimu" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/" data-id="ciyq91m0u0024tleef6r0kwzt" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-5-The-Only-Thing-That’s-Changed-Is-Everything-except-for-like-3-things-that-didn-t-including-the-name/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -782,7 +897,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/It-s-here-5-0-release-candidates/" data-id="ciyesed4r000oo4ee212mom7n" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/It-s-here-5-0-release-candidates/" data-id="ciyq91lz2000qtleei3hck7hs" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/It-s-here-5-0-release-candidates/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -797,139 +912,10 @@ ga('send', 'pageview');
 
 
   
-    <article id="post-Video-js-4-12-The-last-of-the-4-minors" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    
-  <a href="https://github.com/mmcc" class="article-author">
-  <img src="https://github.com/mmcc.png?size=30" class="author_gravatar" height="30">
-  <span class="author_name">Matthew McClure</span>
-
-
-    <a href="/Video-js-4-12-The-last-of-the-4-minors/" class="article-date">
-  <time datetime="2015-02-18T18:32:00.000Z" itemprop="datePublished">2015-02-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Video-js-4-12-The-last-of-the-4-minors/">Video.js 4.12 - The last of the 4 minors</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Much-improved-WebVTT-support"><a href="/Video-js-4-12-The-last-of-the-4-minors/#Much-improved-WebVTT-support" class="headerlink" title="Much improved WebVTT support"></a>Much improved WebVTT support</h2><p>We added basic WebVTT support really early on, which we were pretty proud of. As browsers added support, however, our shim started to lag a bit, or at the very least, cause issues with browsers that required native support (here’s looking at you, iOS).</p>
-<p>So, we’re happy to announce that our text track support is vastly improved with this version! Instead of continuing to try and build out our own WebVTT parser, we’ve pulled in Mozilla’s fantastic work, <a href="https://github.com/mozilla/vtt.js" target="_blank" rel="external">VTT.js</a>. This is the WebVTT implementation used in Firefox / Gecko, so we’re confident that this is a substantial leap forward for Video.js and our accessibility efforts.</p>
-<h2 id="Don’t-use-captions-Feeling-disappointed"><a href="/Video-js-4-12-The-last-of-the-4-minors/#Don’t-use-captions-Feeling-disappointed" class="headerlink" title="Don’t use captions? Feeling disappointed?"></a>Don’t use captions? Feeling disappointed?</h2><p>You shouldn’t feel disappointed, this is a great day! This release includes a lot of fixes, and although fixes are always exciting to the people affected, other people can feel a hefty dose of “meh”. We’re excited to say, however, that this release is exciting for another, very important reason.</p>
-<p>This is the <strong>last minor</strong> release in the version 4 family. There might be a few patches, but from now on, master is officially version 5.0-in-waiting. Party.</p>
-<p><img src="http://media.giphy.com/media/d89VuJ4GflFfO/giphy.gif" alt="party"></p>
-<h4 id="Notable-updates-and-fixes-for-4-12"><a href="/Video-js-4-12-The-last-of-the-4-minors/#Notable-updates-and-fixes-for-4-12" class="headerlink" title="Notable updates and fixes for 4.12"></a>Notable updates and fixes for 4.12</h4><ul>
-<li>The hide / show methods now toggle a class (<code>.vjs-hidden</code>) instead of applying inline styles. Make sure to update your stylesheet as well!</li>
-<li>A new <code>.vjs-scrubbing</code> class gets applied while, you guessed it, scrubbing so menus can be prevented from erroneously showing on hover.</li>
-<li>Improved url parsing in IE9.</li>
-<li>Ever wondered what version you’re using? Now there’s a VERSION key. Woot.</li>
-<li>New <code>.vjs-ended</code> class that’s added when playback reaches the end of the timeline (also known as: ended).</li>
-<li>Player networkState and readyState properties available across techs</li>
-<li>Video.js is now exported as a named AMD module</li>
-<li>Mobile scrolling improvements</li>
-<li>And more! Fixes galore!</li>
-</ul>
-<h2 id="Translation-party-continues"><a href="/Video-js-4-12-The-last-of-the-4-minors/#Translation-party-continues" class="headerlink" title="Translation party continues"></a>Translation party continues</h2><p>We’re now up to <strong>19</strong> community submitted translations! Entirely new translations in this release include:</p>
-<ul>
-<li>Traditional Chinese</li>
-<li>Vietnamese</li>
-<li>Czech</li>
-<li>Catalan</li>
-<li>Bulgarian</li>
-<li>Turkish</li>
-</ul>
-<h2 id="Video-js-in-the-wild"><a href="/Video-js-4-12-The-last-of-the-4-minors/#Video-js-in-the-wild" class="headerlink" title="Video.js in the wild"></a>Video.js in the wild</h2><p>To be terribly honest, there is a level of starstruck over a few of these. Normally we just do one, but hey…</p>
-<h4 id="Social-Media"><a href="/Video-js-4-12-The-last-of-the-4-minors/#Social-Media" class="headerlink" title="Social Media"></a>Social Media</h4><ul>
-<li><a href="http://instagram.com/p/aye9QFmB96" target="_blank" rel="external">Instagram</a></li>
-<li><a href="https://twitter.com/ActuallyNPH/status/560049149836808192" target="_blank" rel="external">Twitter</a></li>
-<li><a href="http://sh1ps-testing.tumblr.com/post/111334784868/lorem-ipsum-and-stuff" target="_blank" rel="external">Tumblr</a></li>
-</ul>
-<h4 id="Global-News-Outlets"><a href="/Video-js-4-12-The-last-of-the-4-minors/#Global-News-Outlets" class="headerlink" title="Global News Outlets"></a>Global News Outlets</h4><ul>
-<li><a href="http://graphics.wsj.com/data-mining-of-emotions/" target="_blank" rel="external">Wall Street Journal</a></li>
-<li><a href="http://www.theguardian.com/film/video/2015/feb/17/whiplash-should-win-best-picture-oscars-2015-video" target="_blank" rel="external">The Guardian</a></li>
-<li><a href="http://www.bloomberg.com/news/videos/2015-02-13/a-harvard-mad-scientist-invented-ice-cream-that-has-skin" target="_blank" rel="external">Bloomberg</a></li>
-<li><a href="http://www.dbtv.no/3827291177001#Dette_har_statsbudsjettet_%C3%A5_si_for_din_%C3%B8konomi" target="_blank" rel="external">Dagbladet</a></li>
-</ul>
-<h2 id="New-plugins-from-the-community"><a href="/Video-js-4-12-The-last-of-the-4-minors/#New-plugins-from-the-community" class="headerlink" title="New plugins from the community"></a>New plugins from the community</h2><ul>
-<li><a href="https://github.com/matthojo/videojs-Background" target="_blank" rel="external">videojs-Background</a>: A plugin that allows for videos to be displayed as a full background to any element.</li>
-<li><a href="https://github.com/space87/videojs-BrightCove-tracking" target="_blank" rel="external">videojs-brightcoveAnalytics</a>: Allow tracking of views/impressions &amp; engagement data in videojs for Brightcove videos</li>
-<li><a href="https://github.com/spchuang/videojs-caption" target="_blank" rel="external">videojs-caption</a>: Have the most flexibility and power for displaying caption videojs</li>
-<li><a href="https://github.com/walsh9/videojs-transcript" target="_blank" rel="external">videojs-transcript</a>: Display an interactive transcript from caption or subtitle tracks.</li>
-<li><a href="https://github.com/theonion/videojs-autoplay-toggle" target="_blank" rel="external">videojs-autoplay-toggle</a>: adds an autoplay toggle which will persist to cookies or localstorage.</li>
-<li><a href="https://github.com/cladera/videojs-offset" target="_blank" rel="external">videojs-offset</a>: Allows you to play a segment of the video.</li>
-<li><a href="https://github.com/mente/videojs-youtube-progress" target="_blank" rel="external">videojs-youtube-progress</a>: Preserve progress seeker when control bar is hidden.</li>
-<li><a href="https://github.com/FbF/projectorjs" target="_blank" rel="external">projectorjs</a>: A small no-dependencies JavaScript library that enables the display of overlays on native HTML5 video elements, or (optionally) video elements powered by videojs.</li>
-<li><a href="https://github.com/collab-project/videojs-record" target="_blank" rel="external">videojs-record</a>: A video.js plugin for recording audio/video files.</li>
-<li><a href="https://github.com/Dash-Industry-Forum/dash.js/tree/v1.2.0/contrib/videojs" target="_blank" rel="external">videojs-dashjs</a>: Loads dash.js as a tech to support MPEG-DASH videos.</li>
-<li><a href="https://github.com/Afterster/videojs-silverlight" target="_blank" rel="external">videojs-silverlight</a>: Allows you to play WMV, WMA, MP4, MP3, WAV and FLAC medias through Silverlight within Video.js.</li>
-<li><a href="https://github.com/Afterster/videojs-vlc" target="_blank" rel="external">videojs-vlc</a>: Allows you to play all media through VLC web plug-in within Video.js.</li>
-<li><a href="https://github.com/Afterster/videojs-aurora" target="_blank" rel="external">videojs-aurora</a>: Allows you to play WAV, OGG, MP3, M4A, AAC and FLAC medias through Aurora.js within Video.js.</li>
-<li><a href="https://github.com/Afterster/videojs-java" target="_blank" rel="external">videojs-java</a>: Allows you to play AIFF, AVI, GSM, MID, MPG, MP2, MOV, AU and WAV medias through Java within Video.js.</li>
-</ul>
-<h2 id="Raw-list-of-changes"><a href="/Video-js-4-12-The-last-of-the-4-minors/#Raw-list-of-changes" class="headerlink" title="Raw list of changes"></a>Raw list of changes</h2><ul>
-<li>@PeterDaveHello added a Traditional Chinese translation (<a href="https://github.com/videojs/video.js/pull/1729" target="_blank" rel="external">view</a>)</li>
-<li>@mmcc updated the hide/show functions to use a class instead of inline styles (<a href="https://github.com/videojs/video.js/pull/1681" target="_blank" rel="external">view</a>)</li>
-<li>@mister-ben added better handling of the additional videojs() arguments when the player is already initialized (<a href="https://github.com/videojs/video.js/pull/1730" target="_blank" rel="external">view</a>)</li>
-<li>@anhskohbo added a Vietnamese translation (<a href="https://github.com/videojs/video.js/pull/1734" target="_blank" rel="external">view</a>)</li>
-<li>@Sxmanek added a Czech translation (<a href="https://github.com/videojs/video.js/pull/1739" target="_blank" rel="external">view</a>)</li>
-<li>@jcaron23 added the vjs-scrubbing CSS class and prevented menus from showing while scrubbing (<a href="https://github.com/videojs/video.js/pull/1741" target="_blank" rel="external">view</a>)</li>
-<li>@dmlap fixed URL parsing in IE9 (<a href="https://github.com/videojs/video.js/pull/1765" target="_blank" rel="external">view</a>)</li>
-<li>@gkatsev Fixed issue where ManualTimeUpdatesOff was not de-registering events (<a href="https://github.com/videojs/video.js/pull/1793" target="_blank" rel="external">view</a>)</li>
-<li>@brycefisher Added a guide on player disposal (<a href="https://github.com/videojs/video.js/pull/1803" target="_blank" rel="external">view</a>)</li>
-<li>@toniher added a Catalan translation (<a href="https://github.com/videojs/video.js/pull/1794" target="_blank" rel="external">view</a>)</li>
-<li>@mmcc added a VERSION key to the videojs object (<a href="https://github.com/videojs/video.js/pull/1798" target="_blank" rel="external">view</a>)</li>
-<li>@mmcc fixed an issue with text track hiding introduced in #1681 (<a href="https://github.com/videojs/video.js/pull/1804" target="_blank" rel="external">view</a>)</li>
-<li>@dmlap exported video.js as a named AMD module (<a href="https://github.com/videojs/video.js/pull/1844" target="_blank" rel="external">view</a>)</li>
-<li>@dmlap fixed poster hiding when the loadstart event does not fire (<a href="https://github.com/videojs/video.js/pull/1834" target="_blank" rel="external">view</a>)</li>
-<li>@chikathreesix fixed an object delete error in Chrome (<a href="https://github.com/videojs/video.js/pull/1858" target="_blank" rel="external">view</a>)</li>
-<li>@steverandy fixed an issue with scrolling over the player on touch devices (<a href="https://github.com/videojs/video.js/pull/1809" target="_blank" rel="external">view</a>)</li>
-<li>@mmcc improved tap sensitivity (<a href="https://github.com/videojs/video.js/pull/1830" target="_blank" rel="external">view</a>)</li>
-<li>@mister-ben added a vjs-ended class when playback reaches the end of the timeline (<a href="https://github.com/videojs/video.js/pull/1857" target="_blank" rel="external">view</a>)</li>
-<li>@dmlap Add network and ready state properties (<a href="https://github.com/videojs/video.js/pull/1854" target="_blank" rel="external">view</a>)</li>
-<li>@woollybogger exported the hasClass function (<a href="https://github.com/videojs/video.js/pull/1839" target="_blank" rel="external">view</a>)</li>
-<li>@DevGavin fixed the Chinese translation (<a href="https://github.com/videojs/video.js/pull/1841" target="_blank" rel="external">view</a>)</li>
-<li>@iSimonWeb added font-path variable (<a href="https://github.com/videojs/video.js/pull/1847" target="_blank" rel="external">view</a>)</li>
-<li>@shoshomiga added a Bulgarian translation (<a href="https://github.com/videojs/video.js/pull/1849" target="_blank" rel="external">view</a>)</li>
-<li>@ragecub3 added a Turkish translation (<a href="https://github.com/videojs/video.js/pull/1853" target="_blank" rel="external">view</a>)</li>
-<li>@gkatsev greatly improved text track support and implemented vtt.js as the webvtt parser (<a href="https://github.com/videojs/video.js/pull/1749" target="_blank" rel="external">view</a>)</li>
-<li>@gkatsev fixed captions showing by default in Chrome and Safari (<a href="https://github.com/videojs/video.js/pull/1865" target="_blank" rel="external">view</a>)</li>
-<li>@mister-ben fixed a woff warning in Firefox (<a href="https://github.com/videojs/video.js/pull/1870" target="_blank" rel="external">view</a>)<img src="http://feeds.feedburner.com/~r/video-js/~4/RLR00vEFKVQ" alt=""></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-4-12-The-last-of-the-4-minors/" data-id="ciyesed7a001zo4ee7jo2dz3a" class="article-share-link">Share</a>
-      
-        <a href="http://blog.videojs.com/Video-js-4-12-The-last-of-the-4-minors/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/news/">news</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -943,7 +929,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hls/">hls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mse/">mse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugins/">plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thumbcoil/">thumbcoil</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/a11y/">a11y</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/accessibility/">accessibility</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hls/">hls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mse/">mse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugins/">plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thumbcoil/">thumbcoil</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
     </div>
   </div>
 
@@ -953,7 +939,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 16px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5-video/" style="font-size: 14px;">html5 video</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18px;">news</a> <a href="/tags/plugins/" style="font-size: 10px;">plugins</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 12px;">releases</a> <a href="/tags/stats/" style="font-size: 12px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 12px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
+      <a href="/tags/a11y/" style="font-size: 10px;">a11y</a> <a href="/tags/accessibility/" style="font-size: 10px;">accessibility</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 16px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5-video/" style="font-size: 14px;">html5 video</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18px;">news</a> <a href="/tags/plugins/" style="font-size: 10px;">plugins</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 12px;">releases</a> <a href="/tags/stats/" style="font-size: 12px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 14px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
     </div>
   </div>
 
@@ -962,7 +948,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
     </div>
   </div>
 
@@ -973,6 +959,10 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/Feature-Spotlight-Accessibility/">Feature Spotlight: Accessibility</a>
+          </li>
         
           <li>
             <a href="/Feature-Spotlight-Advanced-Plugins/">Feature Spotlight: Advanced Plugins</a>
@@ -988,10 +978,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/Video-js-5-12-0-and-5-11-5-releases/">Video.js 5.12.0 and 5.11.5 releases</a>
-          </li>
-        
-          <li>
-            <a href="/the-end-of-html-first/">The End of &quot;HTML-First&quot;</a>
           </li>
         
       </ul>
