@@ -1,13 +1,15 @@
 ---
 title: 'Feature Spotlight: Accessibility'
-author:
-  name: Brandon Casey
-  github: brandonocasey
 tags:
   - video.js 6.0
   - accessibility
   - a11y
+author:
+  name: Brandon Casey
+  github: brandonocasey
+date: 2017-02-03 15:10:33
 ---
+
 
 ### Accessibility! The most important feature you never knew about.
 
@@ -37,13 +39,13 @@ In some cases, such as in Video.js, it will not be possible to use the native `<
 * You have to add a `tabIndex` which will allow the `div` to be navigated to using the `tab` key
 * You have to add handling for the space and enter key that press the button
 
-{% pullquote %}
+{% pullquote right %}
 A list of `role` attribute values can be found on [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Composite_roles).
 {% endpullquote %}
 
 After mimicking or adding native accessibility on the controls and content in your webpage, the next thing to look over are `aria` attributes. For instance, we use `aria-live="polite"` for our `ProgressBar` slider. By default `aria-live` is set `off`, which means updates to controls should not be read to the user unless they un-focus and re-focus an element. The value of `polite` which we use allows us to convey the position of the slider to screen reader without them having to change focus on the control. This is useful because the `ProgressBar` is always updating while a video is playing. A value of `polite` will also wait to convey said updates until the screen reader is done reading other information to the user.
 
-{% pullquote %}
+{% pullquote right %}
 For a more complete list of [ARIA attributes see the specification](https://www.w3.org/TR/wai-aria-1.1/).
 {% endpullquote %}
 
