@@ -51,7 +51,7 @@ Finally you need to add an accessible "name" to an element so that it can be ref
 
 Here are some examples of accessibility straight from Video.js:
 * The `MuteToggle` `<button>`:
-  * Has `aria-live` set to `polite`, rather than the default value of `off`. `aria-live` with any value other than `off` indicates that `innerText`/`innerHTML` updates can be sent to the screen reader without the user needing to move focus off of the control. The value of `polite` maens that the screen reader should wait until it is done speaking to convey these updates to the user.
+  * Has `aria-live` set to `polite`, rather than the default value of `off`. `aria-live` with any value other than `off` indicates that `innerText`/`innerHTML` updates can be sent to the screen reader without the user needing to move focus off of the control. The value of `polite` means that the screen reader should wait until it is done speaking to convey these updates to the user.
   * Has control text of "Mute" or "Unmute" which indicates the current status of the button to the use
 * The `VolumeBar` slider `<div>`:
   * Has a `role` attribute with a value of `slider`. Like this: `role="slider"`
