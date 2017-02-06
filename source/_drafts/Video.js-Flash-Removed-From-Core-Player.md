@@ -27,6 +27,7 @@ Firefox: [Reducing Adobe Flash Usage in Firefox]
 As of the Video.js 6.0 release, the dream of a flashless future will come closer to a reality.
 
 In the meantime, the separate [videojs-flash] project has been created for Flash tech support.
+When the [videojs-flash] plugin is added to the player, the Flash tech is added to the tech order.
 
 ```html
 <link rel="stylesheet" href="path/video.js/dist/video-js.css">
@@ -35,7 +36,7 @@ In the meantime, the separate [videojs-flash] project has been created for Flash
 <video  id='vid' class='video-js' controls height=300 width=600>
 <source src="video.mp4" type="video/mp4">
 </video>
-<script> var player = videojs('vid', {techOrder: ['flash']}); </script>
+<script> var player = videojs('vid'); </script>
 ```
 
 [videojs-flash]: https://github.com/videojs/videojs-flash
