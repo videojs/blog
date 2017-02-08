@@ -1,7 +1,7 @@
 ---
 title: Video.js removes flash from core player
 tags:
-  - Video.js 6.0
+  - video.js 6.0
   - Flash
   - html5
 author:
@@ -40,7 +40,7 @@ When the [videojs-flash] plugin is added to the player, the Flash tech is added 
 ```
 
 [videojs-flash]: https://github.com/videojs/videojs-flash
-[announced]: https://github.com/videojs/blog/blob/master/source/_posts/the-end-of-html-first.md
+[announced]: http://blog.videojs.com/the-end-of-html-first/
 [Chrome 56 disables flash by default]: https://blog.chromium.org/2016/12/roll-out-plan-for-html5-by-default.html
 [Safari makes Flash a legacy plugin]: https://webkit.org/blog/6589/next-steps-for-legacy-plug-ins/
 [Reducing Adobe Flash Usage in Firefox]: https://blog.mozilla.org/futurereleases/2016/07/20/reducing-adobe-flash-usage-in-firefox/
