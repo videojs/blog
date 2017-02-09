@@ -7,7 +7,6 @@ tags:
 author:
   name: Michael Roca
   github: mrocajr
-date: 2017-01-25 14:50:06
 ---
 
 In August of 2016, we [announced] our intention of removing flash as a part of the core Video.js project.
@@ -33,10 +32,14 @@ When the [videojs-flash] plugin is added to the player, the Flash tech is added 
 <link rel="stylesheet" href="path/video.js/dist/video-js.css">
 <script src="path/video.js/dist/video.js"></script>
 <script src="path/videojs-flash/dist/videojs-flash.js"></script>
+
 <video  id='vid' class='video-js' controls height=300 width=600>
-<source src="video.mp4" type="video/mp4">
+  <source src="video.mp4" type="video/mp4">
 </video>
-<script> var player = videojs('vid'); </script>
+
+<script>
+  var player = videojs('vid');
+</script>
 ```
 
 [videojs-flash]: https://github.com/videojs/videojs-flash
@@ -44,6 +47,3 @@ When the [videojs-flash] plugin is added to the player, the Flash tech is added 
 [Chrome 56 disables flash by default]: https://blog.chromium.org/2016/12/roll-out-plan-for-html5-by-default.html
 [Safari makes Flash a legacy plugin]: https://webkit.org/blog/6589/next-steps-for-legacy-plug-ins/
 [Reducing Adobe Flash Usage in Firefox]: https://blog.mozilla.org/futurereleases/2016/07/20/reducing-adobe-flash-usage-in-firefox/
-
-
-
