@@ -5,7 +5,7 @@
   <link href="/rss" rel="self"/>
   
   <link href="http://blog.videojs.com/"/>
-  <updated>2017-02-03T20:13:43.000Z</updated>
+  <updated>2017-02-09T00:19:11.000Z</updated>
   <id>http://blog.videojs.com/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Video.js removes Flash from core player</title>
+    <link href="http://blog.videojs.com/Video-js-removes-Flash-from-core-player/"/>
+    <id>http://blog.videojs.com/Video-js-removes-Flash-from-core-player/</id>
+    <published>2017-02-09T00:17:21.000Z</published>
+    <updated>2017-02-09T00:19:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>In August of 2016, we <a href="http://blog.videojs.com/the-end-of-html-first/">announced</a> our intention of removing Flash as a part of the core Video.js project.<br>As Html5 video becomes the standard playback tech and Flash fades into obsolescence, it is time<br>to remove Flash from the core player and move it to a separate code base.  This will give us the ability<br>to allow developers to continue to support legacy browsers by adding the tech themselves, while allowing<br>us to minimize legacy code in Video.js and decrease the footprint of the player.</p>
+<p>This follows in the footsteps of Chrome, Safari and Firefox which are all taking steps to deprecate Flash.</p>
+<p>Chrome: <a href="https://blog.chromium.org/2016/12/roll-out-plan-for-html5-by-default.html" target="_blank" rel="external">Chrome 56 disables flash by default</a></p>
+<p>Safari: <a href="https://webkit.org/blog/6589/next-steps-for-legacy-plug-ins/" target="_blank" rel="external">Safari makes Flash a legacy plugin</a></p>
+<p>Firefox: <a href="https://blog.mozilla.org/futurereleases/2016/07/20/reducing-adobe-flash-usage-in-firefox/" target="_blank" rel="external">Reducing Adobe Flash Usage in Firefox</a></p>
+<p>As of the Video.js 6.0 release, the dream of a Flashless future will come closer to a reality.</p>
+<p>In the meantime, the separate <a href="https://github.com/videojs/videojs-flash" target="_blank" rel="external">videojs-flash</a> project has been created for Flash tech support.<br>When the <a href="https://github.com/videojs/videojs-flash" target="_blank" rel="external">videojs-flash</a> plugin is added to the player, the Flash tech is added to the tech order.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"path/video.js/dist/video-js.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"path/video.js/dist/video.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"path/videojs-flash/dist/videojs-flash.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">video</span>  <span class="attr">id</span>=<span class="string">'vid'</span> <span class="attr">class</span>=<span class="string">'video-js'</span> <span class="attr">controls</span> <span class="attr">height</span>=<span class="string">300</span> <span class="attr">width</span>=<span class="string">600</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"video.mp4"</span> <span class="attr">type</span>=<span class="string">"video/mp4"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="keyword">var</span> player = videojs(<span class="string">'vid'</span>);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;In August of 2016, we &lt;a href=&quot;http://blog.videojs.com/the-end-of-html-first/&quot;&gt;announced&lt;/a&gt; our intention of removing Flash as a part of
+    
+    </summary>
+    
+    
+      <category term="video.js 6.0" scheme="http://blog.videojs.com/tags/video-js-6-0/"/>
+    
+      <category term="Flash" scheme="http://blog.videojs.com/tags/Flash/"/>
+    
+      <category term="html5" scheme="http://blog.videojs.com/tags/html5/"/>
+    
+  </entry>
   
   <entry>
     <title>Feature Spotlight: Accessibility</title>
