@@ -7,7 +7,9 @@ tags:
 author:
   name: Michael Roca
   github: mrocajr
+date: 2017-02-08 19:17:21
 ---
+
 
 In August of 2016, we [announced] our intention of removing Flash as a part of the core Video.js project.
 As Html5 video becomes the standard playback tech and Flash fades into obsolescence, it is time
