@@ -1,5 +1,5 @@
 ---
-title: Video.js removes flash from core player
+title: Video.js removes Flash from core player
 tags:
   - video.js 6.0
   - Flash
@@ -9,13 +9,13 @@ author:
   github: mrocajr
 ---
 
-In August of 2016, we [announced] our intention of removing flash as a part of the core Video.js project.
-As html5 video becomes the standard playback tech and flash fades into obsolescence, it is time 
-to remove flash from the core player and move it to a separate code base.  This will give us the ability 
-to allow developers to continue to support legacy browsers by adding the tech themselves, while allowing 
+In August of 2016, we [announced] our intention of removing Flash as a part of the core Video.js project.
+As Html5 video becomes the standard playback tech and Flash fades into obsolescence, it is time
+to remove Flash from the core player and move it to a separate code base.  This will give us the ability
+to allow developers to continue to support legacy browsers by adding the tech themselves, while allowing
 us to minimize legacy code in Video.js and decrease the footprint of the player.
 
-This follows in the footsteps of Chrome, Safari and Firefox which are all taking steps to deprecate flash.
+This follows in the footsteps of Chrome, Safari and Firefox which are all taking steps to deprecate Flash.
 
 Chrome: [Chrome 56 disables flash by default]
 
@@ -23,7 +23,7 @@ Safari: [Safari makes Flash a legacy plugin]
 
 Firefox: [Reducing Adobe Flash Usage in Firefox]
 
-As of the Video.js 6.0 release, the dream of a flashless future will come closer to a reality.
+As of the Video.js 6.0 release, the dream of a Flashless future will come closer to a reality.
 
 In the meantime, the separate [videojs-flash] project has been created for Flash tech support.
 When the [videojs-flash] plugin is added to the player, the Flash tech is added to the tech order.
