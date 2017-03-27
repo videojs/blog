@@ -26,6 +26,8 @@ There are two important pieces to be aware of with middleware:
 1. dynamic source handling
 2. intercepting the player and tech interactions.
 
+## A Video Catalog
+
 With the dynamic source handling, you could load video with a custom type and source and resolve it asynchronously.
 A good example for this is a video catalog system.
 The page can be rendered with a specific catalog ID and a special MIME type, like so:
@@ -63,12 +65,14 @@ videojs.use('video/my-catalog', function(player) {
 ```
 Then, when Video.js initializes, it'll go through and call the middleware that are set for `video/my-catalog`.
 
+## Server-Side Ad Insertion
+
 Server Side Ad Insertion (SSAI) is a great fit for middleware. It showcases the ability to intercept the play and tech interactions.
-For example, you have both ads and content in your HLS playlist but you want the controls to display different times for each.
-When the content video is playing, you want to display a timeline of 5 minutes. And for ads you want to display 30 seconds for the pre-roll.
-Yet, currently, the timeline is showing a combined duration of 5 minutes and 30 seconds.
-So, you can add a middleware that knows when the ad is being played and tells the player that the duration is 30 seconds
-and when the content is playing that the duration is 5 minutes.
+For example, you have a 30 seconds ad followed by a five minute video in your HLS manifest.
+You want the timeline to display the ad time and the content time appropriate when each is playing.
+Right now, the duration displayed will be the combined duration of five minutes and 30 seconds (`5:30`).
+The solution is to add a middleware that knows when the ad is being played and tells the player that the duration is 30 seconds
+and when the content is playing that the duration is five minutes.
 ```js
 // register a star-middleware because HLS has two mimetypes
 videojs.use('*', function(player) {
@@ -92,6 +96,8 @@ videojs.use('*', function(player) {
     duration(durationFromTech) {
       if (areWeCurrentlyPlayingAnAd(durationFromTech)) {
         // since we're now in an ad, return the ad duration
+        // in a real example you'd calculate this based on your playlist
+        // rather than hardcode a value in here
         return 30;
       } else {
         // we're playing back content, so, return that duration
@@ -102,9 +108,11 @@ videojs.use('*', function(player) {
 });
 ```
 
+## Playbackrate Adjustment - A Case Study
+
 A simple but interesting middleware to look at is the [playbackrate-adjuster][pra].
-The middleware will change the times of the controls depending on the current rate.
-If you're playing back a 20 minute video and change the rate to 2x, the controls will adjust to display 10 minutes.
+This middleware will change the times of the controls depending on the current rate.
+For example, if you're playing back a 20 minute video and change the rate to 2x, the controls will adjust to display 10 minutes.
 Let's take a look at the code.
 ```js
 videojs.use('*', function(player) {
@@ -123,8 +131,8 @@ videojs.use('*', function(player) {
   };
 });
 ```
-So, here, we attach a star-middleware because we want to have it applied to all our videos.
-In `setSource`, we also call `next` directly will `null` and the `srcObj` because we can handle any source.
+So, here, we attach a star-middleware because we want to have it applied to any video, regardless of the MIME type.
+In `setSource`, we also call `next` directly with `null` and the `srcObj` because we want to use this middleware with any and all sources.
 We also set up our `duration` method to take in the duration from the previous middleware and divide it by the playback rate we get from the player.
 
 If you look at the [code][] you can see some other methods next to duration.
@@ -162,7 +170,7 @@ videojs.use('*', function(player) {
 });
 ```
 
-And then, when the `ratechange` event triggers, we tell Video.js that the duration has changed:
+And then, when the `ratechange` event triggers, we tell Video.js that the duration has changed and Video.js  will update the controls accordingly:
 ```js
 videojs.use('*', function(player) {
   let tech;
