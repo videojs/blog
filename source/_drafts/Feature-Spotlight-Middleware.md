@@ -12,6 +12,10 @@ Middleware is one of the cool new features that is coming to Video.js in version
 
 With middleware, you are now able to interact with and change how the player and the tech talk to each other. The tech is Video.js's abstraction from the player, separating the player API from the playback technology. With techs, we can plug things like a Flash fallback or a Youtube embed into Video.js without changing the external API or the look-and-feel of the player.
 
+{% pullquote right %}
+Video.js middleware are like Express middleware but routes are based on video MIME types.
+{% endpullquote %}
+
 A lot of Video.js users may be familiar with middleware from projects like Express. Video.js middleware isn't that different from those. In both cases you register your middleware against a particular route to call down the chain when the route is triggered. In Express, routes are based on the url paths. In Video.js, these routes are based on the video MIME type. And, like Express, there are "star" (`*`) middleware that match all routes.
 
 There are two important pieces to be aware of with middleware:
