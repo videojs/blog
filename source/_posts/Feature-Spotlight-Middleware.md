@@ -1,12 +1,14 @@
 ---
 title: 'Feature Spotlight: Middleware'
-author:
-  name: Gary Katsevman
-  github: gkatsev
 tags:
   - middleware
   - video.js 6.0
+author:
+  name: Gary Katsevman
+  github: gkatsev
+date: 2017-03-27 15:04:41
 ---
+
 
 Middleware is one of the cool new features that is coming to Video.js in version 6.0
 
