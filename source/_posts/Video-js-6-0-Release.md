@@ -31,10 +31,10 @@ One of the other big changes is that source selection is now asynchronous. This 
 These are written up on our [wiki][breaking-6]. We'll make sure to update it if there's anything that we missed.
 
 ## Feedback Wanted
-If you are using Video.js and have comments or questions, please drop by on [slack][]. If you find a bug, please open an [issue on github][new-issue], preferably, with a [reduced test case][reduced].
+If you are using Video.js and have comments or questions, please drop by on [Slack][]. If you find a bug, please open an [issue on GitHub][new-issue], preferably with a [reduced test case][reduced].
 
 ## 5.x Support
-We're still going to be support the Video.js 5.x release line. This will mostly be bug fixes but features will be considered on a case-by-case basis.
+We're still going to be supporting the Video.js 5.x release line. This will mostly be bug fixes but features will be considered on a case-by-case basis.
 
 If IE8 support is still required, it is probably best to stick to 5.x.
 
@@ -48,7 +48,7 @@ We strive to be open and inclusive and so we have adopted a [Code of Conduct][co
 
 ## Conclusion
 
-We are super excited for this release! Please take it for a spin from `next` tag on npm or from the [CDN][vjs-6]. And please come chat with us on [slack][].
+We are super excited for this release! Please take it for a spin from `next` tag on npm or from the [CDN][vjs-6]. And please come chat with us on [Slack][].
 
 [a11y-post]: Feature-Spotlight-Accessibility.md
 [middleware]: Feature-Spotlight-Middleware.md
@@ -56,7 +56,7 @@ We are super excited for this release! Please take it for a spin from `next` tag
 [remove-flash]: Video-js-removes-Flash-from-core-player.md
 [breaking-6]: https://github.com/videojs/video.js/wiki/Video.js-6-Migration-Guide
 [new-issue]: https://github.com/videojs/video.js/issues/new
-[slack]: http://slack.videojs.com
+[Slack]: http://slack.videojs.com
 [reduced]: https://css-tricks.com/reduced-test-cases/
 [coc]: https://github.com/videojs/video.js/blob/master/CODE_OF_CONDUCT.md
 [contrib-cov]: http://contributor-covenant.org
