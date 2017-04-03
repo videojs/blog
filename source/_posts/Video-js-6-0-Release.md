@@ -11,7 +11,9 @@ tags:
   - plugins
   - Flash
   - html5
+date: 2017-04-03 17:56:51
 ---
+
 
 After months of hard work, I am proud to annouce the release of Video.js 6.0 🎉!
 
