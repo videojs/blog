@@ -3,14 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2014 | Video.js Blog</title>
+  <title>Video.js 6.0 Release! | Video.js Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Video.js Blog">
-<meta property="og:url" content="http://blog.videojs.com/archives/2014/index.html">
+  <meta name="description" content="After months of hard work, I am proud to annouce the release of Video.js 6.0 🎉!
+This release is pretty exciting. It greatly improves the accessibility of the controls and components, and we are commi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Video.js 6.0 Release!">
+<meta property="og:url" content="http://blog.videojs.com/Video-js-6-0-Release/index.html">
 <meta property="og:site_name" content="Video.js Blog">
+<meta property="og:description" content="After months of hard work, I am proud to annouce the release of Video.js 6.0 🎉!
+This release is pretty exciting. It greatly improves the accessibility of the controls and components, and we are commi">
+<meta property="og:updated_time" content="2017-04-03T21:57:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Video.js Blog">
+<meta name="twitter:title" content="Video.js 6.0 Release!">
+<meta name="twitter:description" content="After months of hard work, I am proud to annouce the release of Video.js 6.0 🎉!
+This release is pretty exciting. It greatly improves the accessibility of the controls and components, and we are commi">
   
     <link rel="alternate" href="/rss" title="Video.js Blog" type="application/atom+xml">
   
@@ -72,154 +79,81 @@ ga('send', 'pageview');
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
+        <section id="main"><article id="post-Video-js-6-0-Release" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2014" class="archive-year">2014</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Video-js-4-9-Now-can-join-the-party/" class="archive-article-date">
-  <time datetime="2014-10-03T00:49:00.000Z" itemprop="datePublished">Oct 2</time>
+  <a href="https://github.com/gkatsev" class="article-author">
+  <img src="https://github.com/gkatsev.png?size=30" class="author_gravatar" height="30">
+  <span class="author_name">Gary Katsevman</span>
+
+
+    <a href="/Video-js-6-0-Release/" class="article-date">
+  <time datetime="2017-04-03T21:56:51.000Z" itemprop="datePublished">2017-04-03</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Video-js-4-9-Now-can-join-the-party/">Video.js 4.9 - Now &lt;audio&gt; can join the party!</a>
+    <h1 class="article-title" itemprop="name">
+      Video.js 6.0 Release!
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Video-js-4-8-0-released-Prost/" class="archive-article-date">
-  <time datetime="2014-09-03T20:50:09.000Z" itemprop="datePublished">Sep 3</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Video-js-4-8-0-released-Prost/">Video.js 4.8.0 released...Prost!</a>
-    </h1>
-  
+        <p>After months of hard work, I am proud to annouce the release of Video.js 6.0 🎉!</p>
+<p>This release is pretty exciting. It greatly <a href="/Video-js-6-0-Release/Feature-Spotlight-Accessibility.md">improves the accessibility</a> of the controls and components, and we are committed to making Video.js the most accessible player we can. Video.js also provides some shiny, and awesome, new features for developers in <a href="/Video-js-6-0-Release/Feature-Spotlight-Middleware.md">middleware</a> and <a href="/Video-js-6-0-Release/Feature-Spotlight-Advanced-Plugins.md">advanced plugins</a>. Video.js 6.0 is also the first release where <a href="/Video-js-6-0-Release/Video-js-removes-Flash-from-core-player.md">Flash is unbundled from core</a> – though, it is still availablle as a plugin, if necessary.</p>
+<p>Today’s release is a pre-release and will stay that way for about a week or two before being promoted to <code>latest</code>. Just to make sure that any last bugs, if any, are ironed out.</p>
+<h2 id="Things-you-should-know"><a href="/Video-js-6-0-Release/#Things-you-should-know" class="headerlink" title="Things you should know"></a>Things you should know</h2><p>Most things have not changed between 5.x and 6.x. In fact, in most of our work in plugins we maintain, the majority of the work was to use new methods and fallback to old methods because they were logging deprecation warnings. Those plugins would’ve continued working otherwise.</p>
+<p>However, there are definitely some changes that are breaking and would require action on your part. For example, if you require Flash, that’s something that would now need to be included manually.</p>
+<p>One of the other big changes is that source selection is now asynchronous. This was necessary for middleware support and most likely won’t affect users if they are waiting for the player to be ready before interacting with the player.</p>
+<p>These are written up on our <a href="https://github.com/videojs/video.js/wiki/Video.js-6-Migration-Guide" target="_blank" rel="external">wiki</a>. We’ll make sure to update it if there’s anything that we missed.</p>
+<h2 id="Feedback-Wanted"><a href="/Video-js-6-0-Release/#Feedback-Wanted" class="headerlink" title="Feedback Wanted"></a>Feedback Wanted</h2><p>If you are using Video.js and have comments or questions, please drop by on <a href="http://slack.videojs.com" target="_blank" rel="external">slack</a>. If you find a bug, please open an <a href="https://github.com/videojs/video.js/issues/new" target="_blank" rel="external">issue on github</a>, preferably, with a <a href="https://css-tricks.com/reduced-test-cases/" target="_blank" rel="external">reduced test case</a>.</p>
+<h2 id="5-x-Support"><a href="/Video-js-6-0-Release/#5-x-Support" class="headerlink" title="5.x Support"></a>5.x Support</h2><p>We’re still going to be support the Video.js 5.x release line. This will mostly be bug fixes but features will be considered on a case-by-case basis.</p>
+<p>If IE8 support is still required, it is probably best to stick to 5.x.</p>
+<h2 id="npm-tags"><a href="/Video-js-6-0-Release/#npm-tags" class="headerlink" title="npm tags"></a>npm tags</h2><p>Once Video.js 6 is promoted to latest, it’ll take over the <code>next</code> and <code>latest</code> tags on npm. The 5.x release line will then be given its own set of tags: <code>latest-5</code> and <code>next-5</code>.</p>
+<h2 id="Code-of-Condunct"><a href="/Video-js-6-0-Release/#Code-of-Condunct" class="headerlink" title="Code of Condunct"></a>Code of Condunct</h2><p>We strive to be open and inclusive and so we have adopted a <a href="https://github.com/videojs/video.js/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="external">Code of Conduct</a>, based on <a href="http://contributor-covenant.org" target="_blank" rel="external">Contributor Covenant</a> that applies to all Video.js projects.</p>
+<h2 id="Conclusion"><a href="/Video-js-6-0-Release/#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>We are super excited for this release! Please take it for a spin from <code>next</code> tag on npm or from the <a href="http://vjs.zencdn.net/6.0.0/video.js" target="_blank" rel="external">CDN</a>. And please come chat with us on <a href="http://slack.videojs.com" target="_blank" rel="external">slack</a>.</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/" class="archive-article-date">
-  <time datetime="2014-08-06T18:42:00.000Z" itemprop="datePublished">Aug 6</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Video-js-v4-7-0-Built-mostly-by-NEW-contributors-Also-Google-chooses-Video-js/">Video.js v4.7.0 - Built mostly by NEW contributors! Also Google chooses Video.js</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/DASH-Everywhere-ish-hack-project/" class="archive-article-date">
-  <time datetime="2014-07-22T15:01:00.000Z" itemprop="datePublished">Jul 22</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.videojs.com/Video-js-6-0-Release/" data-id="cj12nptfm003a9jeeqqjovyy6" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/DASH-Everywhere-ish-hack-project/">DASH Everywhere-ish (hack project)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Video-js-version-4-6-0-released-It-s-been-a-productive-month/" class="archive-article-date">
-  <time datetime="2014-05-20T21:29:00.000Z" itemprop="datePublished">May 20</time>
-</a>
+        <a href="http://blog.videojs.com/Video-js-6-0-Release/#disqus_thread" class="article-comment-link">Comments</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Video-js-version-4-6-0-released-It-s-been-a-productive-month/">Video.js version 4.6.0 released! It&#39;s been a productive month.</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/" class="archive-article-date">
-  <time datetime="2014-03-27T22:49:04.000Z" itemprop="datePublished">Mar 27</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Video-js-version-4-5-0-released-Nothing-to-see-here-move-along/">Video.js version 4.5.0 released! Nothing to see here, move along</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flash/">Flash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/a11y/">a11y</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/accessibility/">accessibility</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/middleware/">middleware</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plugins/">plugins</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/" class="archive-article-date">
-  <time datetime="2014-02-19T22:49:00.000Z" itemprop="datePublished">Feb 19</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/">Video.js version 4.4.0 released - Now supporting RequireJS and Browserify</a>
-    </h1>
   
+    <a href="/Feature-Spotlight-Middleware/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Feature Spotlight: Middleware</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
 
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
 
 </section>
         
@@ -312,11 +246,13 @@ ga('send', 'pageview');
 <script>
   var disqus_shortname = 'videojs';
   
+  var disqus_url = 'http://blog.videojs.com/Video-js-6-0-Release/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>

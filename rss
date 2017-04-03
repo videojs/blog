@@ -5,7 +5,7 @@
   <link href="/rss" rel="self"/>
   
   <link href="http://blog.videojs.com/"/>
-  <updated>2017-03-27T19:05:16.000Z</updated>
+  <updated>2017-04-03T21:57:06.000Z</updated>
   <id>http://blog.videojs.com/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Video.js 6.0 Release!</title>
+    <link href="http://blog.videojs.com/Video-js-6-0-Release/"/>
+    <id>http://blog.videojs.com/Video-js-6-0-Release/</id>
+    <published>2017-04-03T21:56:51.000Z</published>
+    <updated>2017-04-03T21:57:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>After months of hard work, I am proud to annouce the release of Video.js 6.0 🎉!</p>
+<p>This release is pretty exciting. It greatly <a href="/Video-js-6-0-Release/Feature-Spotlight-Accessibility.md">improves the accessibility</a> of the controls and components, and we are committed to making Video.js the most accessible player we can. Video.js also provides some shiny, and awesome, new features for developers in <a href="/Video-js-6-0-Release/Feature-Spotlight-Middleware.md">middleware</a> and <a href="/Video-js-6-0-Release/Feature-Spotlight-Advanced-Plugins.md">advanced plugins</a>. Video.js 6.0 is also the first release where <a href="/Video-js-6-0-Release/Video-js-removes-Flash-from-core-player.md">Flash is unbundled from core</a> – though, it is still availablle as a plugin, if necessary.</p>
+<p>Today’s release is a pre-release and will stay that way for about a week or two before being promoted to <code>latest</code>. Just to make sure that any last bugs, if any, are ironed out.</p>
+<h2 id="Things-you-should-know"><a href="/Video-js-6-0-Release/#Things-you-should-know" class="headerlink" title="Things you should know"></a>Things you should know</h2><p>Most things have not changed between 5.x and 6.x. In fact, in most of our work in plugins we maintain, the majority of the work was to use new methods and fallback to old methods because they were logging deprecation warnings. Those plugins would’ve continued working otherwise.</p>
+<p>However, there are definitely some changes that are breaking and would require action on your part. For example, if you require Flash, that’s something that would now need to be included manually.</p>
+<p>One of the other big changes is that source selection is now asynchronous. This was necessary for middleware support and most likely won’t affect users if they are waiting for the player to be ready before interacting with the player.</p>
+<p>These are written up on our <a href="https://github.com/videojs/video.js/wiki/Video.js-6-Migration-Guide" target="_blank" rel="external">wiki</a>. We’ll make sure to update it if there’s anything that we missed.</p>
+<h2 id="Feedback-Wanted"><a href="/Video-js-6-0-Release/#Feedback-Wanted" class="headerlink" title="Feedback Wanted"></a>Feedback Wanted</h2><p>If you are using Video.js and have comments or questions, please drop by on <a href="http://slack.videojs.com" target="_blank" rel="external">slack</a>. If you find a bug, please open an <a href="https://github.com/videojs/video.js/issues/new" target="_blank" rel="external">issue on github</a>, preferably, with a <a href="https://css-tricks.com/reduced-test-cases/" target="_blank" rel="external">reduced test case</a>.</p>
+<h2 id="5-x-Support"><a href="/Video-js-6-0-Release/#5-x-Support" class="headerlink" title="5.x Support"></a>5.x Support</h2><p>We’re still going to be support the Video.js 5.x release line. This will mostly be bug fixes but features will be considered on a case-by-case basis.</p>
+<p>If IE8 support is still required, it is probably best to stick to 5.x.</p>
+<h2 id="npm-tags"><a href="/Video-js-6-0-Release/#npm-tags" class="headerlink" title="npm tags"></a>npm tags</h2><p>Once Video.js 6 is promoted to latest, it’ll take over the <code>next</code> and <code>latest</code> tags on npm. The 5.x release line will then be given its own set of tags: <code>latest-5</code> and <code>next-5</code>.</p>
+<h2 id="Code-of-Condunct"><a href="/Video-js-6-0-Release/#Code-of-Condunct" class="headerlink" title="Code of Condunct"></a>Code of Condunct</h2><p>We strive to be open and inclusive and so we have adopted a <a href="https://github.com/videojs/video.js/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="external">Code of Conduct</a>, based on <a href="http://contributor-covenant.org" target="_blank" rel="external">Contributor Covenant</a> that applies to all Video.js projects.</p>
+<h2 id="Conclusion"><a href="/Video-js-6-0-Release/#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>We are super excited for this release! Please take it for a spin from <code>next</code> tag on npm or from the <a href="http://vjs.zencdn.net/6.0.0/video.js" target="_blank" rel="external">CDN</a>. And please come chat with us on <a href="http://slack.videojs.com" target="_blank" rel="external">slack</a>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;After months of hard work, I am proud to annouce the release of Video.js 6.0 🎉!&lt;/p&gt;
+&lt;p&gt;This release is pretty exciting. It greatly &lt;a hr
+    
+    </summary>
+    
+    
+      <category term="video.js 6.0" scheme="http://blog.videojs.com/tags/video-js-6-0/"/>
+    
+      <category term="accessibility" scheme="http://blog.videojs.com/tags/accessibility/"/>
+    
+      <category term="a11y" scheme="http://blog.videojs.com/tags/a11y/"/>
+    
+      <category term="plugins" scheme="http://blog.videojs.com/tags/plugins/"/>
+    
+      <category term="middleware" scheme="http://blog.videojs.com/tags/middleware/"/>
+    
+      <category term="Flash" scheme="http://blog.videojs.com/tags/Flash/"/>
+    
+      <category term="html5" scheme="http://blog.videojs.com/tags/html5/"/>
+    
+  </entry>
   
   <entry>
     <title>Feature Spotlight: Middleware</title>
@@ -52,9 +98,9 @@
     </summary>
     
     
-      <category term="middleware" scheme="http://blog.videojs.com/tags/middleware/"/>
-    
       <category term="video.js 6.0" scheme="http://blog.videojs.com/tags/video-js-6-0/"/>
+    
+      <category term="middleware" scheme="http://blog.videojs.com/tags/middleware/"/>
     
   </entry>
   
@@ -2404,26 +2450,6 @@ video.on('tap', function(){
   </entry>
   
   <entry>
-    <title>VideoJS is IE9 Compatible</title>
-    <link href="http://blog.videojs.com/VideoJS-is-IE9-Compatible/"/>
-    <id>http://blog.videojs.com/VideoJS-is-IE9-Compatible/</id>
-    <published>2010-09-15T04:00:00.000Z</published>
-    <updated>2016-06-30T19:25:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>After an initial test, VideoJS works with the new <a href="http://ie.microsoft.com/testdrive/" target="_blank" rel="external">Internet Explorer 9 preview</a>. Great news, and a little surprising considering the CSS layout of the controls, and the general nature of IE. Other VideoJS site layout stuff seems to break, but for now as long as the player works I&rsquo;m happy.</p>
-<p>If you find differently let me know (along with any info that might be helpful).</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;After an initial test, VideoJS works with the new &lt;a href=&quot;http://ie.microsoft.com/testdrive/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Internet Ex
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>New VideoJS Site (Now with more HTML5)!</title>
     <link href="http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/"/>
     <id>http://blog.videojs.com/New-VideoJS-Site-Now-with-more-HTML5/</id>
@@ -2439,6 +2465,26 @@ video.on('tap', function(){
     <summary type="html">
     
       &lt;p&gt;I told myself when the site reached 100,000 visits I would redesign it. Well that number&amp;rsquo;s come and gone, so &lt;a href=&quot;http://videoj
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VideoJS is IE9 Compatible</title>
+    <link href="http://blog.videojs.com/VideoJS-is-IE9-Compatible/"/>
+    <id>http://blog.videojs.com/VideoJS-is-IE9-Compatible/</id>
+    <published>2010-09-15T04:00:00.000Z</published>
+    <updated>2016-06-30T19:25:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>After an initial test, VideoJS works with the new <a href="http://ie.microsoft.com/testdrive/" target="_blank" rel="external">Internet Explorer 9 preview</a>. Great news, and a little surprising considering the CSS layout of the controls, and the general nature of IE. Other VideoJS site layout stuff seems to break, but for now as long as the player works I&rsquo;m happy.</p>
+<p>If you find differently let me know (along with any info that might be helpful).</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;After an initial test, VideoJS works with the new &lt;a href=&quot;http://ie.microsoft.com/testdrive/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Internet Ex
     
     </summary>
     

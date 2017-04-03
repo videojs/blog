@@ -74,6 +74,66 @@ ga('send', 'pageview');
       <div class="outer">
         <section id="main">
   
+    <article id="post-Video-js-6-0-Release" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  <a href="https://github.com/gkatsev" class="article-author">
+  <img src="https://github.com/gkatsev.png?size=30" class="author_gravatar" height="30">
+  <span class="author_name">Gary Katsevman</span>
+
+
+    <a href="/Video-js-6-0-Release/" class="article-date">
+  <time datetime="2017-04-03T21:56:51.000Z" itemprop="datePublished">2017-04-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Video-js-6-0-Release/">Video.js 6.0 Release!</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>After months of hard work, I am proud to annouce the release of Video.js 6.0 🎉!</p>
+<p>This release is pretty exciting. It greatly <a href="/Video-js-6-0-Release/Feature-Spotlight-Accessibility.md">improves the accessibility</a> of the controls and components, and we are committed to making Video.js the most accessible player we can. Video.js also provides some shiny, and awesome, new features for developers in <a href="/Video-js-6-0-Release/Feature-Spotlight-Middleware.md">middleware</a> and <a href="/Video-js-6-0-Release/Feature-Spotlight-Advanced-Plugins.md">advanced plugins</a>. Video.js 6.0 is also the first release where <a href="/Video-js-6-0-Release/Video-js-removes-Flash-from-core-player.md">Flash is unbundled from core</a> – though, it is still availablle as a plugin, if necessary.</p>
+<p>Today’s release is a pre-release and will stay that way for about a week or two before being promoted to <code>latest</code>. Just to make sure that any last bugs, if any, are ironed out.</p>
+<h2 id="Things-you-should-know"><a href="/Video-js-6-0-Release/#Things-you-should-know" class="headerlink" title="Things you should know"></a>Things you should know</h2><p>Most things have not changed between 5.x and 6.x. In fact, in most of our work in plugins we maintain, the majority of the work was to use new methods and fallback to old methods because they were logging deprecation warnings. Those plugins would’ve continued working otherwise.</p>
+<p>However, there are definitely some changes that are breaking and would require action on your part. For example, if you require Flash, that’s something that would now need to be included manually.</p>
+<p>One of the other big changes is that source selection is now asynchronous. This was necessary for middleware support and most likely won’t affect users if they are waiting for the player to be ready before interacting with the player.</p>
+<p>These are written up on our <a href="https://github.com/videojs/video.js/wiki/Video.js-6-Migration-Guide" target="_blank" rel="external">wiki</a>. We’ll make sure to update it if there’s anything that we missed.</p>
+<h2 id="Feedback-Wanted"><a href="/Video-js-6-0-Release/#Feedback-Wanted" class="headerlink" title="Feedback Wanted"></a>Feedback Wanted</h2><p>If you are using Video.js and have comments or questions, please drop by on <a href="http://slack.videojs.com" target="_blank" rel="external">slack</a>. If you find a bug, please open an <a href="https://github.com/videojs/video.js/issues/new" target="_blank" rel="external">issue on github</a>, preferably, with a <a href="https://css-tricks.com/reduced-test-cases/" target="_blank" rel="external">reduced test case</a>.</p>
+<h2 id="5-x-Support"><a href="/Video-js-6-0-Release/#5-x-Support" class="headerlink" title="5.x Support"></a>5.x Support</h2><p>We’re still going to be support the Video.js 5.x release line. This will mostly be bug fixes but features will be considered on a case-by-case basis.</p>
+<p>If IE8 support is still required, it is probably best to stick to 5.x.</p>
+<h2 id="npm-tags"><a href="/Video-js-6-0-Release/#npm-tags" class="headerlink" title="npm tags"></a>npm tags</h2><p>Once Video.js 6 is promoted to latest, it’ll take over the <code>next</code> and <code>latest</code> tags on npm. The 5.x release line will then be given its own set of tags: <code>latest-5</code> and <code>next-5</code>.</p>
+<h2 id="Code-of-Condunct"><a href="/Video-js-6-0-Release/#Code-of-Condunct" class="headerlink" title="Code of Condunct"></a>Code of Condunct</h2><p>We strive to be open and inclusive and so we have adopted a <a href="https://github.com/videojs/video.js/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="external">Code of Conduct</a>, based on <a href="http://contributor-covenant.org" target="_blank" rel="external">Contributor Covenant</a> that applies to all Video.js projects.</p>
+<h2 id="Conclusion"><a href="/Video-js-6-0-Release/#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>We are super excited for this release! Please take it for a spin from <code>next</code> tag on npm or from the <a href="http://vjs.zencdn.net/6.0.0/video.js" target="_blank" rel="external">CDN</a>. And please come chat with us on <a href="http://slack.videojs.com" target="_blank" rel="external">slack</a>.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.videojs.com/Video-js-6-0-Release/" data-id="cj12nptfm003a9jeeqqjovyy6" class="article-share-link">Share</a>
+      
+        <a href="http://blog.videojs.com/Video-js-6-0-Release/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flash/">Flash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/a11y/">a11y</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/accessibility/">accessibility</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/middleware/">middleware</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plugins/">plugins</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Feature-Spotlight-Middleware" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     
@@ -126,7 +186,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Feature-Spotlight-Middleware/" data-id="cj0shj3zl000dineelm3u7d20" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Feature-Spotlight-Middleware/" data-id="cj12nptbp000k9jeev55rm92y" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Feature-Spotlight-Middleware/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -181,7 +241,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-removes-Flash-from-core-player/" data-id="cj0shj447002oineeh8caa95h" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-removes-Flash-from-core-player/" data-id="cj12nptfw003h9jeeu77megq3" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-removes-Flash-from-core-player/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -296,7 +356,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Feature-Spotlight-Accessibility/" data-id="cj0shj401000iineeh8wv7oxj" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Feature-Spotlight-Accessibility/" data-id="cj12nptbi000f9jee2uvlb0kb" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Feature-Spotlight-Accessibility/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -392,7 +452,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Feature-Spotlight-Advanced-Plugins/" data-id="cj0shj404000lineef0ofz709" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Feature-Spotlight-Advanced-Plugins/" data-id="cj12nptbk000h9jeed6ynl7jm" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Feature-Spotlight-Advanced-Plugins/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -450,7 +510,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/" data-id="cj0shj43s002einees2lqsj8a" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/" data-id="cj12nptfg00359jee366lngpd" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-6-0-0-RC-0-The-first-RC/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -528,7 +588,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Introducing-Thumbcoil/" data-id="cj0shj40l000vineeb1no5v1y" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Introducing-Thumbcoil/" data-id="cj12nptby000p9jee48b80g98" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Introducing-Thumbcoil/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -611,7 +671,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-5-12-0-and-5-11-5-releases/" data-id="cj0shj443002lineedf9r4oaq" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-5-12-0-and-5-11-5-releases/" data-id="cj12nptfa002y9jeerqlorecr" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-5-12-0-and-5-11-5-releases/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -662,7 +722,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/the-end-of-html-first/" data-id="cj0shj44t0035inee5rq9v98n" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/the-end-of-html-first/" data-id="cj12nptgg003y9jee545o47c3" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/the-end-of-html-first/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -753,82 +813,12 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-5-11-0-Prelease/" data-id="cj0shj43n002bineenzo2curv" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-5-11-0-Prelease/" data-id="cj12nptf4002t9jeeegkqc89g" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-5-11-0-Prelease/#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/news/">news</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/releases/">releases</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Video-js-5-s-fluid-mode-and-playlist-picker" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    
-  <a href="https://github.com/gkatsev" class="article-author">
-  <img src="https://github.com/gkatsev.png?size=30" class="author_gravatar" height="30">
-  <span class="author_name">Gary Katsevman</span>
-
-
-    <a href="/Video-js-5-s-fluid-mode-and-playlist-picker/" class="article-date">
-  <time datetime="2016-06-01T18:50:06.000Z" itemprop="datePublished">2016-06-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Video-js-5-s-fluid-mode-and-playlist-picker/">Video.js 5&#39;s fluid mode and playlist picker</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="How-it-works"><a href="/Video-js-5-s-fluid-mode-and-playlist-picker/#How-it-works" class="headerlink" title="How it works"></a>How it works</h2><p>In video.js 5.0, we added support for truly fluid layouts with video.js.<br>You can see an example of it on the <a href="//videojs.com">video.js website</a>.</p>
-<p>It is done by using <a href="http://alistapart.com/article/creating-intrinsic-ratios-for-video" target="_blank" rel="external">intrinsic ratios</a>. Video.js does the heavy lifting for you.</p>
-<h2 id="How-to-use-it-in-video-js"><a href="/Video-js-5-s-fluid-mode-and-playlist-picker/#How-to-use-it-in-video-js" class="headerlink" title="How to use it in video.js"></a>How to use it in video.js</h2><p>In video.js, to make a player fluid, you can either set the <code>fluid</code> option<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> player = videojs(<span class="string">'preview-player'</span>, &#123;</div><div class="line">  fluid: <span class="literal">true</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
-<p>Or you can add one of the fluid classes to the player: <code>.vjs-fluid</code>, <code>.vjs-4-3</code>, <code>.vjs-16-9</code>:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">id</span>=<span class="string">"preview-player"</span> <span class="attr">class</span>=<span class="string">"video-js vjs-fluid"</span> <span class="attr">controls</span> <span class="attr">data-setup</span>=<span class="string">&#123;&#125;</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><code>.vjs-4-3</code> maintains a 4:3 aspect ratio for the video and <code>.vjs-16-9</code> maintains a 16:9 one.  <code>.vjs-fluid</code> is a bit more special. It waits for the video metadata to load and then uses the video width and video height to calculate the correct aspect ratio to use for the video.</p>
-<h2 id="Playlist-picker"><a href="/Video-js-5-s-fluid-mode-and-playlist-picker/#Playlist-picker" class="headerlink" title="Playlist picker"></a>Playlist picker</h2><p>This works great if you only have the player by itself. What if you are trying to a attach a playlist to the video element and keep it at the same height Like we did on the <a href="//videojs.com/advanced/">advanced example page</a> on the video.js website?<br><img src="/Video-js-5-s-fluid-mode-and-playlist-picker/videojs-with-playlist.png" alt=""></p>
-<p>We <em>could</em> calculate how much the padding top should be depending on the width of the playlist picker or the container element but then each time a video changes we would need to recalculate the height of the playlist picker. Instead, we can rely on video.js to do all the work.</p>
-<h3 id="Attaching-the-playlist-picker"><a href="/Video-js-5-s-fluid-mode-and-playlist-picker/#Attaching-the-playlist-picker" class="headerlink" title="Attaching the playlist picker"></a>Attaching the playlist picker</h3><p>For this example, We’re using the <a href="https://github.com/brightcove/videojs-playlist-ui" target="_blank" rel="external">videojs-playlist-ui</a> and <a href="https://github.com/brightcove/videojs-playlist" target="_blank" rel="external">videojs-playlist</a> plugins for the playlist functionality.<br>We then wrap the player in a container and put the playlist-ui element in there as well.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"main-preview-player"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">video</span> <span class="attr">id</span>=<span class="string">"preview-player"</span> <span class="attr">class</span>=<span class="string">"video-js vjs-fluid"</span> <span class="attr">controls</span> <span class="attr">preload</span>=<span class="string">"auto"</span> <span class="attr">crossorigin</span>=<span class="string">"anonymous"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"vjs-no-js"</span>&gt;</span>To view this video please enable JavaScript, and consider upgrading to a web browser that <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://videojs.com/html5-video-support/"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>supports HTML5 video<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">video</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">"vjs-playlist"</span>&gt;</span><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>Now we can relatively quickly make them align together with some CSS:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.video-js</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">70%</span>;</div><div class="line">  <span class="attribute">float</span>: left;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.vjs-playlist</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">30%</span>;</div><div class="line">  <span class="attribute">float</span>: right;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><img src="/Video-js-5-s-fluid-mode-and-playlist-picker/videojs-playlist-not-fluid.png" alt=""></p>
-<h3 id="How-to-make-it-fluid"><a href="/Video-js-5-s-fluid-mode-and-playlist-picker/#How-to-make-it-fluid" class="headerlink" title="How to make it fluid"></a>How to make it fluid</h3><p>As you can see in the preceeding screenshot, it isn’t aligned correctly with the player like in the screenshot above.<br>Video.js calculates the aspect ratio and then adds a stylesheet to the page:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.preview-player-dimensions</span><span class="selector-class">.vjs-fluid</span> &#123;</div><div class="line">  <span class="attribute">padding-top</span>: <span class="number">41.66666666666667%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>That percentage results in a 2.4 aspect ratio which matches that of the oceans clip.</p>
-<p>So, to make sure that the playlist picker is the same height, we can just add the player dimensions class to it:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">"vjs-playlist preview-player-dimensions vjs-fluid"</span>&gt;</span><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<h3 id="How-to-make-it-line-up"><a href="/Video-js-5-s-fluid-mode-and-playlist-picker/#How-to-make-it-line-up" class="headerlink" title="How to make it line up"></a>How to make it line up</h3><p>One of the easiest ways of making these two things line up correctly is to use flexbox. It’ll make the player and playlist picker grow to fill up as much space as needed. Also, the playlist picker collapse underneath the player if the width of the page is too small.<br>Flexbox is <a href="http://caniuse.com/#feat=flexbox" target="_blank" rel="external">available</a> on a lot of platforms. However, some browsers were implementing flexbox as the specification for it was evolving. It’s probably best to run this css through something like <a href="https://github.com/postcss/autoprefixer" target="_blank" rel="external">autoprefixer</a>. Using autoprefixer won’t make it work on browsers that don’t support flexbox but will significantly increase platform support.</p>
-<p>First, we set <code>display</code> to <code>flex</code> and add some properties for wrapping and sizing:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.main-preview-player</span> &#123;</div><div class="line">  <span class="attribute">display</span>: flex;</div><div class="line">  <span class="attribute">flex-wrap</span>: wrap;</div><div class="line">  <span class="attribute">justify-content</span>: space-between;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p><code>flex-wrap</code> allows playlist picker to wrap to the next line if the width of the container is too small.<br>Then we want to position the player and playlist picker relative to the container and set some default and minimum sizes:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.video-js</span>,</div><div class="line"><span class="selector-class">.vjs-playlist</span> &#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">  <span class="attribute">min-width</span>: <span class="number">300px</span>;</div><div class="line">  <span class="attribute">min-height</span>: <span class="number">150px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>And finally, we want to apply the flex setting to the player and playlist picker:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.video-js</span> &#123;</div><div class="line">  <span class="attribute">flex</span>: <span class="number">3</span> <span class="number">1</span> <span class="number">70%</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.vjs-playlist</span> &#123;</div><div class="line">  <span class="attribute">flex</span>: <span class="number">1</span> <span class="number">1</span> <span class="number">30%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>This tells the player to grow and take up 3x the space as the playlist picker and defaults to 70% of the width. The playlist picker itself defaults to 30% of the width and is allowed to grow and shrink as necessary.<br>Now if we load this in a browser we see a problem. The playlist isn’t the right height:<br><img src="/Video-js-5-s-fluid-mode-and-playlist-picker/videojs-playlist-small.png" alt=""><br>This is because the playlist-ui plugin sets its own padding on the element that ends up overriding the <code>preview-player-dimensions</code> <code>padding-top</code>. We can fix this by forcing the <code>padding-top</code> we want. However, while this solves our height problem, where are our items? Oh, you need to scroll to get them. That seems less than ideal.<br><img src="/Video-js-5-s-fluid-mode-and-playlist-picker/videojs-playlist-padding.png" alt=""><br>This happens because our <code>padding-top</code> is inside the playlist picker; it pushed all the elements down requiring scrolling to get to them.</p>
-<h3 id="The-final-solution"><a href="/Video-js-5-s-fluid-mode-and-playlist-picker/#The-final-solution" class="headerlink" title="The final solution"></a>The final solution</h3><p>Ultimately, what we need to do is wrap the playlist element in a container that flexes so that the <code>padding-top</code> doesn’t push the playlist items down.<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"playlist-container  preview-player-dimensions vjs-fluid"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">"vjs-playlist"</span>&gt;</span><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>We also change the <code>vjs-playlist</code> references to <code>playlist-container</code> and absolutely position the playlist picker inside its container:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.playlist-container</span> &#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">  <span class="attribute">min-width</span>: <span class="number">300px</span>;</div><div class="line">  <span class="attribute">min-height</span>: <span class="number">150px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.playlist-container</span> &#123;</div><div class="line">  <span class="attribute">flex</span>: <span class="number">1</span> <span class="number">1</span> <span class="number">30%</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.vjs-playlist</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Now we have what we were looking for:<br><img src="/Video-js-5-s-fluid-mode-and-playlist-picker/videojs-with-playlist.png" alt=""></p>
-<h3 id="All-together-now"><a href="/Video-js-5-s-fluid-mode-and-playlist-picker/#All-together-now" class="headerlink" title="All together now"></a>All together now</h3><p><img src="/Video-js-5-s-fluid-mode-and-playlist-picker/responsive-playlist.gif" alt=""><br>The HTML:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">class</span>=<span class="string">"main-preview-player"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">video</span> <span class="attr">id</span>=<span class="string">"preview-player"</span> <span class="attr">class</span>=<span class="string">"video-js vjs-fluid"</span> <span class="attr">controls</span> <span class="attr">preload</span>=<span class="string">"auto"</span> <span class="attr">crossorigin</span>=<span class="string">"anonymous"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"vjs-no-js"</span>&gt;</span>To view this video please enable JavaScript, and consider upgrading to a web browser that <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://videojs.com/html5-video-support/"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>supports HTML5 video<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">video</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"playlist-container  preview-player-dimensions vjs-fluid"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">"vjs-playlist"</span>&gt;</span><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>And the CSS:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.main-preview-player</span> &#123;</div><div class="line">  <span class="attribute">display</span>: flex;</div><div class="line">  <span class="attribute">flex-wrap</span>: wrap;</div><div class="line">  <span class="attribute">justify-content</span>: space-between;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.video-js</span>,</div><div class="line"><span class="selector-class">.playlist-container</span> &#123;</div><div class="line">  <span class="attribute">position</span>: relative;</div><div class="line">  <span class="attribute">min-width</span>: <span class="number">300px</span>;</div><div class="line">  <span class="attribute">min-height</span>: <span class="number">150px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.video-js</span> &#123;</div><div class="line">  <span class="attribute">flex</span>: <span class="number">3</span> <span class="number">1</span> <span class="number">70%</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.playlist-container</span> &#123;</div><div class="line">  <span class="attribute">flex</span>: <span class="number">1</span> <span class="number">1</span> <span class="number">30%</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.vjs-playlist</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">position</span>: absolute;</div><div class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-5-s-fluid-mode-and-playlist-picker/" data-id="cj0shj43y002jineeyb2pdj7t" class="article-share-link">Share</a>
-      
-        <a href="http://blog.videojs.com/Video-js-5-s-fluid-mode-and-playlist-picker/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fluid/">fluid</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/videojs-5/">videojs 5</a></li></ul>
 
     </footer>
   </div>
@@ -865,7 +855,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Flash/" style="font-size: 10px;">Flash</a> <a href="/tags/a11y/" style="font-size: 10px;">a11y</a> <a href="/tags/accessibility/" style="font-size: 10px;">accessibility</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/html5-video/" style="font-size: 13.33px;">html5 video</a> <a href="/tags/middleware/" style="font-size: 10px;">middleware</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18.33px;">news</a> <a href="/tags/plugins/" style="font-size: 10px;">plugins</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 11.67px;">releases</a> <a href="/tags/stats/" style="font-size: 11.67px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 16.67px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
+      <a href="/tags/Flash/" style="font-size: 11.67px;">Flash</a> <a href="/tags/a11y/" style="font-size: 11.67px;">a11y</a> <a href="/tags/accessibility/" style="font-size: 11.67px;">accessibility</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5/" style="font-size: 11.67px;">html5</a> <a href="/tags/html5-video/" style="font-size: 13.33px;">html5 video</a> <a href="/tags/middleware/" style="font-size: 11.67px;">middleware</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18.33px;">news</a> <a href="/tags/plugins/" style="font-size: 11.67px;">plugins</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 11.67px;">releases</a> <a href="/tags/stats/" style="font-size: 11.67px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 16.67px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
     </div>
   </div>
 
@@ -874,7 +864,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
     </div>
   </div>
 
@@ -885,6 +875,10 @@ ga('send', 'pageview');
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/Video-js-6-0-Release/">Video.js 6.0 Release!</a>
+          </li>
         
           <li>
             <a href="/Feature-Spotlight-Middleware/">Feature Spotlight: Middleware</a>
@@ -900,10 +894,6 @@ ga('send', 'pageview');
         
           <li>
             <a href="/Feature-Spotlight-Advanced-Plugins/">Feature Spotlight: Advanced Plugins</a>
-          </li>
-        
-          <li>
-            <a href="/Video-js-6-0-0-RC-0-The-first-RC/">Video.js 6.0.0-RC.0: The first Release Candidate</a>
           </li>
         
       </ul>
