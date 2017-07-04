@@ -28,7 +28,7 @@
   "dependencies": {
     "hexo": "^3.2.2",
     "hexo-cli-extras": "^1.0.3",
-    "hexo-deployer-git": "^0.1.0",
+    "hexo-deployer-git": "gkatsev/hexo-deployer-git#optionally-keep-history",
     "hexo-filter-pathfix": "^0.1.2",
     "hexo-generator-alias": "hexojs/hexo-generator-alias",
     "hexo-generator-archive": "^0.1.4",

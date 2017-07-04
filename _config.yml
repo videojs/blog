@@ -85,3 +85,4 @@ deploy:
   type: git
   repo: git@github.com:videojs/blog.git
   branch: gh-pages
+  keep_history: true
