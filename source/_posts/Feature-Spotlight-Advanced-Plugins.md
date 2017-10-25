@@ -39,12 +39,12 @@ At the lowest level, this included a name change for the plugin registration fun
 Beyond a simple registration method name change, advanced plugins are _class-based_. A trivial example of an advanced plugin might look something like this:
 
 ```js
-const Plugin = videojs.getPlugin('Plugin');
+const Plugin = videojs.getPlugin('plugin');
 
 class HelloWorld extends Plugin {
   constructor(player) {
     super(player);
-    this.addClass('hello-world')
+    this.player.addClass('hello-world');
   }
 }
 
