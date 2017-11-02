@@ -3,8 +3,10 @@ title: Video.js 6.4.0 Release
 author:
   name: Gary Katsevman
   github: gkatsev
+date: 2017-11-02 16:01:38
 tags:
 ---
+
 Hello everyone, it's been a while! Yesterday, I pre-released Video.js 6.4.0. It's a pretty big release with 27 merged Pull Requests from 13 authors and 7 of them were contributors!
 I'd like to thank everyone who contributed but particularly those seven. Six of them made their first PRs with Video.js: [@estim][estim], [@seggev319][seggev319], [@nicolaslevy][nicolaslevy], [@MarcAMo][MarcAMo], [@knilob][knilob], [@odisei369][odisei369]. And [@kocoten1992][kocoten1992] returned with some great PRs to refactor things.
 
