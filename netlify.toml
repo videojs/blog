@@ -1,0 +1,14 @@
+# Netlify settings for generating the site
+[build]
+  publish = "/blog"
+  command = "hexo generate"
+
+# Deploy Preview context, i.e., for PRs
+[context.deploy-preview.environment]
+  command = "hexo generate --draft"
+
+# Branch Deploy context
+[context.branch-deploy]
+  command = "hexo generate --draft"
+
+
