@@ -25,7 +25,7 @@ You can get these releases on [GitHub Releases](https://github.com/videojs/video
 - Video.js will now warn when the element it is given isn't in the DOM. This was done as part of a "first-timers-only" issue which we hope to do more off in the future.
 
 ## Google Analytics note
-We've updated the [README][readme] of the project to be explicit about our usage of Google Analytics on the `vjs.zencdn.net` hosted version of Video.js. It is a stripped down version of the [Google Analytics pixel](https://github.com/videojs/cdn/blob/master/src/analytics.js) and sends data on %1 of those loads.
+We've updated the [README][readme] of the project to be explicit about our usage of Google Analytics on the `vjs.zencdn.net` hosted version of Video.js. It is a stripped down version of the [Google Analytics pixel](https://github.com/videojs/cdn/blob/master/src/analytics.js) and sends data on 1% of those loads.
 It can be opted out of by adding the following to the page before the `zencdn`-hosted version of Video.js is loaded
 ```html
 <script>window.HELP_IMPROVE_VIDEOJS = false;</script>
