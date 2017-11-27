@@ -7,7 +7,7 @@ tags:
 ---
 
 November 17th marked the pre-release of Video.js 6.5.0. It comes shortly after the [release of 6.4.0][640], which has now been promoted to latest! This is a pretty exciting release because we finally got our own element! I like to call it the I Can't Believe It's Not Custom Elements because it isn't an actual custom element but it's not a standard HTML element either. Also, a nice and smooth progress bar thanks to a first time contributor; thanks [@vhmth][vhmth]!. A pretty major memory leak fix, and many code refactors and bug fixes.
-I'd like to thank everyone who contributed and the four first time contributors to Video.js: [@vhmth][vhmth], [@FirefoxMetzger][FirefoxMetzger], [@EhsanCh][EhsanCh], and [@][shahlabs].
+I'd like to thank everyone who contributed and the four first time contributors to Video.js: [@vhmth][vhmth], [@FirefoxMetzger][FirefoxMetzger], [@EhsanCh][EhsanCh], and [@shahlabs][shahlabs].
 This post comes a week late because it was Thanksgiving week in the US after release and I was on break, if you celebrate Turkey day 🦃, hope you had a good one!
 
 
@@ -84,8 +84,8 @@ This post comes a week late because it was Thanksgiving week in the US after rel
 [FirefoxMetzger]: https://github.com/FirefoxMetzger
 [EhsanCh]: https://github.com/EhsanCh
 [shahlabs]: https://github.com/shahlabs
-[kocoten1992]: https:github.com/kocoten1992
-[odisei369]: https:github.com/odisei369
-[brandonocasey]: https:github.com/brandonocasey
-[arski]: https:github.com/arski
-[misteroneill]: https:github.com/misteroneill
+[kocoten1992]: https://github.com/kocoten1992
+[odisei369]: https://github.com/odisei369
+[brandonocasey]: https://github.com/brandonocasey
+[arski]: https://github.com/arski
+[misteroneill]: https://github.com/misteroneill
