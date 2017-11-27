@@ -20,7 +20,7 @@ This post comes a week late because it was Thanksgiving week in the US after rel
 * Many code refactorings from our old code style to the new one by [@kocoten1992][kocoten1992]!
 * Previously, you could accidentally seek or toggle playback using the middle or right clicks. Now, just go ahead and try it!
 * An accessibility fix with regards to title tooltips and menu items.
-* Better handling of `play()` in our new asynchrounous world, especially immediately after changing the source.
+* Better handling of `play()` in our new asynchronous world, especially immediately after changing the source.
 
 ## Committers
 * Vinay [@vhmth][vhmth] First PR
