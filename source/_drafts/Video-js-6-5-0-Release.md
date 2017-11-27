@@ -19,7 +19,7 @@ This post comes a week late because it was Thanksgiving week in the US after rel
 * After much spelunking in the code base and developer tools, we've plugged most of the memory leaks with retained DOM elements in Video.js!
 * Many code refactorings from our old code style to the new one by [@kocoten1992][kocoten1992]!
 * Previously, you could accidentally seek or toggle playback using the middle or right clicks. Now, just go ahead and try it!
-* An accessibility fix with regards to title tooltpis and menu items.
+* An accessibility fix with regards to title tooltips and menu items.
 * Better handling of `play()` in our new asynchrounous world, especially immediately after changing the source.
 
 ## Committers
