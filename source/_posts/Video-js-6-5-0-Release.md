@@ -13,7 +13,7 @@ I'd like to thank everyone who contributed and the four first time contributors 
 This post comes a week late because it was Thanksgiving week in the US after release and I was on break, if you celebrate Turkey day 🦃, hope you had a good one!
 
 
-## Noteable Changes
+## Notable Changes
 * I Can't Believe It's Not Custom Elements with a `<video-js>` element. It works exactly like the `<video>` embed but without requiring you to use the `<video>` element and the benefits and drawbacks that come with it. It also adds the `video-js` class name automatically for you, so, there's no need to add it.
 * A smooth progress bar!
 ![before the change](./before.gif)

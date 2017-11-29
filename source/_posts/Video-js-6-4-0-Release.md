@@ -15,7 +15,7 @@ In this release, we fixed a bunch of bugs, refactored some things, updated some 
 As with other releases, this is released as `next` for a short while before being promoted to `latest`.
 You can get these releases on [GitHub Releases](https://github.com/videojs/video.js/releases/tag/v6.4.0) or from [npm](https://www.npmjs.com/package/video.js)
 
-## Noteable Changes
+## Notable Changes
 - Hebrew translations are now available. Russian and Polish translations were updated as well.
 - The Progress Control can now be disabled. This is useful for when you don't want users to be able to interact with it but still want to show play progress.
   - The Progress Control will also be fully filled out when the video ends so that we aren't slightly short or long due to weirdnesses in duration and currentTime.
