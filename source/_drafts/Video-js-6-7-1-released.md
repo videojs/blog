@@ -12,6 +12,8 @@ Video.js 6.7.1 was released this week. This comes a month and a half since the f
 - a new mediator type for middleware
 - `getPlayer` and `getAllPlayers` helper on `videojs`.
 
+## Netlify
+
 Recently, we also switched over all our online properties to run on [Netlify][]. This is great because it lets gave us HTTPS via Let's Encyrpt but also allowed us much better automation for the website, docs website, and blog. Since the docs website is tied to the main Video.js repo and has a build per PR, we also had netlify generate an example page for the PR based on the sandbox examples. [Here's the example page][example] for a [recent PR][].
 
 ## `playerresize`
