@@ -25,7 +25,7 @@ Also, I wanted to note that the `resize` player event does not refer to the size
 ## Mediator type for middleware
 
 This is the first major feature for middleware since they were released in 6.0. The  main reason for the mediator is for middleware to be able to cancel requests to `play()`. Thus, they are currently limited to `play()` and `pause()` calls currently. Once we iron out the details we hope to enable it for further functionality.
-The mediator middleware allows you to intercept the calls to the mediator methods, like `play()`, and then prevent the calls from occuring on the tech. This is important for methods like `play()` because while calling `pause()` immediately after `play()` may succeed in "cancelling" playback, it also has some unitended side-effects in a few cases. The mediator middleware can decide whether `play()` should go through, thus eliminating the need to call `pause()`. Afterwards, all middleware will be notified whether the call was terminated or it will be given the return value. In the case of `play()`, it will be the play promise itself.
+The mediator middleware allows you to intercept the calls to the mediator methods, like `play()`, and then prevent the calls from occuring on the tech. This is important for methods like `play()` because while calling `pause()` immediately after `play()` may succeed in "cancelling" playback, it also has some unintended side-effects in a few cases. The mediator middleware can decide whether `play()` should go through, thus eliminating the need to call `pause()`. Afterwards, all middleware will be notified whether the call was terminated or it will be given the return value. In the case of `play()`, it will be the play promise itself.
 
 Here's a simple example:
 ```js
