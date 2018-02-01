@@ -14,7 +14,7 @@ Video.js 6.7.1 was released this week. This comes a month and a half since the f
 
 ## Netlify
 
-Recently, we also switched over all our online properties to run on [Netlify][]. This is great because it gives us HTTPS via Let's Encrypt but also allowes us much better automation for the website, docs website, and blog. Since the docs website is tied to the main Video.js repo and has a build per PR, we also had Netlify generate an example page for the PR based on the sandbox examples. [Here's the example page][example] for a [recent PR][].
+Recently, we also switched over all our online properties to run on [Netlify][]. This is great because it gives us HTTPS via Let's Encrypt but also allows us much better automation for the website, docs website, and blog. Since the docs website is tied to the main Video.js repo and has a build per PR, we also had Netlify generate an example page for the PR based on the sandbox examples. [Here's the example page][example] for a [recent PR][].
 
 ## `playerresize`
 
