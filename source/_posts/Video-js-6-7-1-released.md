@@ -3,8 +3,10 @@ title: Video.js 6.7.1 released
 author:
   name: Gary Katsevman
   github: gkatsev
+date: 2018-02-01 15:40:55
 tags:
 ---
+
 Video.js 6.7.1 was released this week. This comes a month and a half since the first [6.6.0 release][6.6.0] (which we forgot to blog about) and only a week since the latest patch release ([6.6.3][], which is now latest).
 
 6.7 has two awesome new features and a couple helpers:
