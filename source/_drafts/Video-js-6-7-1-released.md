@@ -20,6 +20,7 @@ Recently, we also switched over all our online properties to run on [Netlify][].
 
 This new event will fire each time the player is resized. It will fire when going fullscreen and when exiting fullscreen and when resizing the player via the dimension methods or if the player is in fluid mode and the window is resized.
 It uses the new [ResizeObserver][] in Chrome 64 and where-ever it is available. If it isn't available, a polyfill can be passed in or it will use its fallback. The fallback uses an absolutely positioned, hidden iframe that's the size of the player and then retriggers the iframe's `resize` event on a debounced handler.
+Also, I wanted to note that the `resize` player event does not refer to the size of the player itself but rather to the native [`resize` event][resize], which is triggered when the videoHeight or videoWidth has changed.
 
 ## Mediator type for middleware
 
@@ -107,3 +108,4 @@ These are to make it easier to manage your players and reduce unintended side-ef
 [misteroneill]: https://github.com/misteroneill
 [mister-ben]: https://github.com/mister-ben
 [ldayananda]: https://github.com/ldayananda
+[resize]: https://html.spec.whatwg.org/multipage/media.html#event-media-resize
