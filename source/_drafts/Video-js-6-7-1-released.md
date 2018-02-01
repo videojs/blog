@@ -14,16 +14,16 @@ Video.js 6.7.1 was released this week. This comes a month and a half since the f
 
 ## Netlify
 
-Recently, we also switched over all our online properties to run on [Netlify][]. This is great because it lets gave us HTTPS via Let's Encyrpt but also allowed us much better automation for the website, docs website, and blog. Since the docs website is tied to the main Video.js repo and has a build per PR, we also had netlify generate an example page for the PR based on the sandbox examples. [Here's the example page][example] for a [recent PR][].
+Recently, we also switched over all our online properties to run on [Netlify][]. This is great because it gives us HTTPS via Let's Encrypt but also allowes us much better automation for the website, docs website, and blog. Since the docs website is tied to the main Video.js repo and has a build per PR, we also had Netlify generate an example page for the PR based on the sandbox examples. [Here's the example page][example] for a [recent PR][].
 
 ## `playerresize`
 
 This new event will fire each time the player is resized. It will fire when going fullscreen and when exiting fullscreen and when resizing the player via the dimension methods or if the player is in fluid mode and the window is resized.
 It uses the new [ResizeObserver][] in Chrome 64 and where-ever it is available. If it isn't available, a polyfill can be passed in or it will use its fallback. The fallback uses an absolutely positioned, hidden iframe that's the size of the player and then retriggers the iframe's `resize` event on a debounced handler.
 
-## mediator type for middleware
+## Mediator type for middleware
 
-This is the first major feature for middleware since they were released in 6.0. The Mediator main reason for the mediator is for middleware to be able to cancel requests to `play()`. Thus, they are currently limietd to `play()` and `pause()` calls currently. Once we iron out the details we hope to enable it for further functionality.
+This is the first major feature for middleware since they were released in 6.0. The  main reason for the mediator is for middleware to be able to cancel requests to `play()`. Thus, they are currently limited to `play()` and `pause()` calls currently. Once we iron out the details we hope to enable it for further functionality.
 The mediator middleware basically allows you to intercept the calls to the mediator methods and then prevent the calls from occuring on the tech. This is important for methods like `play()` because calling `pause()` immediately after a call to `play()`, while may work in a lot of circumstances, definitely has some unintended side-effects in some corner cases. After the mediators decide whether they want the call to `play()` to proceed, they'll be notified whether call terminated or they will be given the return value of the call on the tech, in the case of `play()` it will be the play promise itself.
 Here's a simple example:
 ```js
@@ -49,7 +49,7 @@ videojs.use('*', (player) => ({
 });
 ```
 
-## player helpers
+## Player helpers
 
 These are to make it easier to manage your players and reduce unintended side-effects. A lot of times, a player is being created automatically via `data-setup` but then to refer to it via code, `videojs()` is called. In some cases, this will actually initialize the player because it ended up running before the auto setup. Now, `videojs.getPlayer()` can be used instead and it will never create the player. It is the preferred way of getting the player once it has been created.
 `videojs.getAllPlayers()` is just a nice way of getting a list of all the players that are currently available on the page.
