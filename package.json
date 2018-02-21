@@ -11,8 +11,7 @@
     "draft": "hexo new draft",
     "publish": "hexo publish",
     "hexo": "hexo",
-    "dev": "hexo server --drafts",
-    "release": "hexo clean && hexo g -d"
+    "start": "hexo server --drafts"
   },
   "repository": {
     "type": "git",
