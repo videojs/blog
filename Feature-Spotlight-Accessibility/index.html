@@ -6,14 +6,16 @@
   <title>Feature Spotlight: Accessibility | Video.js Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Accessibility! The most important feature you never knew about.In the Video.js organization we try hard to have good accessibility. Like most other software, any change can affect the system in uninte">
+<meta name="keywords" content="video.js 6.0,accessibility,a11y">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Feature Spotlight: Accessibility">
 <meta property="og:url" content="http://blog.videojs.com/Feature-Spotlight-Accessibility/index.html">
 <meta property="og:site_name" content="Video.js Blog">
 <meta property="og:description" content="Accessibility! The most important feature you never knew about.In the Video.js organization we try hard to have good accessibility. Like most other software, any change can affect the system in uninte">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="http://blog.videojs.com/Feature-Spotlight-Accessibility/before-the-fix.gif">
 <meta property="og:image" content="http://blog.videojs.com/Feature-Spotlight-Accessibility/after-the-fix.gif">
-<meta property="og:updated_time" content="2017-02-03T20:13:43.000Z">
+<meta property="og:updated_time" content="2017-09-07T20:00:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Feature Spotlight: Accessibility">
 <meta name="twitter:description" content="Accessibility! The most important feature you never knew about.In the Video.js organization we try hard to have good accessibility. Like most other software, any change can affect the system in uninte">
@@ -73,7 +75,7 @@ ga('send', 'pageview');
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.videojs.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.videojs.com"></form>
       </div>
     </div>
   </div>
@@ -127,10 +129,10 @@ ga('send', 'pageview');
 <li>You have to add a <code>tabIndex</code> which will allow the <code>div</code> to be navigated to using the <code>tab</code> key</li>
 <li>You have to add handling for the space and enter key that press the button</li>
 </ul>
-<blockquote class="pullquote right"><p>A list of <code>role</code> attribute values can be found on <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Composite_roles" target="_blank" rel="external">Mozilla Developer Network</a>.</p>
+<blockquote class="pullquote right"><p>A list of <code>role</code> attribute values can be found on <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Composite_roles" target="_blank" rel="noopener">Mozilla Developer Network</a>.</p>
 </blockquote>
 <p>After mimicking or adding native accessibility on the controls and content in your webpage, the next thing to look over are <code>aria</code> attributes. For instance, we use <code>aria-live=&quot;polite&quot;</code> for our <code>ProgressBar</code> slider. By default <code>aria-live</code> is set <code>off</code>, which means updates to controls should not be read to the user unless they un-focus and re-focus an element. The value of <code>polite</code> which we use allows us to convey the position of the slider to screen reader without them having to change focus on the control. This is useful because the <code>ProgressBar</code> is always updating while a video is playing. A value of <code>polite</code> will also wait to convey said updates until the screen reader is done reading other information to the user.</p>
-<blockquote class="pullquote right"><p>For a more complete list of <a href="https://www.w3.org/TR/wai-aria-1.1/" target="_blank" rel="external">ARIA attributes see the specification</a>.</p>
+<blockquote class="pullquote right"><p>For a more complete list of <a href="https://www.w3.org/TR/wai-aria-1.1/" target="_blank" rel="noopener">ARIA attributes see the specification</a>.</p>
 </blockquote>
 <p>Finally you need to add an accessible “name” to an element so that it can be referred to. A good example of this is can be seen in the <code>MuteToggle</code> control. Since it is not a simple “button” we include <code>innerHTML</code>/<code>innerText</code> of “Mute” or “Unmute” in a way that is hidden from most users but announced to screen readers. In Video.js we refer to the accessible name and the action that a control performs as “control text”. Control text also updates the <code>title</code> attribute of an element in most cases, which is important for visual accessibility. When the action the a control performs changes so does the control text. This will allow the screen reader to refer to the <code>MuteToggle</code> as “Mute Toggle” rather than “button”. It will also convey the current action of the <code>MuteToggle</code>. In this case that will be either “Mute” or “Unmute” depending on what the button would do when pressed (ie the state of the button).</p>
 <p>Here are some examples of accessibility straight from Video.js:</p>
@@ -159,27 +161,27 @@ ga('send', 'pageview');
 <p>The solution to this problem was to use a regular <code>div</code> to house the <code>MuteToggle</code> and <code>VolumeControl</code>. This regular <code>div</code> would have no role or control text so that it would be invisible to a screen reader. From that point forward we just needed to mimic the old UI. For those who are wondering, this new <code>Component</code> is called the <code>VolumePanel</code>. See the new behavior in a gif below:</p>
 <p><img src="/Feature-Spotlight-Accessibility/after-the-fix.gif" alt="macOS `VoiceOver` After The Fix"></p>
 <h3 id="Outlines"><a href="/Feature-Spotlight-Accessibility/#Outlines" class="headerlink" title="Outlines"></a>Outlines</h3><p>Another big accessibility fix for controls comes from the removal of one small css rule:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">outline</span>: <span class="selector-tag">none</span>;</div></pre></td></tr></table></figure>
-<p>Why did we do it? With feedback from the community and <a href="http://www.outlinenone.com/" target="_blank" rel="external">external resources</a>, we learned that outlines should always be on. Without outlines there is no visual indication of keyboard focus on control elements and without that, keyboard users who are not visually impaired have a hard time using the controls.</p>
-<h3 id="Wrap-up"><a href="/Feature-Spotlight-Accessibility/#Wrap-up" class="headerlink" title="Wrap up"></a>Wrap up</h3><p>Hopefully this post has given you some insight into making a web application accessible. If you find any issues or have any suggestions for our accessibility or in general feel free to <a href="https://github.com/videojs/video.js/blob/master/CONTRIBUTING.md" target="_blank" rel="external">contribute to Video.js</a>.</p>
-<p>If you want to keep up to date on the current state of accessibility work see the a11y label on <a href="https://github.com/videojs/video.js/pulls?q=is%3Apr+is%3Aopen+label%3Aa11y" target="_blank" rel="external">PRs</a> and <a href="https://github.com/videojs/video.js/issues?q=is%3Aissue+is%3Aopen+label%3Aa11y" target="_blank" rel="external">issues</a>.</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">outline</span>: <span class="selector-tag">none</span>;</span><br></pre></td></tr></table></figure>
+<p>Why did we do it? With feedback from the community and <a href="http://www.outlinenone.com/" target="_blank" rel="noopener">external resources</a>, we learned that outlines should always be on. Without outlines there is no visual indication of keyboard focus on control elements and without that, keyboard users who are not visually impaired have a hard time using the controls.</p>
+<h3 id="Wrap-up"><a href="/Feature-Spotlight-Accessibility/#Wrap-up" class="headerlink" title="Wrap up"></a>Wrap up</h3><p>Hopefully this post has given you some insight into making a web application accessible. If you find any issues or have any suggestions for our accessibility or in general feel free to <a href="https://github.com/videojs/video.js/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">contribute to Video.js</a>.</p>
+<p>If you want to keep up to date on the current state of accessibility work see the a11y label on <a href="https://github.com/videojs/video.js/pulls?q=is%3Apr+is%3Aopen+label%3Aa11y" target="_blank" rel="noopener">PRs</a> and <a href="https://github.com/videojs/video.js/issues?q=is%3Aissue+is%3Aopen+label%3Aa11y" target="_blank" rel="noopener">issues</a>.</p>
 <h3 id="Resources"><a href="/Feature-Spotlight-Accessibility/#Resources" class="headerlink" title="Resources"></a>Resources</h3><p>Here are some popular screen readers that are actually used in the wild:</p>
 <ul>
-<li><a href="http://www.apple.com/accessibility/mac/vision/" target="_blank" rel="external">VoiceOver for macOS</a></li>
-<li><a href="https://www.freedomscientific.com/Downloads/JAWS" target="_blank" rel="external">JAWS for Windows</a></li>
-<li><a href="http://www.nvaccess.org/" target="_blank" rel="external">NVDA for Windows</a></li>
+<li><a href="http://www.apple.com/accessibility/mac/vision/" target="_blank" rel="noopener">VoiceOver for macOS</a></li>
+<li><a href="https://www.freedomscientific.com/Downloads/JAWS" target="_blank" rel="noopener">JAWS for Windows</a></li>
+<li><a href="http://www.nvaccess.org/" target="_blank" rel="noopener">NVDA for Windows</a></li>
 </ul>
 <p>Resources for learning more about web accessibility:</p>
 <ul>
-<li><a href="http://webaim.org/" target="_blank" rel="external">WebAIM</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank" rel="external">Mozilla Developer Network</a></li>
-<li><a href="http://www.outlinenone.com/" target="_blank" rel="external">Outline None</a></li>
+<li><a href="http://webaim.org/" target="_blank" rel="noopener">WebAIM</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank" rel="noopener">Mozilla Developer Network</a></li>
+<li><a href="http://www.outlinenone.com/" target="_blank" rel="noopener">Outline None</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Feature-Spotlight-Accessibility/" data-id="cj142yafg000fsveeok9rvb7x" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Feature-Spotlight-Accessibility/" data-id="cjdxbwqz0000n9znsytd9gaui" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Feature-Spotlight-Accessibility/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -230,7 +232,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/a11y/">a11y</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/accessibility/">accessibility</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hls/">hls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5/">html5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/middleware/">middleware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mse/">mse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugins/">plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thumbcoil/">thumbcoil</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/a11y/">a11y</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/accessibility/">accessibility</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hls/">hls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5/">html5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/middleware/">middleware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mse/">mse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugins/">plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thumbcoil/">thumbcoil</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr-360-plugins/">vr, 360, plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
     </div>
   </div>
 
@@ -240,7 +242,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Flash/" style="font-size: 11.67px;">Flash</a> <a href="/tags/a11y/" style="font-size: 11.67px;">a11y</a> <a href="/tags/accessibility/" style="font-size: 11.67px;">accessibility</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5/" style="font-size: 11.67px;">html5</a> <a href="/tags/html5-video/" style="font-size: 13.33px;">html5 video</a> <a href="/tags/middleware/" style="font-size: 11.67px;">middleware</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18.33px;">news</a> <a href="/tags/plugins/" style="font-size: 11.67px;">plugins</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 11.67px;">releases</a> <a href="/tags/stats/" style="font-size: 11.67px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 16.67px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
+      <a href="/tags/Flash/" style="font-size: 11.67px;">Flash</a> <a href="/tags/a11y/" style="font-size: 11.67px;">a11y</a> <a href="/tags/accessibility/" style="font-size: 11.67px;">accessibility</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5/" style="font-size: 11.67px;">html5</a> <a href="/tags/html5-video/" style="font-size: 13.33px;">html5 video</a> <a href="/tags/middleware/" style="font-size: 11.67px;">middleware</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18.33px;">news</a> <a href="/tags/plugins/" style="font-size: 11.67px;">plugins</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 11.67px;">releases</a> <a href="/tags/stats/" style="font-size: 11.67px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 16.67px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/vr-360-plugins/" style="font-size: 10px;">vr, 360, plugins</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
     </div>
   </div>
 
@@ -249,7 +251,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
     </div>
   </div>
 
@@ -262,23 +264,23 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/videojs-vr-now-under-the-video-js-org/">videojs-vr Is Now Under The Video.js Org</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-6-7-1-released/">Video.js 6.7.1 released</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-6-5-0-Release/">Video.js 6.5.0 Release</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-6-4-0-Release/">Video.js 6.4.0 Release</a>
+          </li>
+        
+          <li>
             <a href="/Video-js-6-0-Release/">Video.js 6.0 Release!</a>
-          </li>
-        
-          <li>
-            <a href="/Feature-Spotlight-Middleware/">Feature Spotlight: Middleware</a>
-          </li>
-        
-          <li>
-            <a href="/Video-js-removes-Flash-from-core-player/">Video.js removes Flash from core player</a>
-          </li>
-        
-          <li>
-            <a href="/Feature-Spotlight-Accessibility/">Feature Spotlight: Accessibility</a>
-          </li>
-        
-          <li>
-            <a href="/Feature-Spotlight-Advanced-Plugins/">Feature Spotlight: Advanced Plugins</a>
           </li>
         
       </ul>
@@ -293,7 +295,7 @@ ga('send', 'pageview');
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
+      &copy; 2018 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Video.js 6.4.0 Release | Video.js Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hello everyone, it’s been a while! Yesterday, I pre-released Video.js 6.4.0. It’s a pretty big release with 27 merged Pull Requests from 13 authors and 7 of them were contributors!I’d like to thank ev">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Video.js 6.4.0 Release">
+<meta property="og:url" content="http://blog.videojs.com/Video-js-6-4-0-Release/index.html">
+<meta property="og:site_name" content="Video.js Blog">
+<meta property="og:description" content="Hello everyone, it’s been a while! Yesterday, I pre-released Video.js 6.4.0. It’s a pretty big release with 27 merged Pull Requests from 13 authors and 7 of them were contributors!I’d like to thank ev">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-02-21T16:56:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Video.js 6.4.0 Release">
+<meta name="twitter:description" content="Hello everyone, it’s been a while! Yesterday, I pre-released Video.js 6.4.0. It’s a pretty big release with 27 merged Pull Requests from 13 authors and 7 of them were contributors!I’d like to thank ev">
+  
+    <link rel="alternate" href="/rss" title="Video.js Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-16505296-4', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Video.js Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/rss" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.videojs.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Video-js-6-4-0-Release" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  <a href="https://github.com/gkatsev" class="article-author">
+  <img src="https://github.com/gkatsev.png?size=30" class="author_gravatar" height="30">
+  <span class="author_name">Gary Katsevman</span>
+
+
+    <a href="/Video-js-6-4-0-Release/" class="article-date">
+  <time datetime="2017-11-02T20:01:38.000Z" itemprop="datePublished">2017-11-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Video.js 6.4.0 Release
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hello everyone, it’s been a while! Yesterday, I pre-released Video.js 6.4.0. It’s a pretty big release with 27 merged Pull Requests from 13 authors and 7 of them were contributors!<br>I’d like to thank everyone who contributed but particularly those seven. Six of them made their first PRs with Video.js: <a href="https://github.com/estim" target="_blank" rel="noopener">@estim</a>, <a href="https://github.com/seggev319" target="_blank" rel="noopener">@seggev319</a>, <a href="https://github.com/nicolaslevy" target="_blank" rel="noopener">@nicolaslevy</a>, <a href="https://github.com/MarcAMo" target="_blank" rel="noopener">@MarcAMo</a>, <a href="https://github.com/knilob" target="_blank" rel="noopener">@knilob</a>, <a href="https://github.com/odisei369" target="_blank" rel="noopener">@odisei369</a>. And <a href="https://github.com/kocoten1992" target="_blank" rel="noopener">@kocoten1992</a> returned with some great PRs to refactor things.</p>
+<p>In this release, we fixed a bunch of bugs, refactored some things, updated some tests. We also added some new features.</p>
+<p>As with other releases, this is released as <code>next</code> for a short while before being promoted to <code>latest</code>.<br>You can get these releases on <a href="https://github.com/videojs/video.js/releases/tag/v6.4.0" target="_blank" rel="noopener">GitHub Releases</a> or from <a href="https://www.npmjs.com/package/video.js" target="_blank" rel="noopener">npm</a></p>
+<h2 id="Notable-Changes"><a href="/Video-js-6-4-0-Release/#Notable-Changes" class="headerlink" title="Notable Changes"></a>Notable Changes</h2><ul>
+<li>Hebrew translations are now available. Russian and Polish translations were updated as well.</li>
+<li>The Progress Control can now be disabled. This is useful for when you don’t want users to be able to interact with it but still want to show play progress.<ul>
+<li>The Progress Control will also be fully filled out when the video ends so that we aren’t slightly short or long due to weirdnesses in duration and currentTime.</li>
+</ul>
+</li>
+<li>It’s now possible to add a <code>hook</code> that gets automatically removed once called with <code>hookOnce</code>. This mirrors our <code>on</code> and <code>once</code> event methods.</li>
+<li>If controls are disabled before the modal dialog is opened, the controls stay closed when the dialog is closed.</li>
+<li><code>player.src()</code> will now return an empty string when no source is set to match <code>player.currentSrc()</code> and the native video element.</li>
+<li>Video.js will now warn when the element it is given isn’t in the DOM. This was done as part of a “first-timers-only” issue which we hope to do more off in the future.</li>
+</ul>
+<h2 id="Google-Analytics-note"><a href="/Video-js-6-4-0-Release/#Google-Analytics-note" class="headerlink" title="Google Analytics note"></a>Google Analytics note</h2><p>We’ve updated the <a href="https://github.com/videojs/video.js#quick-start" target="_blank" rel="noopener">README</a> of the project to be explicit about our usage of Google Analytics on the <code>vjs.zencdn.net</code> hosted version of Video.js. It is a stripped down version of the <a href="https://github.com/videojs/cdn/blob/master/src/analytics.js" target="_blank" rel="noopener">Google Analytics pixel</a> and sends data on 1% of those loads.<br>It can be opted out of by adding the following to the page before the <code>zencdn</code>-hosted version of Video.js is loaded<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"><span class="built_in">window</span>.HELP_IMPROVE_VIDEOJS = <span class="literal">false</span>;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>Our GitHub releases and npm releases <em>do not</em> include Google Analytics. Neither do 3rd-party CDNs like unpkg or CDNjs.</p>
+<h2 id="Committers"><a href="/Video-js-6-4-0-Release/#Committers" class="headerlink" title="Committers"></a>Committers</h2><ul>
+<li>Gary Katsevman <a href="https://github.com/gkatsev" target="_blank" rel="noopener">@gkatsev</a></li>
+<li>Pat O’Neill <a href="https://github.com/misteroneill" target="_blank" rel="noopener">@misteroneill</a></li>
+<li>Brandon Casey <a href="https://github.com/BrandonOCasey" target="_blank" rel="noopener">@BrandonOCasey</a></li>
+<li><a href="https://github.com/estim" target="_blank" rel="noopener">@estim</a> First PR</li>
+<li><a href="https://github.com/seggev319" target="_blank" rel="noopener">@seggev319</a> First PR</li>
+<li><a href="https://github.com/mister-ben" target="_blank" rel="noopener">@mister-ben</a></li>
+<li>Chuong <a href="https://github.com/kocoten1992" target="_blank" rel="noopener">@kocoten1992</a></li>
+<li>Nicolas Levy <a href="https://github.com/nicolaslevy" target="_blank" rel="noopener">@nicolaslevy</a> First PR</li>
+<li>Marc A. Modrow <a href="https://github.com/MarcAMo" target="_blank" rel="noopener">@MarcAMo</a> First two PRs</li>
+<li>Matt McClure <a href="https://github.com/mmcc" target="_blank" rel="noopener">@mmcc</a></li>
+<li>Bo Link <a href="https://github.com/knilob" target="_blank" rel="noopener">@knilob</a> First PR</li>
+<li>Joe Forbes <a href="https://github.com/forbesjo" target="_blank" rel="noopener">@forbesjo</a></li>
+<li>Ilya Piatrenka <a href="https://github.com/odisei369" target="_blank" rel="noopener">@odisei369</a> First PR</li>
+</ul>
+<h2 id="Full-Changelog"><a href="/Video-js-6-4-0-Release/#Full-Changelog" class="headerlink" title="Full Changelog"></a>Full Changelog</h2><p><a name="6.4.0"></a></p>
+<h3 id="6-4-0-2017-11-01"><a href="/Video-js-6-4-0-Release/#6-4-0-2017-11-01" class="headerlink" title="6.4.0 (2017-11-01)"></a><a href="https://github.com/videojs/video.js/compare/v6.3.3...v6.4.0" target="_blank" rel="noopener">6.4.0</a> (2017-11-01)</h3><h3 id="Features"><a href="/Video-js-6-4-0-Release/#Features" class="headerlink" title="Features"></a>Features</h3><ul>
+<li><strong>lang:</strong> add Hebrew translation (<a href="https://github.com/videojs/video.js/issues/4675" target="_blank" rel="noopener">#4675</a>) (<a href="https://github.com/videojs/video.js/commit/32caf35" target="_blank" rel="noopener">32caf35</a>)</li>
+<li><strong>lang:</strong> Update for Russian translation (<a href="https://github.com/videojs/video.js/issues/4663" target="_blank" rel="noopener">#4663</a>) (<a href="https://github.com/videojs/video.js/commit/45e21fd" target="_blank" rel="noopener">45e21fd</a>)</li>
+<li>Add videojs.hookOnce method to allow single-run hooks. (<a href="https://github.com/videojs/video.js/issues/4672" target="_blank" rel="noopener">#4672</a>) (<a href="https://github.com/videojs/video.js/commit/85fe685" target="_blank" rel="noopener">85fe685</a>)</li>
+<li>add warning if the element given to Video.js is not in the DOM (<a href="https://github.com/videojs/video.js/issues/4698" target="_blank" rel="noopener">#4698</a>) (<a href="https://github.com/videojs/video.js/commit/6f713ca" target="_blank" rel="noopener">6f713ca</a>)</li>
+<li>allow progress controls to be disabled (<a href="https://github.com/videojs/video.js/issues/4649" target="_blank" rel="noopener">#4649</a>) (<a href="https://github.com/videojs/video.js/commit/a3c254e" target="_blank" rel="noopener">a3c254e</a>)</li>
+<li>set the play progress seek bar to 100% on ended (<a href="https://github.com/videojs/video.js/issues/4648" target="_blank" rel="noopener">#4648</a>) (<a href="https://github.com/videojs/video.js/commit/5e9655f" target="_blank" rel="noopener">5e9655f</a>)</li>
+</ul>
+<h3 id="Bug-Fixes"><a href="/Video-js-6-4-0-Release/#Bug-Fixes" class="headerlink" title="Bug Fixes"></a>Bug Fixes</h3><ul>
+<li><strong>css:</strong> update user-select none (<a href="https://github.com/videojs/video.js/issues/4678" target="_blank" rel="noopener">#4678</a>) (<a href="https://github.com/videojs/video.js/commit/43ddc72" target="_blank" rel="noopener">43ddc72</a>)</li>
+<li>aria-labelledby attribute has an extra space (<a href="https://github.com/videojs/video.js/issues/4708" target="_blank" rel="noopener">#4708</a>) (<a href="https://github.com/videojs/video.js/commit/855adf3" target="_blank" rel="noopener">855adf3</a>), closes <a href="https://github.com/videojs/video.js/issues/4688" target="_blank" rel="noopener">#4688</a></li>
+<li>Don’t enable player controls if they where disabled when ModalDialog closes. (<a href="https://github.com/videojs/video.js/issues/4690" target="_blank" rel="noopener">#4690</a>) (<a href="https://github.com/videojs/video.js/commit/afea980" target="_blank" rel="noopener">afea980</a>)</li>
+<li>don’t throttle duration change updates (<a href="https://github.com/videojs/video.js/issues/4635" target="_blank" rel="noopener">#4635</a>) (<a href="https://github.com/videojs/video.js/commit/9cf9800" target="_blank" rel="noopener">9cf9800</a>)</li>
+<li>Events#off threw if Object.prototype had extra enumerable properties, don’t remove all events if off receives a falsey value (<a href="https://github.com/videojs/video.js/issues/4669" target="_blank" rel="noopener">#4669</a>) (<a href="https://github.com/videojs/video.js/commit/7963913" target="_blank" rel="noopener">7963913</a>)</li>
+<li>make parseUrl helper always have a protocl (<a href="https://github.com/videojs/video.js/issues/4673" target="_blank" rel="noopener">#4673</a>) (<a href="https://github.com/videojs/video.js/commit/bebca9c" target="_blank" rel="noopener">bebca9c</a>), closes <a href="https://github.com/videojs/video.js/issues/3100" target="_blank" rel="noopener">#3100</a></li>
+<li>Make sure we remove vjs-ended from the play toggle in all appropriate cases. (<a href="https://github.com/videojs/video.js/issues/4661" target="_blank" rel="noopener">#4661</a>) (<a href="https://github.com/videojs/video.js/commit/0287f6e" target="_blank" rel="noopener">0287f6e</a>)</li>
+<li>player.src() should return empty string if no source is set (<a href="https://github.com/videojs/video.js/issues/4711" target="_blank" rel="noopener">#4711</a>) (<a href="https://github.com/videojs/video.js/commit/9acbcd8" target="_blank" rel="noopener">9acbcd8</a>)</li>
+</ul>
+<h3 id="Chores"><a href="/Video-js-6-4-0-Release/#Chores" class="headerlink" title="Chores"></a>Chores</h3><ul>
+<li><strong>gh-release:</strong> no console log on success (<a href="https://github.com/videojs/video.js/issues/4657" target="_blank" rel="noopener">#4657</a>) (<a href="https://github.com/videojs/video.js/commit/e8511a5" target="_blank" rel="noopener">e8511a5</a>)</li>
+<li><strong>lang:</strong> Update Polish (<a href="https://github.com/videojs/video.js/issues/4686" target="_blank" rel="noopener">#4686</a>) (<a href="https://github.com/videojs/video.js/commit/ee2a49c" target="_blank" rel="noopener">ee2a49c</a>)</li>
+<li><strong>package:</strong> update babelify to version 8.0.0 (<a href="https://github.com/videojs/video.js/issues/4684" target="_blank" rel="noopener">#4684</a>) (<a href="https://github.com/videojs/video.js/commit/db2f14c" target="_blank" rel="noopener">db2f14c</a>)</li>
+<li>add comment about avoiding helvetica font (<a href="https://github.com/videojs/video.js/issues/4679" target="_blank" rel="noopener">#4679</a>) (<a href="https://github.com/videojs/video.js/commit/cb638d0" target="_blank" rel="noopener">cb638d0</a>)</li>
+<li>add GA note to primary readme (<a href="https://github.com/videojs/video.js/issues/4481" target="_blank" rel="noopener">#4481</a>) (<a href="https://github.com/videojs/video.js/commit/e2af322" target="_blank" rel="noopener">e2af322</a>)</li>
+<li>Add package-lock.json file. (<a href="https://github.com/videojs/video.js/issues/4641" target="_blank" rel="noopener">#4641</a>) (<a href="https://github.com/videojs/video.js/commit/ec5b603" target="_blank" rel="noopener">ec5b603</a>)</li>
+</ul>
+<h3 id="Code-Refactoring"><a href="/Video-js-6-4-0-Release/#Code-Refactoring" class="headerlink" title="Code Refactoring"></a>Code Refactoring</h3><ul>
+<li>component.ready() (<a href="https://github.com/videojs/video.js/issues/4693" target="_blank" rel="noopener">#4693</a>) (<a href="https://github.com/videojs/video.js/commit/b40858b" target="_blank" rel="noopener">b40858b</a>)</li>
+<li>player.dimension() (<a href="https://github.com/videojs/video.js/issues/4704" target="_blank" rel="noopener">#4704</a>) (<a href="https://github.com/videojs/video.js/commit/ad1b47b" target="_blank" rel="noopener">ad1b47b</a>)</li>
+<li>player.hasStarted() (<a href="https://github.com/videojs/video.js/issues/4680" target="_blank" rel="noopener">#4680</a>) (<a href="https://github.com/videojs/video.js/commit/cde8335" target="_blank" rel="noopener">cde8335</a>)</li>
+<li>player.techGet_() (<a href="https://github.com/videojs/video.js/issues/4687" target="_blank" rel="noopener">#4687</a>) (<a href="https://github.com/videojs/video.js/commit/a1748aa" target="_blank" rel="noopener">a1748aa</a>)</li>
+</ul>
+<h3 id="Documentation"><a href="/Video-js-6-4-0-Release/#Documentation" class="headerlink" title="Documentation"></a>Documentation</h3><ul>
+<li><strong>lang:</strong> update translations needed doc (<a href="https://github.com/videojs/video.js/issues/4702" target="_blank" rel="noopener">#4702</a>) (<a href="https://github.com/videojs/video.js/commit/93e7670" target="_blank" rel="noopener">93e7670</a>)</li>
+</ul>
+<h3 id="Tests"><a href="/Video-js-6-4-0-Release/#Tests" class="headerlink" title="Tests"></a>Tests</h3><ul>
+<li>fix modal dialog test for showing controls (<a href="https://github.com/videojs/video.js/issues/4707" target="_blank" rel="noopener">#4707</a>) (<a href="https://github.com/videojs/video.js/commit/45a6b30" target="_blank" rel="noopener">45a6b30</a>), closes <a href="https://github.com/videojs/video.js/issues/4706" target="_blank" rel="noopener">#4706</a></li>
+<li>get rid of redundant test logging (<a href="https://github.com/videojs/video.js/issues/4682" target="_blank" rel="noopener">#4682</a>) (<a href="https://github.com/videojs/video.js/commit/983a573" target="_blank" rel="noopener">983a573</a>)</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.videojs.com/Video-js-6-4-0-Release/" data-id="cjdxbwqzt002l9znsq7ry51pf" class="article-share-link">Share</a>
+      
+        <a href="http://blog.videojs.com/Video-js-6-4-0-Release/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/Video-js-6-5-0-Release/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Video.js 6.5.0 Release
+        
+      </div>
+    </a>
+  
+  
+    <a href="/Video-js-6-0-Release/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Video.js 6.0 Release!</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/a11y/">a11y</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/accessibility/">accessibility</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hls/">hls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5/">html5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/middleware/">middleware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mse/">mse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugins/">plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thumbcoil/">thumbcoil</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr-360-plugins/">vr, 360, plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Flash/" style="font-size: 11.67px;">Flash</a> <a href="/tags/a11y/" style="font-size: 11.67px;">a11y</a> <a href="/tags/accessibility/" style="font-size: 11.67px;">accessibility</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5/" style="font-size: 11.67px;">html5</a> <a href="/tags/html5-video/" style="font-size: 13.33px;">html5 video</a> <a href="/tags/middleware/" style="font-size: 11.67px;">middleware</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18.33px;">news</a> <a href="/tags/plugins/" style="font-size: 11.67px;">plugins</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 11.67px;">releases</a> <a href="/tags/stats/" style="font-size: 11.67px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 16.67px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/vr-360-plugins/" style="font-size: 10px;">vr, 360, plugins</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/videojs-vr-now-under-the-video-js-org/">videojs-vr Is Now Under The Video.js Org</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-6-7-1-released/">Video.js 6.7.1 released</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-6-5-0-Release/">Video.js 6.5.0 Release</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-6-4-0-Release/">Video.js 6.4.0 Release</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-6-0-Release/">Video.js 6.0 Release!</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'videojs';
+  
+  var disqus_url = 'http://blog.videojs.com/Video-js-6-4-0-Release/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

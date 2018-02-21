@@ -6,13 +6,15 @@
   <title>DASH Everywhere-ish (hack project) | Video.js Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="A couple of times a year Brightcove has an internal hackweek where engineers work on any project they&amp;rsquo;d like. In the latest hackweek (2014-07-14) Tom Johnson decided to see if he could get DASH">
+<meta name="keywords" content="news,html5 video">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DASH Everywhere-ish (hack project)">
 <meta property="og:url" content="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/index.html">
 <meta property="og:site_name" content="Video.js Blog">
 <meta property="og:description" content="A couple of times a year Brightcove has an internal hackweek where engineers work on any project they&amp;rsquo;d like. In the latest hackweek (2014-07-14) Tom Johnson decided to see if he could get DASH">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="http://feeds.feedburner.com/~r/video-js/~4/Wn1NGaDuYmo">
-<meta property="og:updated_time" content="2016-06-30T19:25:15.000Z">
+<meta property="og:updated_time" content="2017-01-20T19:56:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DASH Everywhere-ish (hack project)">
 <meta name="twitter:description" content="A couple of times a year Brightcove has an internal hackweek where engineers work on any project they&amp;rsquo;d like. In the latest hackweek (2014-07-14) Tom Johnson decided to see if he could get DASH">
@@ -72,7 +74,7 @@ ga('send', 'pageview');
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.videojs.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.videojs.com"></form>
       </div>
     </div>
   </div>
@@ -106,10 +108,10 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>A couple of times a year Brightcove has an internal hackweek where engineers work on any project they&rsquo;d like. In the latest hackweek (2014-07-14) <a href="https://github.com/seniorflexdeveloper" target="_blank" rel="external">Tom Johnson</a> decided to see if he could get DASH supported in as many places as possible, by combining a few of the existing DASH player implementations with Video.js.</p>
-<p><a href="http://dashif.org/mpeg-dash/" target="_blank" rel="external">MPEG-DASH</a> (Dynamic Adaptive Streaming over HTTP) is a streaming format similar to Apple&rsquo;s <a href="https://developer.apple.com/streaming/" target="_blank" rel="external">HTTP Live Streaming (HLS)</a>. It allows you to provide multiple versions of a video at different bitrates, and then the player can switch between those versions depending on the user&rsquo;s bandwidth (which is more complicated than you might think).</p>
-<p>The two DASH playback implementations used were <a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="external">Dash.js</a> and <a href="https://github.com/castlabs/dashas" target="_blank" rel="external">Dash.as</a>. They were combined using video.js&rsquo;s playback tech architecture, which means you can include <a href="https://github.com/videojs/video.js/wiki/Plugins" target="_blank" rel="external">plugins</a> and custom skins and they&rsquo;ll work the same with either playback method.</p>
-<p><a href="http://mixxture.com/players/brightcove/dash/demo.html" target="_blank" rel="external">See the results.</a></p>
+        <p>A couple of times a year Brightcove has an internal hackweek where engineers work on any project they&rsquo;d like. In the latest hackweek (2014-07-14) <a href="https://github.com/seniorflexdeveloper" target="_blank" rel="noopener">Tom Johnson</a> decided to see if he could get DASH supported in as many places as possible, by combining a few of the existing DASH player implementations with Video.js.</p>
+<p><a href="http://dashif.org/mpeg-dash/" target="_blank" rel="noopener">MPEG-DASH</a> (Dynamic Adaptive Streaming over HTTP) is a streaming format similar to Apple&rsquo;s <a href="https://developer.apple.com/streaming/" target="_blank" rel="noopener">HTTP Live Streaming (HLS)</a>. It allows you to provide multiple versions of a video at different bitrates, and then the player can switch between those versions depending on the user&rsquo;s bandwidth (which is more complicated than you might think).</p>
+<p>The two DASH playback implementations used were <a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="noopener">Dash.js</a> and <a href="https://github.com/castlabs/dashas" target="_blank" rel="noopener">Dash.as</a>. They were combined using video.js&rsquo;s playback tech architecture, which means you can include <a href="https://github.com/videojs/video.js/wiki/Plugins" target="_blank" rel="noopener">plugins</a> and custom skins and they&rsquo;ll work the same with either playback method.</p>
+<p><a href="http://mixxture.com/players/brightcove/dash/demo.html" target="_blank" rel="noopener">See the results.</a></p>
 <h3 id="Browser-Device-Coverage"><a href="/DASH-Everywhere-ish-hack-project/#Browser-Device-Coverage" class="headerlink" title="Browser/Device Coverage"></a>Browser/Device Coverage</h3><p>Using a combination of DASH.AS and DASH.JS will give us the following browser/device coverage:</p>
 <h4 id="DASH-JS-media-source-extensions-support"><a href="/DASH-Everywhere-ish-hack-project/#DASH-JS-media-source-extensions-support" class="headerlink" title="DASH.JS (media source extensions support)"></a>DASH.JS (media source extensions support)</h4><ul>
 <li>Internet Explorer: 11+</li>
@@ -121,15 +123,15 @@ ga('send', 'pageview');
 </ul>
 <h4 id="DASH-AS"><a href="/DASH-Everywhere-ish-hack-project/#DASH-AS" class="headerlink" title="DASH.AS"></a>DASH.AS</h4><p>Fallback to any environment that supports Flash Player 10.3</p>
 <h3 id="iOS"><a href="/DASH-Everywhere-ish-hack-project/#iOS" class="headerlink" title="iOS"></a>iOS</h3><p>As you can see, the one remaining holdout is iOS and there&rsquo;s currently no word when or if that will happen. Seeing media source extensions support in Safari 8 gives some hope, but my understanding is the requirements for getting support built into iOS are much more significant. My guess is it will happen eventually, but not for a while (and hopefully in-line playback + the fullscreen API will be supported at the same time).</p>
-<p>Today, to provide adaptive streaming everywhere, you still need either DASH + HLS, or just HLS (you can use the <a href="https://github.com/videojs/videojs-contrib-hls" target="_blank" rel="external">video.js HLS plugin</a> to support HLS in more browsers).</p>
-<h2 id="Tom-rsquo-s-Notes"><a href="/DASH-Everywhere-ish-hack-project/#Tom-rsquo-s-Notes" class="headerlink" title="Tom&rsquo;s Notes"></a>Tom&rsquo;s Notes</h2><p>The demo shows that for environments which support <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource" target="_blank" rel="external">Media Source Extensions</a> (MSE) we use a full Javscript implementation via <a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="external">Dash.js</a> and as a fallback we use Flash built around <a href="http://sourceforge.net/adobe/osmf/home/Home/" target="_blank" rel="external">OSMF</a> and <a href="https://github.com/castlabs/dashas" target="_blank" rel="external">Dash.as</a>, an open-source plugin provided by <a href="http://castlabs.com" target="_blank" rel="external">Castlabs</a>.</p>
+<p>Today, to provide adaptive streaming everywhere, you still need either DASH + HLS, or just HLS (you can use the <a href="https://github.com/videojs/videojs-contrib-hls" target="_blank" rel="noopener">video.js HLS plugin</a> to support HLS in more browsers).</p>
+<h2 id="Tom-rsquo-s-Notes"><a href="/DASH-Everywhere-ish-hack-project/#Tom-rsquo-s-Notes" class="headerlink" title="Tom&rsquo;s Notes"></a>Tom&rsquo;s Notes</h2><p>The demo shows that for environments which support <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource" target="_blank" rel="noopener">Media Source Extensions</a> (MSE) we use a full Javscript implementation via <a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="noopener">Dash.js</a> and as a fallback we use Flash built around <a href="http://sourceforge.net/adobe/osmf/home/Home/" target="_blank" rel="noopener">OSMF</a> and <a href="https://github.com/castlabs/dashas" target="_blank" rel="noopener">Dash.as</a>, an open-source plugin provided by <a href="http://castlabs.com" target="_blank" rel="noopener">Castlabs</a>.</p>
 <blockquote>
-<p><em>Tom has been working on <a href="https://github.com/seniorflexdeveloper/videojs-osmf" target="_blank" rel="external">videojs-osmf</a> on the side, which helped make this possible.</em></p>
+<p><em>Tom has been working on <a href="https://github.com/seniorflexdeveloper/videojs-osmf" target="_blank" rel="noopener">videojs-osmf</a> on the side, which helped make this possible.</em></p>
 </blockquote>
 <h3 id="DASH-AS-Requirements"><a href="/DASH-Everywhere-ish-hack-project/#DASH-AS-Requirements" class="headerlink" title="DASH.AS Requirements"></a>DASH.AS Requirements</h3><h4 id="Player"><a href="/DASH-Everywhere-ish-hack-project/#Player" class="headerlink" title="Player"></a>Player</h4><ul>
 <li>Environment must support Flash Player 10.3+</li>
-<li>Video.js OSMF Tech (<a href="https://github.com/seniorflexdeveloper/videojs-osmf" target="_blank" rel="external">videojs-osmf</a>)</li>
-<li>CastLabs Dash.AS plugin for OSMF (<a href="https://github.com/castlabs/dashas" target="_blank" rel="external">dash.as</a>)</li>
+<li>Video.js OSMF Tech (<a href="https://github.com/seniorflexdeveloper/videojs-osmf" target="_blank" rel="noopener">videojs-osmf</a>)</li>
+<li>CastLabs Dash.AS plugin for OSMF (<a href="https://github.com/castlabs/dashas" target="_blank" rel="noopener">dash.as</a>)</li>
 </ul>
 <h4 id="Server-Host"><a href="/DASH-Everywhere-ish-hack-project/#Server-Host" class="headerlink" title="Server/Host"></a>Server/Host</h4><ul>
 <li>Since the requests are fired from within Flash, a crossdomain.xml file is required.*   Ability to serve byte range requests via query string (myFile.mp4?range=0-1000 || myFile.m4s?bytes=0-1000) is necessary because Flash Player restricts use of the ‘Range’ request header. Castlabs has an .htaccess file which uses mod_rewrite to achieve this. Akamai edge servers accept the bytes query string var as well.</li>
@@ -141,9 +143,9 @@ ga('send', 'pageview');
 <li>Deeper class inspection shows that the Dash.AS plugin is based on using Netstream in data generation mode, similar to our HLS solution. There may be better way to share the codebase between the two to reduce code duplication.</li>
 </ul>
 <h3 id="DASH-JS-Requirements"><a href="/DASH-Everywhere-ish-hack-project/#DASH-JS-Requirements" class="headerlink" title="DASH.JS Requirements"></a>DASH.JS Requirements</h3><h4 id="Player-1"><a href="/DASH-Everywhere-ish-hack-project/#Player-1" class="headerlink" title="Player"></a>Player</h4><ul>
-<li>Environment must support <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource" target="_blank" rel="external">Media Source Extensions</a></li>
-<li>DASH Industry Forum DASH.JS library (<a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="external">dash.js</a>)</li>
-<li>Video.js Dash.js Tech (<a href="https://github.com/Dash-Industry-Forum/dash.js/blob/development/contrib/videojs/videojs-tech-dashjs.js" target="_blank" rel="external">videojs-tech-dashjs</a>)</li>
+<li>Environment must support <a href="https://developer.mozilla.org/en-US/docs/Web/API/MediaSource" target="_blank" rel="noopener">Media Source Extensions</a></li>
+<li>DASH Industry Forum DASH.JS library (<a href="https://github.com/Dash-Industry-Forum/dash.js" target="_blank" rel="noopener">dash.js</a>)</li>
+<li>Video.js Dash.js Tech (<a href="https://github.com/Dash-Industry-Forum/dash.js/blob/development/contrib/videojs/videojs-tech-dashjs.js" target="_blank" rel="noopener">videojs-tech-dashjs</a>)</li>
 </ul>
 <h4 id="Server-Host-1"><a href="/DASH-Everywhere-ish-hack-project/#Server-Host-1" class="headerlink" title="Server/Host"></a>Server/Host</h4><ul>
 <li>Open CORS headers: Access-Control-Allow-Origin: *</li>
@@ -160,7 +162,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/" data-id="cj142yafd000dsvee7o6ydf9g" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/" data-id="cjdxbwqys000d9znsbt2irtns" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/DASH-Everywhere-ish-hack-project/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -211,7 +213,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/a11y/">a11y</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/accessibility/">accessibility</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hls/">hls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5/">html5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/middleware/">middleware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mse/">mse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugins/">plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thumbcoil/">thumbcoil</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/a11y/">a11y</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/accessibility/">accessibility</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hls/">hls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5/">html5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/middleware/">middleware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mse/">mse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugins/">plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thumbcoil/">thumbcoil</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr-360-plugins/">vr, 360, plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
     </div>
   </div>
 
@@ -221,7 +223,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Flash/" style="font-size: 11.67px;">Flash</a> <a href="/tags/a11y/" style="font-size: 11.67px;">a11y</a> <a href="/tags/accessibility/" style="font-size: 11.67px;">accessibility</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5/" style="font-size: 11.67px;">html5</a> <a href="/tags/html5-video/" style="font-size: 13.33px;">html5 video</a> <a href="/tags/middleware/" style="font-size: 11.67px;">middleware</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18.33px;">news</a> <a href="/tags/plugins/" style="font-size: 11.67px;">plugins</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 11.67px;">releases</a> <a href="/tags/stats/" style="font-size: 11.67px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 16.67px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
+      <a href="/tags/Flash/" style="font-size: 11.67px;">Flash</a> <a href="/tags/a11y/" style="font-size: 11.67px;">a11y</a> <a href="/tags/accessibility/" style="font-size: 11.67px;">accessibility</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5/" style="font-size: 11.67px;">html5</a> <a href="/tags/html5-video/" style="font-size: 13.33px;">html5 video</a> <a href="/tags/middleware/" style="font-size: 11.67px;">middleware</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18.33px;">news</a> <a href="/tags/plugins/" style="font-size: 11.67px;">plugins</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 11.67px;">releases</a> <a href="/tags/stats/" style="font-size: 11.67px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 16.67px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/vr-360-plugins/" style="font-size: 10px;">vr, 360, plugins</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
     </div>
   </div>
 
@@ -230,7 +232,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
     </div>
   </div>
 
@@ -243,23 +245,23 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/videojs-vr-now-under-the-video-js-org/">videojs-vr Is Now Under The Video.js Org</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-6-7-1-released/">Video.js 6.7.1 released</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-6-5-0-Release/">Video.js 6.5.0 Release</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-6-4-0-Release/">Video.js 6.4.0 Release</a>
+          </li>
+        
+          <li>
             <a href="/Video-js-6-0-Release/">Video.js 6.0 Release!</a>
-          </li>
-        
-          <li>
-            <a href="/Feature-Spotlight-Middleware/">Feature Spotlight: Middleware</a>
-          </li>
-        
-          <li>
-            <a href="/Video-js-removes-Flash-from-core-player/">Video.js removes Flash from core player</a>
-          </li>
-        
-          <li>
-            <a href="/Feature-Spotlight-Accessibility/">Feature Spotlight: Accessibility</a>
-          </li>
-        
-          <li>
-            <a href="/Feature-Spotlight-Advanced-Plugins/">Feature Spotlight: Advanced Plugins</a>
           </li>
         
       </ul>
@@ -274,7 +276,7 @@ ga('send', 'pageview');
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
+      &copy; 2018 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

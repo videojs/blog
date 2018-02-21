@@ -6,13 +6,15 @@
   <title>Video.js version 4.4.0 released - Now supporting RequireJS and Browserify | Video.js Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Version 4.4.0 is here with over 20 updates and fixes. The most notable addition may be support for AMD and CommonJS module loaders, meaning you can now include Video.js using RequireJS or Browserify.">
+<meta name="keywords" content="version">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Video.js version 4.4.0 released - Now supporting RequireJS and Browserify">
 <meta property="og:url" content="http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/index.html">
 <meta property="og:site_name" content="Video.js Blog">
 <meta property="og:description" content="Version 4.4.0 is here with over 20 updates and fixes. The most notable addition may be support for AMD and CommonJS module loaders, meaning you can now include Video.js using RequireJS or Browserify.">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="http://feeds.feedburner.com/~r/video-js/~4/ZZPGdmp690s">
-<meta property="og:updated_time" content="2016-06-30T19:25:15.000Z">
+<meta property="og:updated_time" content="2017-01-20T19:56:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Video.js version 4.4.0 released - Now supporting RequireJS and Browserify">
 <meta name="twitter:description" content="Version 4.4.0 is here with over 20 updates and fixes. The most notable addition may be support for AMD and CommonJS module loaders, meaning you can now include Video.js using RequireJS or Browserify.">
@@ -72,7 +74,7 @@ ga('send', 'pageview');
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.videojs.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.videojs.com"></form>
       </div>
     </div>
   </div>
@@ -106,47 +108,47 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Version 4.4.0 is here with over 20 updates and fixes. The most notable addition may be support for AMD and CommonJS module loaders, meaning you can now include Video.js using <a href="http://requirejs.org" target="_blank" rel="external">RequireJS</a> or <a href="http://browserify.org" target="_blank" rel="external">Browserify</a>. Video.js can be installed through <a href="http://www.npmjs.org/package/video.js" target="_blank" rel="external">npm</a> already, and we&rsquo;ll soon add support for <a href="http://bower.io" target="_blank" rel="external">bower</a> and <a href="http://component.io" target="_blank" rel="external">component(1)</a> as well.</p>
-<h3 id="New-plugins"><a href="/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/#New-plugins" class="headerlink" title="New plugins"></a>New plugins</h3><p>The <a href="https://github.com/videojs/video.js/wiki/Plugins" target="_blank" rel="external">plugin list</a> continues to grow, with more in the works. Checkout the new <a href="http://theonion.github.io/videojs-endcard/" target="_blank" rel="external">endcard plugin</a> built by <a href="http://www.theonion.com" target="_blank" rel="external">The Onion</a>.</p>
+        <p>Version 4.4.0 is here with over 20 updates and fixes. The most notable addition may be support for AMD and CommonJS module loaders, meaning you can now include Video.js using <a href="http://requirejs.org" target="_blank" rel="noopener">RequireJS</a> or <a href="http://browserify.org" target="_blank" rel="noopener">Browserify</a>. Video.js can be installed through <a href="http://www.npmjs.org/package/video.js" target="_blank" rel="noopener">npm</a> already, and we&rsquo;ll soon add support for <a href="http://bower.io" target="_blank" rel="noopener">bower</a> and <a href="http://component.io" target="_blank" rel="noopener">component(1)</a> as well.</p>
+<h3 id="New-plugins"><a href="/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/#New-plugins" class="headerlink" title="New plugins"></a>New plugins</h3><p>The <a href="https://github.com/videojs/video.js/wiki/Plugins" target="_blank" rel="noopener">plugin list</a> continues to grow, with more in the works. Checkout the new <a href="http://theonion.github.io/videojs-endcard/" target="_blank" rel="noopener">endcard plugin</a> built by <a href="http://www.theonion.com" target="_blank" rel="noopener">The Onion</a>.</p>
 <ul>
-<li><a href="https://github.com/spchuang/videojs-markers" target="_blank" rel="external">videojs-markers</a> <a href="http://jsbin.com/befob/7/edit" target="_blank" rel="external">[demo]</a> - Add customizable markers on the progress bar</li>
-<li><a href="https://github.com/several27/videojs-youtube-videowall" target="_blank" rel="external">videojs-youtube-videowall</a> - <a href="http://jsbin.com/tave/3" target="_blank" rel="external">[demo]</a> - Display video wall of related youtube videos after the video finishes</li>
-<li><a href="http://theonion.github.io/videojs-endcard/" target="_blank" rel="external">videojs-endcard</a> - Simple, customizable end card solution for VideoJS</li>
-<li><a href="https://github.com/rsadwick/videojs-akamai-analytics" target="_blank" rel="external">videojs-akamai-analytics</a> - Akamai Sola Analytics for video.js</li>
-<li><a href="https://github.com/cladera/videojs-stereopanner" target="_blank" rel="external">videojs-stereopanner</a> - Adds stereo channel panning functions</li>
+<li><a href="https://github.com/spchuang/videojs-markers" target="_blank" rel="noopener">videojs-markers</a> <a href="http://jsbin.com/befob/7/edit" target="_blank" rel="noopener">[demo]</a> - Add customizable markers on the progress bar</li>
+<li><a href="https://github.com/several27/videojs-youtube-videowall" target="_blank" rel="noopener">videojs-youtube-videowall</a> - <a href="http://jsbin.com/tave/3" target="_blank" rel="noopener">[demo]</a> - Display video wall of related youtube videos after the video finishes</li>
+<li><a href="http://theonion.github.io/videojs-endcard/" target="_blank" rel="noopener">videojs-endcard</a> - Simple, customizable end card solution for VideoJS</li>
+<li><a href="https://github.com/rsadwick/videojs-akamai-analytics" target="_blank" rel="noopener">videojs-akamai-analytics</a> - Akamai Sola Analytics for video.js</li>
+<li><a href="https://github.com/cladera/videojs-stereopanner" target="_blank" rel="noopener">videojs-stereopanner</a> - Adds stereo channel panning functions</li>
 </ul>
-<h3 id="Video-js-in-the-wild"><a href="/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/#Video-js-in-the-wild" class="headerlink" title="Video.js in the wild"></a>Video.js in the wild</h3><p>The <a href="https://play.brightcove.com" target="_blank" rel="external">Brightcove Play 2014</a> website recently went live with Video.js as the player. We&rsquo;re also hard at work building Brightcove&rsquo;s next-gen player with Video.js at the core, so stay tuned.</p>
+<h3 id="Video-js-in-the-wild"><a href="/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/#Video-js-in-the-wild" class="headerlink" title="Video.js in the wild"></a>Video.js in the wild</h3><p>The <a href="https://play.brightcove.com" target="_blank" rel="noopener">Brightcove Play 2014</a> website recently went live with Video.js as the player. We&rsquo;re also hard at work building Brightcove&rsquo;s next-gen player with Video.js at the core, so stay tuned.</p>
 <h2 id="Full-list-from-the-changelog"><a href="/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/#Full-list-from-the-changelog" class="headerlink" title="Full list from the changelog"></a>Full list from the changelog</h2><ul>
-<li>Made the poster updateable after initialization (<a href="https://github.com/videojs/video.js/pull/838" target="_blank" rel="external">view</a>)</li>
-<li>Exported more textTrack functions (<a href="https://github.com/videojs/video.js/pull/815" target="_blank" rel="external">view</a>)</li>
-<li>Moved player ID generation to support video tags with no IDs (<a href="https://github.com/videojs/video.js/pull/845" target="_blank" rel="external">view</a>)</li>
-<li>Moved to using QUnit as a dependency (<a href="https://github.com/videojs/video.js/pull/850" target="_blank" rel="external">view</a>)</li>
-<li>Added the util namespace for public utility functions (<a href="https://github.com/videojs/video.js/pull/862" target="_blank" rel="external">view</a>)</li>
-<li>Fixed an issue with calling duration before Flash is loaded (<a href="https://github.com/videojs/video.js/pull/861" target="_blank" rel="external">view</a>)</li>
-<li>Added player methods to externs so they can be overridden (<a href="https://github.com/videojs/video.js/pull/878" target="_blank" rel="external">view</a>)</li>
-<li>Fixed html5 playback when switching between media techs (<a href="https://github.com/videojs/video.js/pull/887" target="_blank" rel="external">view</a>)</li>
-<li>Fixed Firefox+Flash mousemove events so controls don&rsquo;t hide permanently (<a href="https://github.com/videojs/video.js/pull/899" target="_blank" rel="external">view</a>)</li>
-<li>Fixed a test for touch detection (<a href="https://github.com/videojs/video.js/pull/962" target="_blank" rel="external">view</a>)</li>
-<li>Updated the src file list for karma tests (<a href="https://github.com/videojs/video.js/pull/948" target="_blank" rel="external">view</a>)</li>
-<li>Added more tests for API properties after minification (<a href="https://github.com/videojs/video.js/pull/906" target="_blank" rel="external">view</a>)</li>
-<li>Updated projet to use npm version of videojs-swf (<a href="https://github.com/videojs/video.js/pull/930" target="_blank" rel="external">view</a>)</li>
-<li>Added support for dist zipping on windows (<a href="https://github.com/videojs/video.js/pull/944" target="_blank" rel="external">view</a>)</li>
-<li>Fixed iOS fullscreen issue (<a href="https://github.com/videojs/video.js/pull/977" target="_blank" rel="external">view</a>)</li>
-<li>Fixed touch event bubbling (<a href="https://github.com/videojs/video.js/pull/992" target="_blank" rel="external">view</a>)</li>
-<li>Fixed ARIA role attribute for button and slider (<a href="https://github.com/videojs/video.js/pull/988" target="_blank" rel="external">view</a>)</li>
-<li>Fixed and issue where a component&rsquo;s dispose event would bubble up (<a href="https://github.com/videojs/video.js/pull/981" target="_blank" rel="external">view</a>)</li>
-<li>Quieted down deprecation warnings (<a href="https://github.com/videojs/video.js/pull/971" target="_blank" rel="external">view</a>)</li>
-<li>Update seek handle to display the current time (<a href="https://github.com/videojs/video.js/pull/902" target="_blank" rel="external">view</a>)</li>
-<li>Added requirejs and browserify support (UMD) (<a href="https://github.com/videojs/video.js/pull/998" target="_blank" rel="external">view</a>)</li>
+<li>Made the poster updateable after initialization (<a href="https://github.com/videojs/video.js/pull/838" target="_blank" rel="noopener">view</a>)</li>
+<li>Exported more textTrack functions (<a href="https://github.com/videojs/video.js/pull/815" target="_blank" rel="noopener">view</a>)</li>
+<li>Moved player ID generation to support video tags with no IDs (<a href="https://github.com/videojs/video.js/pull/845" target="_blank" rel="noopener">view</a>)</li>
+<li>Moved to using QUnit as a dependency (<a href="https://github.com/videojs/video.js/pull/850" target="_blank" rel="noopener">view</a>)</li>
+<li>Added the util namespace for public utility functions (<a href="https://github.com/videojs/video.js/pull/862" target="_blank" rel="noopener">view</a>)</li>
+<li>Fixed an issue with calling duration before Flash is loaded (<a href="https://github.com/videojs/video.js/pull/861" target="_blank" rel="noopener">view</a>)</li>
+<li>Added player methods to externs so they can be overridden (<a href="https://github.com/videojs/video.js/pull/878" target="_blank" rel="noopener">view</a>)</li>
+<li>Fixed html5 playback when switching between media techs (<a href="https://github.com/videojs/video.js/pull/887" target="_blank" rel="noopener">view</a>)</li>
+<li>Fixed Firefox+Flash mousemove events so controls don&rsquo;t hide permanently (<a href="https://github.com/videojs/video.js/pull/899" target="_blank" rel="noopener">view</a>)</li>
+<li>Fixed a test for touch detection (<a href="https://github.com/videojs/video.js/pull/962" target="_blank" rel="noopener">view</a>)</li>
+<li>Updated the src file list for karma tests (<a href="https://github.com/videojs/video.js/pull/948" target="_blank" rel="noopener">view</a>)</li>
+<li>Added more tests for API properties after minification (<a href="https://github.com/videojs/video.js/pull/906" target="_blank" rel="noopener">view</a>)</li>
+<li>Updated projet to use npm version of videojs-swf (<a href="https://github.com/videojs/video.js/pull/930" target="_blank" rel="noopener">view</a>)</li>
+<li>Added support for dist zipping on windows (<a href="https://github.com/videojs/video.js/pull/944" target="_blank" rel="noopener">view</a>)</li>
+<li>Fixed iOS fullscreen issue (<a href="https://github.com/videojs/video.js/pull/977" target="_blank" rel="noopener">view</a>)</li>
+<li>Fixed touch event bubbling (<a href="https://github.com/videojs/video.js/pull/992" target="_blank" rel="noopener">view</a>)</li>
+<li>Fixed ARIA role attribute for button and slider (<a href="https://github.com/videojs/video.js/pull/988" target="_blank" rel="noopener">view</a>)</li>
+<li>Fixed and issue where a component&rsquo;s dispose event would bubble up (<a href="https://github.com/videojs/video.js/pull/981" target="_blank" rel="noopener">view</a>)</li>
+<li>Quieted down deprecation warnings (<a href="https://github.com/videojs/video.js/pull/971" target="_blank" rel="noopener">view</a>)</li>
+<li>Update seek handle to display the current time (<a href="https://github.com/videojs/video.js/pull/902" target="_blank" rel="noopener">view</a>)</li>
+<li>Added requirejs and browserify support (UMD) (<a href="https://github.com/videojs/video.js/pull/998" target="_blank" rel="noopener">view</a>)</li>
 </ul>
-<p>The new version is available on <a href="http://www.videojs.com" target="_blank" rel="external">videojs.com</a> and  has been added to the CDN.</p>
+<p>The new version is available on <a href="http://www.videojs.com" target="_blank" rel="noopener">videojs.com</a> and  has been added to the CDN.</p>
 <p>Cheers,</p>
 <p>-heff<br><img src="http://feeds.feedburner.com/~r/video-js/~4/ZZPGdmp690s" alt=""></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/" data-id="cj142yal8002vsvee59aymxjx" class="article-share-link">Share</a>
+      <a data-url="http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/" data-id="cjdxbwr0000309zns5r8b2dm3" class="article-share-link">Share</a>
       
         <a href="http://blog.videojs.com/Video-js-version-4-4-0-released-Now-supporting-RequireJS-and-Browserify/#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -197,7 +199,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/a11y/">a11y</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/accessibility/">accessibility</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hls/">hls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5/">html5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/middleware/">middleware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mse/">mse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugins/">plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thumbcoil/">thumbcoil</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flash/">Flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/a11y/">a11y</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/accessibility/">accessibility</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/babel/">babel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flash/">flash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fluid/">fluid</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gallery/">gallery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hls/">hls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5/">html5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html5-video/">html5 video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/middleware/">middleware</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mse/">mse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/news/">news</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugins/">plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/release/">release</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/releases/">releases</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/stats/">stats</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thumbcoil/">thumbcoil</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/version/">version</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video-js-6-0/">video.js 6.0</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs/">videojs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/videojs-5/">videojs 5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vr-360-plugins/">vr, 360, plugins</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
     </div>
   </div>
 
@@ -207,7 +209,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Flash/" style="font-size: 11.67px;">Flash</a> <a href="/tags/a11y/" style="font-size: 11.67px;">a11y</a> <a href="/tags/accessibility/" style="font-size: 11.67px;">accessibility</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5/" style="font-size: 11.67px;">html5</a> <a href="/tags/html5-video/" style="font-size: 13.33px;">html5 video</a> <a href="/tags/middleware/" style="font-size: 11.67px;">middleware</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18.33px;">news</a> <a href="/tags/plugins/" style="font-size: 11.67px;">plugins</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 11.67px;">releases</a> <a href="/tags/stats/" style="font-size: 11.67px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 16.67px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
+      <a href="/tags/Flash/" style="font-size: 11.67px;">Flash</a> <a href="/tags/a11y/" style="font-size: 11.67px;">a11y</a> <a href="/tags/accessibility/" style="font-size: 11.67px;">accessibility</a> <a href="/tags/babel/" style="font-size: 10px;">babel</a> <a href="/tags/code/" style="font-size: 15px;">code</a> <a href="/tags/flash/" style="font-size: 10px;">flash</a> <a href="/tags/fluid/" style="font-size: 10px;">fluid</a> <a href="/tags/gallery/" style="font-size: 10px;">gallery</a> <a href="/tags/hls/" style="font-size: 10px;">hls</a> <a href="/tags/html5/" style="font-size: 11.67px;">html5</a> <a href="/tags/html5-video/" style="font-size: 13.33px;">html5 video</a> <a href="/tags/middleware/" style="font-size: 11.67px;">middleware</a> <a href="/tags/mse/" style="font-size: 10px;">mse</a> <a href="/tags/news/" style="font-size: 18.33px;">news</a> <a href="/tags/plugins/" style="font-size: 11.67px;">plugins</a> <a href="/tags/release/" style="font-size: 10px;">release</a> <a href="/tags/releases/" style="font-size: 11.67px;">releases</a> <a href="/tags/stats/" style="font-size: 11.67px;">stats</a> <a href="/tags/thumbcoil/" style="font-size: 10px;">thumbcoil</a> <a href="/tags/version/" style="font-size: 20px;">version</a> <a href="/tags/video-js-6-0/" style="font-size: 16.67px;">video.js 6.0</a> <a href="/tags/videojs/" style="font-size: 10px;">videojs</a> <a href="/tags/videojs-5/" style="font-size: 10px;">videojs 5</a> <a href="/tags/vr-360-plugins/" style="font-size: 10px;">vr, 360, plugins</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a>
     </div>
   </div>
 
@@ -216,7 +218,7 @@ ga('send', 'pageview');
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">November 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">June 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">May 2013</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/11/">November 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a></li></ul>
     </div>
   </div>
 
@@ -229,23 +231,23 @@ ga('send', 'pageview');
       <ul>
         
           <li>
+            <a href="/videojs-vr-now-under-the-video-js-org/">videojs-vr Is Now Under The Video.js Org</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-6-7-1-released/">Video.js 6.7.1 released</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-6-5-0-Release/">Video.js 6.5.0 Release</a>
+          </li>
+        
+          <li>
+            <a href="/Video-js-6-4-0-Release/">Video.js 6.4.0 Release</a>
+          </li>
+        
+          <li>
             <a href="/Video-js-6-0-Release/">Video.js 6.0 Release!</a>
-          </li>
-        
-          <li>
-            <a href="/Feature-Spotlight-Middleware/">Feature Spotlight: Middleware</a>
-          </li>
-        
-          <li>
-            <a href="/Video-js-removes-Flash-from-core-player/">Video.js removes Flash from core player</a>
-          </li>
-        
-          <li>
-            <a href="/Feature-Spotlight-Accessibility/">Feature Spotlight: Accessibility</a>
-          </li>
-        
-          <li>
-            <a href="/Feature-Spotlight-Advanced-Plugins/">Feature Spotlight: Advanced Plugins</a>
           </li>
         
       </ul>
@@ -260,7 +262,7 @@ ga('send', 'pageview');
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
+      &copy; 2018 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
