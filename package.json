@@ -4,7 +4,7 @@
   "description": "Video.js blog",
   "private": true,
   "hexo": {
-    "version": "3.5.0"
+    "version": "3.2.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
