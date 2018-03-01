@@ -22,10 +22,10 @@
     "url": "https://github.com/videojs/blog/issues"
   },
   "devDependencies": {
-    "hexo-cli": "^1.0.1"
+    "hexo-cli": "1.0.2"
   },
   "dependencies": {
-    "hexo": "^3.2.2",
+    "hexo": "3.2.2",
     "hexo-cli-extras": "^1.0.3",
     "hexo-deployer-git": "gkatsev/hexo-deployer-git#optionally-keep-history",
     "hexo-filter-pathfix": "^0.1.2",
