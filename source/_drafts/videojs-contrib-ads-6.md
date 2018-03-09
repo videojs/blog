@@ -18,13 +18,15 @@ Version 6 of contrib-ads is a maintenance release that includes a major code ref
 
 ## How it works
 
-For a history of how the state machine has evolved over time, [there is detailed information in this Github issue](https://github.com/videojs/videojs-contrib-ads/issues/320). In this article we're going to focus on how it works in version 6.
+contrib-ads has a concept called _ad mode_. Ad mode is [strictly defined](https://github.com/videojs/videojs-contrib-ads#ad-mode-definition) as _if content playback is blocked by the ad plugin_. This does not necessarily mean that an ad is playing. For example, if there is a preroll ad, after a play request we show a loading spinner until ad playback begins. This is considered part of ad mode. The public method `player.ads.isInAdMode()` can be used to check if we are in ad mode.
 
-Here is a diagram of the current states:
+In version 6, the state machine was refactored to match this strict definition of ad mode. There are two types of states: content states and ad states. If contrib-ads is in an ad state, it is in ad mode.
+
+Here is a diagram of the new states. Blue states are content states and yellow states are ad states.
 
 ![](./ad-states.png)
 
-There are two types of states: content states (blue) and ad states (yellow). `player.ads.isInAdMode()` returns true if the current state is an ad state. [Ad mode](https://github.com/videojs/videojs-contrib-ads#ad-mode-definition) is defined as _if content playback is blocked by the ad plugin_. This does not necessarily mean that an ad is playing. For example, if there is a preroll ad, after a play request we show a loading spinner until ad playback actually begins. This is considered part of ad mode.
+For a history of how the state machine has evolved over time, [there is detailed information in this Github issue](https://github.com/videojs/videojs-contrib-ads/issues/320). In this article we're going to focus on how it works in version 6.
 
 Let's walk through the states for a simple preroll scenario. The plugin begins in BeforePreroll state. This is considered a content state because content playback hasn't been requested yet and so ads are not blocking playback. However, the ad plugin can still asynchronously request ads from an ad server during this time. The ad plugin triggers the `adsready` event to say that it's ready. Contrib-ads knows that once the play button is pressed, ads are already prepared.
 
