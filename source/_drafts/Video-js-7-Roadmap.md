@@ -12,7 +12,7 @@ tags:
 ---
 ![](woodland-road-falling-leaf-natural-38537.jpeg)
 
-Today, I’m excited to announce the roadmap to Video.js 7! While this is a major version update, the actual changes are not that major. The two main changes are the addition of videojs-http-streaming, VHS for short, and the removal of support for older versions of Internet Explorer.
+Today, I’m excited to announce the roadmap to Video.js 7! While this is a major version update, there is very little that is actually breaking. The two main changes are the addition of videojs-http-streaming, VHS for short, and the removal of support for older versions of Internet Explorer.
 
 ![VJS 7](vjs 7 small.png)
 
@@ -20,7 +20,7 @@ Today, I’m excited to announce the roadmap to Video.js 7! While this is a majo
 
 ![](VHS small.png)
 
-VHS used to be videojs-contrib-hls, but as MPEG-DASH became more popular, we realized that we wanted to support it as well and that we can share a lot of the code between HLS and DASH implementations. Look for a more details in an announcement post for VHS soon!
+VHS used to be videojs-contrib-hls, but as MPEG-DASH became more popular, we realized that we wanted to support it as well and that we can share a lot of the code between HLS and DASH implementations. Look for more details in an announcement post for VHS soon!
 VHS will ship with Video.js by default because one of the guiding principles of Video.js is to make it easy for users to just put it on the page and have a player that works across browsers. With HLS and DASH becoming so popular, we thought it was about time for a plug and playable Video.js for the most common streaming formats.
 In addition to having it be included by default, we’ll make sure to provide builds that exclude VHS for those that don’t need it or are using another playback engine like HLS.js.
 
