@@ -10,7 +10,7 @@ A major update to videojs-contrib-ads has been released. In this post, we'll tak
 
 ## What is contrib-ads?
 
-Videojs-contrib-ads is a framework for creating Video.js ad plugins. Seamlessly integrating ad support into a video player can be a daunting task, especially if you have other plugins that may be effected. For example, contrib-ads has a feature called [Redispatch](https://github.com/videojs/videojs-contrib-ads#redispatch) that makes sure [media events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events) are not impacted by the presence of ads. You may have some JavaScript on your site, or another Video.js plugin, that responds to events such as the `play` event. With contrib-ads, if an ad plays, it will not send an additional `play` event. This keeps things simple as possible without breaking other plugins. [Additional benefits of using contrib-ads are listed in the readme](https://github.com/videojs/videojs-contrib-ads#benefits).
+Videojs-contrib-ads is a framework for creating Video.js ad plugins. Seamlessly integrating ad support into a video player can be a daunting task, especially if you have other plugins that may be effected. For example, playing ads may result in additional [media events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events). Imagine an analytics system that listens for "loadstart" events: it would start seeing double when extra `loadstart` events result from preroll ads. contrib-ads has a feature called [Redispatch](https://github.com/videojs/videojs-contrib-ads#redispatch) that makes sure ads do not trigger extra media events. This keeps things simple as possible without breaking other plugins. [Additional benefits of using contrib-ads are listed in the readme](https://github.com/videojs/videojs-contrib-ads#benefits).
 
 ## Version 6
 
@@ -24,7 +24,7 @@ Here is a diagram of the current states:
 
 ![](./ad-states.png)
 
-There are two types of states: content states (blue) and ad states (yellow). `player.ads.isInAdMode()` is implemented using this distinction. [Ad mode](https://github.com/videojs/videojs-contrib-ads#ad-mode-definition) is defined as _if content playback is blocked by the ad plugin_. This does not necessarily mean that an ad is playing. For example, if there is a preroll ad, after a play request we show a loading spinner until ad playback actually begins. This is considered part of ad mode.
+There are two types of states: content states (blue) and ad states (yellow). `player.ads.isInAdMode()` returns true if the current state is an ad state. [Ad mode](https://github.com/videojs/videojs-contrib-ads#ad-mode-definition) is defined as _if content playback is blocked by the ad plugin_. This does not necessarily mean that an ad is playing. For example, if there is a preroll ad, after a play request we show a loading spinner until ad playback actually begins. This is considered part of ad mode.
 
 Let's walk through the states for a simple preroll scenario. The plugin begins in BeforePreroll state. This is considered a content state because content playback hasn't been requested yet and so ads are not blocking playback. However, the ad plugin can still asynchronously request ads from an ad server during this time. The ad plugin triggers the `adsready` event to say that it's ready. Contrib-ads knows that once the play button is pressed, ads are already prepared.
 
@@ -32,9 +32,9 @@ Now, the user clicks play. At this point ad mode begins and contrib-ads moves fo
 
 Now we're in the ContentPlayback state. At this point, the ad plugin could play a midroll ad, causing a brief foray into the Midroll state, or content could continue without interruption.
 
-When content ends, normally we would see an `ended` event right away. Instead, contrib-ads sends a `contentended` event, which is the ad plugin's chance to play postroll ads. Perhaps the ad plugin has decided not to play postroll ad, so it responds by triggering `nopreroll`. contrib-ads knows that now we're really done, so an `ended` event is triggered.
+When content ends, normally we would see an `ended` event right away. Instead, contrib-ads sends a `contentended` event, which is the ad plugin's chance to play postroll ads. Perhaps the ad plugin has decided not to play postroll ad, so it responds by triggering `nopostroll`. contrib-ads knows that now we're really done, so an `ended` event is triggered.
 
-Finally, since content has ended for the first time, we now transition to the AdsDone state. There will be no more ads, even if the use seeks backwards and plays through the content again.
+Finally, since content has ended for the first time, we now transition to the AdsDone state. There will be no more ads, even if the user seeks backwards and plays through the content again.
 
 ## Conclusion
 
