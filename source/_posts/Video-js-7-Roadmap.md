@@ -1,15 +1,20 @@
 ---
 title: Video.js 7 Roadmap
-author:
-  name: Gary Katsevman
-  github: gkatsev
 tags:
   - IE8
   - IE
   - google analytics
   - VHS
+  - HLS
+  - DASH
   - webpack
+  - rollup
+author:
+  name: Gary Katsevman
+  github: gkatsev
+date: 2018-03-09 16:33:56
 ---
+
 ![](woodland-road-falling-leaf-natural-38537.jpeg)
 
 Today, I’m excited to announce the roadmap to Video.js 7! While this is a major version update, there is very little that is actually breaking. The two main changes are the addition of videojs-http-streaming, VHS for short, and the removal of support for older versions of Internet Explorer.
