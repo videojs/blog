@@ -1,8 +1,8 @@
 ---
 title: videojs-contrib-ads 6
 author:
-  name: null
-  github: null
+  name: Greg Smith
+  github: incompl
 date: 2018-03-13 15:22:57
 tags:
 ---
