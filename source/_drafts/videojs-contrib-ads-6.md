@@ -6,31 +6,35 @@ author:
 tags:
 ---
 
-A major update to videojs-contrib-ads has been released. In this post, we'll take a look at what videojs-contrib-ads offers and what has improved in this latest version.
+A major update to [videojs-contrib-ads](https://github.com/videojs/videojs-contrib-ads/) has been released. In this post, we'll take a look at what videojs-contrib-ads offers and what has improved in version 6.
 
 ## What is contrib-ads?
 
-Videojs-contrib-ads is a framework for creating Video.js ad plugins. Seamlessly integrating ad support into a video player can be a daunting task, especially if you have other plugins that may be effected. For example, playing ads may result in additional [media events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events). Imagine an analytics system that listens for "loadstart" events: it would start seeing double when extra `loadstart` events result from preroll ads. contrib-ads has a feature called [Redispatch](https://github.com/videojs/videojs-contrib-ads#redispatch) that makes sure ads do not trigger extra media events. This keeps things simple as possible without breaking other plugins. [Additional benefits of using contrib-ads are listed in the readme](https://github.com/videojs/videojs-contrib-ads#benefits).
+Videojs-contrib-ads is a framework for creating Video.js ad plugins. Seamlessly integrating ad support into a video player can be a daunting task, especially if you have other plugins that may be effected. For example, playing ads may result in additional [media events](https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events). Imagine an analytics system that listens to "loadstart" events: it would start seeing double when extra `loadstart` events result from preroll ads. contrib-ads has a feature called [Redispatch](https://github.com/videojs/videojs-contrib-ads#redispatch) that makes sure ads do not trigger extra media events. This keeps things as simple as possible without breaking other plugins. [Additional benefits of using contrib-ads are listed in the readme](https://github.com/videojs/videojs-contrib-ads#benefits).
 
 ## Version 6
 
-Version 6 of contrib-ads is a maintenance release that includes a major code refactor. The core of the project's behavior is handled by a state machine that advances through various states as the player plays content, preroll ads, midroll ads, and postroll ads. The initial state machine was designed to implement a specific set of functionality when the project was first conceptualized. Over the years, the project became much more fully-featured and many new scenarios and edge-cases arose. In this refactor, the state machine was updated to precisely match the modern feature-set. This has resulted in a more maintainable and reliable codebase.
+Version 6 of contrib-ads is a maintenance release that includes a major code refactor. The core of the project's behavior is handled by a state machine that advances through various states as the player plays content, preroll ads, midroll ads, and postroll ads. The initial state machine was designed to implement a specific set of functionality when the project was first conceptualized. Over the years, the project became much more fully-featured and many new scenarios and edge-cases arose. In this refactor, the state machine has been updated to precisely match the modern feature-set. This has resulted in a more maintainable and reliable codebase.
 
 ## How it works
+
+{% pullquote right %}
+Ad mode is [strictly defined](https://github.com/videojs/videojs-contrib-ads#ad-mode-definition) as _if content playback is blocked by the ad plugin_.
+{% endpullquote %}
 
 contrib-ads has a concept called _ad mode_. Ad mode is [strictly defined](https://github.com/videojs/videojs-contrib-ads#ad-mode-definition) as _if content playback is blocked by the ad plugin_. This does not necessarily mean that an ad is playing. For example, if there is a preroll ad, after a play request we show a loading spinner until ad playback begins. This is considered part of ad mode. The public method `player.ads.isInAdMode()` can be used to check if we are in ad mode.
 
 In version 6, the state machine was refactored to match this strict definition of ad mode. There are two types of states: content states and ad states. If contrib-ads is in an ad state, it is in ad mode.
 
-Here is a diagram of the new states. Blue states are content states and yellow states are ad states.
+Here is a diagram of the new states. Blue states are content states and yellow states are ad states:
 
 ![](./ad-states.png)
 
 For a history of how the state machine has evolved over time, [there is detailed information in this Github issue](https://github.com/videojs/videojs-contrib-ads/issues/320). In this article we're going to focus on how it works in version 6.
 
-Let's walk through the states for a simple preroll scenario. The plugin begins in BeforePreroll state. This is considered a content state because content playback hasn't been requested yet and so ads are not blocking playback. However, the ad plugin can still asynchronously request ads from an ad server during this time. The ad plugin triggers the `adsready` event to say that it's ready. Contrib-ads knows that once the play button is pressed, ads are already prepared.
+Let's walk through the states for a simple preroll scenario. contrib-ads begins in the BeforePreroll state. This is considered a content state because content playback hasn't been requested yet and so ads are not blocking playback. The ad plugin can asynchronously request ads from an ad server during this time, even though the plugin is in content mode. The ad plugin triggers the `adsready` event when it's ready. Contrib-ads knows that once the play button is pressed, ads are already prepared.
 
-Now, the user clicks play. At this point ad mode begins and contrib-ads moves forward to the Preroll state. The Preroll state shows a loading spinner while ads load. Once the ad break begins and an ad plays, the control bar turns yellow and will not allow seeking. If the ad takes too long to begin playing, a timeout will occur and content will resume without further adieu. When the ad is complete, contrib-ads restores the content video. Only when content playback results in a `playing` event does ad mode end.
+Now the user clicks play. At this point ad mode begins and contrib-ads moves forward to the Preroll state. The Preroll state shows a loading spinner until ad playback begins. The Preroll state knows that the ad plugin is ready and that play was clicked, so triggers `readyforpreroll` to inform the ad plugin that it's time to play an ad. Once ad playback begins, the control bar turns yellow and will not allow seeking. If the ad takes too long to begin playing, a timeout will occur and content will resume without further adieu. When the ad is complete, contrib-ads restores the content video. Only when content playback results in a `playing` event does ad mode end.
 
 Now we're in the ContentPlayback state. At this point, the ad plugin could play a midroll ad, causing a brief foray into the Midroll state, or content could continue without interruption.
 
