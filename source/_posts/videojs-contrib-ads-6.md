@@ -1,10 +1,12 @@
 ---
 title: videojs-contrib-ads 6
 author:
-  name: Greg Smith
-  github: incompl
+  name: null
+  github: null
+date: 2018-03-13 15:22:57
 tags:
 ---
+
 
 A major update to [videojs-contrib-ads](https://github.com/videojs/videojs-contrib-ads/) has been released. In this post, we'll take a look at what videojs-contrib-ads offers and what has improved in version 6.
 
