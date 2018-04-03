@@ -22,7 +22,7 @@ Back in September 2017, Google announced that [Chrome's autoplay policy would ch
 As of Safari 11, which shipped in September 2017, Apple has [updated their autoplay policies](https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/) to prevent autoplay with sound on most websites.
 
 ### Firefox
-Firefox takes a simpler approach, allowing users to disable autoplay across the board with a configuration change - the `media.autoplay.enabled` setting in `about:config` can be set to `false`.
+With Firefox, Mozilla has taken the position of not having a firm autoplay policy for the time being. That said, Firefox does allow users to disable autoplay across the board with a configuration change - the `media.autoplay.enabled` setting in `about:config` can be set to `false`.
 
 ### IE11 and Edge
 Autoplay always works in Microsoft's browsers.
@@ -52,19 +52,34 @@ By default, you can defer to the default behavior in Video.js. If autoplay succe
 
 If that works for you, your job is done!
 
-For those who *do* care whether or not autoplay was successful, both Google and Apple have recommended the same practice for detecting autoplay success or rejection:
+If you want to use autoplay and improve the chances of it working, use the `muted` attribute (or the `muted` option, with Video.js).
 
-* Use the `muted` attribute (or the `muted` option, with Video.js) when using autoplay. This will lead to a successful autoplay in more cases.
-* Listen to the `Promise` returned by the `play()` method to determine if autoplay was successful or not.
+Beyond that, there are two general practices that may be useful when dealing with autoplay: detecting whether autoplay is supported at all or detecting whether autoplay succeeds or fails.
 
-Further, specifically when using Video.js, we recommend the following guidelines:
+### Detecting Autoplay Support
+Similar to detecting successful or failed autoplay requests, it may be useful to perform autoplay feature detection on the browser before creating a player at all. In these cases, the [can-autoplay](https://github.com/video-dev/can-autoplay) library is the best solution. It provides a similar promise-based API to the native `play()` method:
+
+```js
+canAutoplay.video().then(function(obj) {
+  if (obj.result === true) {
+    // Can autoplay
+  } else {
+    // Can not autoplay
+  }
+});
+```
+
+### Detecting Autoplay Success/Failure
+For those who care whether or not an autoplay request was successful, both Google and Apple have recommended the same practice for detecting autoplay success or rejection: listen to the `Promise` returned by the `play()` method to determine if autoplay was successful or not.
+
+When using Video.js, we also recommend the following guideline:
 
 * Do not refer to the `player.autoplay()` return value until the player is ready (using a `ready()` callback or on the `"ready"` event) - it will often be `undefined` before that point. Really, most things should wait for the player to be ready.
 
 Otherwise, just like the native `<video>` element, the Video.js player will return a `Promise` from the `play()` method - if the browser returns one - or `undefined` if it doesn't. So, the Google/Apple recommended practice applies with very slight modification:
 
 ```html
-<video-js id="player" src="https://path/to/source.mp4"></video-js>
+<video-js id="player" autoplay src="https://path/to/source.mp4"></video-js>
 ```
 
 ```js
@@ -85,7 +100,14 @@ player.ready(function() {
 
 **NOTE:** Even if the browser handles the actual autoplay operation, calling `play()` while it's playing does not seem to cause current browsers to trigger an extra `"play"` event in either Chrome or Firefox. Oddly, it does seem that Safari triggers `"playing"` and `"pause"` events each time `play()` is called.
 
-## Example Use-Case for Autoplay Detection
+#### Example Use-Case
 At Brightcove, one thing we've done to improve the user experience of our Video.js-based player is to hide the "big play button" for players requesting autoplay until the autoplay either succeeds or fails. This prevents a periodic situation where the "big play button" flashes on the player for a moment before autoplay kicks in.
 
 While our actual implementation has more complexity due to specific circumstances with our player, the gist of it is the same as [this functional JSBin demonstration.](https://jsbin.com/quqodek/edit?html,js,output)
+
+## Conclusion
+There may be decision points in your code related to whether autoplay succeeds or not; however, the practical reality is that all the paragraphs before this boil down to a single, essential concept:
+
+**Never assume that your request to autoplay will succeed.**
+
+Keep that in mind and you're golden... for now.
