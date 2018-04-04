@@ -31,7 +31,7 @@ Back in September 2017, Google announced that [Chrome's autoplay policy would ch
 With Firefox, Mozilla has taken the position of not having a firm autoplay policy for the time being. That may change in the future. That said, Firefox today [does allow users to disable autoplay](https://support.mozilla.org/en-US/questions/1150702) with a few configuration changes.
 
 ### IE11 and Edge
-Autoplay always works in Microsoft's browsers.
+Microsoft's browsers have no specific/known autoplay policy - at the time of writing, autoplay just works in IE11 and Edge.
 
 ## Refresher on How to Request Autoplay in Video.js
 Note how the title of this section uses the word "request." That's intentional because it should be thought of as a request. Remember, **never assume autoplay will work.**
