@@ -1,10 +1,12 @@
 ---
-title: "Autoplay Best Practices with Video.js"
+title: Autoplay Best Practices with Video.js
 author:
-  name: "Pat O'Neill"
-  github: misteroneill
+  name: null
+  github: null
+date: 2018-04-17 14:49:43
 tags:
 ---
+
 
 ## tl;dr
 * Never assume autoplay will work.
