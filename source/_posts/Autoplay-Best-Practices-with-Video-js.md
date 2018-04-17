@@ -1,8 +1,8 @@
 ---
 title: Autoplay Best Practices with Video.js
 author:
-  name: null
-  github: null
+  name: Pat O'Neill
+  github: misteroneill
 date: 2018-04-17 14:49:43
 tags:
 ---
