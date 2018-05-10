@@ -12,7 +12,7 @@ I'm happy to announce that Video.js 7 is now out! It brings to Video.js support 
 While it's out, it's still in pre-release for a short while and only available under the `next` tag on npm. Some time next week, we'll flip the switch and make it latest.
 
 ![changes for removing IE8 code](changes.png)
-This release is pretty exciting because it means we were able to [remove a bunch of code](https://github.com/videojs/video.js/pull/5041) for old browsers and we can now start using newer web platform features that we had previously been avoiding like the `:not()` css selector. It'll also free us to look forward and new features and not be held back by needing to support old browsers like IE8.
+This release is pretty exciting because it means we were able to [remove a bunch of code](https://github.com/videojs/video.js/pull/5041) for old browsers and we can now start using newer web platform features that we had previously been avoiding like the `:not()` css selector. It'll also free us to look forward at new features and not be held back by needing to support old browsers like IE8.
 
 ## Getting Video.js 7
 
@@ -42,7 +42,7 @@ https://cdnjs.cloudflare.com/ajax/libs/video.js/7.0.0/video-js.css
 ```
 
 ## VHS and Video.js
-Video.js will be bunlding VHS by default for ease of use for new users. However, some people don't want VHS or are using another plugin. For this, we have a separate build of Video.js which doesn't include VHS.
+Video.js will be bundling VHS by default for ease of use for new users. However, some people don't want VHS or are using another plugin. For this, we have a separate build of Video.js which doesn't include VHS.
 You can get it from our CDN or another CDN
 ```
 https://vjs.zencdn.net/7.0.0/alt/video.core.min.js
@@ -65,7 +65,7 @@ Later down the line, we'd also want to make a roadmap for a Video.js 8. Given th
 As of this release, Video.js 5.x is now officially deprecated. This means that we will no longer work on it or back-port fixes to it but it's still available for usage if you're still using it. We do urge you to update to the latest 5.x if you're on it, or better yet, upgrade to 6.x or 7 if you can.
 
 ### Build Tools
-In the [roadmap][] post, we talked about potentially switching to webpack from rollup for better support of importing VHS into Video.js. However, while doing [this work](https://github.com/videojs/video.js/pull/5033), found out that the filesize of Video.js will increase by about 20%, which isn't a trivial amount, not to mention that the filesize is already going to increase from the default inclusion of VHS.
+In the [roadmap][] post, we talked about potentially switching to webpack from rollup for better support of importing VHS into Video.js. However, while doing [this work](https://github.com/videojs/video.js/pull/5033), we found out that the filesize of Video.js will increase by about 20%, which isn't a trivial amount, not to mention that the filesize is already going to increase from the default inclusion of VHS.
 Eventually, after much work, we were able to figure out how to bundle VHS using rollup as well and we are continuing to use rollup for our builds.
 
 ### Google Analytics
