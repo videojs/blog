@@ -1,10 +1,12 @@
 ---
-title: Video.js 7 is here! 🎉
+title: "Video.js 7 is here! \uD83C\uDF89"
 author:
   name: Gary Katsevman
   github: gkatsev
+date: 2018-05-11 17:31:52
 tags:
 ---
+
 ![](vjs 7 small.png)
 
 I'm happy to announce that Video.js 7 is now out! It brings to Video.js support for HLS and experimental DASH support via the [Video.js HTTP Streaming (VHS)][VHS] project. Video.js 7 also drops support for some older Internet Explorer browsers only keeping support for IE11.
