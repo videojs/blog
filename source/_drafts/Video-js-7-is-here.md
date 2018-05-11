@@ -77,7 +77,7 @@ Eventually, after much work, we were able to figure out how to bundle VHS using 
 ### Google Analytics
 Video.js 7's CDN builds will no longer send any data to Google Analytics via our stripped down pixel tracking.
 
-Video.js 6 and below CDN builds will continue sending data but versions 6.8 and above will honor the Do Not Track option that users can set in their headers before sending the data.
+Video.js 6 and below CDN builds will continue sending data, unless you opt out with `window.HELP_IMPROVE_VIDEOJS = false`, but versions 6.8 and above will honor the Do Not Track option that users can set in their headers before sending the data.
 
 We are continuing to investigate our options for collecting our CDN logs in an open manner and will post updates when we have any.
 
