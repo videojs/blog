@@ -70,9 +70,9 @@ Later down the line, we'd also want to make a roadmap for a Video.js 8. Given th
 As of this release, Video.js 5.x is now officially deprecated. This means that we will no longer work on it or back-port fixes to it but it's still available for usage if you're still using it. We do urge you to update to the latest 5.x if you're on it, or better yet, upgrade to 6.x or 7 if you can.
 
 ### Build Tools
-In the [roadmap][] post, we talked about potentially switching to webpack from rollup for better support of importing VHS into Video.js. However, while doing [this work](https://github.com/videojs/video.js/pull/5033), we found out that the filesize of Video.js will increase by about 20%, which isn't a trivial amount, not to mention that the filesize is already going to increase from the default inclusion of VHS.
+In the [roadmap][] post, we talked about potentially switching to webpack from Rollup for better support of importing VHS into Video.js. However, while doing [this work](https://github.com/videojs/video.js/pull/5033), we found out that the filesize of Video.js will increase by about 20%, which isn't a trivial amount, not to mention that the filesize is already going to increase from the default inclusion of VHS.
 
-Eventually, after much work, we were able to figure out how to bundle VHS using rollup as well and we are continuing to use rollup for our builds.
+Eventually, after much work, we were able to figure out how to bundle VHS using Rollup as well and we are continuing to use Rollup for our builds.
 
 ### Google Analytics
 Video.js 7's CDN builds will no longer send any data to Google Analytics via our stripped down pixel tracking.
