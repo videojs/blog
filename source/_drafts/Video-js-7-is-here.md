@@ -62,12 +62,12 @@ Video.js hasn't really had a roadmap for a long time. With this release, we thin
 
 The roadmap will take into account currently open issues and internal and external feature requests. In addition, we're going to look at currently available features and see if it's worth refactoring them with the more modern web in-mind.
 
-Later down the line, we'd also want to make a roadmap for a Video.js 8. Given that this release only adds VHS and removes old browsers, there's plenty of already deprecated features that it's time to remove.
+Later down the line, we'd also want to make a roadmap for a Video.js 8. Given that this release only adds VHS and removes old browsers, there're plenty of already deprecated features that it's time to remove.
 
 ## Updates from the [Video.js 7 roadmap][roadmap]
 ### Video.js 5.x
 
-As of this release, Video.js 5.x is now officially deprecated. This means that we will no longer work on it or back-port fixes to it but it's still available for usage if you're still using it. We do urge you to update to the latest 5.x if you're on it, or better yet, upgrade to 6.x or 7 if you can.
+As of this release, Video.js 5.x is now officially deprecated. This means that we will no longer work on it or back-port fixes to it but it's still available for usage if you're still using it. We do urge you to update to the latest 5.x, or better yet, upgrade to 6.x or 7.
 
 ### Build Tools
 In the [roadmap][] post, we talked about potentially switching to webpack from Rollup for better support of importing VHS into Video.js. However, while doing [this work](https://github.com/videojs/video.js/pull/5033), we found out that the filesize of Video.js will increase by about 20%, which isn't a trivial amount, not to mention that the filesize is already going to increase from the default inclusion of VHS.
