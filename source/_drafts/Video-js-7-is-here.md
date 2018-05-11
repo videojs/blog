@@ -43,6 +43,7 @@ https://cdnjs.cloudflare.com/ajax/libs/video.js/7.0.0/video-js.css
 
 ## VHS and Video.js
 Video.js will be bundling VHS by default for ease of use for new users. However, some people don't want VHS or are using another plugin. For this, we have a separate build of Video.js which doesn't include VHS.
+
 You can get it from our CDN or another CDN
 ```
 https://vjs.zencdn.net/7.0.0/alt/video.core.min.js
@@ -58,7 +59,9 @@ Finally, expect a more details post about VHS in the weeks to come.
 
 ## What the future holds
 Video.js hasn't really had a roadmap for a long time. With this release, we think it's time to take a step back and create a roadmap.
+
 The roadmap will take into account currently open issues and internal and external feature requests. In addition, we're going to look at currently available features and see if it's worth refactoring them with the more modern web in-mind.
+
 Later down the line, we'd also want to make a roadmap for a Video.js 8. Given that this release only adds VHS and removes old browsers, there's plenty of already deprecated features that it's time to remove.
 
 ## Updates from the [Video.js 7 roadmap][roadmap]
@@ -68,11 +71,14 @@ As of this release, Video.js 5.x is now officially deprecated. This means that w
 
 ### Build Tools
 In the [roadmap][] post, we talked about potentially switching to webpack from rollup for better support of importing VHS into Video.js. However, while doing [this work](https://github.com/videojs/video.js/pull/5033), we found out that the filesize of Video.js will increase by about 20%, which isn't a trivial amount, not to mention that the filesize is already going to increase from the default inclusion of VHS.
+
 Eventually, after much work, we were able to figure out how to bundle VHS using rollup as well and we are continuing to use rollup for our builds.
 
 ### Google Analytics
 Video.js 7's CDN builds will no longer send any data to Google Analytics via our stripped down pixel tracking.
+
 Video.js 6 and below CDN builds will continue sending data but versions 6.8 and above will honor the Do Not Track option that users can set in their headers before sending the data.
+
 We are continuing to investigate our options for collecting our CDN logs in an open manner and will post updates when we have any.
 
 [VHS]: https://github.com/videojs/http-streaming
