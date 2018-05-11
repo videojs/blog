@@ -55,7 +55,7 @@ https://unpkg.com/video.js@7.0.0/dist/alt/video.core.min.js
 https://cdnjs.cloudflare.com/ajax/libs/video.js/7.0.0/alt/video.core.min.js
 ```
 
-Finally, expect a more details post about VHS in the weeks to come.
+Finally, expect a more detailed post about VHS in the weeks to come.
 
 ## What the future holds
 Video.js hasn't really had a roadmap for a long time. With this release, we think it's time to take a step back and create a roadmap.
