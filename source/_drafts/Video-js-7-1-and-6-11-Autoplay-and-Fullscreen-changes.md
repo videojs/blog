@@ -14,10 +14,11 @@ The two big changes are related to autoplay -- when will we stop talking about a
 
 Video.js 7.1.0 and 6.11.0 are out as `next` and `next-6` respectively on npm.
 
-You can get it via
+To get 7.1.0 via npm:
 ```sh
 npm install video.js@next
 ```
+And 6.11.0 via npm:
 ```sh
 npm install video.js@next-6
 ```
