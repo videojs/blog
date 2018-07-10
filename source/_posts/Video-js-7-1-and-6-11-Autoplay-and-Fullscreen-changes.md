@@ -1,12 +1,14 @@
 ---
 title: 'Video.js 7.1 and 6.11: Autoplay and Fullscreen changes'
-author:
-  name: Gary Katsevman
-  github: gkatsev
 tags:
   - autoplay
   - fullscreen
+author:
+  name: Gary Katsevman
+  github: gkatsev
+date: 2018-07-10 17:02:47
 ---
+
 ![](header.png)
 
 It's been a while since the last release post. The [7.1.0][] and [6.11.0][] releases of Video.js are full of great features from contributors and maintainers.
