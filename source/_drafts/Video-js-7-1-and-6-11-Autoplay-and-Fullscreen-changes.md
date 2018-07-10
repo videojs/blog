@@ -12,6 +12,16 @@ tags:
 It's been a while since the last release post. The [7.1.0][] and [6.11.0][] releases of Video.js are full of great features from contributors and maintainers.
 The two big changes are related to autoplay -- when will we stop talking about autoplay? -- and fullscreen. Though, there's plenty more in there.
 
+Video.js 7.1.0 and 6.11.0 are out as `next` and `next-6` respectively on npm.
+
+You can get it via
+```sh
+npm install video.js@next
+```
+```sh
+npm install video.js@next-6
+```
+
 ## Autoplay
 
 We've been keeping track of changes happening around [autoplay][] in browser vendors. We've also done a lot of work to make Video.js work as well as possible with the new autoplay policies. However, there were still some use cases that weren't accounted for. To address those, we decided to extend the existing Video.js `autoplay` option to include a few new values: `muted`, `play`, `any`. The current boolean options will work as they do now and unknown options will be treated as they do now.
