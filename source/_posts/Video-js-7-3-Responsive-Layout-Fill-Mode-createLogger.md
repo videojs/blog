@@ -3,8 +3,15 @@ title: 'Video.js 7.3: Responsive Layout, Fill Mode, createLogger'
 author:
   name: Gary Katsevman
   github: gkatsev
+date: 2018-10-29 17:44:42
 tags:
+  - responsive
+  - log
+  - fill
+  - fluid
+  - playerresize
 ---
+
 
 Another month, another Video.js release: [v7.3.0][]. This release brings a long wanted feature: Responsive Layout.
 In addition, Fill Mode has been promoted to a first-class feature and createLogger was added to make debugging and logging easier.
