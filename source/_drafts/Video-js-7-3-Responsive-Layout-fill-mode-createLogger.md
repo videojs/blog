@@ -25,7 +25,7 @@ I'd like to thank everyone that was involved in making changes that landed in th
 
 Responsive mode will set and change certain breakpoint classes like `vjs-layout-small` when the player size changed. These can be [configured][breakpoints]. Depending on which class is currently on the player, the control bar and other UI elements can adapt. For example, with `vjs-layout-small`, the time controls will not show because the time tooltips on the progress bar are available and the captions button is more important. At a larger size, both can be shown without a problem.
 
-You can find out how to enable [Responsive Mode][] and more in our [docs page][Responsive Mode].
+You can find out how to enable [Responsive Mode][] and more in our [docs page][Responsive Mode]. There is also an example playground in the [sandbox folder in the repo][sandbox].
 
 ## Fill Mode
 [Fill Mode][] allows the Video.js player to resize dynamically, but stay contained within the bounds of the parent container. This is analogous to [Fluid Mode][], but sometimes you the container is already being sized properly.
@@ -35,7 +35,9 @@ Fill Mode is not a brand new mode, the class `vjs-fill` has been available in Vi
 ## createLogger
 This is a new method on `videojs.log` that allows you to create a new logger with a specific name. It then creates a chain of names to make it easier to track which component logged this particular message. In particular, this can help plugin authors to log messages and then filter out only the messages that are associated with their plugin.
 
-###
+`createLogger` returns a function with the same API as `videojs.log`. You can see it in action below.
+
+### Examples
 A new method, `player.log` was added which uses createLogger behind the scenes. It logs the player ID in addition to `VIDEOJS`:
 
 ```js
@@ -55,6 +57,19 @@ mylog.log('foo');
 // VIDEOJS: myid: my-plugin: foo
 ```
 
+If you want to log a warning or error for your custom plugin:
+
+```js
+var player = videojs('myid');
+var mylog = player.log.createLogger('my-plugin');
+
+mylog.log.warn('foo');
+// VIDEOJS: myid: my-plugin: WARN: foo
+
+mylog.log.error('bar');
+// VIDEOJS: vid1: my-plugin: ERROR: bar
+```
+
 [v6.7.0]: https://github.com/videojs/video.js/releases/tag/v6.7.0
 [v7.3.0]: https://github.com/videojs/video.js/releases/tag/v7.3.0
 [`playerresize`]: https://github.com/videojs/video.js/pull/4864
@@ -64,3 +79,4 @@ mylog.log('foo');
 [Fluid Mode]: https://docs.videojs.com/tutorial-layout.html#fluid-mode
 [commit]: https://github.com/videojs/video.js/commit/2fc8968002cf2f40128c39699c3ffbaac73fc9ed#diff-6be43b1f61c2cbcb90c6cb4a762ad527R64
 [issues]: https://github.com/videojs/video.js/issues/new
+[sandbox]: https://github.com/videojs/video.js/blob/master/sandbox/responsive.html.example
