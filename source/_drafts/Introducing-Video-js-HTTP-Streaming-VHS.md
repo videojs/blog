@@ -24,11 +24,11 @@ This was the motivation behind integrating [Video.js HTTP Streaming](https://git
 
 ![](./vhs-logo.svg)
 
-VHS is a source handler forked from the [videojs-contrib-hls](https://github.com/videojs/videojs-contrib-hls) repository. While videojs-contrib-hls was originally designed to add HLS playback on all browsers, we realized that the engine could also play other formats just as well.
+VHS is the successor to videojs-contrib-hls. It is a source handler forked from the [videojs-contrib-hls](https://github.com/videojs/videojs-contrib-hls) repository. While videojs-contrib-hls was originally designed to add HLS playback on all browsers, we realized that the engine could also play other formats just as well.
 
 To prove this, we added a [DASH manifest parser](https://github.com/videojs/mpd-parser), and with a few minor changes, VHS played DASH content with the same codebase and API as it used for HLS.
 
-And with the changing landscape of video technologies, if a new format comes around and gains popularity, with the addition of a small manifest parser and maybe a few minor code changes, we expect it to play via VHS as well. One engine and API for all formats.
+With the changing landscape of video technologies, if a new format comes around and gains popularity, with the addition of a small manifest parser and maybe a few minor code changes, we expect it to play via VHS as well. One engine and API for all formats.
 
 ## Why is VHS included by default in Video.js?
 
