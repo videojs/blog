@@ -1,14 +1,16 @@
 ---
 title: Introducing Video.js HTTP Streaming (VHS)
-author:
-  name: Garrett Singer
-  github: gesinger
 tags:
   - vhs
   - videojs-http-streaming
   - http-streaming
   - playback
+author:
+  name: Garrett Singer
+  github: gesinger
+date: 2018-11-08 11:33:01
 ---
+
 
 > "How do I get my video to play with Video.js?"
 
