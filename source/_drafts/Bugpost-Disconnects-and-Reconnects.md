@@ -73,7 +73,7 @@ VIDEOJS: WARN: Problem encountered with the current HLS playlist. Trying again s
 
 When your console freezes, debugging can be tough. It's like trying to watch a video when the microwave is on. So we tackled that issue first.
 
-Looking at the error message, we were retrying the last rendition over and over. That is expected behavior, as we added that in https://github.com/videojs/videojs-contrib-hls/pull/1039 (a long time ago). However, DASH uses a different playlist loader than HLS, and we never added the same logic for reloading the final DASH playlists.
+Looking at the error message, we were retrying the last rendition over and over. That is expected behavior, as we added it [a long time ago](https://github.com/videojs/videojs-contrib-hls/pull/1039). However, DASH uses a different playlist loader than HLS, and we never added the same logic for reloading the final DASH playlists.
 
 After [adding the throttle](https://github.com/videojs/http-streaming/pull/277), debugging became much easier, and we were able to use the console once again and dig into why DASH didn't reconnect while HLS did.
 
@@ -85,7 +85,7 @@ But there were more than just two requests for DASH. By examining Chrome's netwo
 
 Requests in VHS are managed by a module called `media-segment-request`, which is responsible for requesting everything required for a segment, whether it be the key, the init segment, the segment itself, or all of them, before letting the segment loader know that its requests are done. And for the video requests, the `media-segment-request` was never calling the done callback after the disconnect.
 
-It turned out that if we received one error, we would abort the other requests in that group, and we waited to call the `done` callback until those requests reported that they had been aborted. By the [standards](https://xhr.spec.whatwg.org/#the-abort()-method) though, the abort algorithm may not be run if the request was unsent. In this case, when the network was disconnected, the first request would report an error before the second had a chance to be sent, and so after we aborted the second request, we'd be stuck waiting for an error that would never come.
+It turned out that if we received one error, we would abort the other requests in that group, and we waited to call the `done` callback until those requests reported that they had been aborted. According to the [XHR standard](https://xhr.spec.whatwg.org/#the-abort%28%29-method) though, the abort algorithm may not be run if the request was unsent. In this case, when the network was disconnected, the first request would report an error before the second had a chance to be sent, and so after we aborted the second request, we'd be stuck waiting for an error that would never come.
 
 We fixed that by [immediately calling back with an error on the first error we encounter](https://github.com/videojs/http-streaming/pull/286) instead of waiting for each subsequent request to finish.
 
@@ -93,6 +93,6 @@ The problem should also have existed in HLS, but only in cases where the segment
 
 ## Bug Solved
 
-We hope that was somewhat useful in describing some of the bugs we encounter, how we go about investigation, and what the resolutions look like. We'd be happy to hear from you as well. We're always around on the #playback channel in the [Video.js Slack](http://slack.videojs.com/), or you can find us navigating Issues and PRs at https://github.com/videojs/http-streaming.
+We hope that was somewhat useful in describing some of the bugs we encounter, how we go about investigation, and what the resolutions look like. We'd be happy to hear from you as well. You can find us on the #playback channel in the [Video.js Slack](http://slack.videojs.com/), or navigating Issues and PRs at https://github.com/videojs/http-streaming.
 
 Now to enjoy my oats and video, without any concerns about the playback resuming.
