@@ -15,7 +15,7 @@ date: 2018-12-17 15:00:44
 
 In my old apartment, whenever I nuked a bowl of oats in the microwave, my WIFI cut out. It was an annoyance, but I was hungry, the apartment was too small to move the router further from the microwave, and I didn’t want to buy anything that operated on a different frequency. So I’d start the microwave, watch whatever video was streaming on my laptop until the buffer ran out, then watch the loading spinner until the microwave gave the triple ding.
 
-Thankfully, video players are usually pretty robust against such issues as network connectivity (and rogue microwaves), and the video resumed after the network recovered. But recently, we found that for some content played in Video.js, the video wasn’t resuming. Even worse, the loading spinner simply disappeared, leaving a frozen frame on screen.
+Thankfully, video players are usually pretty robust against such issues as network connectivity (and rogue microwaves), and the video resumed after the network recovered. But recently, we found that for some content played in Video.js, the video didn’t resume. Even worse, the loading spinner simply disappeared, leaving a frozen frame on screen.
 
 You can see this behavior yourself by checking out Video.js 7.3.0, loading https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd as the source, and using Chrome Dev Tools to disconnect and reconnect the network.
 
@@ -83,11 +83,11 @@ After [adding the throttle](https://github.com/videojs/http-streaming/pull/277),
 
 The last problem proved to be the most difficult to debug. Initially, the thought was that demuxed content was the problem, as having a separate audio segment loader to load from the audio playlist could cause trouble when experiencing errors at the same time as the main segment loader tried to load from the video playlist. However, HLS can also have demuxed content, and after an example source proved to resume just fine, that approach was ruled out.
 
-By examining Chrome's network log, the DASH content, after a certain point, stopped requesting video segments, and only request audio segments. But there were more than just two requests for DASH. The video segments included two requests: one for the init segment, and the other for the segment itself.
+By examining Chrome's network log, the DASH content, after a certain point, stopped requesting video segments, and only requested audio segments. But there were more than just two requests for DASH. The video segments themselves included two requests: one for the init segment, and the other for the video data.
 
-Requests in VHS are managed by a module called `media-segment-request`, which is responsible for requesting everything required for a segment, whether it be the key, the init segment, the segment itself, or all of them, before letting the segment loader know that its requests are done. And for the video requests, the `media-segment-request` never called the done callback after the disconnect.
+Requests in VHS are managed by a module called `media-segment-request`, which is responsible for requesting everything required for a segment, whether it be the key, the init segment, the media data, or all of them, before letting the segment loader know that its requests are done. And for the video requests, the `media-segment-request` never called the done callback after the disconnect.
 
-It turned out that if we received one error, we aborted the other requests in that group, and waited to call the `done` callback until those requests reported that they had been aborted. However, according to the [XHR standard](https://xhr.spec.whatwg.org/#the-abort%28%29-method), the abort algorithm may not be run if the request was unsent. In this case, when the network was disconnected, the first request reported an error before the second had a chance to be sent. After we aborted the second request, we'd be stuck waiting for an error that would never come.
+It turned out that if we received one error, we aborted the other requests in that group, and waited to call the `done` callback until those requests reported that they were aborted. However, according to the [XHR standard](https://xhr.spec.whatwg.org/#the-abort%28%29-method), the abort algorithm may not be run if the request was unsent. In this case, when the network disconnected, the first request reported an error before the second had a chance to be sent. After we aborted the second request, we were stuck waiting for an error that would never come.
 
 We fixed that by [immediately calling back with an error on the first error we encounter](https://github.com/videojs/http-streaming/pull/286) instead of waiting for each subsequent request to finish.
 
