@@ -13,7 +13,7 @@ date: 2018-12-17 15:00:44
 ---
 
 
-In my old apartment, whenever I nuked a bowl of oats in the microwave, my WIFI died. It was an annoyance, but I was hungry, the apartment was too small to move the router further from the microwave, and I didn’t want to buy anything that operated on a different frequency. So I’d start the microwave, watch whatever video was streaming on my laptop until the buffer ran out, then watch the loading spinner until the microwave gave the triple ding.
+In my old apartment, whenever I nuked a bowl of oats in the microwave, my WIFI cut out. It was an annoyance, but I was hungry, the apartment was too small to move the router further from the microwave, and I didn’t want to buy anything that operated on a different frequency. So I’d start the microwave, watch whatever video was streaming on my laptop until the buffer ran out, then watch the loading spinner until the microwave gave the triple ding.
 
 Thankfully, video players are usually pretty robust against such issues as network connectivity (and rogue microwaves), and the video resumed after the network recovered. But recently, we found that for some content played in Video.js, the video wasn’t resuming. Even worse, the loading spinner simply disappeared, leaving a frozen frame on screen.
 
