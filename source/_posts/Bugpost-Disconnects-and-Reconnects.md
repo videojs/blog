@@ -1,15 +1,17 @@
 ---
 title: 'Bugpost: Disconnects and Reconnects'
-author:
-  name: Garrett Singer
-  github: gesinger
 tags:
   - vhs
   - videojs-http-streaming
   - http-streaming
   - playback
   - bugs
+author:
+  name: Garrett Singer
+  github: gesinger
+date: 2018-12-17 15:00:44
 ---
+
 
 In my old apartment, whenever I nuked a bowl of oats in the microwave, my WIFI would die. It was an annoyance, but I was hungry, the apartment was too small to move the router further from the microwave, and I didn’t want to buy anything that operated on a different frequency. So I’d start the microwave, watch whatever video was streaming on my laptop until the buffer ran out, then watch the loading spinner until the microwave gave the triple ding.
 
