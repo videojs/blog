@@ -49,6 +49,8 @@ There were a total of 14 first time contributors, I think this is a historic hig
 Video.js has supported live streams for a while, either natively, or via [videojs-http-streaming (VHS)](https://github.com/videojs/http-streaming).
 However, this UI was very minimal, it disabled the progress bar and basically just allowed paused, though, there was an indicator that this was a live stream.
 
+![Video.js playing a live stream](live ui.png)
+
 The new UI, looks pretty similar to the previous live UI and the regular control bar.
 The "live" indicator moves to the right side of the progress bar and also indicates whether we are playing back live or we are behind live.
 Clicking this button will seek to the "live point".
@@ -71,8 +73,6 @@ Or HTML:
   <source src="https://example.com/live.m3u8" type="application/x-mpegurl">
 </video-js>
 ```
-
-![Video.js playing a live stream](live ui.png)
 
 ## Languages
 We've had a bunch of language additions and updates in the 7.4 release line.
