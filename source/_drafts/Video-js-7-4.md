@@ -13,10 +13,10 @@ tags:
 
 It's time to have an overview of Video.js 7.4, first released early December.
 The big new feature for this release is a UI that allows you to seek during live streams.
-We updated focus-visible to work with our Menus, added more translations, added a replay option to the Play/Pause button, and many many fixes, multiple of which are accessibility related.
+We updated focus-visible to work with our Menus, added more translations, added a replay option to the Play/Pause button, and many, many fixes, multiple of which are accessibility related.
 
 We also dropped our usage of Grunt from our build process.
-We owe a lot to grunt as it has served us well but it was time to move on.
+We owe a lot to Grunt as it has served us well but it was time to move on.
 
 Video.js 7.4.1 is currently the latest release with 7.4.2 out as a pre-release until next week.
 
@@ -47,14 +47,14 @@ There were a total of 14 first time contributors, I think this is a historic hig
 
 ## Live UI
 Video.js has supported live streams for a while, either natively, or via [videojs-http-streaming (VHS)](https://github.com/videojs/http-streaming).
-However, this UI was very minimal, it disabled the progress bar and basically just allowed paused, though, there was an indicator that this was a live stream.
+However, this UI was very minimal, it disabled the progress bar and basically only allowed pausing, though, there was an indicator that this was a live stream.
 
-![Video.js playing a live stream](live ui.png)
+![Video.js, with the new Live UI, playing a live stream](live ui.png)
 
-The new UI, looks pretty similar to the previous live UI and the regular control bar.
+The new UI looks pretty similar to the previous live UI and the regular control bar.
 The "live" indicator moves to the right side of the progress bar and also indicates whether we are playing back live or we are behind live.
 Clicking this button will seek to the "live point".
-The Time Displays and Tooltips will show time with respect to the live point, so, current time at the live point will be `0` and if you seek back 30 seconds, it'll show `-00:30`.
+The time displays and tooltips will show time with respect to the live point; so, current time at the live point will be `0` and if you seek back 30 seconds it'll show `-00:30`.
 
 This feature is still somewhat experimental, so, it is behind an option that is off by default.
 We hope that you try it out and give us feedback and that we can enable it by default in a future release.
@@ -89,7 +89,7 @@ In addition, we now copy the JSON files into the dist/lang folder for easier inc
 ## Accessibility
 As always, we aim to make Video.js as accessible and usable as we can. To that end, we've had a bunch of accessibility related fixes in these releases.
 
-- time displays accessibility with VoiceOver
+- Time displays accessibility with VoiceOver
 - remove hidden control text in progress bar
 - make the seek-to-live button announce itself to screen readers properly
 - Make the `-` in the remaining time display be visual only and not readable by screen readers
