@@ -1,15 +1,17 @@
 ---
 title: Video.js 7.4
-author:
-  name: Gary Katsevman
-  github: gkatsev
 tags:
   - a11y
   - responsive
   - languages
   - live-ui
   - focus-visible
+author:
+  name: Gary Katsevman
+  github: gkatsev
+date: 2019-01-11 16:24:34
 ---
+
 
 It's time to have an overview of Video.js 7.4, first released early December. The big new feature for this release is a UI that allows you to seek during live streams. We updated focus-visible to work with our Menus, added more translations, added a replay option to the Play/Pause button, and many, many fixes, multiple of which are accessibility related.
 
