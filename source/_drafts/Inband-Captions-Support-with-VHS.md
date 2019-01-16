@@ -12,7 +12,7 @@ tags:
   - 608
 ---
 
-With the release of [videojs-http-streaming](https://blog.videojs.com/introducing-video-js-http-streaming-vhs/) (VHS) v1.2.0 on July 16th 2018, Video.js has built-in support for CEA/CTA-608 captions carried in FMP4 segments. This means that closed captions are automatically parsed out and made available to Video.js players for MPEG-DASH content and HLS streams using FMP4 segments. Here's a [sample player](http://jsfiddle.net/4xvoj53a/3/) that shows the captions (English with the "CC" button is the track with CEA-608 captions).
+With the release of [videojs-http-streaming](https://blog.videojs.com/introducing-video-js-http-streaming-vhs/) (VHS) v1.2.0 on July 16th 2018, Video.js has built-in support for CEA/CTA-608 captions carried in FMP4 segments. This means that closed captions are automatically parsed out and made available to Video.js players for MPEG-DASH content and HLS streams using FMP4 segments. Here's a [sample player](http://jsfiddle.net/4xvoj53a) that shows the captions (English with the "CC" button is the track with CEA-608 captions).
 
 {% jsfiddle 4xvoj53a result,html light 800 600 %}
 
