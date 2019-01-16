@@ -1,23 +1,93 @@
 ---
-title: Inband Captions Support with VHS
+title: In-band Captions Support with videojs-http-streaming
 author:
   name: Lahiru Dayananda
   github: ldayananda
 tags:
+  - vhs
+  - videojs-http-streaming
+  - playback
+  - captions
+  - cea-608
+  - 608
 ---
 
-With the release of [videojs-http-streaming](https://github.com/videojs/http-streaming) v1.2.0 on July 16th 2018, we now have in-built support for CEA-608 captions carried in FMP4 segments. This means that closed captions are automatically parsed out and made available to video.js players for MPEG-DASH content and HLS streams using FMP4 segments.
+With the release of [videojs-http-streaming](https://blog.videojs.com/introducing-video-js-http-streaming-vhs/) v1.2.0 on July 16th 2018, Video.js has built-in support for CEA/CTA-608 captions carried in FMP4 segments. This means that closed captions are automatically parsed out and made available to Video.js players for MPEG-DASH content and HLS streams using FMP4 segments.
 
-Here's an example of what it looks like:
+Caption Parsing is handled by the [mux.js]() library and interacts with videojs-http-streaming to feed parsed captions back to Video.js.
+
+## Usage
+
+Create a CaptionParser:
 
 ```js
-example will be here
+  import { CaptionParser } from 'mux.js/lib/mp4';
+
+  const captionParser = new CaptionParser();
+
+  // initalize the CaptionParser to ensure that it is ready for data
+  if (!captionParser.isInitialized()) {
+    captionParser.init();
+  }
 ```
 
-videojs-http-streaming is included by default with videojs v7.2.0, which is currently released as `next` on npm.
+When working with HLS and MPEG-DASH with fmp4 segments, it's likely that not all the information needed to parse out captions are included in the media segments themselves, and metadata from the `init` segment needs to be passed to the CaptionParser. For this reason, the ids of video `trak`s and timescales defined in the `init` segment should be passed into the CaptionParser.
 
-To get v7.2.0 via npm:
+```js
+  import mp4probe from 'mux.js/lib/mp4/probe';
 
-```sh
-npm install video.js@next
+  // Typed array containing video and caption data
+  const data = new Uint8Array();
+  // Timescale = 90000
+  const timescales = mp4probe.timescale(data);
+  // trackId = 1
+  const videoTrackIds = mp4probe.videoTrackIds(data);
+
+  // Parsed captions are returned
+  const parsed = captionParser.parse(
+    data,
+    videoTrackIds,
+    timescales
+  );
 ```
+
+Calling `captionParser.parse` with data containing CEA-608 captions will result in an object with this structure:
+
+```js
+  {
+    captions: [
+      {
+        // You can ignore the startPts and endPts values here
+        startPts: 90000,
+        endPts: 99000,
+        // startTime and endTime can be used for caption times in the TextTrack API
+        startTime: 1,
+        endTime: 1.1,
+        text: 'This is a test caption',
+        // This is the CEA-608 "channel" the caption belongs to
+        stream: 'CC1'
+      }
+    ],
+    // Includes any (or none) of: CC1, CC2, CC3, CC4
+    // This should match the captions returned in the above caption array
+    captionStreams: {
+      CC1: true
+    }
+  };
+```
+
+You can then take one caption and create a `VTTCue` to add to a `TextTrack` with Video.js APIs
+
+```js
+  const player = videojs('video');
+  const track = player.addRemoteTextTrack({
+    kind: 'captions',
+    label: parsed.captions[0].stream,
+    default: true,
+    language: 'en'
+  }, false);
+
+  track.addCue(parsed.captions[0]);
+```
+
+videojs-http-streaming is included by default with videojs v7.x.
