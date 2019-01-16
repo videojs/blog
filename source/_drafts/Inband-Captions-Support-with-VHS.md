@@ -12,9 +12,13 @@ tags:
   - 608
 ---
 
-With the release of [videojs-http-streaming](https://blog.videojs.com/introducing-video-js-http-streaming-vhs/) v1.2.0 on July 16th 2018, Video.js has built-in support for CEA/CTA-608 captions carried in FMP4 segments. This means that closed captions are automatically parsed out and made available to Video.js players for MPEG-DASH content and HLS streams using FMP4 segments.
+With the release of [videojs-http-streaming](https://blog.videojs.com/introducing-video-js-http-streaming-vhs/) (VHS) v1.2.0 on July 16th 2018, Video.js has built-in support for CEA/CTA-608 captions carried in FMP4 segments. This means that closed captions are automatically parsed out and made available to Video.js players for MPEG-DASH content and HLS streams using FMP4 segments.
 
-Caption Parsing is handled by the [mux.js]() library and interacts with videojs-http-streaming to feed parsed captions back to Video.js.
+If you are curious about CEA-608 captions and the approach we used to parse them out of fmp4s, or a general overivew, you can watch my [talk from Demuxed 2018](https://www.twitch.tv/videos/326082416?collection=u1vmyYMIYBXvlQ).
+
+{% youtube 0yTYNIajBQM %}
+
+Caption Parsing is handled by the [mux.js](https://github.com/videojs/mux.js) library and interacts with VHS to feed parsed captions back to Video.js.
 
 ## Usage
 
@@ -31,7 +35,7 @@ Create a CaptionParser:
   }
 ```
 
-When working with HLS and MPEG-DASH with fmp4 segments, it's likely that not all the information needed to parse out captions are included in the media segments themselves, and metadata from the `init` segment needs to be passed to the CaptionParser. For this reason, the ids of video `trak`s and timescales defined in the `init` segment should be passed into the CaptionParser.
+When working with HLS and MPEG-DASH with fmp4 segments, it's likely that not all the information needed to parse out captions are included in the media segments themselves, and metadata from the `init` segment needs to be passed to the CaptionParser. For this reason, the video trackIds and timescales defined in the `init` segment should be passed into the CaptionParser.
 
 ```js
   import mp4probe from 'mux.js/lib/mp4/probe';
@@ -90,4 +94,4 @@ You can then take one caption and create a `VTTCue` to add to a `TextTrack` with
   track.addCue(parsed.captions[0]);
 ```
 
-videojs-http-streaming is included by default with videojs v7.x.
+VHS is included by default with videojs v7.x.
