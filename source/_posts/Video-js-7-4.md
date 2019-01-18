@@ -90,7 +90,7 @@ As always, we aim to make Video.js as accessible and usable as we can. To that e
 ### Responsive Captions Settings Dialog
 This uses the new `responsive` setting and breakpoints to make the dialog respond to the size of the player and improves the user experience.
 ### replay option for PlayToggle
-The PlayToggle button changes the icon to a replace icon when the video ends, most users don't mind it and it was a highly requested feature previously. This adds an option to turn it off.
+The PlayToggle button changes the icon to a replay icon when the video ends, most users don't mind it and it was a highly requested feature previously. This adds an option to turn it off.
 ### focus-visisble menu backgrounds
 Like outlines for other buttons, we use a different background color to represent the focus in menus. We should respect focus-visible there like we do for outlines in buttons.
 ### playerreset event
